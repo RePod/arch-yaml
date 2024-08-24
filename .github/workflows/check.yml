@@ -27,11 +27,18 @@ jobs:
 
       #- name: Run a one-line script
       #  run:
+      
+      - name: Prepare env
+      - run: |
+          sudo apt install yq -y
 
       - name: Concat YAML
         run: |
           YAML_OUT=$(cat $GITHUB_WORKSPACE/games/header.yaml $GITHUB_WORKSPACE/games/sync/*.yaml)
-          echo "$YAML_OUT" > $GITHUB_WORKSPACE/RePod.yaml
+          echo "$YAML_OUT" > "$GITHUB_WORKSPACE/RePod.yaml"
+          
+      - name: Validate YAML
+        run: yq validate "$GITHUB_WORKSPACE/RePod.yaml"
 
       - name: Commit & Push
         id: Commit
