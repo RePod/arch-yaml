@@ -47,8 +47,6 @@ jobs:
           chmod +x /tmp/Archipelago/ArchipelagoGenerate
 
       # TODO: better/dynamically
-      # git clone https://github.com/Eijebong/DivaAPworld /tmp/Archipelago/custom_worlds/megamix
-      # custom_worlds doesn't accept loose folders?
       - name: Archipelago - Install Custom Worlds
         run: |
           cp -a $GITHUB_WORKSPACE/games/custom_worlds/. /tmp/Archipelago/custom_worlds
@@ -60,6 +58,7 @@ jobs:
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/spinerak/ArchipelagoYachtDice/releases/download/v2.1.1/yachtdice.apworld
 
       # do we generate single multiworlds or multi single worlds?
+      # ~13s to gen a 16 game multi with sync settings.
       - name: Archipelago - Test singles
         run: |
           cp $GITHUB_WORKSPACE/games/sync/*.yaml /tmp/Archipelago/Players
@@ -70,6 +69,8 @@ jobs:
             echo -e "name: Player{number}\ngame: ${NAME}\n$(cat $file)" > "$file"
           done
           /tmp/Archipelago/ArchipelagoGenerate --race --skip_prog_balancing --skip_output
+          
+      # TODO: Async/triggers
 
       - name: Concat YAML
         run: |
