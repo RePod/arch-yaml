@@ -29,16 +29,14 @@ jobs:
       #  run:
 
       - name: Prepare env
-        run: sudo snap install yq
+        run: |
+            sudo snap install yq
+            sudo apt install -y parallel
 
       # yq: just as bad as snap. pick a fork, pick a version!
       - name: YQ - Sanity check single YAMLs
         run: find games/sync/ -type f -name "*.yaml" -print0 | xargs -0 yq -P > /dev/null
 
-      #- name: Prepare Archipelago and validator
-
-
-      # how provide the goods?
       - name: Archipelago - Setup
         run: |
           wget -nv -P "/tmp" https://github.com/ArchipelagoMW/Archipelago/releases/download/0.5.0/Archipelago_0.5.0_linux-x86_64.tar.gz
@@ -58,7 +56,7 @@ jobs:
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/spinerak/ArchipelagoYachtDice/releases/download/v2.1.1/yachtdice.apworld
 
       # do we generate single multiworlds or multi single worlds?
-      # ~13s to gen a 16 game multi with sync settings.
+      # ~13s to gen a 16 game multi with sync settings. private repos are limited to 2 threads, public 4.
       - name: Archipelago - Test singles
         run: |
           cp $GITHUB_WORKSPACE/games/sync/*.yaml /tmp/Archipelago/Players
@@ -68,8 +66,8 @@ jobs:
             NAME=${NAME%.yaml}
             echo -e "name: Player{number}\ngame: ${NAME}\n$(cat $file)" > "$file"
           done
-          /tmp/Archipelago/ArchipelagoGenerate --race --skip_prog_balancing --skip_output
-          
+          parallel /tmp/Archipelago/ArchipelagoGenerate --race --skip_prog_balancing --skip_output ::: {1..10}
+
       # TODO: Async/triggers
 
       - name: Concat YAML
