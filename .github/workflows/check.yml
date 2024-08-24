@@ -31,7 +31,6 @@ jobs:
       - name: Prepare env
         run: |
             sudo snap install yq
-            sudo apt install -y parallel
 
       # yq: just as bad as snap. pick a fork, pick a version!
       - name: YQ - Sanity check single YAMLs
@@ -66,7 +65,8 @@ jobs:
             NAME=${NAME%.yaml}
             echo -e "name: Player{number}\ngame: ${NAME}\n$(cat $file)" > "$file"
           done
-          parallel /tmp/Archipelago/ArchipelagoGenerate --race --skip_prog_balancing --skip_output ::: {1..10}
+          /tmp/Archipelago/ArchipelagoGenerate --race --skip_prog_balancing --skip_output 
+          parallel /tmp/Archipelago/ArchipelagoGenerate --race --skip_prog_balancing --skip_output  ::: {1..9}
 
       # TODO: Async/triggers
 
