@@ -4,9 +4,12 @@ Muse Dash:
   progression_balancing: 99
   accessibility: minimal
   dlc_packs:
-    - Just As Planned
-    - Miku in Museland
+    - maimai DX Limited-time Suite
+    - Rin Len's Mirrorland
+    - CHUNITHM COURSE MUSE
     - MSR Anthology
+    - Muse Plus
+    - Miku in Museland
   streamer_mode_enabled: false
   starting_song_count: 3
   additional_song_count: 40
