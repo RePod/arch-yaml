@@ -66,7 +66,7 @@ jobs:
             echo -e "name: Player{number}\ngame: ${NAME}\n$(cat $file)" > "$file"
           done
           /tmp/Archipelago/ArchipelagoGenerate --race --skip_prog_balancing --skip_output 
-          parallel /tmp/Archipelago/ArchipelagoGenerate --race --skip_prog_balancing --skip_output  ::: {1..9}
+          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --race --skip_prog_balancing --skip_output ::: {1..9}
 
       # TODO: Async/triggers
 
