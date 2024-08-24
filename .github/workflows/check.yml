@@ -51,7 +51,7 @@ jobs:
       # custom_worlds doesn't accept loose folders?
       - name: Archipelago - Install Custom Worlds
         run: |
-          cp -a $GITHUB_WORKSPACE/custom_worlds/. /tmp/Archipelago/custom_worlds
+          cp -a $GITHUB_WORKSPACE/games/custom_worlds/. /tmp/Archipelago/custom_worlds
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/Cynichill/DivaAPworld/releases/download/1.0.2B/megamix.apworld
           mkdir $GITHUB_WORKSPACE/diva /tmp/Archipelago/custom_worlds/diva /tmp/Archipelago/diva
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/AliceMousie/Archipelago/releases/download/2.1.2/pokemon_crystal.apworld
