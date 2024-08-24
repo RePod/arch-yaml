@@ -8,3 +8,5 @@ async: false
 # Override name based on the game as defined by triggers. async:true forces true.
 per_game_name: true
 
+requires:
+  version: 0.5.0
