@@ -43,7 +43,7 @@ jobs:
           echo "$YAML_OUT" > "$GITHUB_WORKSPACE/RePod.yaml"
           
       - name: Validate concat YAML
-        run: yq v "$GITHUB_WORKSPACE/RePod.yaml"
+        run: yq -P "$GITHUB_WORKSPACE/RePod.yaml" > /dev/null
 
       - name: Commit & Push
         id: Commit
