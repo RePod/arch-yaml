@@ -1,0 +1,27 @@
+Yacht Dice:
+  # https://yacht-dice-ap.netlify.app/
+  # Stock-ish settings until a few plays.
+  progression_balancing: random-low
+  accessibility: random
+  game_difficulty:
+    medium: 1
+    hard: 2
+  score_for_last_check: 1000
+  score_for_goal: 777
+  minimal_number_of_dice_and_rolls: 5_dice_and_3_rolls
+  number_of_dice_fragments_per_dice: 4
+  number_of_roll_fragments_per_roll: 4
+  alternative_categories: 1
+  allow_manual_input: yes_allow
+  weight_of_dice: 5
+  weight_of_roll: 20
+  weight_of_fixed_score_multiplier: 30
+  weight_of_step_score_multiplier: 0
+  weight_of_double_category: 50
+  weight_of_points: 20
+  points_size: medium
+  minimize_extra_items: no_dont
+  add_bonus_points: sure
+  add_story_chapters: sure
+  which_story: random_story
+

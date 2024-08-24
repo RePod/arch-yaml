@@ -1,0 +1,119 @@
+Pokemon FireRed and LeafGreen:
+  # Alpha 0.1.0
+  progression_balancing: random-low
+  accessibility: random
+  game_version: random
+  shuffle_badges: true
+  shuffle_hidden: nonrecurring
+  extra_key_items: true
+  itemfinder_required: logic
+  flash_required: true
+  #remove_badge_requirement
+  oaks_aide_route_2: 5
+  oaks_aide_route_10: 10
+  oaks_aide_route_11: 15
+  oaks_aide_route_16: 20
+  oaks_aide_route_15: 25
+  viridian_city_roadblock:
+    vanilla: 3
+    early_parcel: 6
+    open: 1
+  pewter_city_roadblock:
+    # Sets the requirement for passing the Pewter City Roadblock.
+    #
+    # - Open: The boy will not stop you from entering Route 3.
+    # - Brock: The boy will stop you from entering Route 3 until you defeat Brock.
+    # - Any Gym Leader: The boy will stop you from entering Route 3 until you defeat any Gym Leader.
+    # - Boulder Badge: The boy will stop you from entering Route 3 until you have the Boulder Badge.
+    # - Any Badge: The boy will stop you from entering Route 3 until you have a Badge.
+    open: 1
+    brock: 1
+    any_gym: 1
+    boulder_badge: 1
+    any_badge: 1
+  cerulean_city_roadblocks:
+    false: 1
+    true: 4
+  viridian_gym_requirement:
+    badges: 3
+    gyms: 2
+  viridian_gym_count: random
+  route22_gate_requirement:
+    badges: 3
+    gyms: 2
+  route22_gate_count: random-high
+  route23_guard_requirement:
+    badges: 3
+    gyms: 2
+  route23_guard_count: random-high
+  elite_four_requirement:
+    badges: 3
+    gyms: 2
+  elite_four_count: 8
+  cerulean_cave_requirement:
+    vanilla: 0
+    champion: 0
+    restore_network: 1
+    badges: 1
+    gyms: 1
+  cerulean_cave_count: random-middle
+  level_scaling: true
+  #modify_trainer_levels
+  wild_pokemon:
+    vanilla: 0
+    match_base_stats: 1
+    match_type: 1
+    match_base_stats_and_type: 1
+    completely_random: 7
+  wild_pokemon_groups: random
+  starters:
+    vanilla: 0
+    match_base_stats: 1
+    match_type: 1
+    match_base_stats_and_type: 1
+    completely_random: 5
+  trainers:
+    vanilla: 0
+    match_base_stats: 1
+    match_type: 1
+    match_base_stats_and_type: 1
+    completely_random: 5
+  #trainer_blacklist
+  legendary_pokemon:
+    vanilla: 0
+    match_base_stats: 1
+    match_type: 1
+    match_base_stats_and_type: 1
+    completely_random: 5
+  misc_pokemon:
+    vanilla: 0
+    match_base_stats: 1
+    match_type: 1
+    match_base_stats_and_type: 1
+    completely_random: 3
+  types: vanilla
+  abilities: follow_evolutions
+  ability_blacklist:
+    - Truant
+    - Wonder Guard
+    - Arena Trap
+    - Shadow Tag
+    - Magnet Pull
+  moves:
+    vanilla: 1
+    randomized: 2
+    start_with_four_moves: 2
+  #move_blacklist
+  hm_compatability: full
+  tm_tutor_compatability: random
+  tm_tutor_moves: true
+  reusable_tm_tutors: true
+  min_catch_rate: 255
+  guaranteed_catch: true
+  exp_modifier: 225
+  blind_trainers: true
+  better_shops: true
+  free_fly_location: exclude_indigo
+  turbo_a: true
+  receive_item_messages: progression
+

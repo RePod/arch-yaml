@@ -1,0 +1,8 @@
+MegaMan Battle Network 3:
+  # https://archipelago.gg/tutorial/MegaMan%20Battle%20Network%203/setup/en
+  progression_balancing: random-low
+  accessibility: random
+  extra_ranks: 0
+  include_jobs: false
+  trade_quest_hinting: full
+

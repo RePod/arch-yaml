@@ -1,0 +1,30 @@
+Yu-Gi-Oh! 2006:
+  # https://archipelago.gg/games/Yu-Gi-Oh!%202006/player-options
+  # Currently just the default generation options with a few tweaks
+  progression_balancing: random-low
+  accessibility: random
+  structure_deck:
+    none: 1
+    random_deck: 1
+  banlist: september_2005
+  final_campaign_boss_unlock_condition: campaign_opponents
+  fourth_tier_5_campaign_boss_unlock_condition: campaign_opponents
+  third_tier_5_campaign_boss_unlock_condition: campaign_opponents
+  final_campaign_boss_challenges: 10
+  fourth_tier_5_campaign_boss_challenges: 5
+  third_tier_5_campaign_boss_challenges: 2
+  final_campaign_boss_campaign_opponents: 12
+  fourth_tier_5_campaign_boss_campaign_opponents: 7
+  third_tier_5_campaign_boss_campaign_opponents: 3
+  number_of_challenges: 20
+  starting_money: 3000
+  money_reward_multiplier: 20
+  normalize_boosters_packs: true
+  booster_pack_prices: 100
+  add_empty_banlist: true
+  campaign_opponents_shuffle:
+    true: 3
+    false: 1
+  ocg_arts: false
+  start_inventory: {}
+

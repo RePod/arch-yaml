@@ -1,0 +1,47 @@
+Super Mario World:
+  # https://archipelago.gg/tutorial/Super%20Mario%20World/setup/en
+  progression_balancing: random-middle
+  accessibility: random
+  goal: bowser
+  bosses_required: 7
+  max_yoshi_egg_cap: 50
+  percentage_of_yoshi_eggs: 100
+  dragon_coin_checks: true
+  moon_checks: true
+  hidden_1up_checks: false # "Cryptic"/Risky according to description
+  bonus_block_checks: true # 1Ups from Green ☆ blocks, req. 30 coins?
+  blocksanity: false # Item/coin blocks. Async is back baby!
+  bowser_castle_doors:
+    vanilla: 3
+    fast: 2
+    slow: 0
+  bowser_castle_rooms: random_two_room
+  level_shuffle: true
+  exclude_special_zone: true
+  boss_shuffle: random
+  swap_donut_gh_exits: random
+  display_received_item_popups: progression_minus_yoshi_eggs
+  junk_fill_percentage: 0
+  trap_fill_percentage: 0
+  ice_trap_weight: medium
+  stun_trap_weight: medium
+  literature_trap_weight: medium
+  timer_trap_weight: medium
+  reverse_trap_weight: medium
+  thwimp_trap_weight: medium
+  autosave: true
+  early_climb: true
+  overworld_speed: fast
+  music_shuffle: consistent
+  sfx_shuffle: none
+  mario_palette: random
+  level_palette_shuffle:
+    'off': 1
+    on_legacy: 4
+    on_curated: 5
+  overworld_palette_shuffle:
+    'off': 1
+    on_legacy: 4
+    on_curated: 5
+  starting_life_count: 69
+

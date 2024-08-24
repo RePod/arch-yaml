@@ -1,0 +1,24 @@
+Muse Dash:
+  # https://archipelago.gg/tutorial/Muse%20Dash/setup/en
+  # Every time I look there's an update that breaks EVERYTHING but the options are sound.
+  progression_balancing: 99
+  accessibility: minimal
+  allow_just_as_planned_dlc_songs: true
+  dlc_packs: ["Miku in Museland", "MSR Anthology"]
+  streamer_mode_enabled: false
+  starting_song_count: 3
+  additional_song_count: 40
+  additional_item_percentage: random
+  song_difficulty_mode: any
+  song_difficulty_min: 4
+  song_difficulty_max: 8
+  grade_needed: pinks
+  music_sheet_count_percentage: 20
+  music_sheet_win_count_percentage: 80
+  available_trap_types: all
+  trap_count_percentage: random
+  death_link: true
+  include_songs: ["39 Music!","Hand in Hand","Cynical Night Plan","God-ish","Darling Dance","Hatsune Creation Myth","The Vampire","Future Eve","Unknown Mother Goose"]
+  exclude_songs: []
+  #start_inventory: {"God-ish":1}
+

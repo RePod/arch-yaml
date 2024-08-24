@@ -1,0 +1,34 @@
+Yu-Gi-Oh! Forbidden Memories:
+  # BizHawk client + lua connector
+  progression_balancing: random-low
+  accessibility: random
+  duelist_progression: random
+  local_starchips: false
+  final6_progression: fixed
+  final6_sequence: first_5_shuffled
+  atec_logic:
+    # "Off" means you'll never be expected to do an ATec for progression.
+    # "Pegasus Only" means only Pegasus's SATec pool is in logic.
+    # "Hundo ATecs" means that ATecs are in logic for the duelists typically ATec'd during a Hundo run, specifically:
+    # Pegasus, Kaiba, Mage Soldier, Meadow Mage, and NiteMare.
+    # "All" means all duelists' SATec pools are in logic.
+    #
+    # Regardless of your choice, you will never be expected to do an ATec until you have access to a duelist who drops a
+    # trap card of equal strength or stronger than the trap speicified by your "Weakest Trap for ATecs" setting.
+    off: 0
+    pegasus_only: 1
+    hundo_atecs: 0
+    all: 0
+  atec_trap:
+    # The weakest (i.e. lowest mox Life Point activation) trap card with which you can be expected to ATec a duelist.
+    # ATecs will be in logic as soon as you have access to a duelist who drops this card or a stronger trap card,
+    # excluding their SATec drop pool. Your other ATec settings are still respected.
+    #
+    # Note that Fake Trap puts ATecs in logic right from the start since it drops off of Simon Muran and Simon Muran is
+    # always unlocked.
+    acid_trap_hole: 50
+    invisible_wire: 0
+    fake_trap: 0
+  drop_rate_logic: 64
+  death_link: false
+

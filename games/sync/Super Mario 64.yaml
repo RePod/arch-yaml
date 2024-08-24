@@ -1,0 +1,33 @@
+Super Mario 64:
+  # https://archipelago.gg/tutorial/Super%20Mario%2064/setup/en
+  progression_balancing: random-low
+  accessibility: random
+  area_rando: courses_only
+  buddy_checks: false
+  exclamation_boxes: 1ups_only
+  progressive_keys: random
+  enable_coin_stars: false
+  enable_move_rando: false
+  move_rando_actions:
+    - Triple Jump
+    - Long Jump
+    - Backflip
+    - Side Flip
+    - Wall Kick
+    - Dive
+    - Ground Pound
+    - Kick
+    - Climb
+    - Ledge Grab
+  strict_cap_requirements: true
+  strict_cannon_requirements: true
+  strict_move_requirements: true
+  amount_of_stars: 120
+  first_bowser_star_door_cost: 0
+  basement_star_door_cost: 30
+  second_floor_star_door_cost: 50
+  mips1_cost: 15
+  mips2_cost: 50
+  stars_to_finish: 70
+  completion_type: last_bowser_stage
+

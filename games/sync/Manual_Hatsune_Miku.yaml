@@ -1,0 +1,18 @@
+Manual_Hatsune_Miku:
+  # THE the Manual!
+  # https://discord.com/channels/731205301247803413/1150904175144751194/1218734532065493033
+  #     This does NOT link to the apworld, but steps to create it from scratch.
+  #     To make connecting easier I override the world name to Manual_Hatsune_Miku.
+  # House rules: EX8.5 85%, EX9+ 80% or EX9+ > Hard 95%+
+  progression_balancing: random-low
+  accessibility: random
+  extra_locations: 100
+  music_sheets: random-range-low-80-100
+  song_total: 39
+  duplicate_songs: 0 # Eliminate progression confusion.
+  start_total: random-low
+  force_song: []
+  remove_song: []
+  force_goal: []
+  filler_traps: 0
+

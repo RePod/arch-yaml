@@ -1,0 +1,12 @@
+VVVVVV:
+  # https://archipelago.gg/tutorial/VVVVVV/setup/en
+  # tldr mod + -v6ap_name slotName -v6ap_ip server:port
+  progression_balancing: random-low
+  accessibility: random
+  MusicRandomizer: true
+  AreaRandomizer: false # Painful.
+  DoorCost: random
+  AreaCostRandomizer: random
+  death_link: true
+  DeathLinkAmnesty: 30
+

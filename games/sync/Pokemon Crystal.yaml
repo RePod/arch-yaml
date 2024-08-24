@@ -1,0 +1,69 @@
+Pokemon Crystal:
+  progression_balancing: random-low
+  accessibility: random
+  goal:
+    elite_four: 50
+    red: 0
+  johto_only: off # include_silver_cave = Red
+  elite_four_badges: 8
+  red_badges: 16
+  randomize_badges: completely_random
+  randomize_hidden_items: true
+  require_itemfinder: false
+  trainersanity: false
+  randomize_pokegear: true
+  randomize_berry_trees: true
+  randomize_starters: completely_random
+  randomize_wilds: true
+  normalize_encounter_rates: true
+  randomize_static_pokemon: true
+  randomize_trainer_parties: completely_random
+  randomize_learnsets: start_with_four_moves
+  randomize_tm_moves: true
+  tm_compatibility: 100
+  hm_compatibility: 100
+  randomize_base_stats: random
+  randomize_types: vanilla
+  randomize_palettes: random
+  randomize_music: true
+  early_fly:
+    false: 1
+    true: 4
+  free_fly_location:
+    off: 1
+    free_fly: 2
+    free_fly_and_map_card: 2
+  hm_badge_requirements:
+    # vanilla: HMs require their vanilla badges
+    # no_badges: HMs do not require a badge to use
+    # add_kanto: HMs can be used with the Johto or Kanto badge
+    vanilla: 1
+    no_badges: 0
+    add_kanto: 3
+  reusable_tms: true
+  guaranteed_catch: true
+  minimum_catch_rate: 255
+  blind_trainers: true
+  better_marts: true
+  experience_modifier: 50
+  phone_trap_weight: random
+  sleep_trap_weight: 0
+  poison_trap_weight: 0
+  burn_trap_weight: 0
+  freeze_trap_weight: 0
+  paralysis_trap_weight: 0
+  item_receive_sound: true
+  enable_mischief: true
+  exclude_locations:
+    - Radio Tower 1F - Grunt
+    - Radio Tower 2F - Grunt 1
+    - Radio Tower 2F - Grunt 2
+    - Radio Tower 2F - Grunt 3
+    - Radio Tower 2F - Grunt 4
+    - Union Cave B2F - Item 1
+    - Union Cave B2F - Item 2
+    - Union Cave B2F - Cool Trainer Emma
+    - Union Cave B2F - Cool Trainer Gwen
+    - Union Cave B2F - Cool Trainer Nick
+    - Fuchsia City - Berry Tree
+
