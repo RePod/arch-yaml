@@ -36,16 +36,12 @@ jobs:
       #    echo "$PWD $CWD $GITHUB_WORKSPACE"
       #    ls -R "$GITHUB_WORKSPACE"
 
-      - name: Commit
+      - name: Commit & Push
         id: Commit
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "github-actions"
           git add RePod.yaml
           git commit -m "Update RePod.yaml" -a
+          git push
         shell: bash
-
-      - name: Push
-        uses: ad-m/github-push-action@master
-        with:
-         github_token: ${{ secrets.GITHUB_TOKEN }}
