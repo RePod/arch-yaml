@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: cat $GITHUB_WORKSPACE/games/header.yaml $GITHUB_WORKSPACE/games/sync/*.yaml \
+        run: echo $(cat $GITHUB_WORKSPACE/games/header.yaml $GITHUB_WORKSPACE/games/sync/*.yaml) \
             > $GITHUB_WORKSPACE/RePod.yaml
 
       # Runs a set of commands using the runners shell
@@ -35,7 +35,7 @@ jobs:
       #  run: |
       #    echo "$PWD $CWD $GITHUB_WORKSPACE"
       #    ls -R "$GITHUB_WORKSPACE"
-      
+
       - name: Commit
         id: Commit
         run: |
@@ -44,6 +44,7 @@ jobs:
           git add RePod.yaml
           git commit -m "Update RePod.yaml" -a
         shell: bash
+
       - name: Push
         if: steps.commit.outputs.push == 'true'
         uses: ad-m/github-push-action@master
