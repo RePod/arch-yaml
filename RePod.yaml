@@ -1,1 +1,872 @@
-# Ideally the same as the per_game_name:false trigger. name: RePod{NUMBER} description: "The final player name may change based on settings/triggers." # See triggers at the bottom. when plando? async: false # Override name based on the game as defined by triggers. async:true forces true. per_game_name: true requires: version: 0.5.0 A Hat in Time: # https://archipelago.gg/tutorial/A%20Hat%20in%20Time/setup/en # tldr tcplink beta branch + workshop mod progression_balancing: random-low accessibility: items death_link: false EndGoal: finale ShuffleAlpineZiplines: false LogicDifficulty: normal ShuffleStorybookPages: true ShuffleActContracts: true ShuffleSubconPaintings: false NoPaintingSkips: false CTRLogic: time_stop_only MinPonCost: 75 MaxPonCost: 300 BadgeSellerMinItems: 4 BadgeSellerMaxItems: 8 ActRandomizer: light FinaleShuffle: false StartingChapter: 1 LowestChapterCost: 5 HighestChapterCost: 25 ChapterCostIncrement: 4 ChapterCostMinDifference: 4 FinalChapterMinCost: 30 FinalChapterMaxCost: 35 YarnBalancePercent: 20 TimePieceBalancePercent: 35 RandomizeHatOrder: true UmbrellaLogic: false StartWithCompassBadge: true CompassBadgeMode: closest MaxExtraTimePieces: 16 YarnCostMin: 4 YarnCostMax: 8 YarnAvailable: 50 MinExtraYarn: 10 HatItems: false EnableDLC1: false Tasksanity: false TasksanityTaskStep: 1 TasksanityCheckCount: 18 ExcludeTour: false ShipShapeCustomTaskGoal: 0 EnableDLC2: false BaseballBat: false MetroMinPonCost: 50 MetroMaxPonCost: 200 NyakuzaThugMinShopItems: 2 NyakuzaThugMaxShopItems: 4 NoTicketSkips: false EnableDeathWish: false DWShuffle: false DWShuffleCountMin: 18 DWShuffleCountMax: 25 DeathWishOnly: false DWEnableBonus: false DWAutoCompleteBonuses: true DWExcludeAnnoyingContracts: true DWExcludeAnnoyingBonuses: true DWExcludeCandles: true DWTimePieceRequirement: 15 TrapChance: 0 BabyTrapWeight: 40 LaserTrapWeight: 40 ParadeTrapWeight: 20 start_inventory: {} Hatsune Miku Project Diva Mega Mix+: # NOT the Manual! progression_balancing: random-low accessibility: random allow_megamix_dlc_songs: true starting_song_count: 3 additional_song_count: 36 song_difficulty_mode: manual song_difficulty_min: hard song_difficulty_max: exextreme song_difficulty_rating: manual song_difficulty_rating_min: six song_difficulty_rating_max: nine grade_needed: great leek_count_percentage: 40 leek_win_count_percentage: random-range-mid-70-90 include_songs: [] exclude_songs: [] Manual_Hatsune_Miku: # THE the Manual! # https://discord.com/channels/731205301247803413/1150904175144751194/1218734532065493033 # This does NOT link to the apworld, but steps to create it from scratch. # To make connecting easier I override the world name to Manual_Hatsune_Miku. # House rules: EX8.5 85%, EX9+ 80% or EX9+ > Hard 95%+ progression_balancing: random-low accessibility: random extra_locations: 100 music_sheets: random-range-low-80-100 song_total: 39 duplicate_songs: 0 # Eliminate progression confusion. start_total: random-low force_song: [] remove_song: [] force_goal: [] filler_traps: 0 MegaMan Battle Network 3: # https://archipelago.gg/tutorial/MegaMan%20Battle%20Network%203/setup/en progression_balancing: random-low accessibility: random extra_ranks: 0 include_jobs: false trade_quest_hinting: full Muse Dash: # https://archipelago.gg/tutorial/Muse%20Dash/setup/en # Every time I look there's an update that breaks EVERYTHING but the options are sound. progression_balancing: 99 accessibility: minimal allow_just_as_planned_dlc_songs: true dlc_packs: ["Miku in Museland", "MSR Anthology"] streamer_mode_enabled: false starting_song_count: 3 additional_song_count: 40 additional_item_percentage: random song_difficulty_mode: any song_difficulty_min: 4 song_difficulty_max: 8 grade_needed: pinks music_sheet_count_percentage: 20 music_sheet_win_count_percentage: 80 available_trap_types: all trap_count_percentage: random death_link: true include_songs: ["39 Music!","Hand in Hand","Cynical Night Plan","God-ish","Darling Dance","Hatsune Creation Myth","The Vampire","Future Eve","Unknown Mother Goose"] exclude_songs: [] #start_inventory: {"God-ish":1} Pokemon Crystal: progression_balancing: random-low accessibility: random goal: elite_four: 50 red: 0 johto_only: off # include_silver_cave = Red elite_four_badges: 8 red_badges: 16 randomize_badges: completely_random randomize_hidden_items: true require_itemfinder: false trainersanity: false randomize_pokegear: true randomize_berry_trees: true randomize_starters: completely_random randomize_wilds: true normalize_encounter_rates: true randomize_static_pokemon: true randomize_trainer_parties: completely_random randomize_learnsets: start_with_four_moves randomize_tm_moves: true tm_compatibility: 100 hm_compatibility: 100 randomize_base_stats: random randomize_types: vanilla randomize_palettes: random randomize_music: true early_fly: false: 1 true: 4 free_fly_location: off: 1 free_fly: 2 free_fly_and_map_card: 2 hm_badge_requirements: # vanilla: HMs require their vanilla badges # no_badges: HMs do not require a badge to use # add_kanto: HMs can be used with the Johto or Kanto badge vanilla: 1 no_badges: 0 add_kanto: 3 reusable_tms: true guaranteed_catch: true minimum_catch_rate: 255 blind_trainers: true better_marts: true experience_modifier: 50 phone_trap_weight: random sleep_trap_weight: 0 poison_trap_weight: 0 burn_trap_weight: 0 freeze_trap_weight: 0 paralysis_trap_weight: 0 item_receive_sound: true enable_mischief: true exclude_locations: - Radio Tower 1F - Grunt - Radio Tower 2F - Grunt 1 - Radio Tower 2F - Grunt 2 - Radio Tower 2F - Grunt 3 - Radio Tower 2F - Grunt 4 - Union Cave B2F - Item 1 - Union Cave B2F - Item 2 - Union Cave B2F - Cool Trainer Emma - Union Cave B2F - Cool Trainer Gwen - Union Cave B2F - Cool Trainer Nick - Fuchsia City - Berry Tree Pokemon Emerald: # https://archipelago.gg/tutorial/Pokemon%20Emerald/setup/en progression_balancing: random-low accessibility: random local_items: [] non_local_items: [] start_inventory: {} start_hints: [] start_location_hints: [] exclude_locations: [] priority_locations: [] item_links: [] goal: champion: 50 steven: 0 norman: 0 legendary_hunt: 0 badges: completely_random hms: completely_random key_items: true bikes: true event_tickets: true rods: true overworld_items: true hidden_items: true npc_gifts: true berry_trees: false dexsanity: false trainersanity: false item_pool_type: shuffled: 2 diverse_balanced: 1 diverse: 0 require_itemfinder: false require_flash: neither elite_four_requirement: badges elite_four_count: 8 norman_requirement: badges norman_count: 4 legendary_hunt_catch: # Sets whether legendaries need to be caught to satisfy the Legendary Hunt win condition. Defeated legendaries can be respawned by defeating the Elite 4. false: 50 true: 0 legendary_hunt_count: # Sets the number of legendaries that must be caught/defeated for the Legendary Hunt goal # You can define additional values between the minimum and maximum values. # Minimum value is 1 # Maximum value is 12 3: 50 random: 0 random-low: 0 random-high: 0 allowed_legendary_hunt_encounters: # Sets which legendary encounters can contribute to the Legendary Hunt goal. # Latios will always be the roamer. Latias will always be at Southern Island. # Possible values are: # "Groudon" # "Kyogre" # "Rayquaza" # "Latios" # "Latias" # "Regirock" # "Registeel" # "Regice" # "Ho-Oh" # "Lugia" # "Deoxys" # "Mew" ['Regirock', 'Deoxys', 'Kyogre', 'Lugia', 'Rayquaza', 'Ho-Oh', 'Mew', 'Latios', 'Latias', 'Groudon', 'Registeel', 'Regice'] wild_pokemon: vanilla: 0 match_base_stats: 0 match_type: 0 match_base_stats_and_type: 0 completely_random: 1 wild_encounter_blacklist: [] # Use "_Legendaries" as a shortcut for legendary pokemon. starters: vanilla: 0 match_base_stats: 1 match_type: 1 match_base_stats_and_type: 1 completely_random: 7 starter_blacklist: [] # Use "_Legendaries" as a shortcut for legendary pokemon. trainer_parties: vanilla: 0 match_base_stats: 1 match_type: 1 match_base_stats_and_type: 1 completely_random: 4 trainer_party_blacklist: # Prevents listed species from appearing in opponent trainers' parties if opponent parties are randomized. # May be overridden if enforcing other restrictions in combination with this blacklist is impossible. # Use "_Legendaries" as a shortcut for legendary pokemon. [] force_fully_evolved: random-range-35-50 legendary_encounters: random misc_pokemon: random types: vanilla abilities: follow_evolutions ability_blacklist: - Truant - Wonder Guard - Arena Trap - Shadow Tag - Magnet Pull level_up_moves: vanilla: 1 randomized: 2 start_with_four_moves: 2 move_match_type_bias: # Sets the probability that a learned move will be forced match one of the types of a pokemon. # # If a move is not forced to match type, it will roll for Normal type bias. # # You can define additional values between the minimum and maximum values. # Minimum value is 0 # Maximum value is 100 0: 50 random: 0 random-low: 0 random-high: 0 move_normal_type_bias: # After it has been decided that a move will not be forced to match types, sets the probability that a learned move # will be forced to be the Normal type. # # If a move is not forced to be Normal, it will be completely random. # # You can define additional values between the minimum and maximum values. # Minimum value is 0 # Maximum value is 100 0: 50 random: 0 random-low: 0 random-high: 0 tm_tutor_compatibility: random hm_compatibility: 100 tm_tutor_moves: true reusable_tms_tutors: true move_blacklist: [] min_catch_rate: 3 guaranteed_catch: true normalize_encounter_rates: true exp_modifier: 300 blind_trainers: true purge_spinners: false match_trainer_levels: # When you start a battle with a trainer, your party's levels will be automatically set to match that trainer's highest level pokemon. # The experience you receive will match your party's average actual level, and will only be awarded when you win the battle. # This is a pseudo-replacement for a level cap and makes every trainer battle a fair fight while still allowing you to level up. # Off: The vanilla experience # Additive: The modifier you apply to your team is a flat bonus # Multiplicative: The modifier you apply to your team is a percent bonus off: 50 additive: 0 multiplicative: 0 match_trainer_levels_bonus: # A level bonus (or penalty) to apply to your team when matching an opponent's levels. # When the match trainer levels option is "additive", this value is added to your team's levels during a battle. # For example, if this value is 5 (+5 levels), you'll have a level 25 team against a level 20 team, and a level 45 team against a level 40 team. # When the match trainer levels option is "multiplicative", this is a percent bonus. # For example, if this value is 5 (+5%), you'll have a level 21 team against a level 20 team, and a level 42 team against a level 40 team. # You can define additional values between the minimum and maximum values. # Minimum value is -100 # Maximum value is 100 0: 50 random: 0 random-low: 0 random-high: 0 double_battle_chance: 0 better_shops: true remove_roadblocks: [] # Removes specific NPCs that normally stand in your way until certain events are completed. # This can open up the world a bit and make your playthrough less linear, but careful how many you remove; it may make too much of your world accessible upon receiving Surf. # Possible values are: #- Route 110 Aqua Grunts #- Route 112 Magma Grunts #- Route 119 Aqua Grunts #- Safari Zone Construction Workers #- Lilycove City Wailmer #- Aqua Hideout Grunts #- Seafloor Cavern Aqua Grunt extra_boulders: random extra_bumpy_slope: random modify_118: random free_fly_location: random hm_requirements: random turbo_a: true receive_item_messages: progression remote_items: true music: true fanfares: true death_link: true enable_wonder_trading: true easter_egg: # Enter certain phrases and something special might happen. # All secret phrases are something that could be a trendy phrase in Dewford Town. They are case insensitive. EMERALD SECRET: 50 Pokemon FireRed and LeafGreen: # Alpha 0.1.0 progression_balancing: random-low accessibility: random game_version: random shuffle_badges: true shuffle_hidden: nonrecurring extra_key_items: true itemfinder_required: logic flash_required: true #remove_badge_requirement oaks_aide_route_2: 5 oaks_aide_route_10: 10 oaks_aide_route_11: 15 oaks_aide_route_16: 20 oaks_aide_route_15: 25 viridian_city_roadblock: vanilla: 3 early_parcel: 6 open: 1 pewter_city_roadblock: # Sets the requirement for passing the Pewter City Roadblock. # # - Open: The boy will not stop you from entering Route 3. # - Brock: The boy will stop you from entering Route 3 until you defeat Brock. # - Any Gym Leader: The boy will stop you from entering Route 3 until you defeat any Gym Leader. # - Boulder Badge: The boy will stop you from entering Route 3 until you have the Boulder Badge. # - Any Badge: The boy will stop you from entering Route 3 until you have a Badge. open: 1 brock: 1 any_gym: 1 boulder_badge: 1 any_badge: 1 cerulean_city_roadblocks: false: 1 true: 4 viridian_gym_requirement: badges: 3 gyms: 2 viridian_gym_count: random route22_gate_requirement: badges: 3 gyms: 2 route22_gate_count: random-high route23_guard_requirement: badges: 3 gyms: 2 route23_guard_count: random-high elite_four_requirement: badges: 3 gyms: 2 elite_four_count: 8 cerulean_cave_requirement: vanilla: 0 champion: 0 restore_network: 1 badges: 1 gyms: 1 cerulean_cave_count: random-middle level_scaling: true #modify_trainer_levels wild_pokemon: vanilla: 0 match_base_stats: 1 match_type: 1 match_base_stats_and_type: 1 completely_random: 7 wild_pokemon_groups: random starters: vanilla: 0 match_base_stats: 1 match_type: 1 match_base_stats_and_type: 1 completely_random: 5 trainers: vanilla: 0 match_base_stats: 1 match_type: 1 match_base_stats_and_type: 1 completely_random: 5 #trainer_blacklist legendary_pokemon: vanilla: 0 match_base_stats: 1 match_type: 1 match_base_stats_and_type: 1 completely_random: 5 misc_pokemon: vanilla: 0 match_base_stats: 1 match_type: 1 match_base_stats_and_type: 1 completely_random: 3 types: vanilla abilities: follow_evolutions ability_blacklist: - Truant - Wonder Guard - Arena Trap - Shadow Tag - Magnet Pull moves: vanilla: 1 randomized: 2 start_with_four_moves: 2 #move_blacklist hm_compatability: full tm_tutor_compatability: random tm_tutor_moves: true reusable_tm_tutors: true min_catch_rate: 255 guaranteed_catch: true exp_modifier: 225 blind_trainers: true better_shops: true free_fly_location: exclude_indigo turbo_a: true receive_item_messages: progression Pokemon Red and Blue: # https://archipelago.gg/tutorial/Pokemon%20Red%20and%20Blue/setup/en progression_balancing: random-low accessibility: random game_version: random trainer_name: I rival_name: U elite_four_badges_condition: 8 elite_four_key_items_condition: 0 elite_four_pokedex_condition: 0 victory_road_condition: random route_22_gate_condition: random viridian_gym_condition: random cerulean_cave_badges_condition: random cerulean_cave_key_items_condition: random route_3_condition: random robbed_house_officer: random second_fossil_check_condition: 3 fossil_check_item_types: any exp_all: remove old_man: early_parcel badgesanity: true badges_needed_for_hm_moves: on key_items_only: false tea: random extra_key_items: false split_card_key: off all_elevators_locked: true extra_strength_boulders: random require_item_finder: false randomize_hidden_items: off prizesanity: false trainersanity: false dexsanity: 0 randomize_pokedex: vanilla require_pokedex: true all_pokemon_seen: true oaks_aide_rt_2: 5 oaks_aide_rt_11: 10 oaks_aide_rt_15: 15 stonesanity: false door_shuffle: simple warp_tile_shuffle: false randomize_rock_tunnel: false dark_rock_tunnel_logic: true free_fly_location: random town_map_fly_location: false blind_trainers: 20 minimum_steps_between_encounters: 6 level_scaling: by_spheres exp_modifier: 20 randomize_wild_pokemon: completely_random area_1_to_1_mapping: false randomize_starter_pokemon: completely_random randomize_static_pokemon: completely_random randomize_legendary_pokemon: any catch_em_all: off randomize_pokemon_stats: vanilla randomize_pokemon_catch_rates: false minimum_catch_rate: 255 randomize_trainer_parties: completely_random trainer_legendaries: true move_balancing: false fix_combat_bugs: true randomize_pokemon_movesets: completely_random confine_transform_to_ditto: true start_with_four_moves: true same_type_attack_bonus: true randomize_tm_moves: true tm_same_type_compatibility: -1 tm_normal_type_compatibility: -1 tm_other_type_compatibility: -1 hm_same_type_compatibility: 100 hm_normal_type_compatibility: 100 hm_other_type_compatibility: 100 inherit_tm_hm_compatibility: false randomize_move_types: false randomize_pokemon_types: vanilla secondary_type_chance: -1 randomize_type_chart: vanilla normal_matchups: 143 super_effective_matchups: 38 not_very_effective_matchups: 38 immunity_matchups: 6 safari_zone_normal_battles: false normalize_encounter_chances: false reusable_tms: false better_shops: on master_ball_price: 0 starting_money: 3069 lose_money_on_blackout: false poke_doll_skip: patched bicycle_gate_skips: patched trap_percentage: 10 poison_trap_weight: medium fire_trap_weight: medium paralyze_trap_weight: medium sleep_trap_weight: medium ice_trap_weight: disabled randomize_pokemon_palettes: completely_random death_link: true Super Mario 64: # https://archipelago.gg/tutorial/Super%20Mario%2064/setup/en progression_balancing: random-low accessibility: random area_rando: courses_only buddy_checks: false exclamation_boxes: 1ups_only progressive_keys: random enable_coin_stars: false enable_move_rando: false move_rando_actions: - Triple Jump - Long Jump - Backflip - Side Flip - Wall Kick - Dive - Ground Pound - Kick - Climb - Ledge Grab strict_cap_requirements: true strict_cannon_requirements: true strict_move_requirements: true amount_of_stars: 120 first_bowser_star_door_cost: 0 basement_star_door_cost: 30 second_floor_star_door_cost: 50 mips1_cost: 15 mips2_cost: 50 stars_to_finish: 70 completion_type: last_bowser_stage Super Mario World: # https://archipelago.gg/tutorial/Super%20Mario%20World/setup/en progression_balancing: random-middle accessibility: random goal: bowser bosses_required: 7 max_yoshi_egg_cap: 50 percentage_of_yoshi_eggs: 100 dragon_coin_checks: true moon_checks: true hidden_1up_checks: false # "Cryptic"/Risky according to description bonus_block_checks: true # 1Ups from Green ☆ blocks, req. 30 coins? blocksanity: false # Item/coin blocks. Async is back baby! bowser_castle_doors: vanilla: 3 fast: 2 slow: 0 bowser_castle_rooms: random_two_room level_shuffle: true exclude_special_zone: true boss_shuffle: random swap_donut_gh_exits: random display_received_item_popups: progression_minus_yoshi_eggs junk_fill_percentage: 0 trap_fill_percentage: 0 ice_trap_weight: medium stun_trap_weight: medium literature_trap_weight: medium timer_trap_weight: medium reverse_trap_weight: medium thwimp_trap_weight: medium autosave: true early_climb: true overworld_speed: fast music_shuffle: consistent sfx_shuffle: none mario_palette: random level_palette_shuffle: 'off': 1 on_legacy: 4 on_curated: 5 overworld_palette_shuffle: 'off': 1 on_legacy: 4 on_curated: 5 starting_life_count: 69 Super Metroid: # https://archipelago.gg/tutorial/Super%20Metroid/multiworld/en progression_balancing: 50 accessibility: items start_inventory_removes_from_pool: false preset: regular start_location: landing_site remote_items: true #death_link: disable max_difficulty: easy morph_placement: early hide_items: false strict_minors: false missile_qty: 30 super_qty: 20 power_bomb_qty: 10 minor_qty: 100 energy_qty: vanilla area_randomization: off area_layout: false doors_colors_rando: false allow_grey_doors: false boss_randomization: false escape_rando: false remove_escape_enemies: false fun_combat: false fun_movement: false fun_suits: false layout_patches: true varia_tweaks: false nerfed_charge: false gravity_behaviour: balanced elevators_speed: true fast_doors: true spin_jump_restart: false rando_speed: false infinite_space_jump: false refill_before_save: true hud: true animals: false no_music: false random_music: false tourian: vanilla custom_objective: false custom_objective_list: - random custom_objective_count: 4 objective: - kill all G4 relaxed_round_robin_cf: false VVVVVV: # https://archipelago.gg/tutorial/VVVVVV/setup/en # tldr mod + -v6ap_name slotName -v6ap_ip server:port progression_balancing: random-low accessibility: random MusicRandomizer: true AreaRandomizer: false # Painful. DoorCost: random AreaCostRandomizer: random death_link: true DeathLinkAmnesty: 30 Yacht Dice: # https://yacht-dice-ap.netlify.app/ # Stock-ish settings until a few plays. progression_balancing: random-low accessibility: random game_difficulty: medium: 1 hard: 2 score_for_last_check: 1000 score_for_goal: 777 minimal_number_of_dice_and_rolls: 5_dice_and_3_rolls number_of_dice_fragments_per_dice: 4 number_of_roll_fragments_per_roll: 4 alternative_categories: 1 allow_manual_input: yes_allow weight_of_dice: 5 weight_of_roll: 20 weight_of_fixed_score_multiplier: 30 weight_of_step_score_multiplier: 0 weight_of_double_category: 50 weight_of_points: 20 points_size: medium minimize_extra_items: no_dont add_bonus_points: sure add_story_chapters: sure which_story: random_story Yu-Gi-Oh! 2006: # https://archipelago.gg/games/Yu-Gi-Oh!%202006/player-options # Currently just the default generation options with a few tweaks progression_balancing: random-low accessibility: random structure_deck: none: 1 random_deck: 1 banlist: september_2005 final_campaign_boss_unlock_condition: campaign_opponents fourth_tier_5_campaign_boss_unlock_condition: campaign_opponents third_tier_5_campaign_boss_unlock_condition: campaign_opponents final_campaign_boss_challenges: 10 fourth_tier_5_campaign_boss_challenges: 5 third_tier_5_campaign_boss_challenges: 2 final_campaign_boss_campaign_opponents: 12 fourth_tier_5_campaign_boss_campaign_opponents: 7 third_tier_5_campaign_boss_campaign_opponents: 3 number_of_challenges: 20 starting_money: 3000 money_reward_multiplier: 20 normalize_boosters_packs: true booster_pack_prices: 100 add_empty_banlist: true campaign_opponents_shuffle: true: 3 false: 1 ocg_arts: false start_inventory: {} Yu-Gi-Oh! Forbidden Memories: # BizHawk client + lua connector progression_balancing: random-low accessibility: random duelist_progression: random local_starchips: false final6_progression: fixed final6_sequence: first_5_shuffled atec_logic: # "Off" means you'll never be expected to do an ATec for progression. # "Pegasus Only" means only Pegasus's SATec pool is in logic. # "Hundo ATecs" means that ATecs are in logic for the duelists typically ATec'd during a Hundo run, specifically: # Pegasus, Kaiba, Mage Soldier, Meadow Mage, and NiteMare. # "All" means all duelists' SATec pools are in logic. # # Regardless of your choice, you will never be expected to do an ATec until you have access to a duelist who drops a # trap card of equal strength or stronger than the trap speicified by your "Weakest Trap for ATecs" setting. off: 0 pegasus_only: 1 hundo_atecs: 0 all: 0 atec_trap: # The weakest (i.e. lowest mox Life Point activation) trap card with which you can be expected to ATec a duelist. # ATecs will be in logic as soon as you have access to a duelist who drops this card or a stronger trap card, # excluding their SATec drop pool. Your other ATec settings are still respected. # # Note that Fake Trap puts ATecs in logic right from the start since it drops off of Simon Muran and Simon Muran is # always unlocked. acid_trap_hole: 50 invisible_wire: 0 fake_trap: 0 drop_rate_logic: 64 death_link: false  
+# Ideally the same as the per_game_name:false trigger.
+name: RePod{NUMBER}
+description: "The final player name may change based on settings/triggers."
+
+# See triggers at the bottom. when plando?
+async: false
+
+# Override name based on the game as defined by triggers. async:true forces true.
+per_game_name: true
+
+requires:
+  version: 0.5.0
+
+A Hat in Time:
+  # https://archipelago.gg/tutorial/A%20Hat%20in%20Time/setup/en
+  # tldr tcplink beta branch + workshop mod
+  progression_balancing: random-low
+  accessibility: items
+  death_link: false
+  EndGoal: finale
+  ShuffleAlpineZiplines: false
+  LogicDifficulty: normal
+  ShuffleStorybookPages: true
+  ShuffleActContracts: true
+  ShuffleSubconPaintings: false
+  NoPaintingSkips: false
+  CTRLogic: time_stop_only
+  MinPonCost: 75
+  MaxPonCost: 300
+  BadgeSellerMinItems: 4
+  BadgeSellerMaxItems: 8
+  ActRandomizer: light
+  FinaleShuffle: false
+  StartingChapter: 1
+  LowestChapterCost: 5
+  HighestChapterCost: 25
+  ChapterCostIncrement: 4
+  ChapterCostMinDifference: 4
+  FinalChapterMinCost: 30
+  FinalChapterMaxCost: 35
+  YarnBalancePercent: 20
+  TimePieceBalancePercent: 35
+  RandomizeHatOrder: true
+  UmbrellaLogic: false
+  StartWithCompassBadge: true
+  CompassBadgeMode: closest
+  MaxExtraTimePieces: 16
+  YarnCostMin: 4
+  YarnCostMax: 8
+  YarnAvailable: 50
+  MinExtraYarn: 10
+  HatItems: false
+  EnableDLC1: false
+  Tasksanity: false
+  TasksanityTaskStep: 1
+  TasksanityCheckCount: 18
+  ExcludeTour: false
+  ShipShapeCustomTaskGoal: 0
+  EnableDLC2: false
+  BaseballBat: false
+  MetroMinPonCost: 50
+  MetroMaxPonCost: 200
+  NyakuzaThugMinShopItems: 2
+  NyakuzaThugMaxShopItems: 4
+  NoTicketSkips: false
+  EnableDeathWish: false
+  DWShuffle: false
+  DWShuffleCountMin: 18
+  DWShuffleCountMax: 25
+  DeathWishOnly: false
+  DWEnableBonus: false
+  DWAutoCompleteBonuses: true
+  DWExcludeAnnoyingContracts: true
+  DWExcludeAnnoyingBonuses: true
+  DWExcludeCandles: true
+  DWTimePieceRequirement: 15
+  TrapChance: 0
+  BabyTrapWeight: 40
+  LaserTrapWeight: 40
+  ParadeTrapWeight: 20
+  start_inventory: {}
+
+Hatsune Miku Project Diva Mega Mix+:
+  # NOT the Manual!
+  progression_balancing: random-low
+  accessibility: random
+  allow_megamix_dlc_songs: true
+  starting_song_count: 3
+  additional_song_count: 36
+  song_difficulty_mode: manual
+  song_difficulty_min: hard
+  song_difficulty_max: exextreme
+  song_difficulty_rating: manual
+  song_difficulty_rating_min: six
+  song_difficulty_rating_max: nine
+  grade_needed: great
+  leek_count_percentage: 40
+  leek_win_count_percentage: random-range-mid-70-90
+  include_songs: []
+  exclude_songs: []
+
+Manual_Hatsune_Miku:
+  # THE the Manual!
+  # https://discord.com/channels/731205301247803413/1150904175144751194/1218734532065493033
+  #     This does NOT link to the apworld, but steps to create it from scratch.
+  #     To make connecting easier I override the world name to Manual_Hatsune_Miku.
+  # House rules: EX8.5 85%, EX9+ 80% or EX9+ > Hard 95%+
+  progression_balancing: random-low
+  accessibility: random
+  extra_locations: 100
+  music_sheets: random-range-low-80-100
+  song_total: 39
+  duplicate_songs: 0 # Eliminate progression confusion.
+  start_total: random-low
+  force_song: []
+  remove_song: []
+  force_goal: []
+  filler_traps: 0
+
+MegaMan Battle Network 3:
+  # https://archipelago.gg/tutorial/MegaMan%20Battle%20Network%203/setup/en
+  progression_balancing: random-low
+  accessibility: random
+  extra_ranks: 0
+  include_jobs: false
+  trade_quest_hinting: full
+
+Muse Dash:
+  # https://archipelago.gg/tutorial/Muse%20Dash/setup/en
+  # Every time I look there's an update that breaks EVERYTHING but the options are sound.
+  progression_balancing: 99
+  accessibility: minimal
+  allow_just_as_planned_dlc_songs: true
+  dlc_packs: ["Miku in Museland", "MSR Anthology"]
+  streamer_mode_enabled: false
+  starting_song_count: 3
+  additional_song_count: 40
+  additional_item_percentage: random
+  song_difficulty_mode: any
+  song_difficulty_min: 4
+  song_difficulty_max: 8
+  grade_needed: pinks
+  music_sheet_count_percentage: 20
+  music_sheet_win_count_percentage: 80
+  available_trap_types: all
+  trap_count_percentage: random
+  death_link: true
+  include_songs: ["39 Music!","Hand in Hand","Cynical Night Plan","God-ish","Darling Dance","Hatsune Creation Myth","The Vampire","Future Eve","Unknown Mother Goose"]
+  exclude_songs: []
+  #start_inventory: {"God-ish":1}
+
+Pokemon Crystal:
+  progression_balancing: random-low
+  accessibility: random
+  goal:
+    elite_four: 50
+    red: 0
+  johto_only: off # include_silver_cave = Red
+  elite_four_badges: 8
+  red_badges: 16
+  randomize_badges: completely_random
+  randomize_hidden_items: true
+  require_itemfinder: false
+  trainersanity: false
+  randomize_pokegear: true
+  randomize_berry_trees: true
+  randomize_starters: completely_random
+  randomize_wilds: true
+  normalize_encounter_rates: true
+  randomize_static_pokemon: true
+  randomize_trainer_parties: completely_random
+  randomize_learnsets: start_with_four_moves
+  randomize_tm_moves: true
+  tm_compatibility: 100
+  hm_compatibility: 100
+  randomize_base_stats: random
+  randomize_types: vanilla
+  randomize_palettes: random
+  randomize_music: true
+  early_fly:
+    false: 1
+    true: 4
+  free_fly_location:
+    off: 1
+    free_fly: 2
+    free_fly_and_map_card: 2
+  hm_badge_requirements:
+    # vanilla: HMs require their vanilla badges
+    # no_badges: HMs do not require a badge to use
+    # add_kanto: HMs can be used with the Johto or Kanto badge
+    vanilla: 1
+    no_badges: 0
+    add_kanto: 3
+  reusable_tms: true
+  guaranteed_catch: true
+  minimum_catch_rate: 255
+  blind_trainers: true
+  better_marts: true
+  experience_modifier: 50
+  phone_trap_weight: random
+  sleep_trap_weight: 0
+  poison_trap_weight: 0
+  burn_trap_weight: 0
+  freeze_trap_weight: 0
+  paralysis_trap_weight: 0
+  item_receive_sound: true
+  enable_mischief: true
+  exclude_locations:
+    - Radio Tower 1F - Grunt
+    - Radio Tower 2F - Grunt 1
+    - Radio Tower 2F - Grunt 2
+    - Radio Tower 2F - Grunt 3
+    - Radio Tower 2F - Grunt 4
+    - Union Cave B2F - Item 1
+    - Union Cave B2F - Item 2
+    - Union Cave B2F - Cool Trainer Emma
+    - Union Cave B2F - Cool Trainer Gwen
+    - Union Cave B2F - Cool Trainer Nick
+    - Fuchsia City - Berry Tree
+
+Pokemon Emerald:
+  # https://archipelago.gg/tutorial/Pokemon%20Emerald/setup/en
+  progression_balancing: random-low
+  accessibility: random
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+  goal:
+    champion: 50
+    steven: 0
+    norman: 0
+    legendary_hunt: 0
+  badges: completely_random
+  hms: completely_random
+  key_items: true
+  bikes: true
+  event_tickets: true
+  rods: true
+  overworld_items: true
+  hidden_items: true
+  npc_gifts: true
+  berry_trees: false
+  dexsanity: false
+  trainersanity: false
+  item_pool_type:
+    shuffled: 2
+    diverse_balanced: 1
+    diverse: 0
+  require_itemfinder: false
+  require_flash: neither
+  elite_four_requirement: badges
+  elite_four_count: 8
+  norman_requirement: badges
+  norman_count: 4
+  legendary_hunt_catch:
+    # Sets whether legendaries need to be caught to satisfy the Legendary Hunt win condition. Defeated legendaries can be respawned by defeating the Elite 4.
+    false: 50
+    true: 0
+  legendary_hunt_count:
+    # Sets the number of legendaries that must be caught/defeated for the Legendary Hunt goal
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 12
+    3: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  allowed_legendary_hunt_encounters:
+    # Sets which legendary encounters can contribute to the Legendary Hunt goal.
+    # Latios will always be the roamer. Latias will always be at Southern Island.
+    # Possible values are:
+    # "Groudon"
+    # "Kyogre"
+    # "Rayquaza"
+    # "Latios"
+    # "Latias"
+    # "Regirock"
+    # "Registeel"
+    # "Regice"
+    # "Ho-Oh"
+    # "Lugia"
+    # "Deoxys"
+    # "Mew"
+    ['Regirock', 'Deoxys', 'Kyogre', 'Lugia', 'Rayquaza', 'Ho-Oh', 'Mew', 'Latios', 'Latias', 'Groudon', 'Registeel', 'Regice']
+  wild_pokemon:
+    vanilla: 0
+    match_base_stats: 0
+    match_type: 0
+    match_base_stats_and_type: 0
+    completely_random: 1
+  wild_encounter_blacklist: [] # Use "_Legendaries" as a shortcut for legendary pokemon.
+  starters:
+    vanilla: 0
+    match_base_stats: 1
+    match_type: 1
+    match_base_stats_and_type: 1
+    completely_random: 7
+  starter_blacklist: [] # Use "_Legendaries" as a shortcut for legendary pokemon.
+  trainer_parties:
+    vanilla: 0
+    match_base_stats: 1
+    match_type: 1
+    match_base_stats_and_type: 1
+    completely_random: 4
+  trainer_party_blacklist:
+    # Prevents listed species from appearing in opponent trainers' parties if opponent parties are randomized.
+    # May be overridden if enforcing other restrictions in combination with this blacklist is impossible.
+    # Use "_Legendaries" as a shortcut for legendary pokemon.
+    []
+  force_fully_evolved: random-range-35-50
+  legendary_encounters: random
+  misc_pokemon: random
+  types: vanilla
+  abilities: follow_evolutions
+  ability_blacklist:
+    - Truant
+    - Wonder Guard
+    - Arena Trap
+    - Shadow Tag
+    - Magnet Pull
+  level_up_moves:
+    vanilla: 1
+    randomized: 2
+    start_with_four_moves: 2
+  move_match_type_bias:
+    # Sets the probability that a learned move will be forced match one of the types of a pokemon.
+    #
+    # If a move is not forced to match type, it will roll for Normal type bias.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  move_normal_type_bias:
+    # After it has been decided that a move will not be forced to match types, sets the probability that a learned move
+    # will be forced to be the Normal type.
+    #
+    # If a move is not forced to be Normal, it will be completely random.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  tm_tutor_compatibility: random
+  hm_compatibility: 100
+  tm_tutor_moves: true
+  reusable_tms_tutors: true
+  move_blacklist: []
+  min_catch_rate: 3
+  guaranteed_catch: true
+  normalize_encounter_rates: true
+  exp_modifier: 300
+  blind_trainers: true
+  purge_spinners: false
+  match_trainer_levels:
+    # When you start a battle with a trainer, your party's levels will be automatically set to match that trainer's highest level pokemon.
+    # The experience you receive will match your party's average actual level, and will only be awarded when you win the battle.
+    # This is a pseudo-replacement for a level cap and makes every trainer battle a fair fight while still allowing you to level up.
+    # Off: The vanilla experience
+    # Additive: The modifier you apply to your team is a flat bonus
+    # Multiplicative: The modifier you apply to your team is a percent bonus
+    off: 50
+    additive: 0
+    multiplicative: 0
+  match_trainer_levels_bonus:
+    # A level bonus (or penalty) to apply to your team when matching an opponent's levels.
+    # When the match trainer levels option is "additive", this value is added to your team's levels during a battle.
+    # For example, if this value is 5 (+5 levels), you'll have a level 25 team against a level 20 team, and a level 45 team against a level 40 team.
+    # When the match trainer levels option is "multiplicative", this is a percent bonus.
+    # For example, if this value is 5 (+5%), you'll have a level 21 team against a level 20 team, and a level 42 team against a level 40 team.
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is -100
+    # Maximum value is 100
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+  double_battle_chance: 0
+  better_shops: true
+  remove_roadblocks: []
+    # Removes specific NPCs that normally stand in your way until certain events are completed.
+    # This can open up the world a bit and make your playthrough less linear, but careful how many you remove; it may make too much of your world accessible upon receiving Surf.
+    # Possible values are:
+    #- Route 110 Aqua Grunts
+    #- Route 112 Magma Grunts
+    #- Route 119 Aqua Grunts
+    #- Safari Zone Construction Workers
+    #- Lilycove City Wailmer
+    #- Aqua Hideout Grunts
+    #- Seafloor Cavern Aqua Grunt
+  extra_boulders: random
+  extra_bumpy_slope: random
+  modify_118: random
+  free_fly_location: random
+  hm_requirements: random
+  turbo_a: true
+  receive_item_messages: progression
+  remote_items: true
+  music: true
+  fanfares: true
+  death_link: true
+  enable_wonder_trading: true
+  easter_egg:
+    # Enter certain phrases and something special might happen.
+    # All secret phrases are something that could be a trendy phrase in Dewford Town. They are case insensitive.
+    EMERALD SECRET: 50
+
+Pokemon FireRed and LeafGreen:
+  # Alpha 0.1.0
+  progression_balancing: random-low
+  accessibility: random
+  game_version: random
+  shuffle_badges: true
+  shuffle_hidden: nonrecurring
+  extra_key_items: true
+  itemfinder_required: logic
+  flash_required: true
+  #remove_badge_requirement
+  oaks_aide_route_2: 5
+  oaks_aide_route_10: 10
+  oaks_aide_route_11: 15
+  oaks_aide_route_16: 20
+  oaks_aide_route_15: 25
+  viridian_city_roadblock:
+    vanilla: 3
+    early_parcel: 6
+    open: 1
+  pewter_city_roadblock:
+    # Sets the requirement for passing the Pewter City Roadblock.
+    #
+    # - Open: The boy will not stop you from entering Route 3.
+    # - Brock: The boy will stop you from entering Route 3 until you defeat Brock.
+    # - Any Gym Leader: The boy will stop you from entering Route 3 until you defeat any Gym Leader.
+    # - Boulder Badge: The boy will stop you from entering Route 3 until you have the Boulder Badge.
+    # - Any Badge: The boy will stop you from entering Route 3 until you have a Badge.
+    open: 1
+    brock: 1
+    any_gym: 1
+    boulder_badge: 1
+    any_badge: 1
+  cerulean_city_roadblocks:
+    false: 1
+    true: 4
+  viridian_gym_requirement:
+    badges: 3
+    gyms: 2
+  viridian_gym_count: random
+  route22_gate_requirement:
+    badges: 3
+    gyms: 2
+  route22_gate_count: random-high
+  route23_guard_requirement:
+    badges: 3
+    gyms: 2
+  route23_guard_count: random-high
+  elite_four_requirement:
+    badges: 3
+    gyms: 2
+  elite_four_count: 8
+  cerulean_cave_requirement:
+    vanilla: 0
+    champion: 0
+    restore_network: 1
+    badges: 1
+    gyms: 1
+  cerulean_cave_count: random-middle
+  level_scaling: true
+  #modify_trainer_levels
+  wild_pokemon:
+    vanilla: 0
+    match_base_stats: 1
+    match_type: 1
+    match_base_stats_and_type: 1
+    completely_random: 7
+  wild_pokemon_groups: random
+  starters:
+    vanilla: 0
+    match_base_stats: 1
+    match_type: 1
+    match_base_stats_and_type: 1
+    completely_random: 5
+  trainers:
+    vanilla: 0
+    match_base_stats: 1
+    match_type: 1
+    match_base_stats_and_type: 1
+    completely_random: 5
+  #trainer_blacklist
+  legendary_pokemon:
+    vanilla: 0
+    match_base_stats: 1
+    match_type: 1
+    match_base_stats_and_type: 1
+    completely_random: 5
+  misc_pokemon:
+    vanilla: 0
+    match_base_stats: 1
+    match_type: 1
+    match_base_stats_and_type: 1
+    completely_random: 3
+  types: vanilla
+  abilities: follow_evolutions
+  ability_blacklist:
+    - Truant
+    - Wonder Guard
+    - Arena Trap
+    - Shadow Tag
+    - Magnet Pull
+  moves:
+    vanilla: 1
+    randomized: 2
+    start_with_four_moves: 2
+  #move_blacklist
+  hm_compatability: full
+  tm_tutor_compatability: random
+  tm_tutor_moves: true
+  reusable_tm_tutors: true
+  min_catch_rate: 255
+  guaranteed_catch: true
+  exp_modifier: 225
+  blind_trainers: true
+  better_shops: true
+  free_fly_location: exclude_indigo
+  turbo_a: true
+  receive_item_messages: progression
+
+Pokemon Red and Blue:
+  # https://archipelago.gg/tutorial/Pokemon%20Red%20and%20Blue/setup/en
+  progression_balancing: random-low
+  accessibility: random
+  game_version: random
+  trainer_name: I
+  rival_name: U
+  elite_four_badges_condition: 8
+  elite_four_key_items_condition: 0
+  elite_four_pokedex_condition: 0
+  victory_road_condition: random
+  route_22_gate_condition: random
+  viridian_gym_condition: random
+  cerulean_cave_badges_condition: random
+  cerulean_cave_key_items_condition: random
+  route_3_condition: random
+  robbed_house_officer: random
+  second_fossil_check_condition: 3
+  fossil_check_item_types: any
+  exp_all: remove
+  old_man: early_parcel
+  badgesanity: true
+  badges_needed_for_hm_moves: on
+  key_items_only: false
+  tea: random
+  extra_key_items: false
+  split_card_key: off
+  all_elevators_locked: true
+  extra_strength_boulders: random
+  require_item_finder: false
+  randomize_hidden_items: off
+  prizesanity: false
+  trainersanity: false
+  dexsanity: 0
+  randomize_pokedex: vanilla
+  require_pokedex: true
+  all_pokemon_seen: true
+  oaks_aide_rt_2: 5
+  oaks_aide_rt_11: 10
+  oaks_aide_rt_15: 15
+  stonesanity: false
+  door_shuffle: simple
+  warp_tile_shuffle: false
+  randomize_rock_tunnel: false
+  dark_rock_tunnel_logic: true
+  free_fly_location: random
+  town_map_fly_location: false
+  blind_trainers: 20
+  minimum_steps_between_encounters: 6
+  level_scaling: by_spheres
+  exp_modifier: 20
+  randomize_wild_pokemon: completely_random
+  area_1_to_1_mapping: false
+  randomize_starter_pokemon: completely_random
+  randomize_static_pokemon: completely_random
+  randomize_legendary_pokemon: any
+  catch_em_all: off
+  randomize_pokemon_stats: vanilla
+  randomize_pokemon_catch_rates: false
+  minimum_catch_rate: 255
+  randomize_trainer_parties: completely_random
+  trainer_legendaries: true
+  move_balancing: false
+  fix_combat_bugs: true
+  randomize_pokemon_movesets: completely_random
+  confine_transform_to_ditto: true
+  start_with_four_moves: true
+  same_type_attack_bonus: true
+  randomize_tm_moves: true
+  tm_same_type_compatibility: -1
+  tm_normal_type_compatibility: -1
+  tm_other_type_compatibility: -1
+  hm_same_type_compatibility: 100
+  hm_normal_type_compatibility: 100
+  hm_other_type_compatibility: 100
+  inherit_tm_hm_compatibility: false
+  randomize_move_types: false
+  randomize_pokemon_types: vanilla
+  secondary_type_chance: -1
+  randomize_type_chart: vanilla
+  normal_matchups: 143
+  super_effective_matchups: 38
+  not_very_effective_matchups: 38
+  immunity_matchups: 6
+  safari_zone_normal_battles: false
+  normalize_encounter_chances: false
+  reusable_tms: false
+  better_shops: on
+  master_ball_price: 0
+  starting_money: 3069
+  lose_money_on_blackout: false
+  poke_doll_skip: patched
+  bicycle_gate_skips: patched
+  trap_percentage: 10
+  poison_trap_weight: medium
+  fire_trap_weight: medium
+  paralyze_trap_weight: medium
+  sleep_trap_weight: medium
+  ice_trap_weight: disabled
+  randomize_pokemon_palettes: completely_random
+  death_link: true
+
+Super Mario 64:
+  # https://archipelago.gg/tutorial/Super%20Mario%2064/setup/en
+  progression_balancing: random-low
+  accessibility: random
+  area_rando: courses_only
+  buddy_checks: false
+  exclamation_boxes: 1ups_only
+  progressive_keys: random
+  enable_coin_stars: false
+  enable_move_rando: false
+  move_rando_actions:
+    - Triple Jump
+    - Long Jump
+    - Backflip
+    - Side Flip
+    - Wall Kick
+    - Dive
+    - Ground Pound
+    - Kick
+    - Climb
+    - Ledge Grab
+  strict_cap_requirements: true
+  strict_cannon_requirements: true
+  strict_move_requirements: true
+  amount_of_stars: 120
+  first_bowser_star_door_cost: 0
+  basement_star_door_cost: 30
+  second_floor_star_door_cost: 50
+  mips1_cost: 15
+  mips2_cost: 50
+  stars_to_finish: 70
+  completion_type: last_bowser_stage
+
+Super Mario World:
+  # https://archipelago.gg/tutorial/Super%20Mario%20World/setup/en
+  progression_balancing: random-middle
+  accessibility: random
+  goal: bowser
+  bosses_required: 7
+  max_yoshi_egg_cap: 50
+  percentage_of_yoshi_eggs: 100
+  dragon_coin_checks: true
+  moon_checks: true
+  hidden_1up_checks: false # "Cryptic"/Risky according to description
+  bonus_block_checks: true # 1Ups from Green ☆ blocks, req. 30 coins?
+  blocksanity: false # Item/coin blocks. Async is back baby!
+  bowser_castle_doors:
+    vanilla: 3
+    fast: 2
+    slow: 0
+  bowser_castle_rooms: random_two_room
+  level_shuffle: true
+  exclude_special_zone: true
+  boss_shuffle: random
+  swap_donut_gh_exits: random
+  display_received_item_popups: progression_minus_yoshi_eggs
+  junk_fill_percentage: 0
+  trap_fill_percentage: 0
+  ice_trap_weight: medium
+  stun_trap_weight: medium
+  literature_trap_weight: medium
+  timer_trap_weight: medium
+  reverse_trap_weight: medium
+  thwimp_trap_weight: medium
+  autosave: true
+  early_climb: true
+  overworld_speed: fast
+  music_shuffle: consistent
+  sfx_shuffle: none
+  mario_palette: random
+  level_palette_shuffle:
+    'off': 1
+    on_legacy: 4
+    on_curated: 5
+  overworld_palette_shuffle:
+    'off': 1
+    on_legacy: 4
+    on_curated: 5
+  starting_life_count: 69
+
+Super Metroid:
+  # https://archipelago.gg/tutorial/Super%20Metroid/multiworld/en
+  progression_balancing: 50
+  accessibility: items
+  start_inventory_removes_from_pool: false
+  preset: regular
+  start_location: landing_site
+  remote_items: true
+  #death_link: disable
+  max_difficulty: easy
+  morph_placement: early
+  hide_items: false
+  strict_minors: false
+  missile_qty: 30
+  super_qty: 20
+  power_bomb_qty: 10
+  minor_qty: 100
+  energy_qty: vanilla
+  area_randomization: off
+  area_layout: false
+  doors_colors_rando: false
+  allow_grey_doors: false
+  boss_randomization: false
+  escape_rando: false
+  remove_escape_enemies: false
+  fun_combat: false
+  fun_movement: false
+  fun_suits: false
+  layout_patches: true
+  varia_tweaks: false
+  nerfed_charge: false
+  gravity_behaviour: balanced
+  elevators_speed: true
+  fast_doors: true
+  spin_jump_restart: false
+  rando_speed: false
+  infinite_space_jump: false
+  refill_before_save: true
+  hud: true
+  animals: false
+  no_music: false
+  random_music: false
+  tourian: vanilla
+  custom_objective: false
+  custom_objective_list:
+    - random
+  custom_objective_count: 4
+  objective:
+    - kill all G4
+  relaxed_round_robin_cf: false
+
+VVVVVV:
+  # https://archipelago.gg/tutorial/VVVVVV/setup/en
+  # tldr mod + -v6ap_name slotName -v6ap_ip server:port
+  progression_balancing: random-low
+  accessibility: random
+  MusicRandomizer: true
+  AreaRandomizer: false # Painful.
+  DoorCost: random
+  AreaCostRandomizer: random
+  death_link: true
+  DeathLinkAmnesty: 30
+
+Yacht Dice:
+  # https://yacht-dice-ap.netlify.app/
+  # Stock-ish settings until a few plays.
+  progression_balancing: random-low
+  accessibility: random
+  game_difficulty:
+    medium: 1
+    hard: 2
+  score_for_last_check: 1000
+  score_for_goal: 777
+  minimal_number_of_dice_and_rolls: 5_dice_and_3_rolls
+  number_of_dice_fragments_per_dice: 4
+  number_of_roll_fragments_per_roll: 4
+  alternative_categories: 1
+  allow_manual_input: yes_allow
+  weight_of_dice: 5
+  weight_of_roll: 20
+  weight_of_fixed_score_multiplier: 30
+  weight_of_step_score_multiplier: 0
+  weight_of_double_category: 50
+  weight_of_points: 20
+  points_size: medium
+  minimize_extra_items: no_dont
+  add_bonus_points: sure
+  add_story_chapters: sure
+  which_story: random_story
+
+Yu-Gi-Oh! 2006:
+  # https://archipelago.gg/games/Yu-Gi-Oh!%202006/player-options
+  # Currently just the default generation options with a few tweaks
+  progression_balancing: random-low
+  accessibility: random
+  structure_deck:
+    none: 1
+    random_deck: 1
+  banlist: september_2005
+  final_campaign_boss_unlock_condition: campaign_opponents
+  fourth_tier_5_campaign_boss_unlock_condition: campaign_opponents
+  third_tier_5_campaign_boss_unlock_condition: campaign_opponents
+  final_campaign_boss_challenges: 10
+  fourth_tier_5_campaign_boss_challenges: 5
+  third_tier_5_campaign_boss_challenges: 2
+  final_campaign_boss_campaign_opponents: 12
+  fourth_tier_5_campaign_boss_campaign_opponents: 7
+  third_tier_5_campaign_boss_campaign_opponents: 3
+  number_of_challenges: 20
+  starting_money: 3000
+  money_reward_multiplier: 20
+  normalize_boosters_packs: true
+  booster_pack_prices: 100
+  add_empty_banlist: true
+  campaign_opponents_shuffle:
+    true: 3
+    false: 1
+  ocg_arts: false
+  start_inventory: {}
+
+Yu-Gi-Oh! Forbidden Memories:
+  # BizHawk client + lua connector
+  progression_balancing: random-low
+  accessibility: random
+  duelist_progression: random
+  local_starchips: false
+  final6_progression: fixed
+  final6_sequence: first_5_shuffled
+  atec_logic:
+    # "Off" means you'll never be expected to do an ATec for progression.
+    # "Pegasus Only" means only Pegasus's SATec pool is in logic.
+    # "Hundo ATecs" means that ATecs are in logic for the duelists typically ATec'd during a Hundo run, specifically:
+    # Pegasus, Kaiba, Mage Soldier, Meadow Mage, and NiteMare.
+    # "All" means all duelists' SATec pools are in logic.
+    #
+    # Regardless of your choice, you will never be expected to do an ATec until you have access to a duelist who drops a
+    # trap card of equal strength or stronger than the trap speicified by your "Weakest Trap for ATecs" setting.
+    off: 0
+    pegasus_only: 1
+    hundo_atecs: 0
+    all: 0
+  atec_trap:
+    # The weakest (i.e. lowest mox Life Point activation) trap card with which you can be expected to ATec a duelist.
+    # ATecs will be in logic as soon as you have access to a duelist who drops this card or a stronger trap card,
+    # excluding their SATec drop pool. Your other ATec settings are still respected.
+    #
+    # Note that Fake Trap puts ATecs in logic right from the start since it drops off of Simon Muran and Simon Muran is
+    # always unlocked.
+    acid_trap_hole: 50
+    invisible_wire: 0
+    fake_trap: 0
+  drop_rate_logic: 64
+  death_link: false
