@@ -56,7 +56,7 @@ jobs:
 
       # do we generate single multiworlds or multi single worlds?
       # ~13s to gen a 16 game multi with sync settings. private repos are limited to 2 threads, public 4.
-      - name: Archipelago - Test singles
+      - name: Archipelago - Sync - Singles multi
         run: |
           cp $GITHUB_WORKSPACE/games/sync/*.yaml /tmp/Archipelago/Players
           IFS=$'\n'
@@ -65,14 +65,29 @@ jobs:
             NAME=${NAME%.yaml}
             echo -e "name: Player{number}\ngame: ${NAME}\n$(cat $file)" > "$file"
           done
-          /tmp/Archipelago/ArchipelagoGenerate --race --skip_prog_balancing --skip_output 
-          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --race --skip_prog_balancing --skip_output ::: {1..9}
+          /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output
 
-      # TODO: Async/triggers
+      # fuzz a bit. over time this will shake out errors, if any.
+      - name: Archipelago - Sync - Singles multi (Fuzz)
+        run: |
+          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..4}
+
+      - name: Archipelago - Async/Triggers - Prepare
+        run: |
+          for file in /tmp/Archipelago/Players/*.yaml; do
+            cat $GITHUB_WORKSPACE/games/triggers.yaml >> "$file"
+          done
+          sed -i -e 's|async:.*|async: true|' /tmp/Archipelago/Players/*.yaml
+
+      - name: Archipelago - Async/Triggers - Multi
+        run: /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output
+
+      - name: Archipelago - Async/Triggers - Multi (Fuzz)
+        run: parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..4}
 
       - name: Concat YAML
         run: |
-          YAML_OUT=$(cat $GITHUB_WORKSPACE/games/header.yaml $GITHUB_WORKSPACE/games/sync/*.yaml)
+          YAML_OUT=$(cat $GITHUB_WORKSPACE/games/header.yaml $GITHUB_WORKSPACE/games/sync/*.yaml $GITHUB_WORKSPACE/games/triggers.yaml)
           echo "$YAML_OUT" > "$GITHUB_WORKSPACE/RePod.yaml"
 
       - name: YQ - Sanity check concat YAML

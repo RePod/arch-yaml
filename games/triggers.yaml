@@ -1,0 +1,192 @@
+triggers:
+  # Game defaults should be for SYNC. Triggers will set ASYNC options.
+  # Consider weighting devastating options in case a game is rolled multiple times.
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      null:
+        per_game_name: true
+      #A Hat in Time:
+      Hatsune Miku Project Diva Mega Mix+:
+        accessibility: minimal
+        # base + dlc songs = 251 - goal song = 250 songs / 500 checks
+        starting_song_count: 10
+        additional_song_count: 242
+        # 31 & 51 = 39/78 (+22 dupe slots)
+        leek_count_percentage: 40 # 10-40 / 500*0.4 = 100, higher = less slots for dupes
+        leek_win_count_percentage: 69 # 50-100
+      Manual_Hatsune_Miku:
+        accessibility: minimal
+        music_sheets: 60
+        song_total: 400
+      MegaMan Battle Network 3:
+        include_jobs:
+          false: 1
+          true: 3
+        #trade_quest_hinting: none
+      Pokemon Crystal:
+        randomize_berry_trees: true
+        trainersanity:
+          false: 2
+          true: 3
+        goal: red
+      Pokemon Emerald:
+        # Ever hit a 0.8% by rolling 3 Dex+Trainersanity Emeralds?
+        # Grinding and breeding are OoL
+        berry_trees: true
+        dexsanity:
+          false: 2
+          true: 3
+        trainersanity:
+          false: 2
+          true: 3
+        #exp_modifier: 1000
+        #match_trainer_levels: multiplicative
+        #match_trainer_levels_bonus: 25
+        goal: steven
+      Pokemon FireRed and LeafGreen:
+          trainersanity: true
+          oaks_aide_route_2: 10
+          oaks_aide_route_10: 20
+          oaks_aide_route_11: 30
+          oaks_aide_route_16: 40
+          oaks_aide_route_15: 50
+          shuffle_hidden: all
+      Pokemon Red and Blue:
+        rival_name: FNSHING
+      Super Mario 64:
+        area_rando: courses_and_secrets
+        buddy_checks: true
+        exclamation_boxes: 1ups_only
+        progressive_keys: true
+        enable_coin_stars: false
+        enable_move_rando: true
+        strict_cap_requirements: true
+        strict_cannon_requirements: true
+        strict_move_requirements: true
+        amount_of_stars: 120
+        stars_to_finish: random-range-mid-70-90
+        completion_type: all_bowser_stages
+        death_link: true
+      Super Mario World:
+        death_link: true
+        moon_checks: true
+        exclude_special_zone:
+            false: 3
+            true: 1
+        hidden_1up_checks: true
+        bonus_block_checks: true
+        blocksanity: true
+        bosses_required: random-range-low-7-11 # please not 11 please not 11
+      Yu-Gi-Oh! 2006:
+          # No way to tell what was picked without doing them.
+          final_campaign_boss_unlock_condition:
+            campaign_opponents: 3
+            challenges: 1
+          fourth_tier_5_campaign_boss_unlock_condition:
+            campaign_opponents: 3
+            challenges: 1
+          third_tier_5_campaign_boss_unlock_condition:
+            campaign_opponents: 3
+            challenges: 1
+          # _challenges are 0-91
+          # might want to range these
+          final_campaign_boss_challenges: 39
+          fourth_tier_5_campaign_boss_challenges: 26
+          third_tier_5_campaign_boss_challenges: 13
+          # _opponents is 0-24 - (final/4th/3rd 0/1/2)
+          final_campaign_boss_campaign_opponents: 18
+          fourth_tier_5_campaign_boss_campaign_opponents: 13
+          third_tier_5_campaign_boss_campaign_opponents: 8
+          # 0-91 challenges, imbalanced with above may result in a fast/easier game
+          # 74 base + 91 challenges = 165 checks
+          number_of_challenges: 91
+      Yu-Gi-Oh! Forbidden Memories:
+        atec_logic:
+          pegasus_only: 4
+          hundo_atecs: 1
+        final6_progression:
+          shuffled: 1
+          all_6_shuffled: 0
+        drop_rate_logic: random-range-low-0-40
+        death_link: true
+
+  # I don't think there's a better way to do this to keep the async trigger standalone.
+  # Must resist ReSuffix and PrefixPod. Minifying these breaks generation.
+  - option_name: game
+    option_result: A Hat in Time
+    options:
+      null:
+        name: RePodHIT{NUMBER}
+  - option_name: game
+    option_result: Hatsune Miku Project Diva Mega Mix+
+    options:
+      null:
+        name: RePodMiku{NUMBER}
+  - option_name: game
+    option_result: Manual_Hatsune_Miku
+    options:
+      null:
+        name: RePodMiku{NUMBER}
+  - option_name: game
+    option_result: MegaMan Battle Network 3
+    options:
+      null:
+        name: RePodBN3{NUMBER}
+  - option_name: game
+    option_result: Pokemon Crystal
+    options:
+      null:
+        name: RePodCRY{NUMBER}
+  - option_name: game
+    option_result: Pokemon Emerald
+    options:
+      null:
+        name: RePodEM{NUMBER}
+  - option_name: game
+    option_result: Pokemon FireRed and LeafGreen
+    options:
+      null:
+        name: RePodRG{NUMBER}
+  - option_name: game
+    option_result: Pokemon Red and Blue
+    options:
+      null:
+        name: RePodRB{NUMBER}
+  - option_name: game
+    option_result: Super Mario 64
+    options:
+      null:
+        name: RePodSM64{NUMBER}
+  - option_name: game
+    option_result: Super Mario World
+    options:
+      null:
+        name: RePodSMW{NUMBER}
+  - option_name: game
+    option_result: VVVVVV
+    options:
+      null:
+        name: RePodV6{NUMBER}
+  - option_name: game
+    option_result: Yacht Dice
+    options:
+      null:
+        name: RePodice{NUMBER}
+  - option_name: game
+    option_result: Yu-Gi-Oh! 2006
+    options:
+      null:
+        name: RePod06{NUMBER}
+  - option_name: game
+    option_result: Yu-Gi-Oh! Forbidden Memories
+    options:
+      null:
+        name: RePodFM{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
+
