@@ -47,9 +47,9 @@ jobs:
         
       - name: Setup Archipelago
         run: |
-          wget https://github.com/ArchipelagoMW/Archipelago/releases/download/0.5.0/Archipelago_0.5.0_linux-x86_64.tar.gz
-          tar xvzf Archipelago*.tar.gz
-          ls Archipelago
+          wget -P "/tmp" https://github.com/ArchipelagoMW/Archipelago/releases/download/0.5.0/Archipelago_0.5.0_linux-x86_64.tar.gz
+          tar xzf /tmp/Archipelago*.tar.gz -C /tmp/Archipelago
+          ls /tmp/Archipelago
 
       - name: Commit & Push
         id: Commit
