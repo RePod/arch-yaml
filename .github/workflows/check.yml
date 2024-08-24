@@ -57,6 +57,7 @@ jobs:
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/AliceMousie/Archipelago/releases/download/2.1.2/pokemon_crystal.apworld
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/vyneras/Archipelago/releases/download/0.5.3-beta/pokemon_frlg.apworld
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/sg4e/Archipelago/releases/download/v2.1.0/fm.apworld
+          wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/spinerak/ArchipelagoYachtDice/releases/download/v2.1.1/yachtdice.apworld
 
       # do we generate single multiworlds or multi single worlds?
       - name: Archipelago - Test singles
