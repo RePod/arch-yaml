@@ -32,7 +32,7 @@ jobs:
         run: sudo snap install yq
      
       # yq: just as bad as snap. pick a fork, pick a version!
-      - name: YQ: Sanity check single YAMLs
+      - name: YQ - Sanity check single YAMLs
         run: find games/sync/ -type f -name "*.yaml" -print0 | xargs -0 yq -P > /dev/null
         
       #- name: Prepare Archipelago and validator
@@ -42,7 +42,7 @@ jobs:
           YAML_OUT=$(cat $GITHUB_WORKSPACE/games/header.yaml $GITHUB_WORKSPACE/games/sync/*.yaml)
           echo "$YAML_OUT" > "$GITHUB_WORKSPACE/RePod.yaml"
           
-      - name: YQ: Sanity check concat YAML
+      - name: YQ - Sanity check concat YAML
         run: yq -P "$GITHUB_WORKSPACE/RePod.yaml" > /dev/null
         
       - name: Setup Archipelago
