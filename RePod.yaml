@@ -130,8 +130,13 @@ Muse Dash:
   # Every time I look there's an update that breaks EVERYTHING but the options are sound.
   progression_balancing: 99
   accessibility: minimal
-  allow_just_as_planned_dlc_songs: true
-  dlc_packs: ["Miku in Museland", "MSR Anthology"]
+  dlc_packs:
+    - maimai DX Limited-time Suite
+    - Rin Len's Mirrorland
+    - CHUNITHM COURSE MUSE
+    - MSR Anthology
+    - Muse Plus
+    - Miku in Museland
   streamer_mode_enabled: false
   starting_song_count: 3
   additional_song_count: 40
@@ -142,8 +147,7 @@ Muse Dash:
   grade_needed: pinks
   music_sheet_count_percentage: 20
   music_sheet_win_count_percentage: 80
-  available_trap_types: all
-  trap_count_percentage: random
+  trap_count_percentage: 35
   death_link: true
   include_songs: ["39 Music!","Hand in Hand","Cynical Night Plan","God-ish","Darling Dance","Hatsune Creation Myth","The Vampire","Future Eve","Unknown Mother Goose"]
   exclude_songs: []
