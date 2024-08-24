@@ -53,7 +53,7 @@ jobs:
         run: |
           cp $GITHUB_WORKSPACE/games/sync/*.yaml /tmp/Archipelago/Players
           IFS=$'\n'
-          for file in ./Players/*.yaml; do
+          for file in /tmp/Archipelago/Players/*.yaml; do
             NAME=$(basename "$file")
             NAME=${NAME%.yaml}
             echo -e "name: Player{number}\ngame: ${NAME}\n$(cat $file)" > "$file"
