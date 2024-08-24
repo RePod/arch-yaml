@@ -30,14 +30,17 @@ jobs:
       
       - name: Prepare env
         run: sudo snap install yq
+        
+      - name: Validate singles
+        run: find games/sync/ -type f -name "*.yaml" -exec yq v "{}" ';'
 
       - name: Concat YAML
         run: |
           YAML_OUT=$(cat $GITHUB_WORKSPACE/games/header.yaml $GITHUB_WORKSPACE/games/sync/*.yaml)
           echo "$YAML_OUT" > "$GITHUB_WORKSPACE/RePod.yaml"
           
-      - name: Validate YAML
-        run: yq validate "$GITHUB_WORKSPACE/RePod.yaml"
+      - name: Validate concat YAML
+        run: yq v "$GITHUB_WORKSPACE/RePod.yaml"
 
       - name: Commit & Push
         id: Commit
