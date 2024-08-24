@@ -3,10 +3,10 @@ VVVVVV:
   # tldr mod + -v6ap_name slotName -v6ap_ip server:port
   progression_balancing: random-low
   accessibility: random
-  MusicRandomizer: true
-  AreaRandomizer: false # Painful.
-  DoorCost: random
-  AreaCostRandomizer: random
+  music_rando: true
+  area_rando: false # Painful.
+  door_cost: random
+  area_cost: random
   death_link: true
-  DeathLinkAmnesty: 30
+  death_link_amnesty: 30
 

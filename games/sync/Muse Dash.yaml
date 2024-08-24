@@ -13,7 +13,6 @@ Muse Dash:
   streamer_mode_enabled: false
   starting_song_count: 3
   additional_song_count: 40
-  additional_item_percentage: random
   song_difficulty_mode: any
   song_difficulty_min: 4
   song_difficulty_max: 8
