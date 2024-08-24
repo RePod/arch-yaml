@@ -29,8 +29,7 @@ jobs:
       #  run:
       
       - name: Prepare env
-      - run: |
-          sudo apt install yq -y
+      - run: sudo apt install -y yq
 
       - name: Concat YAML
         run: |
