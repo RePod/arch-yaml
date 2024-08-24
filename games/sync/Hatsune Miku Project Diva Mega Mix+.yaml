@@ -10,7 +10,7 @@ Hatsune Miku Project Diva Mega Mix+:
   song_difficulty_max: exextreme
   song_difficulty_rating: manual
   song_difficulty_rating_min: six
-  song_difficulty_rating_max nine
+  song_difficulty_rating_max: nine
   grade_needed: great
   leek_count_percentage: 40
   leek_win_count_percentage: random-range-mid-70-90
