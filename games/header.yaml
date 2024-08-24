@@ -1,0 +1,10 @@
+# Ideally the same as the per_game_name:false trigger.
+name: RePod{NUMBER}
+description: "The final player name may change based on settings/triggers."
+
+# See triggers at the bottom. when plando?
+async: false
+
+# Override name based on the game as defined by triggers. async:true forces true.
+per_game_name: true
+
