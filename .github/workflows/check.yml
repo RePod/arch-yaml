@@ -45,11 +45,14 @@ jobs:
       - name: YQ - Sanity check concat YAML
         run: yq -P "$GITHUB_WORKSPACE/RePod.yaml" > /dev/null
         
-      - name: Setup Archipelago
+      - name: Archipelago - Setup
         run: |
-          wget -P "/tmp" https://github.com/ArchipelagoMW/Archipelago/releases/download/0.5.0/Archipelago_0.5.0_linux-x86_64.tar.gz
+          wget -nv -P "/tmp" https://github.com/ArchipelagoMW/Archipelago/releases/download/0.5.0/Archipelago_0.5.0_linux-x86_64.tar.gz
+          mkdir /tmp/Archipelago
           tar xzf /tmp/Archipelago*.tar.gz -C /tmp/Archipelago
           ls /tmp/Archipelago
+          
+      #- name: Archipelago - Custom Worlds
 
       - name: Commit & Push
         id: Commit
