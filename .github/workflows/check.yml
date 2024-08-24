@@ -51,7 +51,7 @@ jobs:
           mkdir /tmp/Archipelago
           tar xzf /tmp/Archipelago*.tar.gz -C /tmp/
           chmod +x /tmp/Archipelago/ArchipelagoGenerate
-          sh /tmp/Archipelago/ArchipelagoGenerate
+          /tmp/Archipelago/ArchipelagoGenerate
           
       #- name: Archipelago - Custom Worlds
 
