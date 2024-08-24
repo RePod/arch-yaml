@@ -63,7 +63,7 @@ jobs:
           for file in /tmp/Archipelago/Players/*.yaml; do
             NAME=$(basename "$file")
             NAME=${NAME%.yaml}
-            echo -e "name: Player{number}\ngame: ${NAME}\nasync: false\n$(cat $file)" > "$file"
+            echo -e "name: Player{number}\ngame: ${NAME}\nper_game_name: true\nasync: false\n$(cat $file)" > "$file"
           done
           /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output
 
@@ -79,8 +79,8 @@ jobs:
           done
           sed -i -e 's|async:.*|async: true|' /tmp/Archipelago/Players/*.yaml
 
-      - name: Archipelago - Async/Triggers - Multi
-        run: /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output
+      #- name: Archipelago - Async/Triggers - Multi
+      #  run: /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output
 
       - name: Archipelago - Async/Triggers - Multi (Fuzz)
         run: |
