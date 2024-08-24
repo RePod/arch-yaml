@@ -3,8 +3,10 @@ Muse Dash:
   # Every time I look there's an update that breaks EVERYTHING but the options are sound.
   progression_balancing: 99
   accessibility: minimal
-  allow_just_as_planned_dlc_songs: true
-  dlc_packs: ["Miku in Museland", "MSR Anthology"]
+  dlc_packs:
+    - Just As Planned
+    - Miku in Museland
+    - MSR Anthology
   streamer_mode_enabled: false
   starting_song_count: 3
   additional_song_count: 40
