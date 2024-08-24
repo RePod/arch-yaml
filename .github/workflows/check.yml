@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo $(cat $GITHUB_WORKSPACE/games/header.yaml $GITHUB_WORKSPACE/games/sync/*.yaml) \
+        run: echo "$(cat $GITHUB_WORKSPACE/games/header.yaml $GITHUB_WORKSPACE/games/sync/*.yaml)" \
             > $GITHUB_WORKSPACE/RePod.yaml
 
       # Runs a set of commands using the runners shell
