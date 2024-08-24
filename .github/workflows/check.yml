@@ -50,7 +50,8 @@ jobs:
           wget -nv -P "/tmp" https://github.com/ArchipelagoMW/Archipelago/releases/download/0.5.0/Archipelago_0.5.0_linux-x86_64.tar.gz
           mkdir /tmp/Archipelago
           tar xzf /tmp/Archipelago*.tar.gz -C /tmp/
-          ls /tmp/Archipelago
+          chmod +x /tmp/Archipelago/ArchipelagoGenerate
+          sh /tmp/Archipelago/ArchipelagoGenerate
           
       #- name: Archipelago - Custom Worlds
 
