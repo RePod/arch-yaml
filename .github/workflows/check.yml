@@ -30,9 +30,12 @@ jobs:
       
       - name: Prepare env
         run: sudo snap install yq
-        
+     
+      # yq: just as bad as snap. pick a fork, pick a version!
       - name: Validate singles
-        run: find games/sync/ -type f -name "*.yaml" -exec yq v "{}" ';'
+        run: find games/sync/ -type f -name "*.yaml" -exec yq -P {} ';' > /dev/null
+        
+      #- name: Prepare Archipelago and validator
 
       - name: Concat YAML
         run: |
