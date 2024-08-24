@@ -50,7 +50,7 @@ jobs:
       - name: Archipelago - Install Custom Worlds
         run: |
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/Cynichill/DivaAPworld/releases/download/1.0.2B/megamix.apworld
-          mkdir /tmp/Archipelago/diva
+          
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/AliceMousie/Archipelago/releases/download/2.1.2/pokemon_crystal.apworld
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/vyneras/Archipelago/releases/download/0.5.3-beta/pokemon_frlg.apworld
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/sg4e/Archipelago/releases/download/v2.1.0/fm.apworld
@@ -65,6 +65,7 @@ jobs:
             NAME=${NAME%.yaml}
             echo -e "name: Player{number}\ngame: ${NAME}\n$(cat $file)" > "$file"
           done
+          mkdir /tmp/Archipelago/diva
           /tmp/Archipelago/ArchipelagoGenerate --race --skip_prog_balancing --skip_output
 
       - name: Concat YAML
