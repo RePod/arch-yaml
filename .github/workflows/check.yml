@@ -34,6 +34,7 @@ jobs:
           chmod +x /tmp/Archipelago/ArchipelagoGenerate
 
       # TODO: better/dynamically
+      # Diva folder checks CWD so... ¯\_(ツ)_/¯
       - name: Archipelago | Install Custom Worlds
         if: steps.arch-cache-restore.outputs.cache-hit != 'true'
         run: |
