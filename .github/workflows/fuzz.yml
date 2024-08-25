@@ -1,0 +1,110 @@
+# This is a basic workflow to help you get started with Actions
+
+name: fuzz
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      #- name: Run a one-line script
+      #  run:
+
+      - name: Prepare env
+        run: |
+            sudo snap install yq
+
+      # yq: just as bad as snap. pick a fork, pick a version!
+      - name: Sanity check single YAMLs
+        run: find games/sync/ -type f -name "*.yaml" -print0 | xargs -0 yq -P > /dev/null
+
+      - name: Archipelago | Setup
+        run: |
+          wget -nv -P "/tmp" https://github.com/ArchipelagoMW/Archipelago/releases/download/0.5.0/Archipelago_0.5.0_linux-x86_64.tar.gz
+          mkdir /tmp/Archipelago
+          tar xzf /tmp/Archipelago*.tar.gz -C /tmp/
+          chmod +x /tmp/Archipelago/ArchipelagoGenerate
+
+      # TODO: better/dynamically
+      - name: Archipelago | Install Custom Worlds
+        run: |
+          cp -a $GITHUB_WORKSPACE/games/custom_worlds/. /tmp/Archipelago/custom_worlds
+          wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/Cynichill/DivaAPworld/releases/download/1.0.2B/megamix.apworld
+          mkdir $GITHUB_WORKSPACE/diva /tmp/Archipelago/custom_worlds/diva /tmp/Archipelago/diva
+          wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/AliceMousie/Archipelago/releases/download/2.1.2/pokemon_crystal.apworld
+          wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/vyneras/Archipelago/releases/download/0.5.3-beta/pokemon_frlg.apworld
+          wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/sg4e/Archipelago/releases/download/v2.1.0/fm.apworld
+          wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/spinerak/ArchipelagoYachtDice/releases/download/v2.1.1/yachtdice.apworld
+
+      # do we generate single multiworlds or multi single worlds?
+      # ~13s to gen a 16 game multi with sync settings. private repos are limited to 2 threads, public 4.
+      - name: Archipelago | Multi Sync
+        run: |
+          cp $GITHUB_WORKSPACE/games/sync/*.yaml /tmp/Archipelago/Players
+          IFS=$'\n'
+          for file in /tmp/Archipelago/Players/*.yaml; do
+            NAME=$(basename "$file")
+            NAME=${NAME%.yaml}
+            echo -e "name: Player{number}\ngame: ${NAME}\nper_game_name: true\nasync: false\n$(cat $file)" > "$file"
+          done
+          /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output
+
+      # fuzz a bit. over time this will shake out errors, if any.
+      - name: Archipelago | Multi Sync (Fuzz)
+        run: |
+          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
+
+      # Triggers don't like missing keys/games. Remove them!
+      - name: Archipelago | Multi Async/Triggers (Prepare)
+        run: |
+          for file in /tmp/Archipelago/Players/*.yaml; do
+            NAME=$(basename "$file")
+            NAME=${NAME%.yaml}
+            TRIGGER=$(GAME="$NAME" yq '[.triggers[] | select(.option_name == "async").options |= pick([null,env(GAME)])]' $GITHUB_WORKSPACE/games/triggers.yaml)
+            echo -e "\n\ntriggers:\n$TRIGGER" >> "$file"
+          done
+          sed -i -e 's|async:.*|async: true|' /tmp/Archipelago/Players/*.yaml
+
+      #- name: Archipelago - Async/Triggers - Multi
+      #  run: /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output
+
+      - name: Archipelago | Multi Async/Triggers (Fuzz)
+        run: |
+          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..100}
+
+      - name: Concat | Create
+        run: |
+          YAML_OUT=$(cat $GITHUB_WORKSPACE/games/header.yaml $GITHUB_WORKSPACE/games/sync/*.yaml $GITHUB_WORKSPACE/games/triggers.yaml)
+          echo "$YAML_OUT" > "$GITHUB_WORKSPACE/RePod.yaml"
+
+      - name: Concat | Sanity check YAML
+        run: yq -P "$GITHUB_WORKSPACE/RePod.yaml" > /dev/null
+
+      # Should be a quick fuzz with only 1 player
+      - name: Concat | Archipelago sanity check
+        run: |
+          rm -rf /tmp/Archipelago/Players/*
+          cp "$GITHUB_WORKSPACE/RePod.yaml" /tmp/Archipelago/Players/
+          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..200}
+
+      - name: Commit & Push
+        id: Commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "github-actions"
+          git add RePod.yaml
+          git commit -m "Update RePod.yaml" -a
+          git push
+        shell: bash
