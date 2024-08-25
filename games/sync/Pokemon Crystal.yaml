@@ -54,16 +54,4 @@ Pokemon Crystal:
   paralysis_trap_weight: 0
   item_receive_sound: true
   enable_mischief: true
-  exclude_locations:
-    - Radio Tower 1F - Grunt
-    - Radio Tower 2F - Grunt 1
-    - Radio Tower 2F - Grunt 2
-    - Radio Tower 2F - Grunt 3
-    - Radio Tower 2F - Grunt 4
-    - Union Cave B2F - Item 1
-    - Union Cave B2F - Item 2
-    - Union Cave B2F - Cool Trainer Emma
-    - Union Cave B2F - Cool Trainer Gwen
-    - Union Cave B2F - Cool Trainer Nick
-    - Fuchsia City - Berry Tree
 
