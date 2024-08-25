@@ -5,7 +5,7 @@ Yacht Dice:
   accessibility: random
   game_difficulty:
     medium: 1
-    hard: 2
+    hard: 3
   score_for_last_check: 1000
   score_for_goal: 777
   minimal_number_of_dice_and_rolls: 5_dice_and_3_rolls
