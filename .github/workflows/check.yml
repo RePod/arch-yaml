@@ -19,12 +19,14 @@ jobs:
         run: find games/sync/ -type f -name "*.yaml" -print0 | xargs -0 yq -P > /dev/null
 
       - name: Archipelago | Restore Cache
+        id: arch-cache-restore
         uses: actions/cache/restore@v4
         with:
-          path: |
-            /tmp/Archipelago
+          key: arch-cache
+          path: /tmp/Archipelago
 
       - name: Archipelago | Setup
+        if: steps.arch-cache-restore.outputs.cache-hit != 'true'
         run: |
           wget -nv -P "/tmp" https://github.com/ArchipelagoMW/Archipelago/releases/download/0.5.0/Archipelago_0.5.0_linux-x86_64.tar.gz
           mkdir /tmp/Archipelago
@@ -33,6 +35,7 @@ jobs:
 
       # TODO: better/dynamically
       - name: Archipelago | Install Custom Worlds
+        if: steps.arch-cache-restore.outputs.cache-hit != 'true'
         run: |
           cp -a $GITHUB_WORKSPACE/games/custom_worlds/. /tmp/Archipelago/custom_worlds
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/Cynichill/DivaAPworld/releases/download/1.0.2B/megamix.apworld
@@ -45,8 +48,8 @@ jobs:
       - name: Archipelago | Save Cache
         uses: actions/cache/save@v4
         with:
-          path: |
-            /tmp/Archipelago
+          key: arch-cache
+          path: /tmp/Archipelago
 
       # do we generate single multiworlds or multi single worlds?
       # ~13s to gen a 16 game multi with sync settings. private repos are limited to 2 threads, public 4.
