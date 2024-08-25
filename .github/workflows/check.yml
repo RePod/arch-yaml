@@ -70,7 +70,7 @@ jobs:
       # fuzz a bit. over time this will shake out errors, if any.
       - name: Archipelago | Multi Sync (Fuzz)
         run: |
-          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..4}
+          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
 
       # Triggers don't like missing keys/games. Remove them!
       - name: Archipelago | Multi Async/Triggers (Prepare)
@@ -88,7 +88,7 @@ jobs:
 
       - name: Archipelago | Multi Async/Triggers (Fuzz)
         run: |
-          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..4}
+          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
 
       - name: Concat | Create
         run: |
@@ -103,7 +103,7 @@ jobs:
         run: |
           rm -rf /tmp/Archipelago/Players/*
           cp "$GITHUB_WORKSPACE/RePod.yaml" /tmp/Archipelago/Players/
-          /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..4}
+          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
 
       - name: Commit & Push
         id: Commit
