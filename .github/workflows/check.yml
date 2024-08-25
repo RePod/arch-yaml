@@ -94,5 +94,5 @@ jobs:
           git config --local user.name "github-actions"
           git add RePod.yaml
           git commit -m "Update RePod.yaml" -a
-          git push
+          git push || exit 0
         shell: bash
