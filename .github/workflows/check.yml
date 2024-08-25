@@ -33,10 +33,10 @@ jobs:
             sudo snap install yq
 
       # yq: just as bad as snap. pick a fork, pick a version!
-      - name: YQ - Sanity check single YAMLs
+      - name: Sanity check single YAMLs
         run: find games/sync/ -type f -name "*.yaml" -print0 | xargs -0 yq -P > /dev/null
 
-      - name: Archipelago - Setup
+      - name: Archipelago | Setup
         run: |
           wget -nv -P "/tmp" https://github.com/ArchipelagoMW/Archipelago/releases/download/0.5.0/Archipelago_0.5.0_linux-x86_64.tar.gz
           mkdir /tmp/Archipelago
@@ -44,7 +44,7 @@ jobs:
           chmod +x /tmp/Archipelago/ArchipelagoGenerate
 
       # TODO: better/dynamically
-      - name: Archipelago - Install Custom Worlds
+      - name: Archipelago | Install Custom Worlds
         run: |
           cp -a $GITHUB_WORKSPACE/games/custom_worlds/. /tmp/Archipelago/custom_worlds
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/Cynichill/DivaAPworld/releases/download/1.0.2B/megamix.apworld
@@ -56,7 +56,7 @@ jobs:
 
       # do we generate single multiworlds or multi single worlds?
       # ~13s to gen a 16 game multi with sync settings. private repos are limited to 2 threads, public 4.
-      - name: Archipelago - Sync - Singles multi
+      - name: Archipelago | Multi Sync
         run: |
           cp $GITHUB_WORKSPACE/games/sync/*.yaml /tmp/Archipelago/Players
           IFS=$'\n'
@@ -68,12 +68,12 @@ jobs:
           /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output
 
       # fuzz a bit. over time this will shake out errors, if any.
-      - name: Archipelago - Sync - Singles multi (Fuzz)
+      - name: Archipelago | Multi Sync (Fuzz)
         run: |
           parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..4}
 
       # Triggers don't like missing keys/games. Remove them!
-      - name: Archipelago - Async/Triggers - Prepare
+      - name: Archipelago | Multi Async/Triggers (Prepare)
         run: |
           for file in /tmp/Archipelago/Players/*.yaml; do
             NAME=$(basename "$file")
@@ -86,17 +86,24 @@ jobs:
       #- name: Archipelago - Async/Triggers - Multi
       #  run: /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output
 
-      - name: Archipelago - Async/Triggers - Singles multi (Fuzz)
+      - name: Archipelago | Multi Async/Triggers (Fuzz)
         run: |
           parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..4}
 
-      - name: Concat YAML
+      - name: Concat | Create
         run: |
           YAML_OUT=$(cat $GITHUB_WORKSPACE/games/header.yaml $GITHUB_WORKSPACE/games/sync/*.yaml $GITHUB_WORKSPACE/games/triggers.yaml)
           echo "$YAML_OUT" > "$GITHUB_WORKSPACE/RePod.yaml"
 
-      - name: YQ - Sanity check concat YAML
+      - name: Concat | Sanity check YAML
         run: yq -P "$GITHUB_WORKSPACE/RePod.yaml" > /dev/null
+
+      # Should be a quick fuzz with only 1 player
+      - name: Concat | Archipelago sanity check
+        run: |
+          rm -rf /tmp/Archipelago/Players/*
+          cp "$GITHUB_WORKSPACE/RePod.yaml" /tmp/Archipelago/Players/
+          /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..4}
 
       - name: Commit & Push
         id: Commit
