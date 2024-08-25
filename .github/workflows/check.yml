@@ -18,6 +18,12 @@ jobs:
       - name: Sanity check single YAMLs
         run: find games/sync/ -type f -name "*.yaml" -print0 | xargs -0 yq -P > /dev/null
 
+      - name: Archipelago | Restore Cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            /tmp/Archipelago
+
       - name: Archipelago | Setup
         run: |
           wget -nv -P "/tmp" https://github.com/ArchipelagoMW/Archipelago/releases/download/0.5.0/Archipelago_0.5.0_linux-x86_64.tar.gz
@@ -35,6 +41,12 @@ jobs:
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/vyneras/Archipelago/releases/download/0.5.3-beta/pokemon_frlg.apworld
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/sg4e/Archipelago/releases/download/v2.1.0/fm.apworld
           wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/spinerak/ArchipelagoYachtDice/releases/download/v2.1.1/yachtdice.apworld
+
+      - name: Archipelago | Save Cache
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            /tmp/Archipelago
 
       # do we generate single multiworlds or multi single worlds?
       # ~13s to gen a 16 game multi with sync settings. private repos are limited to 2 threads, public 4.
