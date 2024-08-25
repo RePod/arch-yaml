@@ -168,7 +168,16 @@ Muse Dash:
   music_sheet_win_count_percentage: 80
   trap_count_percentage: 35
   death_link: true
-  include_songs: ["39 Music!","Hand in Hand","Cynical Night Plan","God-ish","Darling Dance","Hatsune Creation Myth","The Vampire","Future Eve","Unknown Mother Goose"]
+  include_songs: 
+    - 39 Music!
+    - Hand in Hand
+    - Cynical Night Plan
+    - God-ish
+    - Darling Dance
+    - Hatsune Creation Myth
+    - The Vampire
+    - Future Eve
+    - Unknown Mother Goose
   exclude_songs: []
   #start_inventory: {"God-ish":1}
 
