@@ -98,13 +98,3 @@ jobs:
           rm -rf /tmp/Archipelago/Players/*
           cp "$GITHUB_WORKSPACE/RePod.yaml" /tmp/Archipelago/Players/
           parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..200}
-
-      - name: Commit & Push
-        id: Commit
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "github-actions"
-          git add RePod.yaml
-          git commit -m "Update RePod.yaml" -a
-          git push
-        shell: bash
