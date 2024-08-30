@@ -1,7 +1,7 @@
 name: RePod{NUMBER}
 game: MegaMan Battle Network 3
 async: false
-per_game_name: false
+per_game_name: true
 
 MegaMan Battle Network 3:
   # https://archipelago.gg/tutorial/MegaMan%20Battle%20Network%203/setup/en

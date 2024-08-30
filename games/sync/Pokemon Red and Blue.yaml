@@ -1,7 +1,7 @@
 name: RePod{NUMBER}
 game: Pokemon Red and Blue
 async: false
-per_game_name: false
+per_game_name: true
 
 Pokemon Red and Blue:
   # https://archipelago.gg/tutorial/Pokemon%20Red%20and%20Blue/setup/en

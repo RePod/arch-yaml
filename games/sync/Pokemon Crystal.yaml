@@ -1,7 +1,7 @@
 name: RePod{NUMBER}
 game: Pokemon Crystal
 async: false
-per_game_name: false
+per_game_name: true
 
 Pokemon Crystal:
   progression_balancing: random-low

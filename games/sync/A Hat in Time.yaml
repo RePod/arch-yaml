@@ -1,7 +1,7 @@
 name: RePod{NUMBER}
 game: A Hat in Time
 async: false
-per_game_name: false
+per_game_name: true
 
 A Hat in Time:
   # https://archipelago.gg/tutorial/A%20Hat%20in%20Time/setup/en

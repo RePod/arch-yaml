@@ -1,7 +1,7 @@
 name: RePod{NUMBER}
 game: Super Metroid
 async: false
-per_game_name: false
+per_game_name: true
 
 Super Metroid:
   # https://archipelago.gg/tutorial/Super%20Metroid/multiworld/en

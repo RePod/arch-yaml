@@ -1,7 +1,7 @@
 name: RePod{NUMBER}
 game: Manual_Hatsune_Miku
 async: false
-per_game_name: false
+per_game_name: true
 
 Manual_Hatsune_Miku:
   # THE the Manual!
