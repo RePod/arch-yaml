@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: Pokemon Crystal
+async: false
+per_game_name: false
+
 Pokemon Crystal:
   progression_balancing: random-low
   accessibility: random
@@ -55,3 +60,24 @@ Pokemon Crystal:
   item_receive_sound: true
   enable_mischief: true
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Pokemon Crystal:
+        randomize_berry_trees: true
+        trainersanity:
+          false: 2
+          true: 3
+        goal: red
+  - option_name: game
+    option_result: Pokemon Crystal
+    options:
+      null:
+        name: RePodCRY{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: Super Metroid
+async: false
+per_game_name: false
+
 Super Metroid:
   # https://archipelago.gg/tutorial/Super%20Metroid/multiworld/en
   progression_balancing: 50
@@ -49,3 +54,20 @@ Super Metroid:
     - kill all G4
   relaxed_round_robin_cf: false
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Super Metroid:
+        progression_balancing: random
+  - option_name: game
+    option_result: Super Metroid
+    options:
+      null:
+        name: RePodSM{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

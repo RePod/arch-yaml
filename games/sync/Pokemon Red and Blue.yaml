@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: Pokemon Red and Blue
+async: false
+per_game_name: false
+
 Pokemon Red and Blue:
   # https://archipelago.gg/tutorial/Pokemon%20Red%20and%20Blue/setup/en
   progression_balancing: random-low
@@ -100,3 +105,20 @@ Pokemon Red and Blue:
   randomize_pokemon_palettes: completely_random
   death_link: true
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Pokemon Red and Blue:
+        rival_name: FNSHING
+  - option_name: game
+    option_result: Pokemon Red and Blue
+    options:
+      null:
+        name: RePodRB{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

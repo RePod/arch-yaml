@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: Manual_Hatsune_Miku
+async: false
+per_game_name: false
+
 Manual_Hatsune_Miku:
   # THE the Manual!
   # https://discord.com/channels/731205301247803413/1150904175144751194/1218734532065493033
@@ -16,3 +21,22 @@ Manual_Hatsune_Miku:
   force_goal: []
   filler_traps: 0
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Manual_Hatsune_Miku:
+        accessibility: minimal
+        music_sheets: 60
+        song_total: 40
+  - option_name: game
+    option_result: Manual_Hatsune_Miku
+    options:
+      null:
+        name: RePodMiku{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

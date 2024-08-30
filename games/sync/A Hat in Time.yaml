@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: A Hat in Time
+async: false
+per_game_name: false
+
 A Hat in Time:
   # https://archipelago.gg/tutorial/A%20Hat%20in%20Time/setup/en
   # tldr tcplink beta branch + workshop mod
@@ -67,3 +72,20 @@ A Hat in Time:
   ParadeTrapWeight: 20
   start_inventory: {}
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      A Hat in Time:
+        death_link: true
+  - option_name: game
+    option_result: A Hat in Time
+    options:
+      null:
+        name: RePodHIT{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

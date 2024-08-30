@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: Yu-Gi-Oh! Forbidden Memories
+async: false
+per_game_name: false
+
 Yu-Gi-Oh! Forbidden Memories:
   # BizHawk client + lua connector
   progression_balancing: random-low
@@ -32,3 +37,27 @@ Yu-Gi-Oh! Forbidden Memories:
   drop_rate_logic: 64
   death_link: false
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Yu-Gi-Oh! Forbidden Memories:
+        atec_logic:
+          pegasus_only: 4
+          hundo_atecs: 1
+        final6_progression:
+          shuffled: 1
+          all_6_shuffled: 0
+        drop_rate_logic: random-range-low-0-40
+        death_link: true
+  - option_name: game
+    option_result: Yu-Gi-Oh! Forbidden Memories
+    options:
+      null:
+        name: RePodFM{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

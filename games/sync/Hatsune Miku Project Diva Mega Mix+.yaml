@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: Hatsune Miku Project Diva Mega Mix+
+async: false
+per_game_name: false
+
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
   progression_balancing: random-low
@@ -18,3 +23,26 @@ Hatsune Miku Project Diva Mega Mix+:
   include_songs: []
   exclude_songs: []
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Hatsune Miku Project Diva Mega Mix+:
+        accessibility: minimal
+        # base + dlc songs = 251 - goal song = 250 songs / 500 checks
+        starting_song_count: 10
+        additional_song_count: 242
+        # 31 & 51 = 39/78 (+22 dupe slots)
+        leek_count_percentage: 40 # 10-40 / 500*0.4 = 100, higher = less slots for dupes
+        leek_win_count_percentage: 69 # 50-100
+  - option_name: game
+    option_result: Hatsune Miku Project Diva Mega Mix+
+    options:
+      null:
+        name: RePodMiku{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

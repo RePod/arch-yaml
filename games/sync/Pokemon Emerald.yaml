@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: Pokemon Emerald
+async: false
+per_game_name: false
+
 Pokemon Emerald:
   # https://archipelago.gg/tutorial/Pokemon%20Emerald/setup/en
   progression_balancing: random-low
@@ -196,3 +201,32 @@ Pokemon Emerald:
     # All secret phrases are something that could be a trendy phrase in Dewford Town. They are case insensitive.
     EMERALD SECRET: 50
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Pokemon Emerald:
+        # Ever hit a 0.8% by rolling 3 Dex+Trainersanity Emeralds?
+        # Grinding and breeding are OoL
+        berry_trees: true
+        dexsanity:
+          false: 2
+          true: 3
+        trainersanity:
+          false: 2
+          true: 3
+        #exp_modifier: 1000
+        #match_trainer_levels: multiplicative
+        #match_trainer_levels_bonus: 25
+        goal: steven
+  - option_name: game
+    option_result: Pokemon Emerald
+    options:
+      null:
+        name: RePodEM{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

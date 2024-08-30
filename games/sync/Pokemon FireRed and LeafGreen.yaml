@@ -1,5 +1,9 @@
+name: RePod{NUMBER}
+game: Pokemon FireRed and LeafGreen
+async: false
+per_game_name: false
+
 Pokemon FireRed and LeafGreen:
-  # Alpha 0.1.0
   progression_balancing: random-low
   accessibility: random
   game_version: random
@@ -116,9 +120,32 @@ Pokemon FireRed and LeafGreen:
   starting_money: 3939
   blind_trainers: true
   better_shops: true
-  free_fly_location: 
+  free_fly_location:
     exclude_indigo: 4
     any: 1
   turbo_a: true
   receive_item_messages: progression
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Pokemon FireRed and LeafGreen:
+          trainersanity: true
+          oaks_aide_route_2: 10
+          oaks_aide_route_10: 20
+          oaks_aide_route_11: 30
+          oaks_aide_route_16: 40
+          oaks_aide_route_15: 50
+          shuffle_hidden: all
+  - option_name: game
+    option_result: Pokemon FireRed and LeafGreen
+    options:
+      null:
+        name: RePodRG{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
