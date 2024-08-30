@@ -39,7 +39,7 @@ jobs:
         if: steps.arch-cache-restore.outputs.cache-hit != 'true'
         run: |
           cp -a $GITHUB_WORKSPACE/games/custom_worlds/. /tmp/Archipelago/custom_worlds
-          wget -nv -P "/tmp/Archipelago/custom_worlds" -i "$GITHUB_WORKSPACE/games/custom_worlds/install.txt"
+          cat "$GITHUB_WORKSPACE/games/custom_worlds/install.txt" | parallel --gnu "wget -nv -P /tmp/Archipelago/custom_worlds {}"
           mkdir $GITHUB_WORKSPACE/diva
 
       #- name: Archipelago | Save Cache
