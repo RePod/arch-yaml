@@ -3,9 +3,11 @@ Pokemon FireRed and LeafGreen:
   progression_balancing: random-low
   accessibility: random
   game_version: random
+  kanto_only: false
   shuffle_badges: true
   shuffle_hidden: nonrecurring
   extra_key_items: true
+  shuffle_fly_destination_unlocks: true
   itemfinder_required: logic
   flash_required: true
   #remove_badge_requirement
@@ -111,9 +113,12 @@ Pokemon FireRed and LeafGreen:
   min_catch_rate: 255
   guaranteed_catch: true
   exp_modifier: 225
+  starting_money: 3939
   blind_trainers: true
   better_shops: true
-  free_fly_location: exclude_indigo
+  free_fly_location: 
+    exclude_indigo: 4
+    any: 1
   turbo_a: true
   receive_item_messages: progression
 
