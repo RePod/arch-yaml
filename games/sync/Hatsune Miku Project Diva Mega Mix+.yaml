@@ -2,7 +2,8 @@ name: RePodMiku{NUMBER}
 game: Hatsune Miku Project Diva Mega Mix+
 async: false
 per_game_name: true
-description: "Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest \nModded JSON + Instructions: https://gist.github.com/RePod/f4252f1bf099713d9559fdc7a0c26e35"
+description: "Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest\nModded JSON + Instructions: https://gist.github.com/RePod/f4252f1bf099713d9559fdc7a0c26e35"
+apworld: "https://github.com/Cynichill/DivaAPworld/releases/latest"
 
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
