@@ -8,6 +8,9 @@ async: false
 # Override name based on the game as defined by triggers. async:true forces true.
 per_game_name: true
 
+requires:
+  version: 0.5.0
+
 game:
   A Hat in Time: 0
   Hatsune Miku Project Diva Mega Mix+: 9    # Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest
@@ -27,10 +30,6 @@ game:
   Yacht Dice: 9                             # Unsupported https://github.com/spinerak/ArchipelagoYachtDice/releases/latest
   Yu-Gi-Oh! 2006: 3
   Yu-Gi-Oh! Forbidden Memories: 9           # Unsupported https://github.com/sg4e/Archipelago/releases/latest
-
-requires:
-  version: 0.5.0
-
 A Hat in Time:
   # https://archipelago.gg/tutorial/A%20Hat%20in%20Time/setup/en
   # tldr tcplink beta branch + workshop mod
@@ -99,12 +98,15 @@ A Hat in Time:
   LaserTrapWeight: 40
   ParadeTrapWeight: 20
   start_inventory: {}
-
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
   progression_balancing: random-low
   accessibility: random
   allow_megamix_dlc_songs: true
+  # HUGE generation issue if there's a JSON without a player/name to match.
+  # Makes rolling into impossible/difficult for RePodMiku2, etc.
+  # ✓ P1 -> P1.json
+  # ✗ P2 -> diff name / no P2.json
   using_modded_songs: true
   starting_song_count: 3
   additional_song_count: 36
@@ -119,7 +121,6 @@ Hatsune Miku Project Diva Mega Mix+:
   leek_win_count_percentage: random-range-mid-70-90
   include_songs: []
   exclude_songs: []
-
 Manual_Hatsune_Miku:
   # THE the Manual!
   # https://discord.com/channels/731205301247803413/1150904175144751194/1218734532065493033
@@ -137,7 +138,6 @@ Manual_Hatsune_Miku:
   remove_song: []
   force_goal: []
   filler_traps: 0
-
 MegaMan Battle Network 3:
   # https://archipelago.gg/tutorial/MegaMan%20Battle%20Network%203/setup/en
   progression_balancing: random-low
@@ -145,7 +145,6 @@ MegaMan Battle Network 3:
   extra_ranks: 0
   include_jobs: false
   trade_quest_hinting: full
-
 Muse Dash:
   # https://archipelago.gg/tutorial/Muse%20Dash/setup/en
   # Every time I look there's an update that breaks EVERYTHING but the options are sound.
@@ -169,7 +168,7 @@ Muse Dash:
   music_sheet_win_count_percentage: 80
   trap_count_percentage: 35
   death_link: true
-  include_songs: 
+  include_songs:
     - 39 Music!
     - Hand in Hand
     - Cynical Night Plan
@@ -181,7 +180,6 @@ Muse Dash:
     - Unknown Mother Goose
   exclude_songs: []
   #start_inventory: {"God-ish":1}
-
 Pokemon Crystal:
   progression_balancing: random-low
   accessibility: random
@@ -238,7 +236,6 @@ Pokemon Crystal:
   paralysis_trap_weight: 0
   item_receive_sound: true
   enable_mischief: true
-
 Pokemon Emerald:
   # https://archipelago.gg/tutorial/Pokemon%20Emerald/setup/en
   progression_balancing: random-low
@@ -291,7 +288,7 @@ Pokemon Emerald:
     random: 0
     random-low: 0
     random-high: 0
-  allowed_legendary_hunt_encounters:
+  allowed_legendary_hunt_encounters: [
     # Sets which legendary encounters can contribute to the Legendary Hunt goal.
     # Latios will always be the roamer. Latias will always be at Southern Island.
     # Possible values are:
@@ -307,7 +304,7 @@ Pokemon Emerald:
     # "Lugia"
     # "Deoxys"
     # "Mew"
-    ['Regirock', 'Deoxys', 'Kyogre', 'Lugia', 'Rayquaza', 'Ho-Oh', 'Mew', 'Latios', 'Latias', 'Groudon', 'Registeel', 'Regice']
+    'Regirock', 'Deoxys', 'Kyogre', 'Lugia', 'Rayquaza', 'Ho-Oh', 'Mew', 'Latios', 'Latias', 'Groudon', 'Registeel', 'Regice']
   wild_pokemon:
     vanilla: 0
     match_base_stats: 0
@@ -328,11 +325,10 @@ Pokemon Emerald:
     match_type: 1
     match_base_stats_and_type: 1
     completely_random: 4
-  trainer_party_blacklist:
-    # Prevents listed species from appearing in opponent trainers' parties if opponent parties are randomized.
-    # May be overridden if enforcing other restrictions in combination with this blacklist is impossible.
-    # Use "_Legendaries" as a shortcut for legendary pokemon.
-    []
+  trainer_party_blacklist: []
+  # Prevents listed species from appearing in opponent trainers' parties if opponent parties are randomized.
+  # May be overridden if enforcing other restrictions in combination with this blacklist is impossible.
+  # Use "_Legendaries" as a shortcut for legendary pokemon.
   force_fully_evolved: random-range-35-50
   legendary_encounters: random
   misc_pokemon: random
@@ -410,16 +406,16 @@ Pokemon Emerald:
   double_battle_chance: 0
   better_shops: true
   remove_roadblocks: []
-    # Removes specific NPCs that normally stand in your way until certain events are completed.
-    # This can open up the world a bit and make your playthrough less linear, but careful how many you remove; it may make too much of your world accessible upon receiving Surf.
-    # Possible values are:
-    #- Route 110 Aqua Grunts
-    #- Route 112 Magma Grunts
-    #- Route 119 Aqua Grunts
-    #- Safari Zone Construction Workers
-    #- Lilycove City Wailmer
-    #- Aqua Hideout Grunts
-    #- Seafloor Cavern Aqua Grunt
+  # Removes specific NPCs that normally stand in your way until certain events are completed.
+  # This can open up the world a bit and make your playthrough less linear, but careful how many you remove; it may make too much of your world accessible upon receiving Surf.
+  # Possible values are:
+  #- Route 110 Aqua Grunts
+  #- Route 112 Magma Grunts
+  #- Route 119 Aqua Grunts
+  #- Safari Zone Construction Workers
+  #- Lilycove City Wailmer
+  #- Aqua Hideout Grunts
+  #- Seafloor Cavern Aqua Grunt
   extra_boulders: random
   extra_bumpy_slope: random
   modify_118: random
@@ -436,9 +432,7 @@ Pokemon Emerald:
     # Enter certain phrases and something special might happen.
     # All secret phrases are something that could be a trendy phrase in Dewford Town. They are case insensitive.
     EMERALD SECRET: 50
-
 Pokemon FireRed and LeafGreen:
-  # Alpha 0.1.0
   progression_balancing: random-low
   accessibility: random
   game_version: random
@@ -545,8 +539,8 @@ Pokemon FireRed and LeafGreen:
     randomized: 2
     start_with_four_moves: 2
   #move_blacklist
-  hm_compatability: full
-  tm_tutor_compatability: random
+  hm_compatibility: full
+  tm_tutor_compatibility: random
   tm_tutor_moves: true
   reusable_tm_tutors: true
   min_catch_rate: 255
@@ -555,12 +549,11 @@ Pokemon FireRed and LeafGreen:
   starting_money: 3939
   blind_trainers: true
   better_shops: true
-  free_fly_location: 
+  free_fly_location:
     exclude_indigo: 4
     any: 1
   turbo_a: true
   receive_item_messages: progression
-
 Pokemon Red and Blue:
   # https://archipelago.gg/tutorial/Pokemon%20Red%20and%20Blue/setup/en
   progression_balancing: random-low
@@ -662,7 +655,6 @@ Pokemon Red and Blue:
   ice_trap_weight: disabled
   randomize_pokemon_palettes: completely_random
   death_link: true
-
 Super Mario 64:
   # https://archipelago.gg/tutorial/Super%20Mario%2064/setup/en
   progression_balancing: random-low
@@ -695,7 +687,6 @@ Super Mario 64:
   mips2_cost: 50
   stars_to_finish: 70
   completion_type: last_bowser_stage
-
 Super Mario World:
   # https://archipelago.gg/tutorial/Super%20Mario%20World/setup/en
   progression_balancing: random-middle
@@ -742,7 +733,6 @@ Super Mario World:
     on_legacy: 4
     on_curated: 5
   starting_life_count: 69
-
 Super Metroid:
   # https://archipelago.gg/tutorial/Super%20Metroid/multiworld/en
   progression_balancing: 50
@@ -793,7 +783,6 @@ Super Metroid:
   objective:
     - kill all G4
   relaxed_round_robin_cf: false
-
 VVVVVV:
   # https://archipelago.gg/tutorial/VVVVVV/setup/en
   # tldr mod + -v6ap_name slotName -v6ap_ip server:port
@@ -805,7 +794,6 @@ VVVVVV:
   area_cost: random
   death_link: true
   death_link_amnesty: 30
-
 Yacht Dice:
   # https://yacht-dice-ap.netlify.app/
   # Stock-ish settings until a few plays.
@@ -832,7 +820,6 @@ Yacht Dice:
   add_bonus_points: sure
   add_story_chapters: sure
   which_story: random_story
-
 Yu-Gi-Oh! 2006:
   # https://archipelago.gg/games/Yu-Gi-Oh!%202006/player-options
   # Currently just the default generation options with a few tweaks
@@ -862,7 +849,6 @@ Yu-Gi-Oh! 2006:
     false: 1
   ocg_arts: false
   start_inventory: {}
-
 Yu-Gi-Oh! Forbidden Memories:
   # BizHawk client + lua connector
   progression_balancing: random-low
@@ -896,7 +882,6 @@ Yu-Gi-Oh! Forbidden Memories:
     fake_trap: 0
   drop_rate_logic: 64
   death_link: false
-
 triggers:
   # Game defaults should be for SYNC. Triggers will set ASYNC options.
   # Consider weighting devastating options in case a game is rolled multiple times.
@@ -906,7 +891,8 @@ triggers:
     options:
       null:
         per_game_name: true
-      #A Hat in Time:
+      A Hat in Time:
+        death_link: true
       Hatsune Miku Project Diva Mega Mix+:
         accessibility: minimal
         # base + dlc songs = 251 - goal song = 250 songs / 500 checks
@@ -918,12 +904,14 @@ triggers:
       Manual_Hatsune_Miku:
         accessibility: minimal
         music_sheets: 60
-        song_total: 400
+        song_total: 40
       MegaMan Battle Network 3:
         include_jobs:
           false: 1
           true: 3
-        #trade_quest_hinting: none
+          #trade_quest_hinting: none
+      Muse Dash:
+        accessibility: random
       Pokemon Crystal:
         randomize_berry_trees: true
         trainersanity:
@@ -945,13 +933,13 @@ triggers:
         #match_trainer_levels_bonus: 25
         goal: steven
       Pokemon FireRed and LeafGreen:
-          trainersanity: true
-          oaks_aide_route_2: 10
-          oaks_aide_route_10: 20
-          oaks_aide_route_11: 30
-          oaks_aide_route_16: 40
-          oaks_aide_route_15: 50
-          shuffle_hidden: all
+        trainersanity: true
+        oaks_aide_route_2: 10
+        oaks_aide_route_10: 20
+        oaks_aide_route_11: 30
+        oaks_aide_route_16: 40
+        oaks_aide_route_15: 50
+        shuffle_hidden: all
       Pokemon Red and Blue:
         rival_name: FNSHING
       Super Mario 64:
@@ -972,35 +960,41 @@ triggers:
         death_link: true
         moon_checks: true
         exclude_special_zone:
-            false: 3
-            true: 1
+          false: 3
+          true: 1
         hidden_1up_checks: true
         bonus_block_checks: true
         blocksanity: true
         bosses_required: random-range-low-7-11 # please not 11 please not 11
+      Super Metroid:
+        progression_balancing: random
+      VVVVVV:
+        area_rando: true
+      Yacht Dice:
+        game_difficulty: hard
       Yu-Gi-Oh! 2006:
-          # No way to tell what was picked without doing them.
-          final_campaign_boss_unlock_condition:
-            campaign_opponents: 3
-            challenges: 1
-          fourth_tier_5_campaign_boss_unlock_condition:
-            campaign_opponents: 3
-            challenges: 1
-          third_tier_5_campaign_boss_unlock_condition:
-            campaign_opponents: 3
-            challenges: 1
-          # _challenges are 0-91
-          # might want to range these
-          final_campaign_boss_challenges: 39
-          fourth_tier_5_campaign_boss_challenges: 26
-          third_tier_5_campaign_boss_challenges: 13
-          # _opponents is 0-24 - (final/4th/3rd 0/1/2)
-          final_campaign_boss_campaign_opponents: 18
-          fourth_tier_5_campaign_boss_campaign_opponents: 13
-          third_tier_5_campaign_boss_campaign_opponents: 8
-          # 0-91 challenges, imbalanced with above may result in a fast/easier game
-          # 74 base + 91 challenges = 165 checks
-          number_of_challenges: 91
+        # No way to tell what was picked without doing them.
+        final_campaign_boss_unlock_condition:
+          campaign_opponents: 3
+          challenges: 1
+        fourth_tier_5_campaign_boss_unlock_condition:
+          campaign_opponents: 3
+          challenges: 1
+        third_tier_5_campaign_boss_unlock_condition:
+          campaign_opponents: 3
+          challenges: 1
+        # _challenges are 0-91
+        # might want to range these
+        final_campaign_boss_challenges: 39
+        fourth_tier_5_campaign_boss_challenges: 26
+        third_tier_5_campaign_boss_challenges: 13
+        # _opponents is 0-24 - (final/4th/3rd 0/1/2)
+        final_campaign_boss_campaign_opponents: 18
+        fourth_tier_5_campaign_boss_campaign_opponents: 13
+        third_tier_5_campaign_boss_campaign_opponents: 8
+        # 0-91 challenges, imbalanced with above may result in a fast/easier game
+        # 74 base + 91 challenges = 165 checks
+        number_of_challenges: 91
       Yu-Gi-Oh! Forbidden Memories:
         atec_logic:
           pegasus_only: 4
@@ -1010,9 +1004,13 @@ triggers:
           all_6_shuffled: 0
         drop_rate_logic: random-range-low-0-40
         death_link: true
-
   # I don't think there's a better way to do this to keep the async trigger standalone.
   # Must resist ReSuffix and PrefixPod. Minifying these breaks generation.
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
   - option_name: game
     option_result: A Hat in Time
     options:
@@ -1033,6 +1031,11 @@ triggers:
     options:
       null:
         name: RePodBN3{NUMBER}
+  - option_name: game
+    option_result: Muse Dash
+    options:
+      null:
+        name: RePodMuse{NUMBER}
   - option_name: game
     option_result: Pokemon Crystal
     options:
@@ -1064,6 +1067,11 @@ triggers:
       null:
         name: RePodSMW{NUMBER}
   - option_name: game
+    option_result: Super Metroid
+    options:
+      null:
+        name: RePodSM{NUMBER}
+  - option_name: game
     option_result: VVVVVV
     options:
       null:
@@ -1083,8 +1091,3 @@ triggers:
     options:
       null:
         name: RePodFM{NUMBER}
-  - option_name: per_game_name
-    option_result: false
-    options:
-      null:
-        name: RePod{NUMBER}
