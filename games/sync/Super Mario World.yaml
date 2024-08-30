@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: Super Mario World
+async: false
+per_game_name: false
+
 Super Mario World:
   # https://archipelago.gg/tutorial/Super%20Mario%20World/setup/en
   progression_balancing: random-middle
@@ -45,3 +50,28 @@ Super Mario World:
     on_curated: 5
   starting_life_count: 69
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Super Mario World:
+        death_link: true
+        moon_checks: true
+        exclude_special_zone:
+            false: 3
+            true: 1
+        hidden_1up_checks: true
+        bonus_block_checks: true
+        blocksanity: true
+        bosses_required: random-range-low-7-11 # please not 11 please not 11
+  - option_name: game
+    option_result: Super Mario World
+    options:
+      null:
+        name: RePodSMW{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

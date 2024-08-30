@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: Yu-Gi-Oh! 2006
+async: false
+per_game_name: false
+
 Yu-Gi-Oh! 2006:
   # https://archipelago.gg/games/Yu-Gi-Oh!%202006/player-options
   # Currently just the default generation options with a few tweaks
@@ -28,3 +33,41 @@ Yu-Gi-Oh! 2006:
   ocg_arts: false
   start_inventory: {}
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Yu-Gi-Oh! 2006:
+          # No way to tell what was picked without doing them.
+          final_campaign_boss_unlock_condition:
+            campaign_opponents: 3
+            challenges: 1
+          fourth_tier_5_campaign_boss_unlock_condition:
+            campaign_opponents: 3
+            challenges: 1
+          third_tier_5_campaign_boss_unlock_condition:
+            campaign_opponents: 3
+            challenges: 1
+          # _challenges are 0-91
+          # might want to range these
+          final_campaign_boss_challenges: 39
+          fourth_tier_5_campaign_boss_challenges: 26
+          third_tier_5_campaign_boss_challenges: 13
+          # _opponents is 0-24 - (final/4th/3rd 0/1/2)
+          final_campaign_boss_campaign_opponents: 18
+          fourth_tier_5_campaign_boss_campaign_opponents: 13
+          third_tier_5_campaign_boss_campaign_opponents: 8
+          # 0-91 challenges, imbalanced with above may result in a fast/easier game
+          # 74 base + 91 challenges = 165 checks
+          number_of_challenges: 91
+  - option_name: game
+    option_result: Yu-Gi-Oh! 2006
+    options:
+      null:
+        name: RePod06{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

@@ -1,0 +1,2 @@
+# yq formatting with CRLF is bad. don't even entertain the possibility.
+* text=auto eol=lf

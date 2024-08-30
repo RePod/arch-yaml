@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: Yacht Dice
+async: false
+per_game_name: false
+
 Yacht Dice:
   # https://yacht-dice-ap.netlify.app/
   # Stock-ish settings until a few plays.
@@ -25,3 +30,20 @@ Yacht Dice:
   add_story_chapters: sure
   which_story: random_story
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Yacht Dice:
+        game_difficulty: hard
+  - option_name: game
+    option_result: Yacht Dice
+    options:
+      null:
+        name: RePodice{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

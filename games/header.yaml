@@ -8,6 +8,9 @@ async: false
 # Override name based on the game as defined by triggers. async:true forces true.
 per_game_name: true
 
+requires:
+  version: 0.5.0
+
 game:
   A Hat in Time: 0
   Hatsune Miku Project Diva Mega Mix+: 9    # Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest
@@ -27,7 +30,3 @@ game:
   Yacht Dice: 9                             # Unsupported https://github.com/spinerak/ArchipelagoYachtDice/releases/latest
   Yu-Gi-Oh! 2006: 3
   Yu-Gi-Oh! Forbidden Memories: 9           # Unsupported https://github.com/sg4e/Archipelago/releases/latest
-
-requires:
-  version: 0.5.0
-

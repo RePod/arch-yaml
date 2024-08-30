@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: Muse Dash
+async: false
+per_game_name: false
+
 Muse Dash:
   # https://archipelago.gg/tutorial/Muse%20Dash/setup/en
   # Every time I look there's an update that breaks EVERYTHING but the options are sound.
@@ -21,7 +26,7 @@ Muse Dash:
   music_sheet_win_count_percentage: 80
   trap_count_percentage: 35
   death_link: true
-  include_songs: 
+  include_songs:
     - 39 Music!
     - Hand in Hand
     - Cynical Night Plan
@@ -34,3 +39,20 @@ Muse Dash:
   exclude_songs: []
   #start_inventory: {"God-ish":1}
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Muse Dash:
+        accessibility: random
+  - option_name: game
+    option_result: Muse Dash
+    options:
+      null:
+        name: RePodMuse{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

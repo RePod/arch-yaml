@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: VVVVVV
+async: false
+per_game_name: false
+
 VVVVVV:
   # https://archipelago.gg/tutorial/VVVVVV/setup/en
   # tldr mod + -v6ap_name slotName -v6ap_ip server:port
@@ -10,3 +15,20 @@ VVVVVV:
   death_link: true
   death_link_amnesty: 30
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      VVVVVV:
+        area_rando: true
+  - option_name: game
+    option_result: VVVVVV
+    options:
+      null:
+        name: RePodV6{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

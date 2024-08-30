@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: Super Mario 64
+async: false
+per_game_name: false
+
 Super Mario 64:
   # https://archipelago.gg/tutorial/Super%20Mario%2064/setup/en
   progression_balancing: random-low
@@ -31,3 +36,32 @@ Super Mario 64:
   stars_to_finish: 70
   completion_type: last_bowser_stage
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Super Mario 64:
+        area_rando: courses_and_secrets
+        buddy_checks: true
+        exclamation_boxes: 1ups_only
+        progressive_keys: true
+        enable_coin_stars: false
+        enable_move_rando: true
+        strict_cap_requirements: true
+        strict_cannon_requirements: true
+        strict_move_requirements: true
+        amount_of_stars: 120
+        stars_to_finish: random-range-mid-70-90
+        completion_type: all_bowser_stages
+        death_link: true
+  - option_name: game
+    option_result: Super Mario 64
+    options:
+      null:
+        name: RePodSM64{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

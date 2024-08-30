@@ -1,3 +1,8 @@
+name: RePod{NUMBER}
+game: MegaMan Battle Network 3
+async: false
+per_game_name: false
+
 MegaMan Battle Network 3:
   # https://archipelago.gg/tutorial/MegaMan%20Battle%20Network%203/setup/en
   progression_balancing: random-low
@@ -6,3 +11,23 @@ MegaMan Battle Network 3:
   include_jobs: false
   trade_quest_hinting: full
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      MegaMan Battle Network 3:
+        include_jobs:
+          false: 1
+          true: 3
+        #trade_quest_hinting: none
+  - option_name: game
+    option_result: MegaMan Battle Network 3
+    options:
+      null:
+        name: RePodBN3{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}

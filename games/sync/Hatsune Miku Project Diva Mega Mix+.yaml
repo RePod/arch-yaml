@@ -1,8 +1,17 @@
+name: RePodMiku{NUMBER}
+game: Hatsune Miku Project Diva Mega Mix+
+async: false
+per_game_name: true
+
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
   progression_balancing: random-low
   accessibility: random
   allow_megamix_dlc_songs: true
+  # HUGE generation issue if there's a JSON without a player/name to match.
+  # Makes rolling into impossible/difficult for RePodMiku2, etc.
+  # ✓ P1 -> P1.json
+  # ✗ P2 -> diff name / no P2.json
   using_modded_songs: true
   starting_song_count: 3
   additional_song_count: 36
@@ -18,3 +27,26 @@ Hatsune Miku Project Diva Mega Mix+:
   include_songs: []
   exclude_songs: []
 
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Hatsune Miku Project Diva Mega Mix+:
+        accessibility: minimal
+        # base + dlc songs = 251 - goal song = 250 songs / 500 checks
+        starting_song_count: 10
+        additional_song_count: 242
+        # 31 & 51 = 39/78 (+22 dupe slots)
+        leek_count_percentage: 40 # 10-40 / 500*0.4 = 100, higher = less slots for dupes
+        leek_win_count_percentage: 69 # 50-100
+  - option_name: game
+    option_result: Hatsune Miku Project Diva Mega Mix+
+    options:
+      null:
+        name: RePodMiku{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
