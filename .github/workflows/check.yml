@@ -10,6 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # CWD -> $GITHUB_WORKSPACE
       - uses: actions/checkout@v4
       - name: Prepare env
         run: sudo snap install yq
@@ -44,9 +45,9 @@ jobs:
       - name: Archipelago | Install Custom Worlds
         if: steps.arch-cache-restore.outputs.cache-hit != 'true'
         run: |
-          cp -a $GITHUB_WORKSPACE/games/custom_worlds/. /tmp/Archipelago/custom_worlds
-          cat "$GITHUB_WORKSPACE/games/custom_worlds/install.txt" | parallel --gnu "wget -nv -P /tmp/Archipelago/custom_worlds {}"
-          mkdir $GITHUB_WORKSPACE/diva
+          cp -a games/custom_worlds/. /tmp/Archipelago/custom_worlds
+          cat "games/custom_worlds/install.txt" | parallel --gnu "wget -nv -P /tmp/Archipelago/custom_worlds {}"
+          mkdir diva
 
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
@@ -58,7 +59,7 @@ jobs:
       # ~13s to gen a 16 game multi with sync settings. private repos are limited to 2 threads, public 4.
       - name: Archipelago | Multi Sync
         run: |
-          cp $GITHUB_WORKSPACE/games/sync/*.yaml /tmp/Archipelago/Players
+          cp games/sync/*.yaml /tmp/Archipelago/Players
           /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output
 
       # fuzz a bit. over time this will shake out errors, if any.
@@ -73,17 +74,15 @@ jobs:
 
       - name: Concat | Create
         run: |
-          YAML_OUT=$(cat $GITHUB_WORKSPACE/games/header.yaml $GITHUB_WORKSPACE/games/sync/*.yaml $GITHUB_WORKSPACE/games/triggers.yaml)
-          echo "$YAML_OUT" > "$GITHUB_WORKSPACE/RePod.yaml"
-
-      - name: Concat | Sanity check YAML
-        run: yq -P "$GITHUB_WORKSPACE/RePod.yaml" > /dev/null
+          YAML_OUT=$(cat games/header.yaml  games/triggers.yaml)
+          echo "$YAML_OUT" > "RePod.yaml"
+          yq -P "RePod.yaml" > /dev/null
 
       # Should be a quick fuzz with only 1 player
       - name: Concat | Archipelago sanity check
         run: |
           rm -rf /tmp/Archipelago/Players/*
-          cp "$GITHUB_WORKSPACE/RePod.yaml" /tmp/Archipelago/Players/
+          cp "RePod.yaml" /tmp/Archipelago/Players/
           parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
 
       - name: Commit & Push
