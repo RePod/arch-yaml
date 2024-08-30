@@ -1,13 +1,17 @@
 name: RePod{NUMBER}
 game: Hatsune Miku Project Diva Mega Mix+
 async: false
-per_game_name: false
+per_game_name: true
 
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
   progression_balancing: random-low
   accessibility: random
   allow_megamix_dlc_songs: true
+  # HUGE generation issue if there's a JSON without a player/name to match.
+  # Makes rolling into impossible/difficult for RePodMiku2, etc.
+  # ✓ P1 -> P1.json
+  # ✗ P2 -> diff name / no P2.json
   using_modded_songs: true
   starting_song_count: 3
   additional_song_count: 36
