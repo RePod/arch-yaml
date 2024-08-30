@@ -35,7 +35,9 @@ jobs:
       - name: Archipelago | Setup
         if: steps.arch-cache-restore.outputs.cache-hit != 'true'
         run: |
-          wget -qnv -O - https://api.github.com/repos/ArchipelagoMW/Archipelago/releases | jq '[.[].assets[] | select(.browser_download_url | endswith(\".tar.gz\"))][0].browser_download_url' | xargs wget -nv -P /tmp
+          wget -qnv -O - https://api.github.com/repos/ArchipelagoMW/Archipelago/releases | \
+            jq '[.[].assets[] | select(.browser_download_url | endswith(".tar.gz"))][0].browser_download_url' | \
+            xargs wget -nv -P /tmp
           mkdir /tmp/Archipelago
           tar xzf /tmp/Archipelago*.tar.gz -C /tmp/
           chmod +x /tmp/Archipelago/ArchipelagoGenerate
@@ -46,8 +48,14 @@ jobs:
         if: steps.arch-cache-restore.outputs.cache-hit != 'true'
         run: |
           cp -a games/custom_worlds/. /tmp/Archipelago/custom_worlds
-          UNSUPPORTED=$(yq '.apworld' games/sync/*.yaml | grep -Po '(?<=.com\/)(.*?)(?=\/releases)' | awk '{printf("https://api.github.com/repos/%s/releases\n", $0);}')
-          echo "$UNSUPPORTED" | parallel "wget -q -O - {} | jq '[.[].assets[] | select(.browser_download_url | endswith(\".apworld\"))][0].browser_download_url' | xargs wget -nv -P /tmp/Archipelago/custom_worlds"
+          UNSUPPORTED=$( \
+            yq '.apworld' games/sync/*.yaml | \
+            grep -Po '(?<=.com\/)(.*?)(?=\/releases)' | \
+            awk '{printf("https://api.github.com/repos/%s/releases\n", $0);}')
+          echo "$UNSUPPORTED" | parallel " \
+            wget -q -O - {} | \
+            jq '[.[].assets[] | select(.browser_download_url | endswith(\".apworld\"))][0].browser_download_url' | \
+            xargs wget -nv -P /tmp/Archipelago/custom_worlds"
           wget -nv -P "./diva/" https://gist.githubusercontent.com/RePod/f4252f1bf099713d9559fdc7a0c26e35/raw/RePodMiku.json
 
       #- name: Archipelago | Save Cache
