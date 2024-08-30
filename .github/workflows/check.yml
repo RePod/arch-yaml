@@ -46,8 +46,7 @@ jobs:
         if: steps.arch-cache-restore.outputs.cache-hit != 'true'
         run: |
           cp -a games/custom_worlds/. /tmp/Archipelago/custom_worlds
-          UNSUPPORTED=$(yq '.apworld' *.yaml | grep -Po '(?<=.com\/)(.*?)(?=\/releases)' | awk '{printf("https://api.github.com/repos/%s/releases/latest\n", $0);}')
-          echo "$UNSUPPORTED"
+          UNSUPPORTED=$(yq '.apworld' games/sync/*.yaml | grep -Po '(?<=.com\/)(.*?)(?=\/releases)' | awk '{printf("https://api.github.com/repos/%s/releases/latest\n", $0);}')
           echo "$UNSUPPORTED" | parallel "wget -O - {} | jq -cr '.assets[] | select(.browser_download_url | endswith(".apworld")) | .browser_download_url' | xargs wget -nv -P /tmp/Archipelago/custom_worlds"
           mkdir diva
           wget -nv -P "./diva" https://gist.githubusercontent.com/RePod/f4252f1bf099713d9559fdc7a0c26e35/raw/RePodMiku.json
