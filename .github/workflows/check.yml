@@ -20,9 +20,9 @@ jobs:
 
       - name: Dynamic Triggers
         run: |
-          ASYNC_TRIGGERS=$(yq eval-all '(.triggers[] | select(.option_name == "async").options) | . as $item ireduce ({}; . * $item )' "./games/sync/*.yaml") \
-          PER_GAME_NAMES=$(yq '[.triggers[] | select(.option_name == "game")]' "./games/sync/*.yaml") \
-          yq -i '(.triggers[] | select(.option_name == "async").options) += env(ASYNC_TRIGGERS) | (.triggers += env(PER_GAME_NAMES))' "./games/triggers.yaml"
+          ASYNC_TRIGGERS=$(yq eval-all '(.triggers[] | select(.option_name == "async").options) | . as $item ireduce ({}; . * $item )' ./games/sync/*.yaml) \
+          PER_GAME_NAMES=$(yq '[.triggers[] | select(.option_name == "game")]' ./games/sync/*.yaml) \
+          yq -i '(.triggers[] | select(.option_name == "async").options) += env(ASYNC_TRIGGERS) | (.triggers += env(PER_GAME_NAMES))' ./games/triggers.yaml
 
       #- name: Archipelago | Restore Cache
       #  id: arch-cache-restore
