@@ -48,6 +48,7 @@ jobs:
           cp -a games/custom_worlds/. /tmp/Archipelago/custom_worlds
           cat "games/custom_worlds/install.txt" | parallel --gnu "wget -nv -P /tmp/Archipelago/custom_worlds {}"
           mkdir diva
+          wget -nv -P "./diva" https://gist.githubusercontent.com/RePod/f4252f1bf099713d9559fdc7a0c26e35/raw/RePodMiku.json
 
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
@@ -74,7 +75,7 @@ jobs:
 
       - name: Concat | Create
         run: |
-          GAMES_CONCAT=$(yq eval-all '{(.game: .[.game])}  | . as $item ireduce ({}; . * $item )' *.yaml)
+          GAMES_CONCAT=$(yq eval-all '{(.game: .[.game])}  | . as $item ireduce ({}; . * $item )' games/sync/*.yaml)
           echo -e "$(cat games/header.yaml ; echo "$GAMES_CONCAT" ; cat games/triggers.yaml)" > "RePod.yaml"
           yq -P "RePod.yaml" > /dev/null
 
