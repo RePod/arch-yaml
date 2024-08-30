@@ -39,12 +39,8 @@ jobs:
         if: steps.arch-cache-restore.outputs.cache-hit != 'true'
         run: |
           cp -a $GITHUB_WORKSPACE/games/custom_worlds/. /tmp/Archipelago/custom_worlds
-          wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/Cynichill/DivaAPworld/releases/download/1.0.2B/megamix.apworld
+          wget -nv -P "/tmp/Archipelago/custom_worlds" -i "$GITHUB_WORKSPACE/games/custom_worlds/install.txt"
           mkdir $GITHUB_WORKSPACE/diva
-          wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/AliceMousie/Archipelago/releases/download/2.1.2/pokemon_crystal.apworld
-          wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/vyneras/Archipelago/releases/download/0.6.0-beta/pokemon_frlg.apworld
-          wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/sg4e/Archipelago/releases/download/v2.1.0/fm.apworld
-          wget -nv -P "/tmp/Archipelago/custom_worlds" https://github.com/spinerak/ArchipelagoYachtDice/releases/download/v2.1.1/yachtdice.apworld
 
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
