@@ -101,14 +101,15 @@ A Hat in Time:
   start_inventory: {}
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
-  progression_balancing: random-low
-  accessibility: random
-  allow_megamix_dlc_songs: true
+  # Modded JSON + Instructions: https://gist.github.com/RePod/f4252f1bf099713d9559fdc7a0c26e35"
   # HUGE generation issue if there's a JSON without a player/name to match.
   # Makes rolling into impossible/difficult for RePodMiku2, etc.
   # ✓ P1 -> P1.json
   # ✗ P2 -> diff name / no P2.json
-  using_modded_songs: true
+  progression_balancing: random-low
+  accessibility: random
+  allow_megamix_dlc_songs: true
+  using_modded_songs: true # true needs the modded JSON above!
   starting_song_count: 3
   additional_song_count: 36
   song_difficulty_mode: manual
@@ -1012,6 +1013,86 @@ triggers:
     options:
       null:
         name: RePod{NUMBER}
+  - option_name: game
+    option_result: A Hat in Time
+    options:
+      null:
+        name: RePodHIT{NUMBER}
+  - option_name: game
+    option_result: Hatsune Miku Project Diva Mega Mix+
+    options:
+      null:
+        name: RePodMiku{NUMBER}
+  - option_name: game
+    option_result: Manual_Hatsune_Miku
+    options:
+      null:
+        name: RePodMiku{NUMBER}
+  - option_name: game
+    option_result: MegaMan Battle Network 3
+    options:
+      null:
+        name: RePodBN3{NUMBER}
+  - option_name: game
+    option_result: Muse Dash
+    options:
+      null:
+        name: RePodMuse{NUMBER}
+  - option_name: game
+    option_result: Pokemon Crystal
+    options:
+      null:
+        name: RePodCRY{NUMBER}
+  - option_name: game
+    option_result: Pokemon Emerald
+    options:
+      null:
+        name: RePodEM{NUMBER}
+  - option_name: game
+    option_result: Pokemon FireRed and LeafGreen
+    options:
+      null:
+        name: RePodRG{NUMBER}
+  - option_name: game
+    option_result: Pokemon Red and Blue
+    options:
+      null:
+        name: RePodRB{NUMBER}
+  - option_name: game
+    option_result: Super Mario 64
+    options:
+      null:
+        name: RePodSM64{NUMBER}
+  - option_name: game
+    option_result: Super Mario World
+    options:
+      null:
+        name: RePodSMW{NUMBER}
+  - option_name: game
+    option_result: Super Metroid
+    options:
+      null:
+        name: RePodSM{NUMBER}
+  - option_name: game
+    option_result: VVVVVV
+    options:
+      null:
+        name: RePodV6{NUMBER}
+  - option_name: game
+    option_result: Yacht Dice
+    options:
+      null:
+        name: RePodice{NUMBER}
+  - option_name: game
+    option_result: Yu-Gi-Oh! 2006
+    options:
+      null:
+        name: RePod06{NUMBER}
+  - option_name: game
+    option_result: Yu-Gi-Oh! Forbidden Memories
+    options:
+      null:
+        name: RePodFM{NUMBER}
   - option_name: game
     option_result: A Hat in Time
     options:
