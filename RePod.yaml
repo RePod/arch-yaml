@@ -804,6 +804,7 @@ Yacht Dice:
   game_difficulty:
     medium: 1
     hard: 3
+    extreme: 1
   score_for_last_check: 1000
   score_for_goal: 777
   minimal_number_of_dice_and_rolls: 5_dice_and_3_rolls
@@ -973,7 +974,7 @@ triggers:
       VVVVVV:
         area_rando: true
       Yacht Dice:
-        game_difficulty: hard
+        game_difficulty: extreme
       Yu-Gi-Oh! 2006:
         # No way to tell what was picked without doing them.
         final_campaign_boss_unlock_condition:
