@@ -17,18 +17,18 @@ game:
                                             # WARNING: As of 2024-07 the world may require a "diva" folder be created
                                             # in the same folder as ArchipelagoGenerate.exe
   Manual_Hatsune_Miku: 0                    # Manual! I can provide it if needed.
-  MegaMan Battle Network 3: 6
+  MegaMan Battle Network 3: 9
   Muse Dash: 0
-  Pokemon Crystal: 6                        # Unsupported https://github.com/AliceMousie/Archipelago/releases/latest
+  Pokemon Crystal: 9                        # Unsupported https://github.com/AliceMousie/Archipelago/releases/latest
   Pokemon Emerald: 9
-  Pokemon FireRed and LeafGreen: 6          # Unsupported https://github.com/vyneras/Archipelago/releases/latest
+  Pokemon FireRed and LeafGreen: 9          # Unsupported https://github.com/vyneras/Archipelago/releases/latest
   Pokemon Red and Blue: 0
-  Super Mario 64: 6
-  Super Mario World: 3
+  Super Mario 64: 9
+  Super Mario World: 9
   Super Metroid: 0
   VVVVVV: 9
   Yacht Dice: 9                             # Unsupported https://github.com/spinerak/ArchipelagoYachtDice/releases/latest
-  Yu-Gi-Oh! 2006: 3
+  Yu-Gi-Oh! 2006: 9
   Yu-Gi-Oh! Forbidden Memories: 9           # Unsupported https://github.com/sg4e/Archipelago/releases/latest
 
 A Hat in Time:
@@ -1013,6 +1013,86 @@ triggers:
     options:
       null:
         name: RePod{NUMBER}
+  - option_name: game
+    option_result: A Hat in Time
+    options:
+      null:
+        name: RePodHIT{NUMBER}
+  - option_name: game
+    option_result: Hatsune Miku Project Diva Mega Mix+
+    options:
+      null:
+        name: RePodMiku{NUMBER}
+  - option_name: game
+    option_result: Manual_Hatsune_Miku
+    options:
+      null:
+        name: RePodMiku{NUMBER}
+  - option_name: game
+    option_result: MegaMan Battle Network 3
+    options:
+      null:
+        name: RePodBN3{NUMBER}
+  - option_name: game
+    option_result: Muse Dash
+    options:
+      null:
+        name: RePodMuse{NUMBER}
+  - option_name: game
+    option_result: Pokemon Crystal
+    options:
+      null:
+        name: RePodCRY{NUMBER}
+  - option_name: game
+    option_result: Pokemon Emerald
+    options:
+      null:
+        name: RePodEM{NUMBER}
+  - option_name: game
+    option_result: Pokemon FireRed and LeafGreen
+    options:
+      null:
+        name: RePodRG{NUMBER}
+  - option_name: game
+    option_result: Pokemon Red and Blue
+    options:
+      null:
+        name: RePodRB{NUMBER}
+  - option_name: game
+    option_result: Super Mario 64
+    options:
+      null:
+        name: RePodSM64{NUMBER}
+  - option_name: game
+    option_result: Super Mario World
+    options:
+      null:
+        name: RePodSMW{NUMBER}
+  - option_name: game
+    option_result: Super Metroid
+    options:
+      null:
+        name: RePodSM{NUMBER}
+  - option_name: game
+    option_result: VVVVVV
+    options:
+      null:
+        name: RePodV6{NUMBER}
+  - option_name: game
+    option_result: Yacht Dice
+    options:
+      null:
+        name: RePodice{NUMBER}
+  - option_name: game
+    option_result: Yu-Gi-Oh! 2006
+    options:
+      null:
+        name: RePod06{NUMBER}
+  - option_name: game
+    option_result: Yu-Gi-Oh! Forbidden Memories
+    options:
+      null:
+        name: RePodFM{NUMBER}
   - option_name: game
     option_result: A Hat in Time
     options:
