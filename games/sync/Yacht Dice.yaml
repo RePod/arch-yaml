@@ -2,6 +2,8 @@ name: RePod{NUMBER}
 game: Yacht Dice
 async: false
 per_game_name: true
+description: "Unsupported https://github.com/spinerak/ArchipelagoYachtDice/releases/latest"
+apworld: "https://github.com/spinerak/ArchipelagoYachtDice/releases/latest"
 
 Yacht Dice:
   # https://yacht-dice-ap.netlify.app/
