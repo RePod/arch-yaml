@@ -110,8 +110,8 @@ Pokemon FireRed and LeafGreen:
     randomized: 2
     start_with_four_moves: 2
   #move_blacklist
-  hm_compatability: full
-  tm_tutor_compatability: random
+  hm_compatibility: full
+  tm_tutor_compatibility: random
   tm_tutor_moves: true
   reusable_tm_tutors: true
   min_catch_rate: 255
