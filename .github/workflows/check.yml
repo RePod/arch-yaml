@@ -75,7 +75,7 @@ jobs:
       - name: Concat | Create
         run: |
           GAMES_CONCAT=$(yq eval-all '{(.game: .[.game])}  | . as $item ireduce ({}; . * $item )' *.yaml)
-          echo "$(cat games/header.yaml ; echo "$GAMES_CONCAT" ; cat games/triggers.yaml)" > "RePod.yaml"
+          echo -e "$(cat games/header.yaml ; echo "$GAMES_CONCAT" ; cat games/triggers.yaml)" > "RePod.yaml"
           yq -P "RePod.yaml" > /dev/null
 
       # Should be a quick fuzz with only 1 player
