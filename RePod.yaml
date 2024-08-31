@@ -842,6 +842,41 @@ Yacht Dice:
   add_bonus_points: sure
   add_story_chapters: sure
   which_story: random_story
+Yoshi's Island:
+  progression_balancing: random-low
+  accessibility: random
+  starting_world: world_1
+  starting_lives: 69
+  goal:
+    bowser: 1
+    luigi_hunt: 0
+  luigi_pieces_required: 25 # 1-100
+  luigi_pieces_in_pool: 50 # 1-100
+  extras_enabled: false
+  minigame_checks: none
+  split_extras: false
+  split_bonus: false
+  hidden_object_visibility: coins_only
+  add_secretlens: false
+  shuffle_midrings: false
+  stage_logic: strict
+  item_logic: false
+  disable_autoscroll: false
+  softlock_prevention: true
+  castle_open_condition: 5
+  castle_clear_condition: 0
+  bowser_door_mode: manual
+  level_shuffle: disabled
+  boss_shuffle: false
+  yoshi_colors: random_order
+  yoshi_singularity_color: random
+  baby_mario_sound:
+    normal: 50
+    disabled: 0
+    random_sound_effect: 0
+  traps_enabled: false
+  trap_percent: 10
+  death_link: false
 Yu-Gi-Oh! 2006:
   # https://archipelago.gg/games/Yu-Gi-Oh!%202006/player-options
   # Currently just the default generation options with a few tweaks
@@ -996,6 +1031,8 @@ triggers:
         area_rando: true
       Yacht Dice:
         game_difficulty: extreme
+      Yoshi's Island:
+        death_link: true
       Yu-Gi-Oh! 2006:
         # No way to tell what was picked without doing them.
         final_campaign_boss_unlock_condition:
@@ -1110,6 +1147,11 @@ triggers:
     options:
       null:
         name: RePodice{NUMBER}
+  - option_name: game
+    option_result: Yoshi's Island
+    options:
+      null:
+        name: RePodYI{NUMBER}
   - option_name: game
     option_result: Yu-Gi-Oh! 2006
     options:
