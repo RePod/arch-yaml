@@ -1,0 +1,44 @@
+name: RePod{NUMBER}
+game: ANIMAL WELL
+async: false
+per_game_name: true
+description: "Unsupported https://github.com/ScipioWright/Archipelago-SW/releases/latest"
+apworld: "https://github.com/ScipioWright/Archipelago-SW/releases/latest"
+
+ANIMAL WELL:
+  progression_balancing: random-low
+  accessibility: random
+  goal:
+    fireworks: 50
+    egg_hunt: 0
+  eggs_needed: 64
+  key_ring: true
+  matchbox: true
+  candle_checks: false
+  bunnies_as_checks: off
+  bunny_warps_in_logic: false
+  exclude_song_chests: true
+  random_final_egg_location: false
+  death_link: false
+  bubble_jumping: exclude_long_chains
+  disc_hopping: off
+  wheel_tricks: off
+  weird_tricks: false
+
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      ANIMAL WELL:
+        death_link: true
+  - option_name: game
+    option_result: ANIMAL WELL
+    options:
+      null:
+        name: RePodWell{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
