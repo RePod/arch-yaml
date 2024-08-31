@@ -99,6 +99,25 @@ A Hat in Time:
   LaserTrapWeight: 40
   ParadeTrapWeight: 20
   start_inventory: {}
+ANIMAL WELL:
+  progression_balancing: random-low
+  accessibility: random
+  goal:
+    fireworks: 50
+    egg_hunt: 0
+  eggs_needed: 64
+  key_ring: true
+  matchbox: true
+  candle_checks: false
+  bunnies_as_checks: off
+  bunny_warps_in_logic: false
+  exclude_song_chests: true
+  random_final_egg_location: false
+  death_link: false
+  bubble_jumping: exclude_long_chains
+  disc_hopping: off
+  wheel_tricks: off
+  weird_tricks: false
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
   # Modded JSON + Instructions: https://gist.github.com/RePod/f4252f1bf099713d9559fdc7a0c26e35"
@@ -896,6 +915,8 @@ triggers:
         per_game_name: true
       A Hat in Time:
         death_link: true
+      ANIMAL WELL:
+        death_link: true
       Hatsune Miku Project Diva Mega Mix+:
         accessibility: minimal
         # base + dlc songs = 251 - goal song = 250 songs / 500 checks
@@ -1019,6 +1040,11 @@ triggers:
     options:
       null:
         name: RePodHIT{NUMBER}
+  - option_name: game
+    option_result: ANIMAL WELL
+    options:
+      null:
+        name: RePodWell{NUMBER}
   - option_name: game
     option_result: Hatsune Miku Project Diva Mega Mix+
     options:
