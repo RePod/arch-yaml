@@ -13,6 +13,7 @@ requires:
 
 game:
   A Hat in Time: 0
+  ANIMAL WELL: 0                            # Unsupported https://github.com/ScipioWright/Archipelago-SW/releases/latest
   Hatsune Miku Project Diva Mega Mix+: 9    # Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest
                                             # WARNING: As of 2024-07 the world may require a "diva" folder be created
                                             # in the same folder as ArchipelagoGenerate.exe
@@ -28,6 +29,7 @@ game:
   Super Metroid: 0
   VVVVVV: 9
   Yacht Dice: 9                             # Unsupported https://github.com/spinerak/ArchipelagoYachtDice/releases/latest
+  Yoshi's Island: 0
   Yu-Gi-Oh! 2006: 9
   Yu-Gi-Oh! Forbidden Memories: 9           # Unsupported https://github.com/sg4e/Archipelago/releases/latest
 
