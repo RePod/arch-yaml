@@ -25,6 +25,16 @@ jobs:
           PER_GAME_NAMES=$(yq '[.triggers[] | select(.option_name == "game")]' ./games/sync/*.yaml) \
           yq -i '(.triggers[] | select(.option_name == "async").options) += env(ASYNC_TRIGGERS) | (.triggers += env(PER_GAME_NAMES))' ./games/triggers.yaml
 
+      # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      - name: Dynamic Games
+        run: |
+           yq -N '{.game: (.weight // 9), "desc": .description // ""} | .[] line_comment = .desc | del .desc' ./games/sync/*.yaml | 
+           sed -r '/^\s*$/d' |
+           yq '{"game": .}' - | 
+           sed $'s/#/\001#/' | 
+           column -ets $'\001' >>
+           games/header.yaml
+           
       #- name: Archipelago | Restore Cache
       #  id: arch-cache-restore
       #  uses: actions/cache/restore@v4
