@@ -4,6 +4,7 @@ async: false
 per_game_name: true
 
 A Link to the Past:
+  # https://archipelago.gg/tutorial/A%20Link%20to%20the%20Past/multiworld/en
   progression_balancing: random-low
   accessibility: random
   goal: ganon
