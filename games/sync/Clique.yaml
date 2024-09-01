@@ -4,6 +4,7 @@ async: false
 per_game_name: true
 
 Clique:
+  # https://clique.pharware.com
   progression_balancing: random 
   accessibility: random
   color: random
