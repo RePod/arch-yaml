@@ -2,6 +2,7 @@ name: RePod{NUMBER}
 game: Clique
 async: false
 per_game_name: true
+weight: 1
 
 Clique:
   # https://clique.pharware.com
