@@ -1,0 +1,27 @@
+name: RePod{NUMBER}
+game: Clique
+async: false
+per_game_name: true
+
+Clique:
+  progression_balancing: random 
+  accessibility: random
+  color: random
+
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Clique:
+        hard_mode: true
+  - option_name: game
+    option_result: Clique
+    options:
+      null:
+        name: RePodClique{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
