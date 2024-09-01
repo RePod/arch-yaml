@@ -28,12 +28,11 @@ jobs:
       # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       - name: Dynamic Games
         run: |
-           yq -N '{.game: (.weight // 9), "desc": .description // ""} | .[] line_comment = .desc | del .desc' ./games/sync/*.yaml | 
+           $(yq -N '{.game: (.weight // 9), "desc": .description // ""} | .[] line_comment = .desc | del .desc' ./games/sync/*.yaml | 
            sed -r '/^\s*$/d' |
-           yq '{"game": .}' - | 
+           yq '{"game": .}' | 
            sed $'s/#/\001#/' | 
-           column -ets $'\001' >>
-           games/header.yaml
+           column -ets $'\001') >> games/header.yaml
            
       #- name: Archipelago | Restore Cache
       #  id: arch-cache-restore
