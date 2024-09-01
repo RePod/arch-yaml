@@ -14,6 +14,7 @@ requires:
 game:                                      
   A Hat in Time: 0                         
   ANIMAL WELL: 9                           # Unsupported https://github.com/ScipioWright/Archipelago-SW/releases/latest
+  Clique: 9                                
   Hatsune Miku Project Diva Mega Mix+: 9   # Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest
                                            # Modded JSON + Instructions: https://gist.github.com/RePod/f4252f1bf099713d9559fdc7a0c26e35
   Manual_Hatsune_Miku: 9                   # Manual! I can provide it if needed.
@@ -119,6 +120,11 @@ ANIMAL WELL:
   disc_hopping: off
   wheel_tricks: off
   weird_tricks: false
+Clique:
+  # https://clique.pharware.com
+  progression_balancing: random
+  accessibility: random
+  color: random
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
   # Modded JSON + Instructions: https://gist.github.com/RePod/f4252f1bf099713d9559fdc7a0c26e35"
@@ -952,6 +958,8 @@ triggers:
         death_link: true
       ANIMAL WELL:
         death_link: true
+      Clique:
+        hard_mode: true
       Hatsune Miku Project Diva Mega Mix+:
         accessibility: minimal
         # base + dlc songs = 251 - goal song = 250 songs / 500 checks
@@ -1099,6 +1107,11 @@ triggers:
     options:
       null:
         name: RePodWell{NUMBER}
+  - option_name: game
+    option_result: Clique
+    options:
+      null:
+        name: RePodClique{NUMBER}
   - option_name: game
     option_result: Hatsune Miku Project Diva Mega Mix+
     options:
