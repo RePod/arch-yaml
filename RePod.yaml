@@ -12,7 +12,7 @@ requires:
   version: 0.5.0
 
 game:                                      
-  A Hat in Time: 9                         
+  A Hat in Time: 0                         
   ANIMAL WELL: 9                           # Unsupported https://github.com/ScipioWright/Archipelago-SW/releases/latest
   Hatsune Miku Project Diva Mega Mix+: 9   # Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest
                                            # Modded JSON + Instructions: https://gist.github.com/RePod/f4252f1bf099713d9559fdc7a0c26e35
