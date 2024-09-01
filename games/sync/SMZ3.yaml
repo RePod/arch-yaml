@@ -5,7 +5,7 @@ per_game_name: true
 
 SMZ3:
   # https://archipelago.gg/tutorial/SMZ3/multiworld/en
-  progression_balancing: random-mid
+  progression_balancing: random-middle
   sm_logic: normal
   sword_location: randomized
   morph_location: randomized
