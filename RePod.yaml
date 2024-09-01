@@ -18,7 +18,7 @@ game:
                                            # Modded JSON + Instructions: https://gist.github.com/RePod/f4252f1bf099713d9559fdc7a0c26e35
   Manual_Hatsune_Miku: 9                   # Manual! I can provide it if needed.
   MegaMan Battle Network 3: 9              
-  Muse Dash: 9                             
+  Muse Dash: 0                             
   Pokemon Crystal: 9                       # Unsupported https://github.com/AliceMousie/Archipelago/releases/latest
   Pokemon Emerald: 9                       
   Pokemon FireRed and LeafGreen: 9         # Unsupported https://github.com/vyneras/Archipelago/releases/latest
@@ -606,9 +606,6 @@ Pokemon Red and Blue:
   extra_strength_boulders: random
   require_item_finder: false
   randomize_hidden_items: off
-  prizesanity: false
-  trainersanity: false
-  dexsanity: 0
   randomize_pokedex: vanilla
   require_pokedex: true
   all_pokemon_seen: true
@@ -620,12 +617,16 @@ Pokemon Red and Blue:
   warp_tile_shuffle: false
   randomize_rock_tunnel: false
   dark_rock_tunnel_logic: true
-  free_fly_location: random
-  town_map_fly_location: false
-  blind_trainers: 20
+  free_fly_location:
+    true: 3
+    false: 1
+  town_map_fly_location:
+    true: 3
+    false: 1
+  blind_trainers: 100
   minimum_steps_between_encounters: 6
   level_scaling: by_spheres
-  exp_modifier: 20
+  exp_modifier: 32
   randomize_wild_pokemon: completely_random
   area_1_to_1_mapping: false
   randomize_starter_pokemon: completely_random
@@ -660,11 +661,11 @@ Pokemon Red and Blue:
   not_very_effective_matchups: 38
   immunity_matchups: 6
   safari_zone_normal_battles: false
-  normalize_encounter_chances: false
-  reusable_tms: false
+  normalize_encounter_chances: true
+  reusable_tms: true
   better_shops: on
   master_ball_price: 0
-  starting_money: 3069
+  starting_money: 3001
   lose_money_on_blackout: false
   poke_doll_skip: patched
   bicycle_gate_skips: patched
@@ -675,7 +676,6 @@ Pokemon Red and Blue:
   sleep_trap_weight: medium
   ice_trap_weight: disabled
   randomize_pokemon_palettes: completely_random
-  death_link: true
 Super Mario 64:
   # https://archipelago.gg/tutorial/Super%20Mario%2064/setup/en
   progression_balancing: random-low
@@ -762,7 +762,6 @@ Super Metroid:
   preset: regular
   start_location: landing_site
   remote_items: true
-  #death_link: disable
   max_difficulty: easy
   morph_placement: early
   hide_items: false
@@ -1001,6 +1000,22 @@ triggers:
         shuffle_hidden: all
       Pokemon Red and Blue:
         rival_name: FNSHING
+        death_link: true
+        all_pokemon_seen: false
+        oaks_aide_rt_2: 10
+        oaks_aide_rt_11: 30
+        oaks_aide_rt_15: 50
+        door_shuffle:
+          insanity: 3
+          decoupled: 1
+        extra_key_items: true
+        split_card_key: true
+        warp_tile_shuffle: mixed
+        randomize_rock_tunnel: true
+        dark_rock_tunnel_logic: true
+        prizesanity: true
+        trainersanity: true
+        dexsanity: full
       Super Mario 64:
         area_rando: courses_and_secrets
         buddy_checks: true
@@ -1026,7 +1041,8 @@ triggers:
         blocksanity: true
         bosses_required: random-range-low-7-11 # please not 11 please not 11
       Super Metroid:
-        progression_balancing: random
+        progression_balancing: random-low
+        death_link: true
       VVVVVV:
         area_rando: true
       Yacht Dice:
