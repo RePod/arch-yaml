@@ -13,6 +13,7 @@ requires:
 
 game:                                      
   A Hat in Time: 0                         
+  A Link to the Past: 9                    
   ANIMAL WELL: 9                           # Unsupported https://github.com/ScipioWright/Archipelago-SW/releases/latest
   ChecksFinder: 1                          
   Clique: 1                                
@@ -102,6 +103,82 @@ A Hat in Time:
   LaserTrapWeight: 40
   ParadeTrapWeight: 20
   start_inventory: {}
+A Link to the Past:
+  progression_balancing: random-low
+  accessibility: random
+  goal: ganon
+  mode: open
+  glitches_required: no_glitches
+  dark_room_logic: lamp
+  open_pyramid: goal
+  crystals_needed_for_gt: 7
+  crystals_needed_for_ganon: 7
+  triforce_pieces_mode: available
+  triforce_pieces_percentage: 150
+  triforce_pieces_required: 20
+  triforce_pieces_available: 30
+  triforce_pieces_extra: 10
+  entrance_shuffle: vanilla
+  entrance_shuffle_seed: random
+  big_key_shuffle: original_dungeon
+  small_key_shuffle: original_dungeon
+  key_drop_shuffle: true
+  compass_shuffle: original_dungeon
+  map_shuffle: original_dungeon
+  restrict_dungeon_item_on_boss: false
+  item_pool: normal
+  item_functionality: normal
+  enemy_health: default
+  enemy_damage: default
+  progressive: on
+  swordless: false
+  dungeon_counters: pickup
+  retro_bow: false
+  retro_caves: false
+  hints: on
+  scams: off
+  boss_shuffle: none
+  pot_shuffle: false
+  enemy_shuffle: false
+  killable_thieves: false
+  bush_shuffle: false
+  shop_item_slots: 0
+  randomize_shop_inventories: default
+  shuffle_shop_inventories: false
+  include_witch_hut: false
+  randomize_shop_prices: false
+  randomize_cost_types: false
+  shop_price_modifier: 100
+  shuffle_capacity_upgrades: off
+  bombless_start: false
+  shuffle_prizes: general
+  tile_shuffle: false
+  glitch_boots: true
+  beemizer_total_chance: 0
+  beemizer_trap_chance: 60
+  timer: none
+  countdown_start_time: 10
+  red_clock_time: -2
+  blue_clock_time: 2
+  green_clock_time: 4
+  death_link: false
+  allow_collect: true
+  ow_palettes: random
+  uw_palettes: random
+  hud_palettes: random
+  sword_palettes: random
+  shield_palettes: random
+  heartbeep: quarter
+  heartcolor: red
+  quickswap: true
+  menuspeed: normal
+  music: true
+  reduceflashing: true
+  triforcehud: normal
+  start_inventory: {}
+  start_inventory_from_pool: {}
+  misery_mire_medallion: random
+  turtle_rock_medallion: random
 ANIMAL WELL:
   progression_balancing: random-low
   accessibility: random
@@ -960,6 +1037,8 @@ triggers:
         per_game_name: true
       A Hat in Time:
         death_link: true
+      A Link to the Past:
+        death_link: true
       ANIMAL WELL:
         death_link: true
       ChecksFinder:
@@ -1108,6 +1187,11 @@ triggers:
     options:
       null:
         name: RePodHIT{NUMBER}
+  - option_name: game
+    option_result: A Link to the Past
+    options:
+      null:
+        name: RePodLTTP{NUMBER}
   - option_name: game
     option_result: ANIMAL WELL
     options:
