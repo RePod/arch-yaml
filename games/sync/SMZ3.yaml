@@ -1,0 +1,41 @@
+name: RePod{NUMBER}
+game: SMZ3
+async: false
+per_game_name: true
+
+SMZ3:
+  # https://archipelago.gg/tutorial/SMZ3/multiworld/en
+  progression_balancing: random-mid
+  sm_logic: normal
+  sword_location: randomized
+  morph_location: randomized
+  goal: defeatboth
+  key_shuffle: none
+  open_tower: 7
+  ganon_vulnerable: 7
+  open_tourian: 4
+  spin_jumps_animation: false
+  heart_beep_speed: quarter
+  heart_color: random
+  quick_swap: true
+  energy_beep: true
+  start_inventory: {}
+  accessibility: random
+
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      SMZ3:
+        progression_balancing: random-low
+  - option_name: game
+    option_result: SMZ3
+    options:
+      null:
+        name: RePodSMZ3{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
