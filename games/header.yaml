@@ -11,25 +11,3 @@ per_game_name: true
 requires:
   version: 0.5.0
 
-game:
-  A Hat in Time: 0
-  ANIMAL WELL: 0                            # Unsupported https://github.com/ScipioWright/Archipelago-SW/releases/latest
-  Hatsune Miku Project Diva Mega Mix+: 9    # Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest
-                                            # WARNING: As of 2024-07 the world may require a "diva" folder be created
-                                            # in the same folder as ArchipelagoGenerate.exe
-  Manual_Hatsune_Miku: 0                    # Manual! I can provide it if needed.
-  MegaMan Battle Network 3: 9
-  Muse Dash: 0
-  Pokemon Crystal: 9                        # Unsupported https://github.com/AliceMousie/Archipelago/releases/latest
-  Pokemon Emerald: 9
-  Pokemon FireRed and LeafGreen: 9          # Unsupported https://github.com/vyneras/Archipelago/releases/latest
-  Pokemon Red and Blue: 0
-  Super Mario 64: 9
-  Super Mario World: 9
-  Super Metroid: 0
-  VVVVVV: 9
-  Yacht Dice: 9                             # Unsupported https://github.com/spinerak/ArchipelagoYachtDice/releases/latest
-  Yoshi's Island: 0
-  Yu-Gi-Oh! 2006: 9
-  Yu-Gi-Oh! Forbidden Memories: 9           # Unsupported https://github.com/sg4e/Archipelago/releases/latest
-
