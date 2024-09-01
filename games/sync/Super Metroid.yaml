@@ -11,7 +11,6 @@ Super Metroid:
   preset: regular
   start_location: landing_site
   remote_items: true
-  #death_link: disable
   max_difficulty: easy
   morph_placement: early
   hide_items: false
@@ -60,7 +59,8 @@ triggers:
     option_result: true
     options:
       Super Metroid:
-        progression_balancing: random
+        progression_balancing: random-low
+        death_link: true
   - option_name: game
     option_result: Super Metroid
     options:

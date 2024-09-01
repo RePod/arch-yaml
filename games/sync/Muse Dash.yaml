@@ -2,6 +2,7 @@ name: RePod{NUMBER}
 game: Muse Dash
 async: false
 per_game_name: true
+weight: 0
 
 Muse Dash:
   # https://archipelago.gg/tutorial/Muse%20Dash/setup/en
