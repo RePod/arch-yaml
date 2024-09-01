@@ -1083,6 +1083,7 @@ triggers:
           true: 3
           #trade_quest_hinting: none
       Muse Dash:
+        progression_balancing: random-middle
       Pokemon Crystal:
         randomize_berry_trees: true
         trainersanity:
