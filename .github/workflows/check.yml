@@ -21,14 +21,14 @@ jobs:
 
       - name: Dynamic Triggers
         run: |
-          ASYNC_TRIGGERS=$(yq eval-all '(.triggers[] | select(.option_name == "async").options) | . as $item ireduce ({}; . * $item )' ./games/sync/*.yaml) \
-          PER_GAME_NAMES=$(yq '[.triggers[] | select(.option_name == "game")]' ./games/sync/*.yaml) \
-          yq -i '(.triggers[] | select(.option_name == "async").options) += env(ASYNC_TRIGGERS) | (.triggers += env(PER_GAME_NAMES))' ./games/triggers.yaml
+          ASYNC_TRIGGERS=$(yq ea -N '.triggers[] | select(.option_name == "async").options)' games/sync/*.yaml) \
+          PER_GAME_NAMES=$(yq '[.triggers[] | select(.option_name == "game")]' games/sync/*.yaml) \
+          yq -i '(.triggers[] | select(.option_name == "async").options) += env(ASYNC_TRIGGERS) | (.triggers += env(PER_GAME_NAMES))' games/triggers.yaml
 
       # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       - name: Dynamic Games
         run: |
-           echo -e "$(yq -N '{.game: (.weight // 9), "desc": .description // ""} | .[] line_comment = .desc | del .desc' ./games/sync/*.yaml | 
+           echo -e "$(yq -N '{.game: (.weight // 9), "desc": .description // ""} | .[] line_comment = .desc | del .desc' games/sync/*.yaml | 
            sed -r '/^\s*$/d' |
            yq '{"game": .}' | 
            sed $'s/#/\001#/' | 
@@ -65,7 +65,7 @@ jobs:
             wget -q -O - {} |
             jq '[.[].assets[] | select(.browser_download_url | endswith(\".apworld\"))][0].browser_download_url' |
             xargs wget -nv -P /tmp/Archipelago/custom_worlds"
-          wget -nv -P "./diva/" https://gist.githubusercontent.com/RePod/f4252f1bf099713d9559fdc7a0c26e35/raw/RePodMiku.json
+          wget -nv -P "diva/" https://gist.githubusercontent.com/RePod/f4252f1bf099713d9559fdc7a0c26e35/raw/RePodMiku.json
 
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
