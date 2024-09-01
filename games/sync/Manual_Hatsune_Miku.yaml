@@ -3,6 +3,7 @@ game: Manual_Hatsune_Miku
 async: false
 per_game_name: true
 description: "Manual! I can provide it if needed."
+weight: 0
 
 Manual_Hatsune_Miku:
   # THE the Manual!
