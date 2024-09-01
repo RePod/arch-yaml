@@ -1,0 +1,27 @@
+name: RePod{NUMBER}
+game: ChecksFinder
+async: false
+per_game_name: true
+weight: 1
+
+ChecksFinder:
+  progression_balancing: random-low
+  accessibility: random
+
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      ChecksFinder:
+        progression_balancing: 0
+  - option_name: game
+    option_result: ChecksFinder
+    options:
+      null:
+        name: RePodMine{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
