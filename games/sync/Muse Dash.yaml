@@ -46,6 +46,7 @@ triggers:
     option_result: true
     options:
       Muse Dash:
+        progression_balancing: random-middle
   - option_name: game
     option_result: Muse Dash
     options:
