@@ -26,6 +26,7 @@ game:
   Pokemon Emerald: 9                       
   Pokemon FireRed and LeafGreen: 9         # Unsupported https://github.com/vyneras/Archipelago/releases/latest
   Pokemon Red and Blue: 9                  
+  SMZ3: 9                                  
   Super Mario 64: 9                        
   Super Mario World: 9                     
   Super Metroid: 9                         
@@ -104,6 +105,7 @@ A Hat in Time:
   ParadeTrapWeight: 20
   start_inventory: {}
 A Link to the Past:
+  # https://archipelago.gg/tutorial/A%20Link%20to%20the%20Past/multiworld/en
   progression_balancing: random-low
   accessibility: random
   goal: ganon
@@ -764,6 +766,24 @@ Pokemon Red and Blue:
   sleep_trap_weight: medium
   ice_trap_weight: disabled
   randomize_pokemon_palettes: completely_random
+SMZ3:
+  # https://archipelago.gg/tutorial/SMZ3/multiworld/en
+  progression_balancing: random-middle
+  sm_logic: normal
+  sword_location: randomized
+  morph_location: randomized
+  goal: defeatboth
+  key_shuffle: none
+  open_tower: 7
+  ganon_vulnerable: 7
+  open_tourian: 4
+  spin_jumps_animation: false
+  heart_beep_speed: quarter
+  heart_color: random
+  quick_swap: true
+  energy_beep: true
+  start_inventory: {}
+  accessibility: random
 Super Mario 64:
   # https://archipelago.gg/tutorial/Super%20Mario%2064/setup/en
   progression_balancing: random-low
@@ -1063,7 +1083,6 @@ triggers:
           true: 3
           #trade_quest_hinting: none
       Muse Dash:
-        accessibility: random
       Pokemon Crystal:
         randomize_berry_trees: true
         trainersanity:
@@ -1110,6 +1129,8 @@ triggers:
         prizesanity: true
         trainersanity: true
         dexsanity: full
+      SMZ3:
+        progression_balancing: random-low
       Super Mario 64:
         area_rando: courses_and_secrets
         buddy_checks: true
@@ -1247,6 +1268,11 @@ triggers:
     options:
       null:
         name: RePodRB{NUMBER}
+  - option_name: game
+    option_result: SMZ3
+    options:
+      null:
+        name: RePodSMZ3{NUMBER}
   - option_name: game
     option_result: Super Mario 64
     options:
