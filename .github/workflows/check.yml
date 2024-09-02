@@ -115,4 +115,4 @@ jobs:
       - name: Summarize
         run: |
           COUNT=$(ls -1 | wc -l)
-          echo "Successfully generated $COUNT games." >> $GITHUB_SUMMARY
+          echo "Successfully generated $COUNT games." >> $GITHUB_STEP_SUMMARY
