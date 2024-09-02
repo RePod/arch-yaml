@@ -61,7 +61,7 @@ jobs:
             yq '.apworld' games/sync/*.yaml |
             grep -Po '(?<=.com\/)(.*?)(?=\/releases)' |
             awk '{printf("https://api.github.com/repos/%s/releases\n", $0);}')
-          echo "$UNSUPPORTED" | parallel "
+          echo "$UNSUPPORTED" | parallel --halt now,fail=1 "
             wget -q -O - {} |
             jq '[.[].assets[] | select(.browser_download_url | endswith(\".apworld\"))][0].browser_download_url' |
             xargs wget -nv -P /tmp/Archipelago/custom_worlds"
@@ -83,12 +83,12 @@ jobs:
       # fuzz a bit. over time this will shake out errors, if any.
       - name: Archipelago | Multi Sync (Fuzz)
         run: |
-          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
+          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
 
       - name: Archipelago | Multi Async/Triggers (Fuzz)
         run: |
           find /tmp/Archipelago/Players/ -maxdepth 1 -type f -name "*.yaml" -exec yq -i '(.async = true)' {} \;
-          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
+          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
 
       - name: Concat | Create
         run: |
@@ -101,7 +101,7 @@ jobs:
         run: |
           rm -rf /tmp/Archipelago/Players/*
           cp "RePod.yaml" /tmp/Archipelago/Players/
-          parallel -N0 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
+          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
 
       - name: Commit & Push
         id: Commit
