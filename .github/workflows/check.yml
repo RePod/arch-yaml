@@ -114,5 +114,5 @@ jobs:
 
       - name: Summarize
         run: |
-          COUNT=$(ls -1 | wc -l)
+          COUNT=$(ls -1 games/sync/*.yaml | wc -l)
           echo "Successfully generated $COUNT games." >> $GITHUB_STEP_SUMMARY
