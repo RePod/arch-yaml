@@ -19,7 +19,7 @@ on:
 env:
   #GEN_SEED: ${{ github.event.inputs.generation_seed && "?" || "" }}
   ITERATIONS: ${{ github.event.inputs.fuzz_iterations }}
-  SKIP_PROGBAL: ${{ github.event.inputs.skip_progbal && "--skip_prog_balancing" || "" }}
+  SKIP_PROGBAL: "--skip_prog_balancing" # ${{ github.event.inputs.skip_progbal }} # Conditional env where!
 
 jobs:
   build:
