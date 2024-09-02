@@ -17,9 +17,9 @@ on:
         default: true
 
 env:
-  #GEN_SEED: ${{ github.event.inputs.generation_seed && "?" || "" }}
+  GEN_SEED: ${{ github.event.inputs.generation_seed }}
   ITERATIONS: ${{ github.event.inputs.fuzz_iterations }}
-  SKIP_PROGBAL: "--skip_prog_balancing" # ${{ github.event.inputs.skip_progbal }} # Conditional env where!
+  SKIP_PROGBAL: ${{ github.event.inputs.skip_progbal }}
 
 jobs:
   build:
@@ -35,6 +35,7 @@ jobs:
 
       - name: Dynamic Triggers
         run: |
+          SEED=$([ -n $GEN_SEED ] && echo "--seed=$GEN_SEED" || "") && echo "$SEED $SKIP_PROGBAL"
           ASYNC_TRIGGERS=$(yq ea -N '.triggers[] | select(.option_name == "async").options' games/sync/*.yaml) \
           PER_GAME_NAMES=$(yq '[.triggers[] | select(.option_name == "game")]' games/sync/*.yaml) \
           yq -i '(.triggers[] | select(.option_name == "async").options) += env(ASYNC_TRIGGERS) | (.triggers += env(PER_GAME_NAMES))' games/triggers.yaml
