@@ -4,10 +4,12 @@ on:
     inputs:
       generation_seed:
         description: 'Generation Seed'
+        type: number
         required: false
         default: ''
       fuzz_iterations:
         description: 'Fuzz Iterations'
+        type: number
         required: true
         default: '2'
       skip_progbal:
