@@ -111,4 +111,8 @@ jobs:
           git add RePod.yaml
           git commit -m "Update RePod.yaml" || exit 0
           git push || exit 0
-        shell: bash
+
+      - name: Summarize
+        run: |
+          COUNT=$(ls -1 | wc -l)
+          echo "Successfully generated $COUNT games." >> $GITHUB_SUMMARY
