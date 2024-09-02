@@ -35,7 +35,6 @@ jobs:
 
       - name: Dynamic Triggers
         run: |
-          SEED=$([ -n $GEN_SEED ] && echo "--seed=$GEN_SEED" || "") && echo "$SEED $SKIP_PROGBAL"
           ASYNC_TRIGGERS=$(yq ea -N '.triggers[] | select(.option_name == "async").options' games/sync/*.yaml) \
           PER_GAME_NAMES=$(yq '[.triggers[] | select(.option_name == "game")]' games/sync/*.yaml) \
           yq -i '(.triggers[] | select(.option_name == "async").options) += env(ASYNC_TRIGGERS) | (.triggers += env(PER_GAME_NAMES))' games/triggers.yaml
@@ -85,18 +84,21 @@ jobs:
       # ~13s to gen a 16 game multi with sync settings. private repos are limited to 2 threads, public 4.
       - name: Archipelago | Multi Sync
         run: |
+          SEED=$([ -n $GEN_SEED ] && echo "--seed=$GEN_SEED" || "") && PROGBAL=$([ $SKIP_PROGBAL == true ] && echo "--skip_prog_balancing" || "")
           cp games/sync/*.yaml /tmp/Archipelago/Players
-          /tmp/Archipelago/ArchipelagoGenerate $SKIP_PROGBAL --skip_output
+          /tmp/Archipelago/ArchipelagoGenerate $SEED $PROGBAL --skip_output
 
       # fuzz a bit. over time this will shake out errors, if any.
       - name: Archipelago | Multi Sync (Fuzz)
         run: |
-          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $SKIP_PROGBAL --skip_output ::: {1..$ITERATIONS}
+          SEED=$([ -n $GEN_SEED ] && echo "--seed=$GEN_SEED" || "") && PROGBAL=$([ $SKIP_PROGBAL == true ] && echo "--skip_prog_balancing" || "")
+          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $SEED $PROGBAL --skip_output ::: {1..$ITERATIONS}
 
       - name: Archipelago | Multi Async/Triggers (Fuzz)
         run: |
+          SEED=$([ -n $GEN_SEED ] && echo "--seed=$GEN_SEED" || "") && PROGBAL=$([ $SKIP_PROGBAL == true ] && echo "--skip_prog_balancing" || "")
           find /tmp/Archipelago/Players/ -maxdepth 1 -type f -name "*.yaml" -exec yq -i '(.async = true)' {} \;
-          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $SKIP_PROGBAL --skip_output ::: {1..$ITERATIONS}
+          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $SEED $PROGBAL --skip_output ::: {1..$ITERATIONS}
 
       - name: Concat | Create
         run: |
@@ -107,6 +109,7 @@ jobs:
       # Should be a quick fuzz with only 1 player
       - name: Concat | Archipelago sanity check
         run: |
+          SEED=$([ -n $GEN_SEED ] && echo "--seed=$GEN_SEED" || "") && PROGBAL=$([ $SKIP_PROGBAL == true ] && echo "--skip_prog_balancing" || "")
           rm -rf /tmp/Archipelago/Players/*
           cp "RePod.yaml" /tmp/Archipelago/Players/
-          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $SKIP_PROGBAL --skip_output ::: {1..${{ inputs.fuzz_iterations }}}
+          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $SEED $PROGBAL --skip_output ::: {1..${{ inputs.fuzz_iterations }}}
