@@ -359,11 +359,7 @@ Pokemon Emerald:
   exclude_locations: []
   priority_locations: []
   item_links: []
-  goal:
-    champion: 50
-    steven: 0
-    norman: 0
-    legendary_hunt: 0
+  goal: champion
   badges: completely_random
   hms: completely_random
   key_items: true
@@ -386,10 +382,7 @@ Pokemon Emerald:
   elite_four_count: 8
   norman_requirement: badges
   norman_count: 4
-  legendary_hunt_catch:
-    # Sets whether legendaries need to be caught to satisfy the Legendary Hunt win condition. Defeated legendaries can be respawned by defeating the Elite 4.
-    false: 50
-    true: 0
+  legendary_hunt_catch: true
   legendary_hunt_count:
     # Sets the number of legendaries that must be caught/defeated for the Legendary Hunt goal
     # You can define additional values between the minimum and maximum values.
@@ -1093,17 +1086,20 @@ triggers:
       Pokemon Emerald:
         # Ever hit a 0.8% by rolling 3 Dex+Trainersanity Emeralds?
         # Grinding and breeding are OoL
+        goal:
+          steven: 2
+          legendary_hunt: 1
+        legendary_hunt_count: 12
         berry_trees: true
         dexsanity:
-          false: 2
+          false: 1
           true: 3
         trainersanity:
-          false: 2
+          false: 1
           true: 3
-        #exp_modifier: 1000
-        #match_trainer_levels: multiplicative
-        #match_trainer_levels_bonus: 25
-        goal: steven
+          #exp_modifier: 1000
+          #match_trainer_levels: multiplicative
+          #match_trainer_levels_bonus: 25
       Pokemon FireRed and LeafGreen:
         trainersanity: true
         oaks_aide_route_2: 10
