@@ -112,6 +112,12 @@ jobs:
           git commit -m "Update RePod.yaml" || exit 0
           git push || exit 0
 
+      - name: Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: concat-yaml
+          path: RePod.yaml
+
       - name: Summarize
         run: |
           COUNT=$(ls -1 games/sync/*.yaml | wc -l)
