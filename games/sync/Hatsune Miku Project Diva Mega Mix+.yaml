@@ -30,6 +30,8 @@ Hatsune Miku Project Diva Mega Mix+:
   leek_win_count_percentage: random-range-mid-70-90
   include_songs: []
   exclude_songs: []
+  non_local_items:
+    - Leek # Doing everything possible to not send out dupes.
 
 triggers:
   - option_category: null
