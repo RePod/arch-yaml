@@ -210,7 +210,7 @@ Clique:
   color: random
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
-  # Modded JSON + Instructions: https://gist.github.com/RePod/f4252f1bf099713d9559fdc7a0c26e35"
+  # Modded JSON + Instructions: https://gist.github.com/RePod/f4252f1bf099713d9559fdc7a0c26e35
   # HUGE generation issue if there's a JSON without a player/name to match.
   # Makes rolling into impossible/difficult for RePodMiku2, etc.
   # ✓ P1 -> P1.json
