@@ -65,7 +65,7 @@ Pokemon FireRed and LeafGreen:
     badges: 1
     gyms: 1
   cerulean_cave_count: random-middle
-  level_scaling: true
+  level_scaling: spheres_and_distance
   #modify_trainer_levels
   wild_pokemon:
     vanilla: 0
