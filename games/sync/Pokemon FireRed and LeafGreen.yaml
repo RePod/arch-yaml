@@ -15,7 +15,7 @@ Pokemon FireRed and LeafGreen:
   extra_key_items: true
   shuffle_fly_destination_unlocks: true
   itemfinder_required: logic
-  flash_required: true
+  flash_required: logic
   #remove_badge_requirement
   oaks_aide_route_2: 5
   oaks_aide_route_10: 10
