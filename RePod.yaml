@@ -548,7 +548,7 @@ Pokemon FireRed and LeafGreen:
   extra_key_items: true
   shuffle_fly_destination_unlocks: true
   itemfinder_required: logic
-  flash_required: true
+  flash_required: logic
   #remove_badge_requirement
   oaks_aide_route_2: 5
   oaks_aide_route_10: 10
@@ -598,7 +598,7 @@ Pokemon FireRed and LeafGreen:
     badges: 1
     gyms: 1
   cerulean_cave_count: random-middle
-  level_scaling: true
+  level_scaling: spheres_and_distance
   #modify_trainer_levels
   wild_pokemon:
     vanilla: 0
