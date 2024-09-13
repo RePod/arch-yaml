@@ -179,6 +179,30 @@ Pokemon FireRed and LeafGreen:
     No: 1
 
 triggers:
+  # Async
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Pokemon FireRed and LeafGreen:
+          goal: elite_four_rematch
+          shuffle_hidden: all
+          trainersanity: true
+          famesanity: true
+          pokemon_request_locations: true
+          card_key:
+            split: 4
+            progressive: 1
+          island_passes:
+            progressive: 1
+            split: 5
+            progressive_split: 1
+          oaks_aide_route_2: 10
+          oaks_aide_route_10: 20
+          oaks_aide_route_11: 30
+          oaks_aide_route_16: 40
+          oaks_aide_route_15: 50
+          modify_world_state: []
   # World state
   - option_name: Modify Route 2
     option_category: Pokemon FireRed and LeafGreen
@@ -300,30 +324,6 @@ triggers:
       Pokemon FireRed and LeafGreen:
         +additional_dark_caves:
           - Victory Road
-  # Async
-  - option_category: null
-    option_name: async
-    option_result: true
-    options:
-      Pokemon FireRed and LeafGreen:
-          goal: elite_four_rematch
-          shuffle_hidden: all
-          trainersanity: true
-          famesanity: true
-          pokemon_request_locations: true
-          card_key:
-            split: 4
-            progressive: 1
-          island_passes:
-            progressive: 1
-            split: 5
-            progressive_split: 1
-          oaks_aide_route_2: 10
-          oaks_aide_route_10: 20
-          oaks_aide_route_11: 30
-          oaks_aide_route_16: 40
-          oaks_aide_route_15: 50
-          modify_world_state: []
   - option_name: game
     option_result: Pokemon FireRed and LeafGreen
     options:
