@@ -572,9 +572,6 @@ Pokemon FireRed and LeafGreen:
     any_gym: 1
     boulder_badge: 1
     any_badge: 1
-  cerulean_city_roadblocks:
-    false: 1
-    true: 4
   viridian_gym_requirement:
     badges: 3
     gyms: 2
@@ -1130,9 +1127,6 @@ triggers:
           progressive: 1
           split: 5
           progressive_split: 1
-        modify_world_state:
-          - Modify Route 2
-          - Modify Route 10
         oaks_aide_route_2: 10
         oaks_aide_route_10: 20
         oaks_aide_route_11: 30
