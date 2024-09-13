@@ -201,8 +201,7 @@ triggers:
           oaks_aide_route_11: 30
           oaks_aide_route_16: 40
           oaks_aide_route_15: 50
-          modify_world_state: []
-  # World state
+# FRLG World state
   - option_name: Modify Route 2
     option_category: Pokemon FireRed and LeafGreen
     option_result: Yes
@@ -301,7 +300,7 @@ triggers:
       Pokemon FireRed and LeafGreen:
         +modify_world_state:
           - Total Darkness
-  # Dark Caves
+  # FRLG Dark Caves
   - option_name: Dark Mt Moon
     option_category: Pokemon FireRed and LeafGreen
     option_result: Yes
