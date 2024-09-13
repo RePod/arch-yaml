@@ -660,6 +660,21 @@ Pokemon FireRed and LeafGreen:
     any: 1
   turbo_a: true
   receive_item_messages: progression
+  # Roll world modifiers (triggers)
+  Modify Route 2: random-range-0-1
+  Remove Cerulean Roadblocks: random-range-0-1
+  Block Tunnels: random-range-0-1
+  Modify Route 9: random-range-0-1
+  Modify Route 10: random-range-0-1
+  Block Tower: random-range-0-1
+  Route 12 Boulders: random-range-0-1
+  Modify Route 12: random-range-0-1
+  Modify Route 16: random-range-0-1
+  Route 23 Trees: random-range-0-1
+  Modify Route 23: random-range-0-1
+  Victory Road Rocks: random-range-0-1
+  Early Gossipers: random-range-0-1
+  Total Darkness: random-range-0-1
 Pokemon Red and Blue:
   # https://archipelago.gg/tutorial/Pokemon%20Red%20and%20Blue/setup/en
   progression_balancing: random-low
@@ -1103,13 +1118,26 @@ triggers:
           #match_trainer_levels: multiplicative
           #match_trainer_levels_bonus: 25
       Pokemon FireRed and LeafGreen:
+        goal: elite_four_rematch
+        shuffle_hidden: all
         trainersanity: true
+        famesanity: true
+        pokemon_request_locations: true
+        card_key:
+          split: 4
+          progressive: 1
+        island_passes:
+          progressive: 1
+          split: 5
+          progressive_split: 1
+        modify_world_state:
+          - Modify Route 2
+          - Modify Route 10
         oaks_aide_route_2: 10
         oaks_aide_route_10: 20
         oaks_aide_route_11: 30
         oaks_aide_route_16: 40
         oaks_aide_route_15: 50
-        shuffle_hidden: all
       Pokemon Red and Blue:
         rival_name: FNSHING
         death_link: true
