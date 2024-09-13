@@ -1263,6 +1263,126 @@ triggers:
     options:
       null:
         name: RePod{NUMBER}
+  - option_name: Modify Route 2
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Modify Route 2
+  - option_name: Remove Cerulean Roadblocks
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Remove Cerulean Roadblocks
+  - option_name: Block Tunnels
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Block Tunnels
+  - option_name: Modify Route 9
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Modify Route 9
+  - option_name: Modify Route 10
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Modify Route 10
+  - option_name: Block Tower
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Block Tower
+  - option_name: Route 12 Boulders
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Route 12 Boulders
+  - option_name: Modify Route 12
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Modify Route 12
+  - option_name: Modify Route 16
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Modify Route 16
+  - option_name: Route 23 Trees
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Route 23 Trees
+  - option_name: Modify Route 23
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Modify Route 23
+  - option_name: Victory Road Rocks
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Victory Road Rocks
+  - option_name: Early Gossipers
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Early Gossipers
+  - option_name: Total Darkness
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Total Darkness
+  # Dark Caves
+  - option_name: Dark Mt Moon
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +additional_dark_caves:
+          - Mt. Moon
+  - option_name: Dark Digletts Cave
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +additional_dark_caves:
+          - Diglett's Cave
+  - option_name: Dark Victory Road
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +additional_dark_caves:
+          - Victory Road
   - option_name: game
     option_result: A Hat in Time
     options:
