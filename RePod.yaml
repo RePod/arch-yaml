@@ -658,20 +658,58 @@ Pokemon FireRed and LeafGreen:
   turbo_a: true
   receive_item_messages: progression
   # Roll world modifiers (triggers)
-  Modify Route 2: random-range-0-1
-  Remove Cerulean Roadblocks: random-range-0-1
-  Block Tunnels: random-range-0-1
-  Modify Route 9: random-range-0-1
-  Modify Route 10: random-range-0-1
-  Block Tower: random-range-0-1
-  Route 12 Boulders: random-range-0-1
-  Modify Route 12: random-range-0-1
-  Modify Route 16: random-range-0-1
-  Route 23 Trees: random-range-0-1
-  Modify Route 23: random-range-0-1
-  Victory Road Rocks: random-range-0-1
-  Early Gossipers: random-range-0-1
-  Total Darkness: random-range-0-1
+  Modify Route 2:
+    Yes: 2
+    No: 1
+  Remove Cerulean Roadblocks:
+    Yes: 2
+    No: 1
+  Block Tunnels:
+    Yes: 2
+    No: 1
+  Modify Route 9:
+    Yes: 2
+    No: 1
+  Modify Route 10:
+    Yes: 2
+    No: 1
+  Block Tower:
+    Yes: 2
+    No: 1
+  Route 12 Boulders:
+    Yes: 2
+    No: 1
+  Modify Route 12:
+    Yes: 2
+    No: 1
+  Modify Route 16:
+    Yes: 2
+    No: 1
+  Route 23 Trees:
+    Yes: 2
+    No: 1
+  Modify Route 23:
+    Yes: 2
+    No: 1
+  Victory Road Rocks:
+    Yes: 2
+    No: 1
+  Early Gossipers:
+    Yes: 2
+    No: 1
+  Total Darkness:
+    Yes: 2
+    No: 1
+  # Caves
+  Dark Mt Moon:
+    Yes: 2
+    No: 1
+  Dark Digletts Cave:
+    Yes: 2
+    No: 1
+  Dark Victory Road:
+    Yes: 2
+    No: 1
 Pokemon Red and Blue:
   # https://archipelago.gg/tutorial/Pokemon%20Red%20and%20Blue/setup/en
   progression_balancing: random-low
@@ -1132,6 +1170,7 @@ triggers:
         oaks_aide_route_11: 30
         oaks_aide_route_16: 40
         oaks_aide_route_15: 50
+        modify_world_state: []
       Pokemon Red and Blue:
         rival_name: FNSHING
         death_link: true
