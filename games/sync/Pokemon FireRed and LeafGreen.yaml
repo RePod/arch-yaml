@@ -179,7 +179,6 @@ Pokemon FireRed and LeafGreen:
     No: 1
 
 triggers:
-  # Async
   - option_category: null
     option_name: async
     option_result: true
