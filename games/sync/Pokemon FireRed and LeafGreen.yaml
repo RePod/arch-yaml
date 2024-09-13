@@ -39,9 +39,6 @@ Pokemon FireRed and LeafGreen:
     any_gym: 1
     boulder_badge: 1
     any_badge: 1
-  cerulean_city_roadblocks:
-    false: 1
-    true: 4
   viridian_gym_requirement:
     badges: 3
     gyms: 2
