@@ -127,8 +127,121 @@ Pokemon FireRed and LeafGreen:
     any: 1
   turbo_a: true
   receive_item_messages: progression
+  # Roll world modifiers (triggers)
+  Modify Route 2: random-range-0-1
+  Remove Cerulean Roadblocks: random-range-0-1
+  Block Tunnels: random-range-0-1
+  Modify Route 9: random-range-0-1
+  Modify Route 10: random-range-0-1
+  Block Tower: random-range-0-1
+  Route 12 Boulders: random-range-0-1
+  Modify Route 12: random-range-0-1
+  Modify Route 16: random-range-0-1
+  Route 23 Trees: random-range-0-1
+  Modify Route 23: random-range-0-1
+  Victory Road Rocks: random-range-0-1
+  Early Gossipers: random-range-0-1
+  Total Darkness: random-range-0-1
 
 triggers:
+  - option_name: Modify Route 2
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Modify Route 2
+  - option_name: Remove Cerulean Roadblocks
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Remove Cerulean Roadblocks
+  - option_name: Block Tunnels
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Block Tunnels
+  - option_name: Modify Route 9
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Modify Route 9
+  - option_name: Modify Route 10
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Modify Route 10
+  - option_name: Block Tower
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Block Tower
+  - option_name: Route 12 Boulders
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Route 12 Boulders
+  - option_name: Modify Route 12
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Modify Route 12
+  - option_name: Modify Route 16
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Modify Route 16
+  - option_name: Route 23 Trees
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Route 23 Trees
+  - option_name: Modify Route 23
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Modify Route 23
+  - option_name: Victory Road Rocks
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Victory Road Rocks
+  - option_name: Early Gossipers
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Early Gossipers
+  - option_name: Total Darkness
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: 1
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Total Darkness
   - option_category: null
     option_name: async
     option_result: true
@@ -154,7 +267,6 @@ triggers:
           oaks_aide_route_11: 30
           oaks_aide_route_16: 40
           oaks_aide_route_15: 50
-          shuffle_hidden: all
   - option_name: game
     option_result: Pokemon FireRed and LeafGreen
     options:
