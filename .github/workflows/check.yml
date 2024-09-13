@@ -23,7 +23,8 @@ jobs:
         run: |
           ASYNC_TRIGGERS=$(yq ea -N '.triggers[] | select(.option_name == "async").options' games/sync/*.yaml) \
           PER_GAME_NAMES=$(yq '[.triggers[] | select(.option_name == "game")]' games/sync/*.yaml) \
-          yq -i '(.triggers[] | select(.option_name == "async").options) += env(ASYNC_TRIGGERS) | (.triggers += env(PER_GAME_NAMES))' games/triggers.yaml
+          MISC_TRIGGERS=$(yq ea -N '[.triggers[] | select(.option_name | test("(game|async|per_game_name)") | not)]' games/sync/*.yaml) \
+          yq -i '(.triggers[] | select(.option_name == "async").options) += env(ASYNC_TRIGGERS) | (.triggers += env(MISC_TRIGGERS)) | (.triggers += env(PER_GAME_NAMES))' games/triggers.yaml
 
       # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       - name: Dynamic Games
