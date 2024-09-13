@@ -146,92 +146,79 @@ triggers:
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Modify Route 2
+        +modify_world_state: Modify Route 2
   - option_name: Remove Cerulean Roadblocks
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Remove Cerulean Roadblocks
+        +modify_world_state: Remove Cerulean Roadblocks
   - option_name: Block Tunnels
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Block Tunnels
+        +modify_world_state: Block Tunnels
   - option_name: Modify Route 9
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Modify Route 9
+        +modify_world_state: Modify Route 9
   - option_name: Modify Route 10
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Modify Route 10
+        +modify_world_state: Modify Route 10
   - option_name: Block Tower
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Block Tower
+        +modify_world_state: Block Tower
   - option_name: Route 12 Boulders
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Route 12 Boulders
+        +modify_world_state: Route 12 Boulders
   - option_name: Modify Route 12
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Modify Route 12
+        +modify_world_state: Modify Route 12
   - option_name: Modify Route 16
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Modify Route 16
+        +modify_world_state: Modify Route 16
   - option_name: Route 23 Trees
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Route 23 Trees
+        +modify_world_state: Route 23 Trees
   - option_name: Modify Route 23
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Modify Route 23
+        +modify_world_state: Modify Route 23
   - option_name: Victory Road Rocks
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Victory Road Rocks
+        +modify_world_state: Victory Road Rocks
   - option_name: Early Gossipers
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
     options:
       Pokemon FireRed and LeafGreen:
-        +modify_world_state:
-          - Early Gossipers
+        +modify_world_state: Early Gossipers
   - option_name: Total Darkness
     option_category: Pokemon FireRed and LeafGreen
     option_result: 1
@@ -256,9 +243,6 @@ triggers:
             progressive: 1
             split: 5
             progressive_split: 1
-          modify_world_state:
-            - Modify Route 2
-            - Modify Route 10
           oaks_aide_route_2: 10
           oaks_aide_route_10: 20
           oaks_aide_route_11: 30
