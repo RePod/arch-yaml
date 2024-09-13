@@ -134,7 +134,21 @@ triggers:
     option_result: true
     options:
       Pokemon FireRed and LeafGreen:
+          goal: elite_four_rematch
+          shuffle_hidden: all
           trainersanity: true
+          famesanity: true
+          pokemon_request_locations: true
+          card_key:
+            split: 4
+            progressive: 1
+          island_passes:
+            progressive: 1
+            split: 5
+            progressive_split: 1
+          modify_world_state:
+            - Modify Route 2
+            - Modify Route 10
           oaks_aide_route_2: 10
           oaks_aide_route_10: 20
           oaks_aide_route_11: 30
