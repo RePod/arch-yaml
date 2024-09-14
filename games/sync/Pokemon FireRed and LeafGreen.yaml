@@ -201,7 +201,7 @@ triggers:
           oaks_aide_route_11: 30
           oaks_aide_route_16: 40
           oaks_aide_route_15: 50
-# FRLG World state
+  # FRLG World state
   - option_name: Modify Route 2
     option_category: Pokemon FireRed and LeafGreen
     option_result: Yes
