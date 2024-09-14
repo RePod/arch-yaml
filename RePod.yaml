@@ -1472,7 +1472,7 @@ triggers:
     option_result: VVVVVV
     options:
       null:
-        name: RePodV6{NUMBER}
+        name: RRRRRR{NUMBER}
   - option_name: game
     option_result: Yacht Dice
     options:
