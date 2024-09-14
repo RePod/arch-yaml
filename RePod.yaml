@@ -1170,7 +1170,6 @@ triggers:
         oaks_aide_route_11: 30
         oaks_aide_route_16: 40
         oaks_aide_route_15: 50
-        # FRLG World state
       Pokemon Red and Blue:
         rival_name: FNSHING
         death_link: true
