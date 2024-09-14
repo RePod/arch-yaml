@@ -26,7 +26,7 @@ triggers:
     option_result: VVVVVV
     options:
       null:
-        name: RePodV6{NUMBER}
+        name: RRRRRR{NUMBER}
   - option_name: per_game_name
     option_result: false
     options:
