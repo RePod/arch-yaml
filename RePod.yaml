@@ -185,12 +185,12 @@ ANIMAL WELL:
   progression_balancing: random-low
   accessibility: random
   goal:
-    fireworks: 50
-    egg_hunt: 0
+    fireworks: 1
+    egg_hunt: 3
   eggs_needed: 64
   key_ring: true
   matchbox: true
-  candle_checks: false
+  candle_checks: true
   bunnies_as_checks: off
   bunny_warps_in_logic: false
   exclude_song_chests: true
@@ -1105,6 +1105,10 @@ triggers:
       A Link to the Past:
         death_link: true
       ANIMAL WELL:
+        goal:
+          fireworks: 3
+          egg_hunt: 1
+        disc_hopping: single
         death_link: true
       ChecksFinder:
         progression_balancing: 0
