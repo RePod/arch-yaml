@@ -41,11 +41,11 @@ Super Mario World:
   sfx_shuffle: none
   mario_palette: random
   level_palette_shuffle:
-    'off': 1
+    off: 1
     on_legacy: 4
     on_curated: 5
   overworld_palette_shuffle:
-    'off': 1
+    off: 1
     on_legacy: 4
     on_curated: 5
   starting_life_count: 69
@@ -56,11 +56,14 @@ triggers:
     option_result: true
     options:
       Super Mario World:
+        goal:
+          bowser: 3
+          yoshi_egg_hunt: 2
         death_link: true
-        moon_checks: true
         exclude_special_zone:
-            false: 3
-            true: 1
+          false: 3
+          true: 1
+        moon_checks: true
         hidden_1up_checks: true
         bonus_block_checks: true
         blocksanity: true

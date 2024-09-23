@@ -8,7 +8,7 @@ apworld: "https://github.com/spinerak/ArchipelagoYachtDice/releases/latest"
 Yacht Dice:
   # https://yacht-dice-ap.netlify.app/
   # Stock-ish settings until a few plays.
-  progression_balancing: random-low
+  progression_balancing: random-middle
   accessibility: random
   game_difficulty:
     medium: 1
@@ -39,6 +39,7 @@ triggers:
     option_result: true
     options:
       Yacht Dice:
+        progression_balancing: random-low
         game_difficulty: extreme
   - option_name: game
     option_result: Yacht Dice

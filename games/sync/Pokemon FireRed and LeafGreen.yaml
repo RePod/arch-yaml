@@ -14,7 +14,7 @@ Pokemon FireRed and LeafGreen:
   shuffle_hidden: nonrecurring
   extra_key_items: true
   shuffle_fly_destination_unlocks: true
-  itemfinder_required: logic
+  itemfinder_required: off
   flash_required: logic
   #remove_badge_requirement
   oaks_aide_route_2: 5
@@ -76,26 +76,26 @@ Pokemon FireRed and LeafGreen:
     match_base_stats: 1
     match_type: 1
     match_base_stats_and_type: 1
-    completely_random: 5
+    completely_random: 7
   trainers:
     vanilla: 0
     match_base_stats: 1
     match_type: 1
     match_base_stats_and_type: 1
-    completely_random: 5
+    completely_random: 7
   #trainer_blacklist
   legendary_pokemon:
     vanilla: 0
     match_base_stats: 1
     match_type: 1
     match_base_stats_and_type: 1
-    completely_random: 5
+    completely_random: 7
   misc_pokemon:
     vanilla: 0
     match_base_stats: 1
     match_type: 1
     match_base_stats_and_type: 1
-    completely_random: 3
+    completely_random: 7
   types: vanilla
   abilities: follow_evolutions
   ability_blacklist:

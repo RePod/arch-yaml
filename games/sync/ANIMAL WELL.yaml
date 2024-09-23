@@ -34,6 +34,7 @@ triggers:
         goal:
           fireworks: 3
           egg_hunt: 1
+        bunnies_as_checks: exclude_tedious
         disc_hopping: single
         death_link: true
   - option_name: game
