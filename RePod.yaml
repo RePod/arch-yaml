@@ -187,7 +187,6 @@ ANIMAL WELL:
   goal:
     fireworks: 1
     egg_hunt: 3
-  eggs_needed: 64
   key_ring: true
   matchbox: true
   candle_checks: true
@@ -1107,8 +1106,17 @@ triggers:
         goal:
           fireworks: 3
           egg_hunt: 1
-        bunnies_as_checks: exclude_tedious
+        key_ring:
+          false: 1
+          true: 3
+        matchbox:
+          false: 1
+          true: 3
+        candle_checks: true
+        bunnies_as_checks: exclude_tedious # forces bunny_warps_in_logic true
+        exclude_song_chests: false
         disc_hopping: single
+        weird_tricks: true # https://www.youtube.com/playlist?list=PL-YW4GNIhXnrXszgntzCGw2SoLcmRElKY
         death_link: true
       ChecksFinder:
         progression_balancing: 0
