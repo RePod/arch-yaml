@@ -1278,6 +1278,116 @@ triggers:
     options:
       null:
         name: RePod{NUMBER}
+  - option_name: game
+    option_result: A Hat in Time
+    options:
+      null:
+        name: RePodHIT{NUMBER}
+  - option_name: game
+    option_result: A Link to the Past
+    options:
+      null:
+        name: RePodLTTP{NUMBER}
+  - option_name: game
+    option_result: ANIMAL WELL
+    options:
+      null:
+        name: RePodWell{NUMBER}
+  - option_name: game
+    option_result: ChecksFinder
+    options:
+      null:
+        name: RePodMine{NUMBER}
+  - option_name: game
+    option_result: Clique
+    options:
+      null:
+        name: RePodClique{NUMBER}
+  - option_name: game
+    option_result: Hatsune Miku Project Diva Mega Mix+
+    options:
+      null:
+        name: RePodMiku{NUMBER}
+  - option_name: game
+    option_result: Manual_Hatsune_Miku
+    options:
+      null:
+        name: RePodMiku{NUMBER}
+  - option_name: game
+    option_result: MegaMan Battle Network 3
+    options:
+      null:
+        name: RePodBN3{NUMBER}
+  - option_name: game
+    option_result: Muse Dash
+    options:
+      null:
+        name: RePodMuse{NUMBER}
+  - option_name: game
+    option_result: Pokemon Crystal
+    options:
+      null:
+        name: RePodCRY{NUMBER}
+  - option_name: game
+    option_result: Pokemon Emerald
+    options:
+      null:
+        name: RePodEM{NUMBER}
+  - option_name: game
+    option_result: Pokemon FireRed and LeafGreen
+    options:
+      null:
+        name: RePodRG{NUMBER}
+  - option_name: game
+    option_result: Pokemon Red and Blue
+    options:
+      null:
+        name: RePodRB{NUMBER}
+  - option_name: game
+    option_result: SMZ3
+    options:
+      null:
+        name: RePodSMZ3{NUMBER}
+  - option_name: game
+    option_result: Super Mario 64
+    options:
+      null:
+        name: RePodSM64{NUMBER}
+  - option_name: game
+    option_result: Super Mario World
+    options:
+      null:
+        name: RePodSMW{NUMBER}
+  - option_name: game
+    option_result: Super Metroid
+    options:
+      null:
+        name: RePodSM{NUMBER}
+  - option_name: game
+    option_result: VVVVVV
+    options:
+      null:
+        name: RRRRRR{NUMBER}
+  - option_name: game
+    option_result: Yacht Dice
+    options:
+      null:
+        name: RePodice{NUMBER}
+  - option_name: game
+    option_result: Yoshi's Island
+    options:
+      null:
+        name: RePodYI{NUMBER}
+  - option_name: game
+    option_result: Yu-Gi-Oh! 2006
+    options:
+      null:
+        name: RePod06{NUMBER}
+  - option_name: game
+    option_result: Yu-Gi-Oh! Forbidden Memories
+    options:
+      null:
+        name: RePodFM{NUMBER}
   - option_name: Modify Route 2
     option_category: Pokemon FireRed and LeafGreen
     option_result: Yes
@@ -1398,113 +1508,3 @@ triggers:
       Pokemon FireRed and LeafGreen:
         +additional_dark_caves:
           - Victory Road
-  - option_name: game
-    option_result: A Hat in Time
-    options:
-      null:
-        name: RePodHIT{NUMBER}
-  - option_name: game
-    option_result: A Link to the Past
-    options:
-      null:
-        name: RePodLTTP{NUMBER}
-  - option_name: game
-    option_result: ANIMAL WELL
-    options:
-      null:
-        name: RePodWell{NUMBER}
-  - option_name: game
-    option_result: ChecksFinder
-    options:
-      null:
-        name: RePodMine{NUMBER}
-  - option_name: game
-    option_result: Clique
-    options:
-      null:
-        name: RePodClique{NUMBER}
-  - option_name: game
-    option_result: Hatsune Miku Project Diva Mega Mix+
-    options:
-      null:
-        name: RePodMiku{NUMBER}
-  - option_name: game
-    option_result: Manual_Hatsune_Miku
-    options:
-      null:
-        name: RePodMiku{NUMBER}
-  - option_name: game
-    option_result: MegaMan Battle Network 3
-    options:
-      null:
-        name: RePodBN3{NUMBER}
-  - option_name: game
-    option_result: Muse Dash
-    options:
-      null:
-        name: RePodMuse{NUMBER}
-  - option_name: game
-    option_result: Pokemon Crystal
-    options:
-      null:
-        name: RePodCRY{NUMBER}
-  - option_name: game
-    option_result: Pokemon Emerald
-    options:
-      null:
-        name: RePodEM{NUMBER}
-  - option_name: game
-    option_result: Pokemon FireRed and LeafGreen
-    options:
-      null:
-        name: RePodRG{NUMBER}
-  - option_name: game
-    option_result: Pokemon Red and Blue
-    options:
-      null:
-        name: RePodRB{NUMBER}
-  - option_name: game
-    option_result: SMZ3
-    options:
-      null:
-        name: RePodSMZ3{NUMBER}
-  - option_name: game
-    option_result: Super Mario 64
-    options:
-      null:
-        name: RePodSM64{NUMBER}
-  - option_name: game
-    option_result: Super Mario World
-    options:
-      null:
-        name: RePodSMW{NUMBER}
-  - option_name: game
-    option_result: Super Metroid
-    options:
-      null:
-        name: RePodSM{NUMBER}
-  - option_name: game
-    option_result: VVVVVV
-    options:
-      null:
-        name: RRRRRR{NUMBER}
-  - option_name: game
-    option_result: Yacht Dice
-    options:
-      null:
-        name: RePodice{NUMBER}
-  - option_name: game
-    option_result: Yoshi's Island
-    options:
-      null:
-        name: RePodYI{NUMBER}
-  - option_name: game
-    option_result: Yu-Gi-Oh! 2006
-    options:
-      null:
-        name: RePod06{NUMBER}
-  - option_name: game
-    option_result: Yu-Gi-Oh! Forbidden Memories
-    options:
-      null:
-        name: RePodFM{NUMBER}
