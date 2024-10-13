@@ -17,6 +17,7 @@ Hatsune Miku Project Diva Mega Mix+:
   progression_balancing: random-low
   accessibility: random
   allow_megamix_dlc_songs: true
+  auto_remove_songs: true
   starting_song_count: 3
   additional_song_count: 36
   song_difficulty_mode: manual
