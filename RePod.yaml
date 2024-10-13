@@ -1264,13 +1264,22 @@ triggers:
         # 74 base + 91 challenges = 165 checks
         number_of_challenges: 91
       Yu-Gi-Oh! Forbidden Memories:
+        randomize_duelist_order:
+          false: 1
+          true: 3
+        item_mode:
+          starchips: 1
+          cards: 4
+        unobtainable_rewards:
+          false: 1
+          true: 4
         atec_logic:
           pegasus_only: 4
           hundo_atecs: 1
         final6_progression:
           shuffled: 1
           all_6_shuffled: 0
-        drop_rate_logic: random-range-low-0-40
+        drop_rate_logic: random-range-low-0-24
         death_link: true
   # I don't think there's a better way to do this to keep the async trigger standalone.
   # Must resist ReSuffix and PrefixPod. Minifying these breaks generation.
