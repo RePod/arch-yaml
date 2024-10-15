@@ -67,13 +67,10 @@ jobs:
             wget -q -O - {} |
             jq '[.[].assets[] | select(.browser_download_url | endswith(\".apworld\"))][0].browser_download_url' |
             xargs wget -nv -P /tmp/Archipelago/custom_worlds"
-          UNSUPPORTED=$(
-            yq '.apworld' games/sync/*.yaml |
-            grep -Po '(.*\.apworld)$')
-          echo "$UNSUPPORTED" | parallel --halt now,fail=1 "
-            wget -q -O - {} |
-            jq '[.[].assets[] | select(.browser_download_url | endswith(\".apworld\"))][0].browser_download_url' |
-            xargs wget -nv -P /tmp/Archipelago/custom_worlds"
+          
+          UNSUPPORTED=$(yq '.apworld' games/sync/*.yaml | grep -Po '(.*\.apworld)$')
+          echo "$UNSUPPORTED" | parallel --halt now,fail=1 "xargs wget -nv -P /tmp/Archipelago/custom_worlds"
+          
           wget -nv -P "diva/" https://gist.githubusercontent.com/RePod/f4252f1bf099713d9559fdc7a0c26e35/raw/RePodMiku.json
 
       #- name: Archipelago | Save Cache
