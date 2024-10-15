@@ -1,0 +1,37 @@
+name: RePod{NUMBER}
+game: Void Stranger
+async: false
+per_game_name: true
+description: "Unsupported https://github.com/CriminalPancake/void-stranger-ap/raw/refs/heads/main/voidstranger.apworld"
+apworld: "https://github.com/CriminalPancake/void-stranger-ap/raw/refs/heads/main/voidstranger.apworld"
+weight: 0
+
+Void Stranger:
+  progression_balancing: random-middle
+  accessibility: random
+  locustsanity: false
+  brandsanity: false
+  idolsanity: false
+  shortcutsanity: false
+
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Void Stranger:
+        progression_balancing: random-low
+        locustsanity: true
+        brandsanity: true
+        idolsanity: true
+        shortcutsanity: true
+  - option_name: game
+    option_result: MegaMan Battle Network 3
+    options:
+      null:
+        name: RePodBN3{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
