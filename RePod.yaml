@@ -31,6 +31,7 @@ game:
   Super Mario World: 9                     
   Super Metroid: 9                         
   VVVVVV: 9                                
+  Void Stranger: 0                         # Unsupported https://github.com/CriminalPancake/void-stranger-ap/raw/refs/heads/main/voidstranger.apworld
   Yacht Dice: 9                            # Unsupported https://github.com/spinerak/ArchipelagoYachtDice/releases/latest
   Yoshi's Island: 9                        
   Yu-Gi-Oh! 2006: 9                        
@@ -966,6 +967,13 @@ VVVVVV:
   area_cost: random
   death_link: true
   death_link_amnesty: 30
+Void Stranger:
+  progression_balancing: random-middle
+  accessibility: random
+  locustsanity: false
+  brandsanity: false
+  idolsanity: false
+  shortcutsanity: false
 Yacht Dice:
   # https://yacht-dice-ap.netlify.app/
   # Stock-ish settings until a few plays.
@@ -1235,6 +1243,12 @@ triggers:
         death_link: true
       VVVVVV:
         area_rando: true
+      Void Stranger:
+        progression_balancing: random-low
+        locustsanity: true
+        brandsanity: true
+        idolsanity: true
+        shortcutsanity: true
       Yacht Dice:
         progression_balancing: random-low
         game_difficulty: extreme
@@ -1378,6 +1392,11 @@ triggers:
     options:
       null:
         name: RRRRRR{NUMBER}
+  - option_name: game
+    option_result: MegaMan Battle Network 3
+    options:
+      null:
+        name: RePodBN3{NUMBER}
   - option_name: game
     option_result: Yacht Dice
     options:
