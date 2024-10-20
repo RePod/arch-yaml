@@ -19,15 +19,6 @@ Yu-Gi-Oh! Forbidden Memories:
     hundo_atecs: 0 # Pegasus, Kaiba, Mage Soldier, Meadow Mage, and NiteMare
     all: 0
   atec_trap: acid_trap_hole
-    # The weakest (i.e. lowest mox Life Point activation) trap card with which you can be expected to ATec a duelist.
-    # ATecs will be in logic as soon as you have access to a duelist who drops this card or a stronger trap card,
-    # excluding their SATec drop pool. Your other ATec settings are still respected.
-    #
-    # Note that Fake Trap puts ATecs in logic right from the start since it drops off of Simon Muran and Simon Muran is
-    # always unlocked.
-    acid_trap_hole: 50
-    invisible_wire: 0
-    fake_trap: 0
   drop_rate_logic: 64
   death_link: false
 
@@ -48,7 +39,7 @@ triggers:
           true: 4 # requires item_mode:cards
         atec_logic:
           pegasus_only: 4
-          hundo_atecs: 2
+          hundo_atecs: 2 # Pegasus, Kaiba, Mage Soldier, Meadow Mage, and NiteMare
           all: 1 # Pain
         atec_trap:
           acid_trap_hole: 4 # <3000 ATK
