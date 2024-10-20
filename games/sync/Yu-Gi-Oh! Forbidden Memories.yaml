@@ -14,19 +14,11 @@ Yu-Gi-Oh! Forbidden Memories:
   final6_progression: fixed
   final6_sequence: first_5_shuffled
   atec_logic:
-    # "Off" means you'll never be expected to do an ATec for progression.
-    # "Pegasus Only" means only Pegasus's SATec pool is in logic.
-    # "Hundo ATecs" means that ATecs are in logic for the duelists typically ATec'd during a Hundo run, specifically:
-    # Pegasus, Kaiba, Mage Soldier, Meadow Mage, and NiteMare.
-    # "All" means all duelists' SATec pools are in logic.
-    #
-    # Regardless of your choice, you will never be expected to do an ATec until you have access to a duelist who drops a
-    # trap card of equal strength or stronger than the trap speicified by your "Weakest Trap for ATecs" setting.
     off: 0
     pegasus_only: 1
-    hundo_atecs: 0
+    hundo_atecs: 0 # Pegasus, Kaiba, Mage Soldier, Meadow Mage, and NiteMare
     all: 0
-  atec_trap:
+  atec_trap: acid_trap_hole
     # The weakest (i.e. lowest mox Life Point activation) trap card with which you can be expected to ATec a duelist.
     # ATecs will be in logic as soon as you have access to a duelist who drops this card or a stronger trap card,
     # excluding their SATec drop pool. Your other ATec settings are still respected.
@@ -50,13 +42,18 @@ triggers:
           true: 3
         item_mode:
           starchips: 1
-          cards: 4
+          cards: 4 # 678 > 358 checks
         unobtainable_rewards:
           false: 1
-          true: 4
+          true: 4 # requires item_mode:cards
         atec_logic:
           pegasus_only: 4
-          hundo_atecs: 1
+          hundo_atecs: 2
+          all: 1 # Pain
+        atec_trap:
+          acid_trap_hole: 4 # <3000 ATK
+          invisible_wire: 2 # <2000 ATK
+          fake_trap: 1      # Pain. Simon Muran from the start.
         final6_progression:
           shuffled: 1
           all_6_shuffled: 0
