@@ -31,7 +31,6 @@ Yu-Gi-Oh! 2006:
     true: 3
     false: 1
   ocg_arts: false
-  start_inventory: {}
 
 triggers:
   - option_category: null
@@ -49,8 +48,7 @@ triggers:
           third_tier_5_campaign_boss_unlock_condition:
             campaign_opponents: 3
             challenges: 1
-          # _challenges are 0-91
-          # might want to range these
+          # _challenges are 0-91, might want to range these
           final_campaign_boss_challenges: 39
           fourth_tier_5_campaign_boss_challenges: 26
           third_tier_5_campaign_boss_challenges: 13
