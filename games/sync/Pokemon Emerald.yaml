@@ -7,14 +7,6 @@ Pokemon Emerald:
   # https://archipelago.gg/tutorial/Pokemon%20Emerald/setup/en
   progression_balancing: random-low
   accessibility: random
-  local_items: []
-  non_local_items: []
-  start_inventory: {}
-  start_hints: []
-  start_location_hints: []
-  exclude_locations: []
-  priority_locations: []
-  item_links: []
   goal: champion
   badges: completely_random
   hms: completely_random
@@ -39,31 +31,9 @@ Pokemon Emerald:
   norman_requirement: badges
   norman_count: 4
   legendary_hunt_catch: true
-  legendary_hunt_count:
-    # Sets the number of legendaries that must be caught/defeated for the Legendary Hunt goal
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 1
-    # Maximum value is 12
-    3: 50
-    random: 0
-    random-low: 0
-    random-high: 0
+  legendary_hunt_count: 3 # 1-12
   allowed_legendary_hunt_encounters:
-    # Sets which legendary encounters can contribute to the Legendary Hunt goal.
     # Latios will always be the roamer. Latias will always be at Southern Island.
-    # Possible values are:
-    # "Groudon"
-    # "Kyogre"
-    # "Rayquaza"
-    # "Latios"
-    # "Latias"
-    # "Regirock"
-    # "Registeel"
-    # "Regice"
-    # "Ho-Oh"
-    # "Lugia"
-    # "Deoxys"
-    # "Mew"
     ['Regirock', 'Deoxys', 'Kyogre', 'Lugia', 'Rayquaza', 'Ho-Oh', 'Mew', 'Latios', 'Latias', 'Groudon', 'Registeel', 'Regice']
   wild_pokemon:
     vanilla: 0
@@ -85,11 +55,7 @@ Pokemon Emerald:
     match_type: 1
     match_base_stats_and_type: 1
     completely_random: 4
-  trainer_party_blacklist:
-    # Prevents listed species from appearing in opponent trainers' parties if opponent parties are randomized.
-    # May be overridden if enforcing other restrictions in combination with this blacklist is impossible.
-    # Use "_Legendaries" as a shortcut for legendary pokemon.
-    []
+  trainer_party_blacklist: [] # Use "_Legendaries" as a shortcut for legendary pokemon.
   force_fully_evolved: random-range-35-50
   legendary_encounters: random
   misc_pokemon: random
@@ -189,10 +155,7 @@ Pokemon Emerald:
   fanfares: true
   death_link: true
   enable_wonder_trading: true
-  easter_egg:
-    # Enter certain phrases and something special might happen.
-    # All secret phrases are something that could be a trendy phrase in Dewford Town. They are case insensitive.
-    EMERALD SECRET: 50
+  easter_egg: 'EMERALD SECRET'
 
 triggers:
   - option_category: null
