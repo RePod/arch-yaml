@@ -5,8 +5,8 @@ per_game_name: true
 
 Super Metroid:
   # https://archipelago.gg/tutorial/Super%20Metroid/multiworld/en
-  progression_balancing: 50
-  accessibility: items
+  progression_balancing: random-middle
+  accessibility: random
   start_inventory_removes_from_pool: false
   preset: regular
   start_location: landing_site
@@ -21,12 +21,14 @@ Super Metroid:
   minor_qty: 100
   energy_qty: vanilla
   area_randomization: off
-  area_layout: false
+  area_layout: true
   doors_colors_rando: false
   allow_grey_doors: false
   boss_randomization: false
   escape_rando: false
-  remove_escape_enemies: false
+  remove_escape_enemies:
+    false: 3
+    true: 1
   fun_combat: false
   fun_movement: false
   fun_suits: false
@@ -41,10 +43,17 @@ Super Metroid:
   infinite_space_jump: false
   refill_before_save: true
   hud: true
-  animals: false
+  animals:
+    false: 1
+    true: 1
   no_music: false
-  random_music: false
-  tourian: vanilla
+  random_music:
+    false: 1
+    true: 3
+  tourian:
+    vanilla: 3
+    fast: 2
+    disabled: 1
   custom_objective: false
   custom_objective_list:
     - random
@@ -61,6 +70,20 @@ triggers:
       Super Metroid:
         progression_balancing: random-low
         death_link: true
+        start_location: random
+        area_randomization:
+          off: 5
+          light: 3
+          full: 1
+        doors_colors_rando:
+          false: 3
+          true: 2
+        allow_grey_doors:
+          false: 3
+          true: 2
+        boss_randomization:
+          false: 3
+          true: 2
   - option_name: game
     option_result: Super Metroid
     options:
