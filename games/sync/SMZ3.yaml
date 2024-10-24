@@ -2,6 +2,7 @@ name: RePod{NUMBER}
 game: SMZ3
 async: false
 per_game_name: true
+weight: 4
 
 SMZ3:
   # https://archipelago.gg/tutorial/SMZ3/multiworld/en
