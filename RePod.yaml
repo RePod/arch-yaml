@@ -1249,9 +1249,12 @@ triggers:
           acid_trap_hole: 4 # <3000 ATK
           invisible_wire: 2 # <2000 ATK
           fake_trap: 1 # Pain. Simon Muran from the start.
-        final6_progression:
-          shuffled: 1
-          all_6_shuffled: 0
+        final6_progression: shuffled
+        final6_sequence: # all_6 can add Nitemare ATec
+          vanilla: 1
+          first_5_shuffled: 5
+          all_6_shuffled: 2
+        extra_progressive_duelists: random-range-low-1-4 # 36 minimum to clear
         drop_rate_logic: random-range-low-0-24
         death_link: true
   # I don't think there's a better way to do this to keep the async trigger standalone.
