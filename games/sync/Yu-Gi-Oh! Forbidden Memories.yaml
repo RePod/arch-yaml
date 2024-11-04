@@ -50,7 +50,9 @@ triggers:
           vanilla: 1
           first_5_shuffled: 5
           all_6_shuffled: 2
-        extra_progressive_duelists: random-range-low-1-2 # 36 minimum to clear
+        extra_progressive_duelists: # 36 minimum
+          1: 4
+          2: 1
         drop_rate_logic: random-range-low-0-24
         death_link: true
   - option_name: game

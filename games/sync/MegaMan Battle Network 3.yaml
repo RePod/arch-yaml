@@ -20,7 +20,9 @@ triggers:
         include_jobs:
           false: 1
           true: 3
-        extra_ranks: random-range-low-1-2
+        extra_ranks: # 8 minimum
+          1: 4
+          2: 1
         #trade_quest_hinting: none
   - option_name: game
     option_result: MegaMan Battle Network 3
