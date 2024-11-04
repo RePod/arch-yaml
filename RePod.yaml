@@ -1161,6 +1161,20 @@ triggers:
         dexsanity: full
       SMZ3:
         progression_balancing: random-low
+        sword_location:
+          randomized: 3
+          early: 1
+        morph_location:
+          randomized: 3
+          early: 1
+        goal:
+          defeatboth: 5
+          fastganondefeatmotherbrain: 2 # Skip Agahnim, Ganon vulnerable with req. crystals. Keysanity removes Crateria Boss Key req. from Tourian
+          alldungeonsdefeatmotherbrain: 1 # ^ but all dungeons cleared incl. Agahnim
+        key_shuffle:
+          none: 1
+          keysanity: 2
+        open_tower: random-high
       Super Mario 64:
         area_rando: courses_and_secrets
         buddy_checks: true
