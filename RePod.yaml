@@ -1094,7 +1094,8 @@ triggers:
         include_jobs:
           false: 1
           true: 3
-          #trade_quest_hinting: none
+        extra_ranks: random-range-low-1-2
+        #trade_quest_hinting: none
       Muse Dash:
         progression_balancing: random-middle
       Pokemon Crystal:
@@ -1254,7 +1255,7 @@ triggers:
           vanilla: 1
           first_5_shuffled: 5
           all_6_shuffled: 2
-        extra_progressive_duelists: random-range-low-1-4 # 36 minimum to clear
+        extra_progressive_duelists: random-range-low-1-2 # 36 minimum to clear
         drop_rate_logic: random-range-low-0-24
         death_link: true
   # I don't think there's a better way to do this to keep the async trigger standalone.
