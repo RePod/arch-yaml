@@ -44,7 +44,6 @@ triggers:
           none: 1
           keysanity: 2
         open_tower: random-high
-        
   - option_name: game
     option_result: SMZ3
     options:
