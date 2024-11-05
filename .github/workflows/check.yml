@@ -51,7 +51,7 @@ jobs:
           mkdir /tmp/Archipelago
           tar xzf /tmp/Archipelago*.tar.gz -C /tmp/
           chmod +x /tmp/Archipelago/ArchipelagoGenerate
-          /tmp/Archipelago/ArchipelagoGenerate "Open host.yaml" 2>/dev/null
+          /tmp/Archipelago/ArchipelagoLauncher "Open host.yaml" 2>/dev/null
 
       # Originally this hit /latest but Yacht Dice made it obvious releases can have (or not) whatever they want.
       # Void Stranger is (currently) releasing the world in the repo files. Another exception!
