@@ -30,6 +30,7 @@ game:
   Super Mario 64: 9                        
   Super Mario World: 9                     
   Super Metroid: 9                         
+  The Messenger: 9                         
   VVVVVV: 9                                
   Yacht Dice: 9                            # Unsupported https://github.com/spinerak/ArchipelagoYachtDice/releases/latest
   Yoshi's Island: 9                        
@@ -948,6 +949,31 @@ Super Metroid:
   objective:
     - kill all G4
   relaxed_round_robin_cf: false
+The Messenger:
+  progression_balancing: random-middle
+  accessibility: random
+  death_link: false
+  logic_level:
+    normal: 1
+    hard: 0
+  shuffle_shards: false
+  limited_movement: false
+  early_meditation: false
+  available_portals: 6 # 3-6
+  shuffle_portals:
+    none: 1
+    shops: 0
+    checkpoints: 0
+    anywhere: 0
+  goal:
+    open_music_box: 1
+    power_seal_hunt: 0
+  music_box: true
+  notes_needed: 6 # 1-6
+  total_seals: 45 # 1-85
+  percent_seals_required: 100 # 10-100
+  traps: false
+  shop_price: 100 # % mult
 VVVVVV:
   # https://archipelago.gg/tutorial/VVVVVV/setup/en
   # tldr mod + -v6ap_name slotName -v6ap_ip server:port
@@ -1244,6 +1270,10 @@ triggers:
         boss_randomization:
           false: 3
           true: 2
+      The Messenger:
+        progression_balancing: random-low
+        death_link: true
+        shuffle_shards: true
       VVVVVV:
         area_rando: true
       Yacht Dice:
@@ -1398,6 +1428,11 @@ triggers:
     options:
       null:
         name: RePodSM{NUMBER}
+  - option_name: game
+    option_result: The Messenger
+    options:
+      null:
+        name: RePodMess{NUMBER}
   - option_name: game
     option_result: VVVVVV
     options:
