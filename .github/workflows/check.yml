@@ -69,7 +69,7 @@ jobs:
             jq '[.[].assets[] | select(.browser_download_url | endswith(\".apworld\"))][0].browser_download_url' |
             xargs wget -nv -P /tmp/Archipelago/custom_worlds"
 
-          UNSUPPORTED=$(yq '.apworld' games/sync/*.yaml | grep -Po '(.*\.apworld)$' || true)
+          UNSUPPORTED=$(yq '.description' games/sync/*.yaml | grep -Po '(https:\/\/.*\.apworld)$' || true)
           if [ -n "$UNSUPPORTED" ]; then
             echo "$UNSUPPORTED" | parallel --halt now,fail=1 "xargs wget -nv -P /tmp/Archipelago/custom_worlds"
           fi
