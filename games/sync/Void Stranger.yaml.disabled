@@ -3,7 +3,6 @@ game: Void Stranger
 async: false
 per_game_name: true
 description: "Unsupported https://github.com/CriminalPancake/void-stranger-ap/raw/refs/heads/main/voidstranger.apworld"
-apworld: "https://github.com/CriminalPancake/void-stranger-ap/raw/refs/heads/main/voidstranger.apworld"
 weight: 0
 
 Void Stranger:

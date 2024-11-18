@@ -3,7 +3,6 @@ game: Pokemon FireRed and LeafGreen
 async: false
 per_game_name: true
 description: "Unsupported https://github.com/vyneras/Archipelago/releases/latest"
-apworld: "https://github.com/vyneras/Archipelago/releases/latest"
 
 Pokemon FireRed and LeafGreen:
   progression_balancing: random-low

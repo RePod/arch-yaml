@@ -3,7 +3,6 @@ game: Yu-Gi-Oh! Forbidden Memories
 async: false
 per_game_name: true
 description: "Unsupported https://github.com/sg4e/Archipelago/releases/latest"
-apworld: "https://github.com/sg4e/Archipelago/releases/latest"
 
 Yu-Gi-Oh! Forbidden Memories:
   # BizHawk client + lua connector

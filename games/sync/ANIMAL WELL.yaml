@@ -3,7 +3,6 @@ game: ANIMAL WELL
 async: false
 per_game_name: true
 description: "Unsupported https://github.com/ScipioWright/Archipelago-SW/releases/latest"
-apworld: "https://github.com/ScipioWright/Archipelago-SW/releases/latest"
 
 ANIMAL WELL:
   progression_balancing: random-low

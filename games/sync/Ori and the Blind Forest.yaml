@@ -3,7 +3,6 @@ game: Ori and the Blind Forest
 async: false
 per_game_name: true
 description: "Unsupported https://github.com/c-ostic/Archipelago/releases/latest"
-apworld: "https://github.com/c-ostic/Archipelago/releases/latest"
 weight: 0
 
 Ori and the Blind Forest:

@@ -3,7 +3,6 @@ game: Pokemon Crystal
 async: false
 per_game_name: true
 description: "Unsupported https://github.com/AliceMousie/Archipelago/releases/latest"
-apworld: "https://github.com/AliceMousie/Archipelago/releases/latest"
 
 Pokemon Crystal:
   progression_balancing: random-low
