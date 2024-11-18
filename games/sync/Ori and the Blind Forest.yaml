@@ -1,0 +1,47 @@
+name: RePod{NUMBER}
+game: Ori and the Blind Forest
+async: false
+per_game_name: true
+description: "Unsupported https://github.com/c-ostic/Archipelago/releases/latest"
+apworld: "https://github.com/c-ostic/Archipelago/releases/latest"
+
+Ori and the Blind Forest:
+  progression_balancing: random-middle
+  accessibility: random
+  goal: all_skill_trees
+  logic_difficulty:
+    casual: 1
+    standard: 1
+    expert: 0
+    master: 0
+    glitched: 0
+  keystone_logic:
+    anywhere: 1
+    area_specific: 0
+  mapstone_logic:
+    anywhere: 1
+    area_specific: 0
+  deathlink_logic:
+    disabled: 1
+    partial: 0 # does not send instakills
+    full: 0
+
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Ori and the Blind Forest:
+        progression_balancing: random-low
+        logic_difficulty: expert
+        deathlink_logic: partial
+  - option_name: game
+    option_result: Pokemon Crystal
+    options:
+      null:
+        name: RePodOri{NUMBER} # OrePod...
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
