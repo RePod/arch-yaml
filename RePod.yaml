@@ -21,7 +21,7 @@ game:
   Manual_Hatsune_Miku: 0                   # Manual! I can provide it if needed.
   MegaMan Battle Network 3: 9              
   Muse Dash: 0                             
-  Ori and the Blind Forest: 9              # Unsupported https://github.com/c-ostic/Archipelago/releases/latest
+  Ori and the Blind Forest: 0              # Unsupported https://github.com/c-ostic/Archipelago/releases/latest
   Pokemon Crystal: 9                       # Unsupported https://github.com/AliceMousie/Archipelago/releases/latest
   Pokemon Emerald: 9                       
   Pokemon FireRed and LeafGreen: 9         # Unsupported https://github.com/vyneras/Archipelago/releases/latest
