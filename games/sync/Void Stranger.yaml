@@ -25,10 +25,10 @@ triggers:
         idolsanity: true
         shortcutsanity: true
   - option_name: game
-    option_result: MegaMan Battle Network 3
+    option_result: Void Stranger
     options:
       null:
-        name: RePodBN3{NUMBER}
+        name: RePodVoid{NUMBER}
   - option_name: per_game_name
     option_result: false
     options:
