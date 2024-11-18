@@ -61,7 +61,7 @@ jobs:
         run: |
           cp -a games/custom_worlds/. /tmp/Archipelago/custom_worlds
           UNSUPPORTED=$(
-            yq '.apworld' games/sync/*.yaml |
+            yq '.description' games/sync/*.yaml |
             grep -Po '(?<=.com\/)(.*?)(?=\/releases)' |
             awk '{printf("https://api.github.com/repos/%s/releases\n", $0);}')
           [[ -n "$UNSUPPORTED" ]] && echo "$UNSUPPORTED" | parallel --halt now,fail=1 "
