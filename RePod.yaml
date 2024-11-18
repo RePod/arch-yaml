@@ -21,6 +21,7 @@ game:
   Manual_Hatsune_Miku: 0                   # Manual! I can provide it if needed.
   MegaMan Battle Network 3: 9              
   Muse Dash: 0                             
+  Ori and the Blind Forest: 9              # Unsupported https://github.com/c-ostic/Archipelago/releases/latest
   Pokemon Crystal: 9                       # Unsupported https://github.com/AliceMousie/Archipelago/releases/latest
   Pokemon Emerald: 9                       
   Pokemon FireRed and LeafGreen: 9         # Unsupported https://github.com/vyneras/Archipelago/releases/latest
@@ -291,6 +292,26 @@ Muse Dash:
     - Unknown Mother Goose
   exclude_songs: []
   #start_inventory: {"God-ish":1}
+Ori and the Blind Forest:
+  progression_balancing: random-middle
+  accessibility: random
+  goal: all_skill_trees
+  logic_difficulty:
+    casual: 1
+    standard: 1
+    expert: 0
+    master: 0
+    glitched: 0
+  keystone_logic:
+    anywhere: 1
+    area_specific: 0
+  mapstone_logic:
+    anywhere: 1
+    area_specific: 0
+  deathlink_logic:
+    disabled: 1
+    partial: 0 # does not send instakills
+    full: 0
 Pokemon Crystal:
   progression_balancing: random-low
   accessibility: random
@@ -1100,6 +1121,10 @@ triggers:
           #trade_quest_hinting: none
       Muse Dash:
         progression_balancing: random-middle
+      Ori and the Blind Forest:
+        progression_balancing: random-low
+        logic_difficulty: expert
+        deathlink_logic: partial
       Pokemon Crystal:
         randomize_berry_trees: true
         trainersanity:
@@ -1328,6 +1353,11 @@ triggers:
     options:
       null:
         name: RePodMuse{NUMBER}
+  - option_name: game
+    option_result: Pokemon Crystal
+    options:
+      null:
+        name: RePodOri{NUMBER} # OrePod...
   - option_name: game
     option_result: Pokemon Crystal
     options:
