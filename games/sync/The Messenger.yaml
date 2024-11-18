@@ -1,0 +1,51 @@
+name: RePod{NUMBER}
+game: The Messenger
+async: false
+per_game_name: true
+
+The Messenger:
+  progression_balancing: random-middle
+  accessibility: random
+  death_link: false
+  logic_level:
+    normal: 1
+    hard: 0
+  shuffle_shards: false
+  limited_movement: false
+  early_meditation: false
+  available_portals: 6 # 3-6
+  shuffle_portals:
+    none: 1
+    shops: 0
+    checkpoints: 0
+    anywhere: 0
+  goal:
+    open_music_box: 1
+    power_seal_hunt: 0
+  music_box: true
+  notes_needed: 6 # 1-6
+  total_seals: 45 # 1-85
+  percent_seals_required: 100 # 10-100
+  traps: false
+  shop_price: 100 # % mult
+
+
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      The Messenger:
+        progression_balancing: random-low
+        death_link: true
+        shuffle_shards: true
+  - option_name: game
+    option_result: The Messenger
+    options:
+      null:
+        name: RePodMess{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
