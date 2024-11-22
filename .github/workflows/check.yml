@@ -106,8 +106,8 @@ jobs:
         run: |
           sed -i 's|megamix_mod_data:\s*{\(".*"\)}|megamix_mod_data: \1|' games/sync/Hatsune\ Miku\ Project\ Diva\ Mega\ Mix+.yaml
           GAMES_CONCAT=$(yq eval-all '{(.game: .[.game])}  | . as $item ireduce ({}; . * $item )' games/sync/*.yaml)
-          sed -i 's|megamix_mod_data:\s*\(".*"\)|megamix_mod_data: {\1}|' games/sync/Hatsune\ Miku\ Project\ Diva\ Mega\ Mix+.yaml
           echo -e "$(cat games/header.yaml ; echo "$GAMES_CONCAT" ; cat games/triggers.yaml)" > "RePod.yaml"
+          sed -i 's|megamix_mod_data:\s*\(".*"\)|megamix_mod_data: {\1}|' RePod.yaml
           yq -P "RePod.yaml" > /dev/null
 
       # Should be a quick fuzz with only 1 player
