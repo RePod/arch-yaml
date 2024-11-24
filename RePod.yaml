@@ -11,33 +11,33 @@ per_game_name: true
 requires:
   version: 0.5.0
 
-game:                                      
-  A Hat in Time: 0                         
-  A Link to the Past: 9                    
+game:
+  A Hat in Time: 0
+  A Link to the Past: 9
   ANIMAL WELL: 9                           # Unsupported https://github.com/ScipioWright/Archipelago-SW/releases/latest
-  Bumper Stickers: 1                       
-  ChecksFinder: 1                          
-  Clique: 1                                
+  Bumper Stickers: 1
+  ChecksFinder: 1
+  Clique: 1
   Hades: 0                                 # Unsupported https://github.com/NaixGames/Polycosmos/releases/latest
   Hatsune Miku Project Diva Mega Mix+: 0   # Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest
   Manual_Hatsune_Miku: 0                   # Manual! I can provide it if needed.
-  MegaMan Battle Network 3: 9              
-  Muse Dash: 0                             
+  MegaMan Battle Network 3: 9
+  Muse Dash: 0
   Ori and the Blind Forest: 9              # Unsupported https://github.com/c-ostic/Archipelago/releases/latest
   Pokemon Crystal: 9                       # Unsupported https://github.com/AliceMousie/Archipelago/releases/latest
-  Pokemon Emerald: 9                       
+  Pokemon Emerald: 9
   Pokemon FireRed and LeafGreen: 9         # Unsupported https://github.com/vyneras/Archipelago/releases/latest
-  Pokemon Red and Blue: 9                  
-  SMZ3: 4                                  
-  Super Mario 64: 9                        
-  Super Mario World: 9                     
-  Super Metroid: 9                         
-  The Messenger: 9                         
-  VVVVVV: 9                                
+  Pokemon Red and Blue: 9
+  SMZ3: 4
+  Super Mario 64: 9
+  Super Mario World: 9
+  Super Metroid: 9
+  The Messenger: 9
+  VVVVVV: 9
   Void Stranger: 0                         # Unsupported https://github.com/CriminalPancake/void-stranger-ap/raw/refs/heads/main/voidstranger.apworld
   Yacht Dice: 9                            # Unsupported https://github.com/spinerak/ArchipelagoYachtDice/releases/latest
-  Yoshi's Island: 9                        
-  Yu-Gi-Oh! 2006: 9                        
+  Yoshi's Island: 9
+  Yu-Gi-Oh! 2006: 9
   Yu-Gi-Oh! Forbidden Memories: 9          # Unsupported https://github.com/sg4e/Archipelago/releases/latest
 
 A Hat in Time:
