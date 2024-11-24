@@ -1,0 +1,34 @@
+name: RePod{NUMBER}
+game: Bumper Stickers
+async: false
+per_game_name: true
+weight: 1
+
+Bumper Stickers:
+  progression_balancing: random-middle
+  accessibility: random
+  task_advances: 4 # 0-5
+  turners: 3 # 0-5
+  paint_cans: 3 # 0-5
+  trap_count: 5 # 0-15
+  rainbow_trap_weight: 5 # 0-100
+  spinner_trap_weight: 5 # 0-100
+  killer_trap_weight: 0 # 0-100
+
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Bumper Stickers:
+        progression_balancing: random-low
+  - option_name: game
+    option_result: Bumper Stickers
+    options:
+      null:
+        name: RePodBump{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
