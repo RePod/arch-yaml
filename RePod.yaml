@@ -18,6 +18,7 @@ game:
   Bumper Stickers: 1                       
   ChecksFinder: 1                          
   Clique: 1                                
+  Hades: 0                                 # Unsupported https://github.com/NaixGames/Polycosmos/releases/latest
   Hatsune Miku Project Diva Mega Mix+: 0   # Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest
   Manual_Hatsune_Miku: 0                   # Manual! I can provide it if needed.
   MegaMan Battle Network 3: 9              
@@ -220,6 +221,73 @@ Clique:
   progression_balancing: random
   accessibility: random
   color: random
+Hades:
+  progression_balancing: random-middle
+  accessibility: random
+  initial_weapon:
+    sword: 1
+    bow: 0
+    spear: 0
+    shield: 0
+    fist: 0
+    gun: 0
+  location_system:
+    room_based: 1
+    score_based: 4
+    room_weapon_based: 0 # more locs than room_based
+  score_rewards_amount: 150 # 72-1000, score_based, # checks based on score. check 10 = 10 score, etc.
+  keepsakesanity: true # does not affect Hades/Persephone
+  weaponsanity: true
+  hidden_aspectsanity: true
+  storesanity: true
+  fatesanity: false # longer games
+  hades_defeats_needed: 1 # 1-20, 10 = credits
+  weapons_clears_needed: 1 # 1-6
+  keepsakes_needed: 0 # 0-23
+  fates_needed: 0 # 0-35
+  heat_system:
+    reverse_heat: 1 # start with forced pacts, disable with its item
+    minimal_heat: 0 # PactsAmounts set minimal heat to be set, and cannot go below that level
+    vanilla_heat: 0 # following options do nothing
+  hard_labor_pact_amount: 3 # 0-5
+  lasting_consequences_pact_amount: 2 # 0-4
+  convenience_fee_pact_amount: 1 # 0-2
+  jury_summons_pact_amount: 2 # 0-3
+  extreme_measures_pact_amount: 2 # 0-4
+  calisthenics_program_pact_amount: 1 # 0-2
+  benefits_package_pact_amount: 1 # 0-2
+  middle_management_pact_amount: 1 # 0-1
+  underworld_customs_pact_amount: 1 # 0-1
+  forced_overtime_pact_amount: 1 # 0-2
+  heightened_security_pact_amount: 1 # 0-1
+  routine_inspection_pact_amount: 3 # 0-4
+  damage_control_pact_amount: 1 # 0-2
+  approval_process_pact_amount: 1 # 0-2
+  tight_deadline_pact_amount: 2 # 0-3
+  personal_liability_pact_amount: 0 # 0-1
+  darkness_pack_value: 500 # 0-10000
+  keys_pack_value: 10 # 0-500
+  gemstones_pack_value: 50 # 0-2500
+  diamonds_pack_value: 5 # 0-100
+  titan_blood_pack_value: 2 # 0-50
+  nectar_pack_value: 2 # 2-50
+  ambrosia_pack_value: 2 # 2-50
+  filler_helper_percentage: 10 # 0-100
+  max_health_helper_percentage: 15 # 0-100
+  initial_money_helper_percentage: 30 # 0-100, money+25 each run
+  filler_trap_percentage: 10 # 0-100
+  reverse_order_em:
+    # When true the order in which extreme meassures applied is reverse 
+    # so level 1 is applied to Hades, instead to Meg/The Furies). 
+    # For a more balanced experience
+    false: 0
+    true: 50
+  ignore_greece_deaths: true
+  store_give_hints: true
+  automatic_rooms_finish_on_hades_defeat:
+    false: 1
+    true: 4 # Hades = clear all on room_based/room_weapon_based
+  death_link: false
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
   progression_balancing: random-low
@@ -1144,6 +1212,10 @@ triggers:
         progression_balancing: 0
       Clique:
         hard_mode: true
+      Hades:
+        progression_balancing: random-low
+        death_link: true
+        score_rewards_amount: 666
       Hatsune Miku Project Diva Mega Mix+:
         accessibility: minimal
         # base + dlc songs = 251 - goal song = 250 songs / 500 checks
@@ -1407,6 +1479,11 @@ triggers:
     options:
       null:
         name: RePodClique{NUMBER}
+  - option_name: game
+    option_result: Hades
+    options:
+      null:
+        name: RePodHades{NUMBER}
   - option_name: game
     option_result: Hatsune Miku Project Diva Mega Mix+
     options:
