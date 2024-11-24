@@ -1294,6 +1294,12 @@ triggers:
         progression_balancing: random-low
         death_link: true
         shuffle_shards: true
+        logic_level:
+          normal: 9 # may require damage boosts
+          hard: 1 # leashing, clips, tighter dmg boosting
+        limited_movement:
+          false: 9
+          true: 1 # remove either rope or wingsuit. forces logic_level hard and accessibility minimal
         goal:
           open_music_box: 3
           power_seal_hunt: 1
