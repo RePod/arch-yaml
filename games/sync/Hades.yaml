@@ -16,10 +16,10 @@ Hades:
     fist: 0
     gun: 0
   location_system:
-    roombased: 1
-    scorebased: 4
-    roomweaponbased: 0 # more locs than roombased
-  score_rewards_amount: 150 # 72-1000, scorebased, # checks based on score. check 10 = 10 score, etc.
+    room_based: 1
+    score_based: 4
+    room_weapon_based: 0 # more locs than room_based
+  score_rewards_amount: 150 # 72-1000, score_based, # checks based on score. check 10 = 10 score, etc.
   keepsakesanity: true # does not affect Hades/Persephone
   weaponsanity: true
   hidden_aspectsanity: true
@@ -70,7 +70,7 @@ Hades:
   store_give_hints: true
   automatic_rooms_finish_on_hades_defeat:
     false: 1
-    true: 4 # Hades = clear all on roombased/roomweaponbased
+    true: 4 # Hades = clear all on room_based/room_weapon_based
   death_link: false
 
 
