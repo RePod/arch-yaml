@@ -33,7 +33,8 @@ jobs:
            sed -r '/^\s*$/d' |
            yq '{"game": .}' | 
            sed $'s/#/\001#/' | 
-           column -ets $'\001')\n" >> games/header.yaml
+           column -ets $'\001')\n" |
+           sed 's/\s+$//' >> games/header.yaml
            
       #- name: Archipelago | Restore Cache
       #  id: arch-cache-restore
