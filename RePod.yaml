@@ -982,7 +982,7 @@ The Messenger:
   music_box: true
   notes_needed: 6 # 1-6
   total_seals: 45 # 1-85
-  percent_seals_required: 100 # 10-100
+  percent_seals_required: random-range-60-75 # 10-100
   traps: false
   shop_price: 100 # % mult
 VVVVVV:
@@ -1294,6 +1294,13 @@ triggers:
         progression_balancing: random-low
         death_link: true
         shuffle_shards: true
+        goal:
+          open_music_box: 3
+          power_seal_hunt: 1
+        notes_needed: 6
+        total_seals: 45
+        percent_seals_required: random-range-80-95
+        traps: true
       VVVVVV:
         area_rando: true
       Void Stranger:
