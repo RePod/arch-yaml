@@ -30,9 +30,9 @@ Hades:
   keepsakes_needed: 0 # 0-23
   fates_needed: 0 # 0-35
   heat_system:
-    reverseheat: 1 # start with forced pacts, disable with its item
-    minimalheat: 0 # PactsAmounts set minimal heat to be set, and cannot go below that level
-    vanillaheat: 0 # following options do nothing
+    reverse_heat: 1 # start with forced pacts, disable with its item
+    minimal_heat: 0 # PactsAmounts set minimal heat to be set, and cannot go below that level
+    vanilla_heat: 0 # following options do nothing
   hard_labor_pact_amount: 3 # 0-5
   lasting_consequences_pact_amount: 2 # 0-4
   convenience_fee_pact_amount: 1 # 0-2
