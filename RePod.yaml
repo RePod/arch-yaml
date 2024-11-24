@@ -15,6 +15,7 @@ game:
   A Hat in Time: 0                         
   A Link to the Past: 9                    
   ANIMAL WELL: 9                           # Unsupported https://github.com/ScipioWright/Archipelago-SW/releases/latest
+  Bumper Stickers: 1                       
   ChecksFinder: 1                          
   Clique: 1                                
   Hatsune Miku Project Diva Mega Mix+: 0   # Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest
@@ -201,6 +202,16 @@ ANIMAL WELL:
   disc_hopping: off
   wheel_tricks: off
   weird_tricks: false
+Bumper Stickers:
+  progression_balancing: random-middle
+  accessibility: random
+  task_advances: 4 # 0-5
+  turners: 3 # 0-5
+  paint_cans: 3 # 0-5
+  trap_count: 5 # 0-15
+  rainbow_trap_weight: 5 # 0-100
+  spinner_trap_weight: 5 # 0-100
+  killer_trap_weight: 0 # 0-100
 ChecksFinder:
   progression_balancing: random-low
   accessibility: random
@@ -1127,6 +1138,8 @@ triggers:
         disc_hopping: single
         weird_tricks: true # https://www.youtube.com/playlist?list=PL-YW4GNIhXnrXszgntzCGw2SoLcmRElKY
         death_link: true
+      Bumper Stickers:
+        progression_balancing: random-low
       ChecksFinder:
         progression_balancing: 0
       Clique:
@@ -1366,6 +1379,11 @@ triggers:
     options:
       null:
         name: RePodWell{NUMBER}
+  - option_name: game
+    option_result: Bumper Stickers
+    options:
+      null:
+        name: RePodBump{NUMBER}
   - option_name: game
     option_result: ChecksFinder
     options:
