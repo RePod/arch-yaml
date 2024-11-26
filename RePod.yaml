@@ -1300,7 +1300,7 @@ triggers:
         randomize_rock_tunnel: true
         dark_rock_tunnel_logic: true
         prizesanity: true
-        trainersanity: true
+        trainersanity: full
         dexsanity: full
       SMZ3:
         progression_balancing: random-low
