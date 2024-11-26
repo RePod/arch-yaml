@@ -126,7 +126,7 @@ triggers:
         randomize_rock_tunnel: true
         dark_rock_tunnel_logic: true
         prizesanity: true
-        trainersanity: true
+        trainersanity: full
         dexsanity: full
   - option_name: game
     option_result: Pokemon Red and Blue
