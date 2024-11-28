@@ -1241,7 +1241,7 @@ triggers:
         progression_balancing: random-middle
       Ori and the Blind Forest:
         progression_balancing: random-low
-        logic_difficulty: expert
+        #logic_difficulty: expert
         deathlink_logic: partial
       Pokemon Crystal:
         randomize_berry_trees: true
