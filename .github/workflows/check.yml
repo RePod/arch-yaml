@@ -92,20 +92,15 @@ jobs:
         run: |
           parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
 
-      # sed to prevent yq from mangling megamix_mod_data
       - name: Archipelago | Multi Async/Triggers (Fuzz)
         run: |
-          sed -i 's|megamix_mod_data:\s*{\(".*"\)}|megamix_mod_data: \1|' games/sync/Hatsune\ Miku\ Project\ Diva\ Mega\ Mix+.yaml
           find /tmp/Archipelago/Players/ -maxdepth 1 -type f -name "*.yaml" -exec yq -i '(.async = true)' {} \;
-          sed -i 's|megamix_mod_data:\s*\(".*"\)|megamix_mod_data: {\1}|' games/sync/Hatsune\ Miku\ Project\ Diva\ Mega\ Mix+.yaml
           parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
 
       - name: Concat | Create
         run: |
-          sed -i 's|megamix_mod_data:\s*{\(".*"\)}|megamix_mod_data: \1|' games/sync/Hatsune\ Miku\ Project\ Diva\ Mega\ Mix+.yaml
           GAMES_CONCAT=$(yq eval-all '{(.game: .[.game])}  | . as $item ireduce ({}; . * $item )' games/sync/*.yaml)
           echo -e "$(cat games/header.yaml ; echo "$GAMES_CONCAT" ; cat games/triggers.yaml)" > "RePod.yaml"
-          sed -i 's|megamix_mod_data:\s*\(".*"\)|megamix_mod_data: {\1}|' RePod.yaml
           yq -P "RePod.yaml" > /dev/null
 
       # Should be a quick fuzz with only 1 player
