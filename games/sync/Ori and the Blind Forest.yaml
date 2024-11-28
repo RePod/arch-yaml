@@ -32,7 +32,7 @@ triggers:
     options:
       Ori and the Blind Forest:
         progression_balancing: random-low
-        logic_difficulty: expert
+        #logic_difficulty: expert
         deathlink_logic: partial
   - option_name: game
     option_result: Pokemon Crystal
