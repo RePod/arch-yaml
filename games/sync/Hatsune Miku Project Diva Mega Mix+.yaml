@@ -43,8 +43,8 @@ triggers:
         starting_song_count: 10
         additional_song_count: 240
         duplicate_song_percentage: 10
-        # 31 & 51 = 39/78 (+22 dupe slots)
-        leek_count_percentage: 40 # 10-40 / 500*0.4 = 100, higher = less slots for dupes
+        # Each song gets 1 copy in the pool (before dupes), so cut the checks in half
+        leek_count_percentage: 40 # 10-40 / 250*0.4 = 100, higher = less slots for dupes
         leek_win_count_percentage: 69 # 50-100
   - option_name: game
     option_result: Hatsune Miku Project Diva Mega Mix+
