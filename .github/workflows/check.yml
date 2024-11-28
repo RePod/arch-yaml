@@ -56,7 +56,6 @@ jobs:
 
       # Originally this hit /latest but Yacht Dice made it obvious releases can have (or not) whatever they want.
       # Void Stranger is (currently) releasing the world in the repo files. Another exception!
-      # Diva folder checks CWD so... ¯\_(ツ)_/¯
       - name: Archipelago | Install Custom Worlds
         if: steps.arch-cache-restore.outputs.cache-hit != 'true'
         run: |
@@ -74,8 +73,6 @@ jobs:
           if [ -n "$UNSUPPORTED" ]; then
             echo "$UNSUPPORTED" | parallel --halt now,fail=1 "xargs wget -nv -P /tmp/Archipelago/custom_worlds"
           fi
-      
-      #wget -nv -P "diva/" https://gist.githubusercontent.com/RePod/f4252f1bf099713d9559fdc7a0c26e35/raw/RePodMiku.json
 
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
