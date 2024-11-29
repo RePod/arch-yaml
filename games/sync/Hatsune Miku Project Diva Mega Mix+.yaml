@@ -1,4 +1,4 @@
-name: RePodMiku{NUMBER}
+name: RePod{NUMBER}
 game: Hatsune Miku Project Diva Mega Mix+
 async: false
 per_game_name: true
