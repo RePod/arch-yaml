@@ -10,11 +10,13 @@ Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
   progression_balancing: random-low
   accessibility: random
-  allow_megamix_dlc_songs: true
+  allow_megamix_dlc_songs:
+    true: 2
+    false: 1
   auto_remove_songs: true
   duplicate_song_percentage: 50
   starting_song_count: 3
-  additional_song_count: 47
+  additional_song_count: 72
   song_difficulty_mode: manual
   song_difficulty_min: hard
   song_difficulty_max: exextreme
@@ -25,7 +27,7 @@ Hatsune Miku Project Diva Mega Mix+:
   song_difficulty_rating_max: nine
   grade_needed: standard
   leek_count_percentage: 40
-  leek_win_count_percentage: random-range-mid-70-90
+  leek_win_count_percentage: 50 # 50-100
   include_songs: []
   exclude_songs: []
   non_local_items:
