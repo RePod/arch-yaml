@@ -35,7 +35,7 @@ triggers:
         #logic_difficulty: expert
         deathlink_logic: partial
   - option_name: game
-    option_result: Pokemon Crystal
+    option_result: Ori and the Blind Forest
     options:
       null:
         name: RePodOri{NUMBER} # OrePod...
