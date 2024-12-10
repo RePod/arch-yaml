@@ -9,9 +9,9 @@ Ori and the Blind Forest:
   accessibility: random
   goal: all_skill_trees
   logic_difficulty:
-    casual: 1
+    casual: 0
     standard: 1
-    expert: 0
+    expert: 1
     master: 0
     glitched: 0
   keystone_logic:
