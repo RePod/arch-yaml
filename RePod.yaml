@@ -1167,7 +1167,10 @@ Yu-Gi-Oh! Forbidden Memories:
   # BizHawk client + lua connector
   progression_balancing: random-low
   accessibility: random
-  duelist_progression: random
+  duelist_progression:
+    thematic: 6 # E1 > WT > E2 > F6
+    campaign: 3 # Thematic + campaign breakpoints, more individual prog duelist
+    singular: 1 # More meaningful in an async
   local_starchips: false
   final6_progression: fixed
   final6_sequence: first_5_shuffled
@@ -1419,6 +1422,10 @@ triggers:
         # 74 base + 91 challenges = 165 checks
         number_of_challenges: 91
       Yu-Gi-Oh! Forbidden Memories:
+        duelist_progression:
+          thematic: 1
+          campaign: 3
+          singular: 6
         randomize_duelist_order:
           false: 1
           true: 3
@@ -1441,7 +1448,7 @@ triggers:
           vanilla: 1
           first_5_shuffled: 5
           all_6_shuffled: 2
-        extra_progressive_duelists: # 36 minimum
+        extra_progressive_duelists: # 36 minimum for duelist_progression:singular
           1: 4
           2: 1
         drop_rate_logic: random-range-low-0-24
