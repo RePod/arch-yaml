@@ -382,7 +382,7 @@ Ori and the Blind Forest:
     casual: 0
     standard: 1
     expert: 2
-    master: 0
+    master: 0 # grenade jumping is not sync safe
     glitched: 0
   keystone_logic:
     anywhere: 1
@@ -1244,7 +1244,7 @@ triggers:
       Ori and the Blind Forest:
         progression_balancing: random-low
         logic_difficulty:
-          expert: 4
+          expert: 3
           master: 1
         deathlink_logic: partial
       Pokemon Crystal:
