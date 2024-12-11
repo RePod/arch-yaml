@@ -381,7 +381,7 @@ Ori and the Blind Forest:
   logic_difficulty:
     casual: 0
     standard: 1
-    expert: 1
+    expert: 2
     master: 0
     glitched: 0
   keystone_logic:
@@ -1243,7 +1243,9 @@ triggers:
         progression_balancing: random-middle
       Ori and the Blind Forest:
         progression_balancing: random-low
-        #logic_difficulty: expert
+        logic_difficulty:
+          expert: 4
+          master: 1
         deathlink_logic: partial
       Pokemon Crystal:
         randomize_berry_trees: true
