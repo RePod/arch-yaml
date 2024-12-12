@@ -12,6 +12,8 @@ Yu-Gi-Oh! Forbidden Memories:
     thematic: 6 # E1 > WT > E2 > F6
     campaign: 3 # Thematic + campaign breakpoints, more individual prog duelist
     singular: 1 # More meaningful in an async
+  item_mode: cards
+  unobtainable_rewards: true
   local_starchips: false
   final6_progression: fixed
   final6_sequence: first_5_shuffled
@@ -39,7 +41,7 @@ triggers:
           true: 3
         item_mode:
           starchips: 1
-          cards: 4 # 678 > 358 checks
+          cards: 3 # 678 > 358 checks
         unobtainable_rewards:
           false: 1
           true: 4 # requires item_mode:cards
