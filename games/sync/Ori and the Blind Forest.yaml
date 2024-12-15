@@ -35,6 +35,12 @@ triggers:
         logic_difficulty:
           expert: 3
           master: 1
+        keystone_logic:
+          anywhere: 3
+          area_specific: 1
+        mapstone_logic:
+          anywhere: 3
+          area_specific: 1
         deathlink_logic: partial
   - option_name: game
     option_result: Ori and the Blind Forest
