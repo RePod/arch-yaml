@@ -32,10 +32,7 @@ triggers:
     option_result: true
     options:
       Yu-Gi-Oh! Forbidden Memories:
-        duelist_progression:
-          thematic: 1
-          campaign: 3
-          singular: 6
+        duelist_progression: singular
         randomize_duelist_order:
           false: 1
           true: 3
