@@ -40,9 +40,15 @@ triggers:
           true: 3
         candle_checks: true
         bunnies_as_checks: exclude_tedious # forces bunny_warps_in_logic true
+        fruitsanity: true # +115 checks
         exclude_song_chests: false
         disc_hopping: single
-        weird_tricks: true # https://www.youtube.com/playlist?list=PL-YW4GNIhXnrXszgntzCGw2SoLcmRElKY
+        # https://www.youtube.com/playlist?list=PL-YW4GNIhXnrXszgntzCGw2SoLcmRElKY
+        wheel_tricks: off
+        ball_throwing: simple
+        flute_jumps: false
+        obscure_tricks: false
+        precise_tricks: false
         death_link: true
   - option_name: game
     option_result: ANIMAL WELL
