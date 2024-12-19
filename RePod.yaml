@@ -202,7 +202,7 @@ ANIMAL WELL:
   bubble_jumping: exclude_long_chains
   disc_hopping: off
   wheel_tricks: off
-  weird_tricks: false
+  ball_throwing: simple
 Bumper Stickers:
   progression_balancing: random-middle
   accessibility: random
@@ -1209,9 +1209,15 @@ triggers:
           true: 3
         candle_checks: true
         bunnies_as_checks: exclude_tedious # forces bunny_warps_in_logic true
+        fruitsanity: true # +115 checks
         exclude_song_chests: false
         disc_hopping: single
-        weird_tricks: true # https://www.youtube.com/playlist?list=PL-YW4GNIhXnrXszgntzCGw2SoLcmRElKY
+        # https://www.youtube.com/playlist?list=PL-YW4GNIhXnrXszgntzCGw2SoLcmRElKY
+        wheel_tricks: off
+        ball_throwing: simple
+        flute_jumps: false
+        obscure_tricks: false
+        precise_tricks: false
         death_link: true
       Bumper Stickers:
         progression_balancing: random-low
@@ -1430,10 +1436,7 @@ triggers:
         # 74 base + 91 challenges = 165 checks
         number_of_challenges: 91
       Yu-Gi-Oh! Forbidden Memories:
-        duelist_progression:
-          thematic: 1
-          campaign: 3
-          singular: 6
+        duelist_progression: singular
         randomize_duelist_order:
           false: 1
           true: 3
