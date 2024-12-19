@@ -21,7 +21,7 @@ ANIMAL WELL:
   bubble_jumping: exclude_long_chains
   disc_hopping: off
   wheel_tricks: off
-  weird_tricks: false
+  ball_throwing: simple
 
 triggers:
   - option_category: null
