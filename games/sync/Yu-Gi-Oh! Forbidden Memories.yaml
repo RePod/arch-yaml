@@ -23,6 +23,7 @@ Yu-Gi-Oh! Forbidden Memories:
     hundo_atecs: 0 # Pegasus, Kaiba, Mage Soldier, Meadow Mage, and NiteMare
     all: 0
   atec_trap: acid_trap_hole
+  extra_progressive_duelists: 1
   drop_rate_logic: 64
   death_link: false
 
