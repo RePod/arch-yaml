@@ -79,7 +79,7 @@ jobs:
       # eventually make this automated, probably folded into above. specifically for official updates before a new release.
       - name: Archipelago | Patched Officials
         run: |
-          wget https://github.com/Eijebong/Archipelago-index/raw/refs/heads/main/apworlds/yugioh06-0.5.2-beta.apworld -P /tmp/Archipelago/lib/worlds/ -O yugioh06.apworld
+          wget https://github.com/Eijebong/Archipelago-index/raw/refs/heads/main/apworlds/yugioh06-0.5.2-beta.apworld -O /tmp/Archipelago/lib/worlds/yugioh06.apworld
 
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
