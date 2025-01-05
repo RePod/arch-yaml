@@ -1141,7 +1141,7 @@ Yu-Gi-Oh! 2006:
   progression_balancing: random-low
   accessibility: random
   structure_deck:
-    none: 1
+    none: 3
     random_deck: 1
   banlist: september_2005
   final_campaign_boss_unlock_condition: campaign_opponents
