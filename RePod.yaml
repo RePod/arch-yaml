@@ -1148,9 +1148,9 @@ Yu-Gi-Oh! 2006:
     random_playsets: 1 # 14 completely random playsets of 3.
   #starter_deck: vanilla remove random_singles random_playsets
   banlist: september_2005
-  final_campaign_boss_unlock_condition: campaign_opponents
-  fourth_tier_5_campaign_boss_unlock_condition: campaign_opponents
-  third_tier_5_campaign_boss_unlock_condition: campaign_opponents
+  #final_campaign_boss_unlock_condition: campaign_opponents
+  #fourth_tier_5_campaign_boss_unlock_condition: campaign_opponents # deprecated
+  #third_tier_5_campaign_boss_unlock_condition: campaign_opponents # deprecated
   final_campaign_boss_challenges: 10
   fourth_tier_5_campaign_boss_challenges: 5
   third_tier_5_campaign_boss_challenges: 2
@@ -1160,7 +1160,7 @@ Yu-Gi-Oh! 2006:
   number_of_challenges: 91
   starting_money: 3000
   money_reward_multiplier: 20
-  normalize_boosters_packs: true
+  normalize_booster_pack_prices: true
   booster_pack_prices: 100
   normalize_booster_pack_rarities: true
   add_empty_banlist: true
@@ -1423,15 +1423,15 @@ triggers:
         death_link: true
       Yu-Gi-Oh! 2006:
         # No way to tell what was picked without doing them.
-        final_campaign_boss_unlock_condition:
-          campaign_opponents: 3
-          challenges: 1
-        fourth_tier_5_campaign_boss_unlock_condition:
-          campaign_opponents: 3
-          challenges: 1
-        third_tier_5_campaign_boss_unlock_condition:
-          campaign_opponents: 3
-          challenges: 1
+        #final_campaign_boss_unlock_condition:
+        #  campaign_opponents: 3
+        #  challenges: 1
+        #fourth_tier_5_campaign_boss_unlock_condition:
+        #  campaign_opponents: 3
+        #  challenges: 1
+        #third_tier_5_campaign_boss_unlock_condition:
+        #  campaign_opponents: 3
+        #  challenges: 1
         # _challenges are 0-91, might want to range these
         final_campaign_boss_challenges: 39
         fourth_tier_5_campaign_boss_challenges: 26
