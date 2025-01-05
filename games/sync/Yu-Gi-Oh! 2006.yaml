@@ -9,8 +9,12 @@ Yu-Gi-Oh! 2006:
   progression_balancing: random-low
   accessibility: random
   structure_deck:
-    none: 3
-    random_deck: 1
+    # dragons_roar zombie_madness blazing_destruction fury_from_the_deep warriors_triumph spellcasters_judgement worst random_deck random_singles random_playsets custom
+    worst: 1
+    random_deck: 1 # old behavior, any of the starters
+    random_singles: 1 # completely random no dupes
+    random_playsets: 1 # 14 completely random playsets of 3.
+  #starter_deck: vanilla remove random_singles random_playsets
   banlist: september_2005
   final_campaign_boss_unlock_condition: campaign_opponents
   fourth_tier_5_campaign_boss_unlock_condition: campaign_opponents
@@ -26,11 +30,14 @@ Yu-Gi-Oh! 2006:
   money_reward_multiplier: 20
   normalize_boosters_packs: true
   booster_pack_prices: 100
+  normalize_booster_pack_rarities: true
   add_empty_banlist: true
   campaign_opponents_shuffle:
     true: 3
     false: 1
-  ocg_arts: false
+  ocg_arts:
+    true: 1
+    false: 3
 
 triggers:
   - option_category: null
@@ -59,6 +66,11 @@ triggers:
           # 0-91 challenges, imbalanced with above may result in a fast/easier game
           # 74 base + 91 challenges = 165 checks
           number_of_challenges: 91
+          normalize_booster_pack_rarities: false
+          randomize_pack_contents:
+            vanilla: 0
+            shuffle: 2
+            chaos: 3
   - option_name: game
     option_result: Yu-Gi-Oh! 2006
     options:
