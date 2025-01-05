@@ -76,6 +76,11 @@ jobs:
             echo "$UNSUPPORTED" | parallel --halt now,fail=1 "xargs wget -nv -P /tmp/Archipelago/custom_worlds"
           fi
 
+      # eventually make this automated, probably folded into above. specifically for official updates before a new release.
+      - name: Archipelago | Patched Officials
+        run: |
+          wget https://github.com/Eijebong/Archipelago-index/raw/refs/heads/main/apworlds/yugioh06-0.5.2-beta.apworld -P /tmp/Archipelago/lib/worlds/ -O yugioh06.apworld
+
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
       #  with:
