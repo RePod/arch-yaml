@@ -1242,10 +1242,10 @@ triggers:
         # base + dlc songs = 251 - goal song = 250 songs / 500 checks
         starting_song_count: 10
         additional_song_count: 240
-        duplicate_song_percentage: 10
+        duplicate_song_percentage: 0
         # Each song gets 1 copy in the pool (before dupes), so cut the checks in half
         leek_count_percentage: 40 # 10-40 / 250*0.4 = 100, higher = less slots for dupes
-        leek_win_count_percentage: 69 # 50-100
+        leek_win_count_percentage: 50 # 50-100
       Manual_Hatsune_Miku:
         accessibility: minimal
         music_sheets: 60
