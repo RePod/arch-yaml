@@ -375,6 +375,7 @@ Muse Dash:
   exclude_songs: []
   #start_inventory: {"God-ish":1}
 Ori and the Blind Forest:
+  # Easy FillError on solo gens
   progression_balancing: random-middle
   accessibility: random
   goal: all_skill_trees
