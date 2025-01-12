@@ -5,6 +5,7 @@ per_game_name: true
 description: "Unsupported https://github.com/c-ostic/Archipelago/releases/latest"
 
 Ori and the Blind Forest:
+  # Easy FillError on solo gens
   progression_balancing: random-middle
   accessibility: random
   goal: all_skill_trees
