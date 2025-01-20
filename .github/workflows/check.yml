@@ -37,7 +37,7 @@ jobs:
       # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       - name: Dynamic Games
         run: |
-           echo -e "$(yq -N '{.game: (.weight // $DEFAULT_WEIGHT), "desc": .description // ""} | .[] line_comment = .desc | del .desc' games/sync/*.yaml |
+           echo -e "$(yq -N '{.game: (.weight // env(DEFAULT_WEIGHT)), "desc": .description // ""} | .[] line_comment = .desc | del .desc' games/sync/*.yaml |
            sed -r '/^\s*$/d' |
            yq '{"game": .}' |
            sed $'s/#/\001#/' |
