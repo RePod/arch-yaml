@@ -1,9 +1,19 @@
 ### [Individual Games](games/sync)
 
- I use this repo to manage individual YAMLs and combine them all into my GigaYAML™. Doing so manually would be way too much effort and error prone.
+I use this repo to manage individual YAMLs and combine them all into my GigaYAML™. Doing so manually would be way too much effort and error prone.
+
+Priorities:
+ - Sane management of single YAMLs and single random YAML
+ - Global Async toggle, keeping async settings with their original YAML
+ - Easy modification and retrieval of individual game YAMLs
+ - Automatically test changes routinely and as they come in to not be the one breaking generations
+   - Including Unofficial worlds in the 50 different ways they're provided
+
+---
 
 ### ~~Quick~~ HOWTO
- - I don't recommend forking with this repo as upstream. Its commit history and syncing with are pointless for you.
+ - I don't recommend forking with this repo as upstream.
+   - Its commit history and syncing with it are pointless for you.
    - Grab the [current main ZIP](https://github.com/RePod/arch-yaml/archive/refs/heads/main.zip) and make a fresh repo with it.
  - Edit `games/header.yaml` and `games/triggers.yaml`
    - Any instances of the name. Keep `{NUMBER}` everywhere as it prevents name conflicts if the same game is chosen.
@@ -13,6 +23,7 @@
    - The `description` property will be very important soon!
 ```YAML
 # Simple YAML with triggers in place. For Official worlds, this format is all you'll need.
+# Extra properties like description and weight can be used (check example YAMLs).
 name: Name{NUMBER}
 game: MYGAME
 async: false
@@ -30,7 +41,7 @@ triggers:
       MYGAME:
         progression_balancing: 0
   - option_name: game
-    option_result: Game
+    option_result: MYGAME
     options:
       null:
         name: NameMYGAME{NUMBER}
