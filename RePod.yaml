@@ -1252,9 +1252,7 @@ triggers:
         music_sheets: 60
         song_total: 40
       MegaMan Battle Network 3:
-        include_jobs:
-          false: 1
-          true: 3
+        include_jobs: true
         extra_ranks: # 8 minimum
           1: 4
           2: 1
