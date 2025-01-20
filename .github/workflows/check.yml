@@ -60,7 +60,7 @@ jobs:
       # Void Stranger is (currently) releasing the world in the repo files. Another exception!
       - name: Archipelago | Install Custom Worlds
         if: steps.arch-cache-restore.outputs.cache-hit != 'true'
-        run: |
+        run: | # descs that point to a releases page, grab latest
           cp -a games/custom_worlds/. /tmp/Archipelago/custom_worlds
           UNSUPPORTED=$(
             yq '.description' games/sync/*.yaml |
@@ -70,16 +70,20 @@ jobs:
             wget -q -O - {} |
             jq '[.[].assets[] | select(.browser_download_url | endswith(\".apworld\"))][0].browser_download_url' |
             xargs wget -nv -P /tmp/Archipelago/custom_worlds"
-
+        run: | # descs that point directly to an .apworld
           UNSUPPORTED=$(yq '.description' games/sync/*.yaml | grep -Po '(https:\/\/.*\.apworld)$' || true)
           if [ -n "$UNSUPPORTED" ]; then
             echo "$UNSUPPORTED" | parallel --halt now,fail=1 "xargs wget -nv -P /tmp/Archipelago/custom_worlds"
           fi
-
-      # eventually make this automated, probably folded into above. specifically for official updates before a new release.
-      - name: Archipelago | Patched Officials
-        run: |
-          wget https://github.com/Eijebong/Archipelago-index/raw/refs/heads/main/apworlds/yugioh06-0.5.2-beta.apworld -O /tmp/Archipelago/lib/worlds/yugioh06.apworld
+        run: | # normalize apworld names. no world uses - but best case is the zip's inner folder name (slow+effort)
+          while read file; do
+            mv "$file" $(sed "s/-.*\.apworld$/.apworld/" <<< "$file")
+          done <<< $(find /tmp/Archipelago/custom_worlds -name "*-*.apworld")
+        run: | # handle patched/officials conflict
+          while read file; do
+            FPATH=$(cut -d' ' -f1 <<< "$file")
+            mv -vf "$FPATH" $(sed "s/custom_worlds/lib\/worlds/" <<< "$FPATH")
+          done <<< $(find "/tmp/Archipelago/custom_worlds/" "/tmp/Archipelago/lib/worlds/" -name "*.apworld" -printf "%p %P\n" | sort | uniq -f1 -d)
 
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
