@@ -46,6 +46,13 @@ jobs:
           sudo snap install yq
           echo ${{ github.event_name }}
 
+      - name: Prepare env (dispatch)
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          echo ${{ inputs.generation_seed }}
+          echo ${{ inputs.fuzz_iterations }}
+          echo ${{ inputs.skip_progbal }}
+
       # yq: just as bad as snap. pick a fork, pick a version!
       - name: Sanity check single YAMLs
         run: find games/sync/ -type f -name "*.yaml" -print0 | xargs -0 yq -P > /dev/null
