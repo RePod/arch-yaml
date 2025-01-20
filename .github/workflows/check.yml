@@ -95,6 +95,7 @@ jobs:
               mv -vf "$FPATH" "$TPATH"
             done <<< "$CONFLICT"
           fi
+          mv /tmp/Archipelago/custom_worlds/yugioh06.apworld /tmp/Archipelago/lib/worlds/
           ls -la /tmp/Archipelago/custom_worlds/ /tmp/Archipelago/lib/worlds/*.apworld
 
       #- name: Archipelago | Save Cache
