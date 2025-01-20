@@ -93,7 +93,7 @@ jobs:
             while read file; do
               echo "move $file"
               FPATH=$(cut -d' ' -f1 <<< "$file")
-              FPATH=$(sed "s/lib\/worlds/custom_worlds" <<< "$FPATH")
+              FPATH=$(sed "s/lib\/worlds/custom_worlds/" <<< "$FPATH")
               TPATH=$(sed "s/custom_worlds/lib\/worlds/" <<< "$FPATH")
               mv -vf "$FPATH" "$TPATH"
             done <<< "$CONFLICT"
