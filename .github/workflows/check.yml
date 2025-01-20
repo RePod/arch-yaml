@@ -89,11 +89,11 @@ jobs:
         run: |
           CONFLICT=$(find /tmp/Archipelago/custom_worlds /tmp/Archipelago/lib/worlds -name "*.apworld" -printf "%P\n" | sort | uniq -d)
           if [ -n "$CONFLICT" ]; then
+            echo -e "Official Conflicts:\n$CONFLICT"
             while read file; do
               mv -f "/tmp/Archipelago/custom_worlds/${file}" "/tmp/Archipelago/lib/worlds/${file}"
             done <<< "$CONFLICT"
           fi
-          ls -la /tmp/Archipelago/custom_worlds/ /tmp/Archipelago/lib/worlds/*.apworld
 
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
