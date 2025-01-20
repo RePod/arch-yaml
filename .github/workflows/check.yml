@@ -51,7 +51,7 @@ jobs:
         run: |
           [[ -n "${{ inputs.generation_seed }}" ]] && echo "GEN_SEED=--seed ${{ inputs.generation_seed }}" >> "$GITHUB_ENV"
           [[ -n "${{ inputs.fuzz_iterations }}" ]] && echo "GEN_ROUNDS=${{ inputs.fuzz_iterations }}" >> "$GITHUB_ENV"
-          [[ -n "${{ inputs.skip_progbal }}" && "${{ inputs.skip_progbal }}" == "false" ]] && echo "GEN_SKIPPROG=" >> "$GITHUB_ENV"
+          [[ "${{ inputs.skip_progbal }}" == "false" ]] && echo "GEN_SKIPPROG=" >> "$GITHUB_ENV"
 
       - name: Sanity check single YAMLs
         run: |
