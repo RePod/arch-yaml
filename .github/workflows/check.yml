@@ -95,6 +95,7 @@ jobs:
               [[ -f "$FPATH" ]] && mv -vf "$FPATH" "$TPATH"
             done <<< "$CONFLICT"
           fi
+          ls -la /tmp/Archipelago/custom_worlds/ /tmp/Archipelago/lib/worlds/
 
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
