@@ -44,18 +44,21 @@ jobs:
       - name: Prepare env
         run: |
           sudo snap install yq
-          echo ${{ github.event_name }}
+          echo "GEN_ROUNDS=2" >> "$GITHUB_ENV"
+          echo "GEN_SKIPPROG=true" >> "$GITHUB_ENV"
 
       - name: Prepare env (dispatch)
-        if: ${{ github.event_name == 'workflow_dispatch' }}
+        if: github.event_name == 'workflow_dispatch'
         run: |
-          echo ${{ inputs.generation_seed }}
-          echo ${{ inputs.fuzz_iterations }}
-          echo ${{ inputs.skip_progbal }}
+          [[ -n ${{ inputs.generation_seed }} ]] && echo "GEN_SEED=${{ inputs.generation_seed }}" >> "$GITHUB_ENV"
+          [[ -n ${{ inputs.fuzz_iterations }} ]] && echo "GEN_ROUNDS=${{ inputs.fuzz_iterations }}" >> "$GITHUB_ENV"
+          [[ -n ${{ inputs.skip_progbal }} ]] && echo "GEN_SKIPPROG=${{ inputs.skip_progbal }}" >> "$GITHUB_ENV"
 
       # yq: just as bad as snap. pick a fork, pick a version!
       - name: Sanity check single YAMLs
-        run: find games/sync/ -type f -name "*.yaml" -print0 | xargs -0 yq -P > /dev/null
+        run: |
+          echo "$GEN_ROUNDS / $GEN_SKIPPROG / $GEN_SEED"
+          find games/sync/ -type f -name "*.yaml" -print0 | xargs -0 yq -P > /dev/null
 
       - name: Dynamic Triggers
         run: |
