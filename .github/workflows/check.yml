@@ -87,15 +87,11 @@ jobs:
       # uniq is doing SOMETHING that trips up the loop with an empty string
       - name: Archipelago | Custom Worlds - Resolve conflicts
         run: |
-          CONFLICT=$(find "/tmp/Archipelago/custom_worlds/" "/tmp/Archipelago/lib/worlds/" -name "*.apworld" -printf "%p %P\n" | sort | uniq -df2)
+          CONFLICT=$(find /tmp/Archipelago/custom_worlds /tmp/Archipelago/lib/worlds -name "*.apworld" -printf "%P\n" | sort | uniq -d)
           echo "$CONFLICT"
           if [ -n "$CONFLICT" ]; then
             while read file; do
-              echo "move $file"
-              FPATH=$(cut -d' ' -f1 <<< "$file")
-              FPATH=$(sed "s/lib\/worlds/custom_worlds/" <<< "$FPATH")
-              TPATH=$(sed "s/custom_worlds/lib\/worlds/" <<< "$FPATH")
-              mv -vf "$FPATH" "$TPATH"
+              mv -f "/tmp/Archipelago/custom_worlds/${file}" "/tmp/Archipelago/lib/worlds/${file}"
             done <<< "$CONFLICT"
           fi
           ls -la /tmp/Archipelago/custom_worlds/ /tmp/Archipelago/lib/worlds/*.apworld
