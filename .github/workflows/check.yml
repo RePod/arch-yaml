@@ -50,7 +50,15 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         run: |
           [[ -n "${{ inputs.generation_seed }}" ]] && echo "GEN_SEED=--seed ${{ inputs.generation_seed }}" >> "$GITHUB_ENV"
+
+      - name: iter
+        if: github.event_name == 'workflow_dispatch'
+        run: |
           [[ -n "${{ inputs.fuzz_iterations }}" ]] && echo "GEN_ROUNDS=${{ inputs.fuzz_iterations }}" >> "$GITHUB_ENV"
+
+      - name: skiprog
+        if: github.event_name == 'workflow_dispatch'
+        run: |
           [[ "${{ inputs.skip_progbal }}" == "false" ]] && echo "GEN_SKIPPROG=" >> "$GITHUB_ENV"
 
       - name: Sanity check single YAMLs
