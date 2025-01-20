@@ -42,7 +42,9 @@ jobs:
       # CWD -> $GITHUB_WORKSPACE
       - uses: actions/checkout@v4
       - name: Prepare env
-        run: sudo snap install yq
+        run: |
+          sudo snap install yq
+          echo ${{ github.event_name }}
 
       # yq: just as bad as snap. pick a fork, pick a version!
       - name: Sanity check single YAMLs
