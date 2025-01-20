@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * 0"  
+    - cron: "0 0 * * 0"
 
 jobs:
   build:
@@ -31,13 +31,13 @@ jobs:
       # AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       - name: Dynamic Games
         run: |
-           echo -e "$(yq -N '{.game: (.weight // 9), "desc": .description // ""} | .[] line_comment = .desc | del .desc' games/sync/*.yaml | 
+           echo -e "$(yq -N '{.game: (.weight // 9), "desc": .description // ""} | .[] line_comment = .desc | del .desc' games/sync/*.yaml |
            sed -r '/^\s*$/d' |
-           yq '{"game": .}' | 
-           sed $'s/#/\001#/' | 
+           yq '{"game": .}' |
+           sed $'s/#/\001#/' |
            column -ets $'\001')\n" |
            sed 's/\s*$//' >> games/header.yaml
-           
+
       #- name: Archipelago | Restore Cache
       #  id: arch-cache-restore
       #  uses: actions/cache/restore@v4
@@ -60,7 +60,7 @@ jobs:
       # Void Stranger is (currently) releasing the world in the repo files. Another exception!
       - name: Archipelago | Install Custom Worlds
         if: steps.arch-cache-restore.outputs.cache-hit != 'true'
-        run: | # descs that point to a releases page, grab latest
+        run: |
           cp -a games/custom_worlds/. /tmp/Archipelago/custom_worlds
           UNSUPPORTED=$(
             yq '.description' games/sync/*.yaml |
@@ -70,16 +70,16 @@ jobs:
             wget -q -O - {} |
             jq '[.[].assets[] | select(.browser_download_url | endswith(\".apworld\"))][0].browser_download_url' |
             xargs wget -nv -P /tmp/Archipelago/custom_worlds"
-        run: | # descs that point directly to an .apworld
           UNSUPPORTED=$(yq '.description' games/sync/*.yaml | grep -Po '(https:\/\/.*\.apworld)$' || true)
           if [ -n "$UNSUPPORTED" ]; then
             echo "$UNSUPPORTED" | parallel --halt now,fail=1 "xargs wget -nv -P /tmp/Archipelago/custom_worlds"
           fi
-        run: | # normalize apworld names. no world uses - but best case is the zip's inner folder name (slow+effort)
+
+      - name: Archipelago | Normalize and resolve Custom World conflicts
+        run: |
           while read file; do
             mv "$file" $(sed "s/-.*\.apworld$/.apworld/" <<< "$file")
           done <<< $(find /tmp/Archipelago/custom_worlds -name "*-*.apworld")
-        run: | # handle patched/officials conflict
           while read file; do
             FPATH=$(cut -d' ' -f1 <<< "$file")
             mv -vf "$FPATH" $(sed "s/custom_worlds/lib\/worlds/" <<< "$FPATH")
