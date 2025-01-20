@@ -88,6 +88,7 @@ jobs:
       - name: Archipelago | Custom Worlds - Resolve conflicts
         run: |
           CONFLICT=$(find "/tmp/Archipelago/custom_worlds/" "/tmp/Archipelago/lib/worlds/" -name "*.apworld" -printf "%p %P\n" | sort | uniq -df1)
+          echo "$CONFLICT"
           if [ -n "$CONFLICT" ]; then
             while read file; do
               echo "move $file"
