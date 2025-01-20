@@ -149,12 +149,12 @@ jobs:
       # fuzz a bit. over time this will shake out errors, if any.
       - name: Archipelago | Multi Sync (Fuzz)
         run: |
-          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $GEN_SEED $GEN_SKIPPROG --skip_output ::: {1.. $GEN_ROUNDS}
+          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $GEN_SEED $GEN_SKIPPROG --skip_output ::: $(seq 1 $GEN_ROUNDS)
 
       - name: Archipelago | Multi Async/Triggers (Fuzz)
         run: |
           find /tmp/Archipelago/Players/ -maxdepth 1 -type f -name "*.yaml" -exec yq -i '(.async = true)' {} \;
-          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $GEN_SEED $GEN_SKIPPROG --skip_output ::: {1..$GEN_ROUNDS}
+          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $GEN_SEED $GEN_SKIPPROG --skip_output ::: $(seq 1 $GEN_ROUNDS)
 
       - name: Concat | Create
         run: |
@@ -167,7 +167,7 @@ jobs:
         run: |
           rm -rf /tmp/Archipelago/Players/*
           cp "$GIGAYAML" /tmp/Archipelago/Players/
-          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $GEN_SEED $GEN_SKIPPROG --skip_output ::: {1..$GEN_ROUNDS}
+          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $GEN_SEED $GEN_SKIPPROG --skip_output ::: $(seq 1 $GEN_ROUNDS)
 
       - name: Commit & Push
         id: Commit
