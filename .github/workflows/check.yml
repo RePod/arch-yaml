@@ -92,10 +92,10 @@ jobs:
             while read file; do
               FPATH=$(cut -d' ' -f1 <<< "$file")
               TPATH=$(sed "s/custom_worlds/lib\/worlds/" <<< "$FPATH")
-              [[ -f "$FPATH" ]] && mv -vf "$FPATH" "$TPATH"
+              mv -vf "$FPATH" "$TPATH"
             done <<< "$CONFLICT"
           fi
-          ls -la /tmp/Archipelago/custom_worlds/ /tmp/Archipelago/lib/worlds/
+          ls -la /tmp/Archipelago/custom_worlds/ /tmp/Archipelago/lib/worlds/*.apworld
 
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
