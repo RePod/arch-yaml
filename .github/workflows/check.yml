@@ -58,7 +58,7 @@ jobs:
 
       # Originally this hit /latest but Yacht Dice made it obvious releases can have (or not) whatever they want.
       # Void Stranger is (currently) releasing the world in the repo files. Another exception!
-      - name: Archipelago | Custom Worlds: Install
+      - name: Archipelago | Custom Worlds - Install
         if: steps.arch-cache-restore.outputs.cache-hit != 'true'
         run: |
           cp -a games/custom_worlds/. /tmp/Archipelago/custom_worlds
@@ -75,14 +75,14 @@ jobs:
             echo "$UNSUPPORTED" | parallel --halt now,fail=1 "xargs wget -nv -P /tmp/Archipelago/custom_worlds"
           fi
 
-      - name: Archipelago | Custom Worlds: Normalize
+      - name: Archipelago | Custom Worlds - Normalize
         run: |
           NORMALIZE=$(find /tmp/Archipelago/custom_worlds -name "*-*.apworld")
           [[ -n "$NORMALIZE" ]] && while read file; do
             mv "$file" $(sed "s/-.*\.apworld$/.apworld/" <<< "$file")
           done <<< "$NORMALIZE"
 
-      - name: Archipelago | Custom Worlds: Resolve conflicts
+      - name: Archipelago | Custom Worlds - Resolve conflicts
         run: |
           CONFLICT=$(find "/tmp/Archipelago/custom_worlds/" "/tmp/Archipelago/lib/worlds/" -name "*.apworld" -printf "%p %P\n" | sort | uniq -f1 -d)
           [[ -n "$CONFLICT" ]] && while read file; do
