@@ -1,18 +1,39 @@
 name: CI
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * 0"
 
 env:
   # GigaYAML output name.
   GIGAYAML: "RePod.yaml"
   # If an individual YAML doesn't specify a "weight" override for game selection, this value is used instead.
   DEFAULT_WEIGHT: 9
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      skip_progbal:
+        description: 'Skip Progression Balancing (faster)'
+        type: boolean
+        required: true
+        default: true
+      fuzz_iterations:
+        description: 'Fuzz Iterations'
+        type: number
+        required: true
+        default: '2'
+      generation_seed:
+        description: 'Generation Seed'
+        type: number
+        required: false
+        default: ''
+  schedule:
+    - cron: "0 0 * * 0"
+
+#${{ inputs.generation_seed }}
+#${{ inputs.fuzz_iterations }}
+#${{ inputs.skip_progbal }}
 
 jobs:
   build:
