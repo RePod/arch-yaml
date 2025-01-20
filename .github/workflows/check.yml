@@ -45,19 +45,18 @@ jobs:
         run: |
           sudo snap install yq
           echo "GEN_ROUNDS=2" >> "$GITHUB_ENV"
-          echo "GEN_SKIPPROG=true" >> "$GITHUB_ENV"
+          echo "GEN_SKIPPROG=--skip_prog_balancing" >> "$GITHUB_ENV"
 
       - name: Prepare env (dispatch)
         if: github.event_name == 'workflow_dispatch'
         run: |
-          [[ -n "${{ inputs.generation_seed }}" ]] && echo "GEN_SEED=${{ inputs.generation_seed }}" >> "$GITHUB_ENV"
+          [[ -n "${{ inputs.generation_seed }}" ]] && echo 'GEN_SEED="--seed ${{ inputs.generation_seed }}"' >> "$GITHUB_ENV"
           [[ -n "${{ inputs.fuzz_iterations }}" ]] && echo "GEN_ROUNDS=${{ inputs.fuzz_iterations }}" >> "$GITHUB_ENV"
-          [[ -n "${{ inputs.skip_progbal }}" ]] && echo "GEN_SKIPPROG=${{ inputs.skip_progbal }}" >> "$GITHUB_ENV"
+          [[ -n "${{ inputs.skip_progbal }}" && "${{ inputs.skip_progbal }}" == "false" ]] && echo "GEN_SKIPPROG=" >> "$GITHUB_ENV"
 
       # yq: just as bad as snap. pick a fork, pick a version!
       - name: Sanity check single YAMLs
         run: |
-          echo "$GEN_ROUNDS / $GEN_SKIPPROG / $GEN_SEED"
           find games/sync/ -type f -name "*.yaml" -print0 | xargs -0 yq -P > /dev/null
 
       - name: Dynamic Triggers
@@ -145,17 +144,17 @@ jobs:
       - name: Archipelago | Multi Sync
         run: |
           cp games/sync/*.yaml /tmp/Archipelago/Players
-          /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output
+          /tmp/Archipelago/ArchipelagoGenerate $GEN_SEED $GEN_SKIPPROG --skip_output
 
       # fuzz a bit. over time this will shake out errors, if any.
       - name: Archipelago | Multi Sync (Fuzz)
         run: |
-          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
+          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $GEN_SEED $GEN_SKIPPROG --skip_output ::: {1.. $GEN_ROUNDS}
 
       - name: Archipelago | Multi Async/Triggers (Fuzz)
         run: |
           find /tmp/Archipelago/Players/ -maxdepth 1 -type f -name "*.yaml" -exec yq -i '(.async = true)' {} \;
-          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
+          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $GEN_SEED $GEN_SKIPPROG --skip_output ::: {1..$GEN_ROUNDS}
 
       - name: Concat | Create
         run: |
@@ -168,7 +167,7 @@ jobs:
         run: |
           rm -rf /tmp/Archipelago/Players/*
           cp "$GIGAYAML" /tmp/Archipelago/Players/
-          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate --skip_prog_balancing --skip_output ::: {1..2}
+          parallel -N0 --halt now,fail=1 /tmp/Archipelago/ArchipelagoGenerate $GEN_SEED $GEN_SKIPPROG --skip_output ::: {1..$GEN_ROUNDS}
 
       - name: Commit & Push
         id: Commit
