@@ -43,7 +43,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Prepare env
         run: |
-          sudo snap install yq
           echo "GEN_ROUNDS=2" >> "$GITHUB_ENV"
           echo "GEN_SKIPPROG=--skip_prog_balancing" >> "$GITHUB_ENV"
 
