@@ -82,13 +82,15 @@ jobs:
             mv "$file" $(sed "s/-.*\.apworld$/.apworld/" <<< "$file")
           done <<< "$NORMALIZE"
 
+      # uniq is doing SOMETHING that trips up the loop with an empty string
       - name: Archipelago | Custom Worlds - Resolve conflicts
         run: |
-          CONFLICT=$(find "/tmp/Archipelago/custom_worlds/" "/tmp/Archipelago/lib/worlds/" -name "*.apworld" -printf "%p %P\n" | sort | uniq -f1 -d)
-          [[ -n "$CONFLICT" ]] && while read file; do
+          CONFLICT=$(find "/tmp/Archipelago/custom_worlds/" "/tmp/Archipelago/lib/worlds/" -name "*.apworld" -printf "%p %P\n")
+          while read file; do
+            [[ -z "$file" ]] && continue
             FPATH=$(cut -d' ' -f1 <<< "$file")
             mv -vf "$FPATH" $(sed "s/custom_worlds/lib\/worlds/" <<< "$FPATH")
-          done <<< "$CONFLICT"
+          done <<< $(echo "$CONFLICT" | sort | uniq -df1)
 
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
