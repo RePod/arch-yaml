@@ -37,7 +37,7 @@ game:
   Void Stranger: 0                         # Unsupported https://github.com/CriminalPancake/void-stranger-ap/raw/refs/heads/main/voidstranger.apworld
   Yacht Dice: 9
   Yoshi's Island: 9
-  Yu-Gi-Oh! 2006: 9
+  Yu-Gi-Oh! 2006: 9                        # Patched https://github.com/Eijebong/Archipelago-index/raw/refs/heads/main/apworlds/yugioh06-0.5.2-beta.apworld
   Yu-Gi-Oh! Forbidden Memories: 9          # Unsupported https://github.com/sg4e/Archipelago/releases/latest
 
 A Hat in Time:
