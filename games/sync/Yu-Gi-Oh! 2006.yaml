@@ -2,7 +2,7 @@ name: RePod{NUMBER}
 game: Yu-Gi-Oh! 2006
 async: false
 per_game_name: true
-description: "Patched https://github.com/Eijebong/Archipelago-index/raw/refs/heads/main/apworlds/yugioh06-0.5.2-beta.apworld"
+#description: "Patched https://github.com/Eijebong/Archipelago-index/raw/refs/heads/main/apworlds/yugioh06-0.5.2-beta.apworld"
 
 Yu-Gi-Oh! 2006:
   # https://archipelago.gg/games/Yu-Gi-Oh!%202006/player-options
