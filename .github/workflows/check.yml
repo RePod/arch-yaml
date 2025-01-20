@@ -77,13 +77,16 @@ jobs:
 
       - name: Archipelago | Normalize and resolve Custom World conflicts
         run: |
-          while read file; do
+          NORMALIZE=$(find /tmp/Archipelago/custom_worlds -name "*-*.apworld")
+          [[ -n "$NORMALIZE" ]] && while read file; do
             mv "$file" $(sed "s/-.*\.apworld$/.apworld/" <<< "$file")
-          done <<< $(find /tmp/Archipelago/custom_worlds -name "*-*.apworld")
-          while read file; do
+          done <<< "$NORMALIZE"
+
+          CONFLICT=$(find "/tmp/Archipelago/custom_worlds/" "/tmp/Archipelago/lib/worlds/" -name "*.apworld" -printf "%p %P\n" | sort | uniq -f1 -d)
+          [[ -n "$CONFLICT" ]] && while read file; do
             FPATH=$(cut -d' ' -f1 <<< "$file")
             mv -vf "$FPATH" $(sed "s/custom_worlds/lib\/worlds/" <<< "$FPATH")
-          done <<< $(find "/tmp/Archipelago/custom_worlds/" "/tmp/Archipelago/lib/worlds/" -name "*.apworld" -printf "%p %P\n" | sort | uniq -f1 -d)
+          done <<< "$CONFLICT"
 
       #- name: Archipelago | Save Cache
       #  uses: actions/cache/save@v4
