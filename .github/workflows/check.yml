@@ -90,12 +90,13 @@ jobs:
           CONFLICT=$(find "/tmp/Archipelago/custom_worlds/" "/tmp/Archipelago/lib/worlds/" -name "*.apworld" -printf "%p %P\n" | sort | uniq -df1)
           if [ -n "$CONFLICT" ]; then
             while read file; do
+              echo "move $file"
               FPATH=$(cut -d' ' -f1 <<< "$file")
+              FPATH=$(sed "s/lib\/worlds/custom_worlds" <<< "$FPATH")
               TPATH=$(sed "s/custom_worlds/lib\/worlds/" <<< "$FPATH")
               mv -vf "$FPATH" "$TPATH"
             done <<< "$CONFLICT"
           fi
-          mv /tmp/Archipelago/custom_worlds/yugioh06.apworld /tmp/Archipelago/lib/worlds/
           ls -la /tmp/Archipelago/custom_worlds/ /tmp/Archipelago/lib/worlds/*.apworld
 
       #- name: Archipelago | Save Cache
