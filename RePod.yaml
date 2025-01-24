@@ -933,8 +933,8 @@ Super Mario World:
   accessibility: random
   goal: bowser
   bosses_required: 7
-  max_yoshi_egg_cap: 50
-  percentage_of_yoshi_eggs: 100
+  max_yoshi_egg_cap: 50 # 1-255
+  percentage_of_yoshi_eggs: 75
   dragon_coin_checks: true
   moon_checks: true
   hidden_1up_checks: false # "Cryptic"/Risky according to description
@@ -1361,12 +1361,15 @@ triggers:
         completion_type: all_bowser_stages
         death_link: true
       Super Mario World:
+        progression_balancing: random-low
         goal:
           bowser: 3
           yoshi_egg_hunt: 2
+        max_yoshi_egg_cap: 255
+        percentage_of_yoshi_eggs: 90
         death_link: true
         exclude_special_zone:
-          false: 3
+          false: 4
           true: 1
         moon_checks: true
         hidden_1up_checks: true
