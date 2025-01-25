@@ -8,11 +8,26 @@ Pokemon FireRed and LeafGreen:
   progression_balancing: random-low
   accessibility: random
   game_version: random
+  goal: elite_four # _rematch
   kanto_only: false
   shuffle_badges: true
   shuffle_hidden: nonrecurring
   extra_key_items: true
   shuffle_fly_destination_unlocks: true
+  pokemon_request_locations: true
+  shuffle_running_shoes: start_with
+  card_key:
+    vanilla: 1
+    split: 2
+    progressive: 2
+  island_passes:
+    vanilla: 1
+    progressive: 2
+    split: 2
+    progressive_split: 2
+  split_teas:
+    false: 2
+    true: 3
   itemfinder_required: off
   flash_required: logic
   #remove_badge_requirement
@@ -114,6 +129,8 @@ Pokemon FireRed and LeafGreen:
   reusable_tm_tutors: true
   min_catch_rate: 255
   guaranteed_catch: true
+  normalize_encounter_rates: true
+  all_pokemon_seen: true
   exp_modifier: 225
   starting_money: 3939
   blind_trainers: true
@@ -121,8 +138,15 @@ Pokemon FireRed and LeafGreen:
   free_fly_location:
     exclude_indigo: 4
     any: 1
+  town_map_fly_location
+    off: 1
+    exclude_indigo: 4
+    any: 1
   turbo_a: true
   receive_item_messages: progression
+  randomize_music: true
+  randomize_fanfares: true
+  provide_hints: true
   # Roll world modifiers (triggers)
   Modify Route 2:
     Yes: 2
@@ -151,6 +175,12 @@ Pokemon FireRed and LeafGreen:
   Modify Route 16:
     Yes: 2
     No: 1
+  Open Silph:
+    Yes: 2
+    No: 1
+  Remove Saffron Rockets:
+    Yes: 2
+    No: 1
   Route 23 Trees:
     Yes: 2
     No: 1
@@ -164,6 +194,9 @@ Pokemon FireRed and LeafGreen:
     Yes: 2
     No: 1
   Total Darkness:
+    Yes: 2
+    No: 1
+  Block Vermilion Sailing:
     Yes: 2
     No: 1
   # Caves
@@ -185,7 +218,8 @@ triggers:
       Pokemon FireRed and LeafGreen:
           goal: elite_four_rematch
           shuffle_hidden: all
-          trainersanity: true
+          trainersanity: all # none-0-456-all
+          dexsanity: all # none-1-386-all
           famesanity: true
           pokemon_request_locations: true
           card_key:
@@ -264,6 +298,20 @@ triggers:
       Pokemon FireRed and LeafGreen:
         +modify_world_state:
           - Modify Route 16
+  - option_name: Open Silph
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Open Silph
+  - option_name: Remove Saffron Rockets
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Remove Saffron Rockets
   - option_name: Route 23 Trees
     option_category: Pokemon FireRed and LeafGreen
     option_result: Yes
@@ -299,6 +347,13 @@ triggers:
       Pokemon FireRed and LeafGreen:
         +modify_world_state:
           - Total Darkness
+ - option_name: Block Vermilion Sailing
+    option_category: Pokemon FireRed and LeafGreen
+    option_result: Yes
+    options:
+      Pokemon FireRed and LeafGreen:
+        +modify_world_state:
+          - Block Vermilion Sailing
   # FRLG Dark Caves
   - option_name: Dark Mt Moon
     option_category: Pokemon FireRed and LeafGreen
