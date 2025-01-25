@@ -138,7 +138,7 @@ Pokemon FireRed and LeafGreen:
   free_fly_location:
     exclude_indigo: 4
     any: 1
-  town_map_fly_location
+  town_map_fly_location:
     off: 1
     exclude_indigo: 4
     any: 1
