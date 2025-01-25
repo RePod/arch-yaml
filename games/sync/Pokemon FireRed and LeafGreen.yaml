@@ -347,7 +347,7 @@ triggers:
       Pokemon FireRed and LeafGreen:
         +modify_world_state:
           - Total Darkness
- - option_name: Block Vermilion Sailing
+  - option_name: Block Vermilion Sailing
     option_category: Pokemon FireRed and LeafGreen
     option_result: Yes
     options:
