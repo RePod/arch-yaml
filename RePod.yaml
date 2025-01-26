@@ -626,8 +626,8 @@ Pokemon FireRed and LeafGreen:
     split: 2
     progressive_split: 2
   split_teas:
-    false: 2
-    true: 3
+    false: 1
+    true: 4
   itemfinder_required: off
   flash_required: logic
   #remove_badge_requirement
