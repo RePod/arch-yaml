@@ -112,6 +112,7 @@ jobs:
           if [ -n "$UNSUPPORTED" ]; then
             echo "$UNSUPPORTED" | parallel --halt now,fail=1 "xargs wget -nv -P /tmp/Archipelago/custom_worlds"
           fi
+          sha1sum /tmp/Archipelago/custom_worlds/*.apworld
 
       - name: Archipelago | Custom Worlds - Normalize
         run: |
