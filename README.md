@@ -1,3 +1,5 @@
+[![CI](https://github.com/RePod/arch-yaml/actions/workflows/check.yml/badge.svg)](https://github.com/RePod/arch-yaml/actions/workflows/check.yml)
+
 ### [Individual Games](games/sync)
 
 I use this repo to manage individual YAMLs and combine them all into my GigaYAML™. Doing so manually would be way too much effort and error prone.
