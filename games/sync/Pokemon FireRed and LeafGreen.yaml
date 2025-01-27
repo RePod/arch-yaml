@@ -11,8 +11,9 @@ Pokemon FireRed and LeafGreen:
   goal: elite_four # _rematch
   kanto_only: false
   shuffle_badges: true
-  shuffle_hidden: nonrecurring
+  shuffle_hidden: all
   extra_key_items: true
+  famesanity: true
   shuffle_fly_destination_unlocks: true
   pokemon_request_locations: true
   shuffle_running_shoes: start_with
@@ -30,6 +31,7 @@ Pokemon FireRed and LeafGreen:
     true: 4
   itemfinder_required: off
   flash_required: logic
+  fame_checker_required: false
   #remove_badge_requirement
   oaks_aide_route_2: 5
   oaks_aide_route_10: 10
@@ -41,13 +43,6 @@ Pokemon FireRed and LeafGreen:
     early_parcel: 6
     open: 1
   pewter_city_roadblock:
-    # Sets the requirement for passing the Pewter City Roadblock.
-    #
-    # - Open: The boy will not stop you from entering Route 3.
-    # - Brock: The boy will stop you from entering Route 3 until you defeat Brock.
-    # - Any Gym Leader: The boy will stop you from entering Route 3 until you defeat any Gym Leader.
-    # - Boulder Badge: The boy will stop you from entering Route 3 until you have the Boulder Badge.
-    # - Any Badge: The boy will stop you from entering Route 3 until you have a Badge.
     open: 1
     brock: 1
     any_gym: 1
@@ -76,7 +71,7 @@ Pokemon FireRed and LeafGreen:
     badges: 1
     gyms: 1
   cerulean_cave_count: random-middle
-  level_scaling: spheres_and_distance
+  level_scaling: spheres
   #modify_trainer_levels
   wild_pokemon:
     vanilla: 0
@@ -221,6 +216,7 @@ triggers:
           trainersanity: all # none-0-456-all
           dexsanity: all # none-1-386-all
           famesanity: true
+          all_pokemon_seen: false
           pokemon_request_locations: true
           card_key:
             split: 4
