@@ -28,7 +28,7 @@ Pokemon FireRed and LeafGreen:
     progressive_split: 2
   split_teas:
     false: 1
-    true: 4
+    true: 9
   itemfinder_required: off
   flash_required: logic
   fame_checker_required: false
