@@ -614,7 +614,7 @@ Pokemon FireRed and LeafGreen:
   shuffle_hidden: all
   extra_key_items: true
   famesanity: true
-  shuffle_fly_destination_unlocks: true
+  shuffle_fly_destination_unlocks: all
   pokemon_request_locations: true
   shuffle_running_shoes: start_with
   card_key:
