@@ -610,6 +610,7 @@ Pokemon FireRed and LeafGreen:
   game_version: random
   goal: elite_four # _rematch
   kanto_only: false
+  random_starting_town: true
   shuffle_badges: true
   shuffle_hidden: all
   extra_key_items: true
