@@ -24,6 +24,7 @@ game:
   MegaMan Battle Network 3: 9
   Muse Dash: 0
   Ori and the Blind Forest: 9              # Unsupported https://github.com/c-ostic/Archipelago/releases/latest
+  Ori and the Will of the Wisps: 0         # Unsupported https://github.com/Satisha10/APwotw_release/releases/latest
   Pokemon Crystal: 9                       # Unsupported https://github.com/AliceMousie/Archipelago/releases/latest
   Pokemon Emerald: 9
   Pokemon FireRed and LeafGreen: 9         # Unsupported https://github.com/vyneras/Archipelago/releases/latest
@@ -395,6 +396,70 @@ Ori and the Blind Forest:
     disabled: 1
     partial: 0 # does not send instakills
     full: 0
+Ori and the Will of the Wisps:
+  progression_balancing: random-middle
+  accessibility: random
+  difficulty:
+    moki: 50 # easy
+    gorlek: 0 # medium, sword/hammer movement, damage boosts
+    kii: 0 # hard, precise paths, energy weapons as movement
+    unsafe: 0 # VERY hard/unverified paths
+  glitches:
+    # - **Gorlek**: includes grounded sentry jumps, sentry as a fire source, breaking walls with Shuriken, and removing the kill plane in Feeding Grounds.
+    # - **Kii**: glitches are not included in Kii logic yet.
+    # - **Unsafe**: everything else.
+    'false': 50
+    'true': 0
+  spawn:
+    # Choose the starting location.
+    marsh: 50
+    burrows: 0
+    howlsden: 0
+    hollow: 0
+    glades: 0
+    wellspring: 0
+    westwoods: 0
+    eastwoods: 0
+    reach: 0
+    depths: 0
+    eastpools: 0
+    westpools: 0
+    westwastes: 0
+    eastwastes: 0
+    outerruins: 0
+    innerruins: 0
+    willow: 0
+    shriek: 0
+  goal: # check goal progress with rando wheel (V)
+    trees: 50
+    wisps: 0
+    quests: 0
+    nothing: 0
+  hard_mode:
+    'false': 50
+    'true': 0
+  qol: true
+  hints: true
+  # Item Pool
+  tp: true # teleporters
+  extratp: true # +2 teleporters
+  bonus: true # add rando specific items
+  extra_bonus: true # add rando specific powerful items
+  skill_upgrade: false # add rando specific skill upgrades
+  # World Changes
+  better_spawn: false # Opens some doors so random spawn works better.
+  better_wellspring: false # The top door of Wellspring Glades is opened by default.
+  no_rain: false # Remove the rain in Marsh, and remove Howl.
+  no_combat: false # Skip most of the combats.
+  no_trials: false # Trials only contain filler items.
+  no_hearts: false # The door to Shriek is open from the beginning.
+  no_quests: false # Talking to NPCs gives no item, and locations locked behind them are accessible.
+  no_ks: false # Open keystone doors by default (and remove keystones from the pool).
+  open_mode: false # Open most of the doors and obstacles.
+  glades_done: false # Start with Glades rebuilt and regrown.
+  # Item Placements
+  sword: true # start with sword
+  vanilla_shop_upgrades: false # Weapon upgrades and shards in shops are not randomized.
 Pokemon Crystal:
   progression_balancing: random-low
   accessibility: random
@@ -1300,6 +1365,18 @@ triggers:
           anywhere: 3
           area_specific: 1
         deathlink_logic: partial
+      Ori and the Will of the Wisps:
+        progression_balancing: random-low
+        logic_difficulty:
+          expert: 3
+          master: 1
+        keystone_logic:
+          anywhere: 3
+          area_specific: 1
+        mapstone_logic:
+          anywhere: 3
+          area_specific: 1
+        deathlink_logic: partial
       Pokemon Crystal:
         randomize_berry_trees: true
         trainersanity:
@@ -1577,6 +1654,11 @@ triggers:
     options:
       null:
         name: RePodOri{NUMBER} # OrePod...
+  - option_name: game
+    option_result: Ori and the Will of the Wisps
+    options:
+      null:
+        name: RePodOriW{NUMBER} # OrePod...
   - option_name: game
     option_result: Pokemon Crystal
     options:
