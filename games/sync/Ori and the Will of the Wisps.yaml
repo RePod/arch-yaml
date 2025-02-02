@@ -55,13 +55,9 @@ Ori and the Will of the Wisps:
   bonus: true # add rando specific items
   extra_bonus: true # add rando specific powerful items
   skill_upgrade: false # add rando specific skill upgrades
-
   # World Changes
   better_spawn: false # Opens some doors so random spawn works better.
   better_wellspring: false # The top door of Wellspring Glades is opened by default.
-    'false': 50
-    'true': 0
-
   no_rain: false # Remove the rain in Marsh, and remove Howl.
   no_combat: false # Skip most of the combats.
   no_trials: false # Trials only contain filler items.
