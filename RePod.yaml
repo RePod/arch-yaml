@@ -393,8 +393,8 @@ Ori and the Blind Forest:
     anywhere: 1
     area_specific: 0
   deathlink_logic:
-    disabled: 1
-    partial: 0 # does not send instakills
+    disabled: 0
+    partial: 1 # does not send instakills
     full: 0
 Ori and the Will of the Wisps:
   progression_balancing: random-middle
