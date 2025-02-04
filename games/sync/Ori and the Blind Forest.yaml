@@ -8,6 +8,12 @@ Ori and the Blind Forest:
   # Easy FillError on solo gens
   progression_balancing: random-middle
   accessibility: random
+  goal:
+    all_skill_trees: 5 # old reliable
+    all_maps: 3 # place all mapstones
+    warmth_fragments: 1 # mcguffin hunt
+    world_tour: 1 # mcguffin hunt. N/11 areas contain a relic in a random loc
+    none: 0 # reach and finish escape
   goal: all_skill_trees
   logic_difficulty:
     casual: 0
@@ -34,12 +40,7 @@ triggers:
     options:
       Ori and the Blind Forest:
         progression_balancing: random-low
-        goal:
-          all_skill_trees: 5 # old reliable
-          all_maps: 3 # place all mapstones
-          warmth_fragments: 1 # mcguffin hunt
-          world_tour: 1 # mcguffin hunt. N/11 areas contain a relic in a random loc
-          none: 0 # reach and finish escape
+
         warmth_fragments_available: 30 # 1-50
         warmth_fragments_required: 20 # 1-50
         relic_count: 8 # 1-11
