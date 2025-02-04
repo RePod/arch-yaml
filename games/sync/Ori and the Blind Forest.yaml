@@ -14,7 +14,6 @@ Ori and the Blind Forest:
     warmth_fragments: 1 # mcguffin hunt
     world_tour: 1 # mcguffin hunt. N/11 areas contain a relic in a random loc
     none: 0 # reach and finish escape
-  goal: all_skill_trees
   logic_difficulty:
     casual: 0
     standard: 1
@@ -40,10 +39,9 @@ triggers:
     options:
       Ori and the Blind Forest:
         progression_balancing: random-low
-
-        warmth_fragments_available: 30 # 1-50
-        warmth_fragments_required: 20 # 1-50
-        relic_count: 8 # 1-11
+        warmth_fragments_available: 50 # 1-50 (30)
+        warmth_fragments_required: 45 # 1-50 (20)
+        relic_count: random-range-8-11 # 1-11 (8)
         logic_difficulty:
           standard: 0
           expert: 3
