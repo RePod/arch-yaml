@@ -392,6 +392,7 @@ Ori and the Blind Forest:
   mapstone_logic:
     anywhere: 1
     area_specific: 0
+  extra_mapstones: 1 # 0-9
   deathlink_logic:
     disabled: 0
     partial: 1 # does not send instakills
@@ -1355,7 +1356,17 @@ triggers:
         progression_balancing: random-middle
       Ori and the Blind Forest:
         progression_balancing: random-low
+        goal:
+          all_skill_trees: 5 # old reliable
+          all_maps: 3 # place all mapstones
+          warmth_fragments: 1 # mcguffin hunt
+          world_tour: 1 # mcguffin hunt. N/11 areas contain a relic in a random loc
+          none: 0 # reach and finish escape
+        warmth_fragments_available: 30 # 1-50
+        warmth_fragments_required: 20 # 1-50
+        relic_count: 8 # 1-11
         logic_difficulty:
+          standard: 0
           expert: 3
           master: 1
         keystone_logic:
@@ -1364,7 +1375,9 @@ triggers:
         mapstone_logic:
           anywhere: 3
           area_specific: 1
+        extra_mapstones: 1
         deathlink_logic: partial
+        # All the enable_LOGIC are true by default but trend to higher diffs and have EXP logic gating
       Ori and the Will of the Wisps:
         progression_balancing: random-low
         logic_difficulty:
