@@ -745,6 +745,7 @@ Pokemon FireRed and LeafGreen:
   cerulean_cave_count: random-middle
   level_scaling: spheres
   #modify_trainer_levels
+  force_fully_evolved: species
   wild_pokemon:
     vanilla: 0
     match_base_stats: 1
