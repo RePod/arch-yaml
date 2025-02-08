@@ -2,7 +2,8 @@ name: RePod{NUMBER}
 game: Sonic the Hedgehog 1
 async: false
 per_game_name: true
-description: "Unsupported https://github.com/kaithar/Archipelago/releases/download/Sonic_1-v0.0.4/sonic1.apworld"
+# For now, the releases are only Sonic 1. Intent seems to be PR for official then another branch.
+description: "Unsupported https://github.com/kaithar/Archipelago/releases/latest"
 
 Sonic the Hedgehog 1:
   progression_balancing: random-middle
