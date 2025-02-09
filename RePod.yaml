@@ -30,7 +30,7 @@ game:
   Pokemon FireRed and LeafGreen: 9         # Unsupported https://github.com/vyneras/Archipelago/releases/latest
   Pokemon Red and Blue: 9
   SMZ3: 4
-  Sonic the Hedgehog 1: 9                  # Unsupported https://github.com/kaithar/Archipelago/releases/latest
+  Sonic the Hedgehog 1: 0                  # Unsupported https://github.com/kaithar/Archipelago/releases/latest
   Super Mario 64: 9
   Super Mario World: 9
   Super Metroid: 9
@@ -1391,16 +1391,6 @@ triggers:
         # All the enable_LOGIC are true by default but trend to higher diffs and have EXP logic gating
       Ori and the Will of the Wisps:
         progression_balancing: random-low
-        logic_difficulty:
-          expert: 3
-          master: 1
-        keystone_logic:
-          anywhere: 3
-          area_specific: 1
-        mapstone_logic:
-          anywhere: 3
-          area_specific: 1
-        deathlink_logic: partial
       Pokemon Crystal:
         randomize_berry_trees: true
         trainersanity:
@@ -1685,7 +1675,7 @@ triggers:
     option_result: Ori and the Will of the Wisps
     options:
       null:
-        name: RePodOriW{NUMBER} # OrePod...
+        name: RePodWisp{NUMBER} # OrePod...
   - option_name: game
     option_result: Pokemon Crystal
     options:
