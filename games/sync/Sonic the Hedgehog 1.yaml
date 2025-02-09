@@ -4,6 +4,7 @@ async: false
 per_game_name: true
 # For now, the releases are only Sonic 1. Intent seems to be PR for official then another branch.
 description: "Unsupported https://github.com/kaithar/Archipelago/releases/latest"
+weight: 0
 
 Sonic the Hedgehog 1:
   progression_balancing: random-middle
