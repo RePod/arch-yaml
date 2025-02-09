@@ -77,21 +77,11 @@ triggers:
     options:
       Ori and the Will of the Wisps:
         progression_balancing: random-low
-        logic_difficulty:
-          expert: 3
-          master: 1
-        keystone_logic:
-          anywhere: 3
-          area_specific: 1
-        mapstone_logic:
-          anywhere: 3
-          area_specific: 1
-        deathlink_logic: partial
   - option_name: game
     option_result: Ori and the Will of the Wisps
     options:
       null:
-        name: RePodOriW{NUMBER} # OrePod...
+        name: RePodWisp{NUMBER} # OrePod...
   - option_name: per_game_name
     option_result: false
     options:
