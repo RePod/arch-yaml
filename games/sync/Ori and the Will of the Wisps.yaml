@@ -58,7 +58,7 @@ Ori and the Will of the Wisps:
   better_spawn: false # Opens some doors so random spawn works better.
   better_wellspring: false # The top door of Wellspring Glades is opened by default.
   no_rain: false # Remove the rain in Marsh, and remove Howl.
-  no_combat: false # Skip most of the combats.
+  no_combat: [] # Skip most of the combats. [Everything, Shrines, Arenas, Demi Bosses, Bosses]
   no_trials: false # Trials only contain filler items.
   no_hearts: false # The door to Shriek is open from the beginning.
   no_quests: false # Talking to NPCs gives no item, and locations locked behind them are accessible.
