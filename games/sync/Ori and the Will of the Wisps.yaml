@@ -43,7 +43,6 @@ Ori and the Will of the Wisps:
     trees: 50
     wisps: 0
     quests: 0
-    nothing: 0
   hard_mode:
     'false': 50
     'true': 0
