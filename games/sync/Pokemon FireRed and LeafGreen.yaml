@@ -34,11 +34,11 @@ Pokemon FireRed and LeafGreen:
   flash_required: logic
   fame_checker_required: false
   #remove_badge_requirement
-  oaks_aide_route_2: 5
-  oaks_aide_route_10: 10
-  oaks_aide_route_11: 15
-  oaks_aide_route_16: 20
-  oaks_aide_route_15: 25
+  oaks_aide_route_2: 1
+  oaks_aide_route_10: 2
+  oaks_aide_route_11: 3
+  oaks_aide_route_16: 4
+  oaks_aide_route_15: 5
   viridian_city_roadblock:
     vanilla: 3
     early_parcel: 6
