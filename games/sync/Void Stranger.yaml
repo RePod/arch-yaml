@@ -10,7 +10,7 @@ Void Stranger:
   accessibility: random
   locustsanity: true # 3x chests force an equivalent 3x locust item. atoning changes, F9 menu.
   brandsanity: false # murals as checks, brand required to carve
-  idolsanity: false # lover/smiler/killer idols are eggs until received. give checks once restored.
+  idolsanity: false # one check each once received
   shortcutsanity: false # no locust reqs for mon, mon gives checks 
   skipcutscenes: true # finale only
 
