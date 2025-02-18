@@ -2,16 +2,17 @@ name: RePod{NUMBER}
 game: Void Stranger
 async: false
 per_game_name: true
-description: "Unsupported https://github.com/CriminalPancake/void-stranger-ap/raw/refs/heads/main/voidstranger.apworld"
+description: "Unsupported https://github.com/CriminalPancake/void-stranger-ap/raw/refs/tags/v0.8.0/voidstranger.apworld"
 weight: 0
 
 Void Stranger:
   progression_balancing: random-middle
   accessibility: random
-  locustsanity: false
-  brandsanity: false
-  idolsanity: false
-  shortcutsanity: false
+  locustsanity: true # 3x chests force an equivalent 3x locust item. atoning changes, F9 menu.
+  brandsanity: false # murals as checks, brand required to carve
+  idolsanity: false # lover/smiler/killer idols are eggs until received. give checks once restored.
+  shortcutsanity: false # no locust reqs for mon, mon gives checks 
+  skipcutscenes: true # finale only
 
 triggers:
   - option_category: null
