@@ -36,7 +36,7 @@ game:
   Super Metroid: 9
   The Messenger: 9
   VVVVVV: 9
-  Void Stranger: 0                         # Unsupported https://github.com/CriminalPancake/void-stranger-ap/raw/refs/heads/main/voidstranger.apworld
+  Void Stranger: 0                         # Unsupported https://github.com/CriminalPancake/void-stranger-ap/raw/refs/tags/v0.8.0/voidstranger.apworld
   Yacht Dice: 9
   Yoshi's Island: 9
   Yu-Gi-Oh! 2006: 9                        # Patched https://github.com/Eijebong/Archipelago-index/raw/refs/heads/main/apworlds/yugioh06-0.5.2-beta.apworld
@@ -1181,10 +1181,11 @@ VVVVVV:
 Void Stranger:
   progression_balancing: random-middle
   accessibility: random
-  locustsanity: false
-  brandsanity: false
-  idolsanity: false
-  shortcutsanity: false
+  locustsanity: true # 3x chests force an equivalent 3x locust item. atoning changes, F9 menu.
+  brandsanity: false # murals as checks, brand required to carve
+  idolsanity: false # one check each once received
+  shortcutsanity: false # no locust reqs for mon, mon gives checks 
+  skipcutscenes: true # finale only
 Yacht Dice:
   # https://yacht-dice-ap.netlify.app/
   # Stock-ish settings until a few plays.
