@@ -1,0 +1,37 @@
+name: RePod{NUMBER}
+game: Jigsaw
+async: false
+per_game_name: true
+description: "Unsupported https://github.com/spineraks-org/ArchipelagoJigsaw/releases/latest"
+weight: 1
+
+Jigsaw:
+  progression_balancing: random-middle
+  accessibility: random
+  number_of_pieces: 25 # 25-1000
+  orientation_of_image: square # square/landscape/protrait
+  percentage_of_extra_pieces: 10 # 0-100
+  piece_order:
+    random_order: 3
+    corners_edges_rest: 1
+  number_of_checks_out_of_logic: 1 # 0-10, additional OoL checks
+
+triggers:
+  - option_category: null
+    option_name: async
+    option_result: true
+    options:
+      Jigsaw:
+        progression_balancing: random-low
+        number_of_pieces: random-range-100-300
+        number_of_checks_out_of_logic: 5
+  - option_name: game
+    option_result: Jigsaw
+    options:
+      null:
+        name: RePodSaw{NUMBER}
+  - option_name: per_game_name
+    option_result: false
+    options:
+      null:
+        name: RePod{NUMBER}
