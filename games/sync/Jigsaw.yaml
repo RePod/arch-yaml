@@ -2,7 +2,7 @@ name: RePod{NUMBER}
 game: Jigsaw
 async: false
 per_game_name: true
-description: "Unsupported https://github.com/spineraks-org/ArchipelagoJigsaw/releases/latest"
+description: "Unsupported https://github.com/spineraks-org/ArchipelagoJigsaw/releases/download/v0.1.0/jigsaw.apworld"
 weight: 1
 
 Jigsaw:
