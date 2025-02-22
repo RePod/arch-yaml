@@ -8,7 +8,7 @@ weight: 1
 Jigsaw:
   progression_balancing: random-middle
   accessibility: random
-  number_of_pieces: 25 # 25-1000
+  number_of_pieces: 50 # 25-1000
   orientation_of_image: square # square/landscape/protrait
   percentage_of_extra_pieces: 10 # 0-100
   piece_order:
@@ -23,7 +23,7 @@ triggers:
     options:
       Jigsaw:
         progression_balancing: random-low
-        number_of_pieces: random-range-100-300
+        number_of_pieces: random-range-150-300
         number_of_checks_out_of_logic: 5
   - option_name: game
     option_result: Jigsaw
