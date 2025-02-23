@@ -134,29 +134,27 @@ Pokemon FireRed and LeafGreen:
     off: 1
     exclude_indigo: 4
     any: 1
-  turbo_a: true
-  receive_item_messages: progression
   randomize_music: true
   randomize_fanfares: true
   game_options:
-    Auto Run: On
-    Battle Scene: Off
-    Battle Style: Set
-    Bike Music: Off
-    Blind Trainers: On
-    Button Mode: Help
-    Encounter Rates: Normalized
-    Experience: Double
+    Auto Run: 'On'
+    Battle Scene: 'Off'
+    Battle Style: 'Set'
+    Bike Music: 'Off'
+    Blind Trainers: 'On'
+    Button Mode: 'Help'
+    Encounter Rates: 'Normalized'
+    Experience: 'Double'
     Frame: 1
-    Guaranteed Catch: On
-    Item Messages: Progression
+    Guaranteed Catch: 'On'
+    Item Messages: 'Progression'
     Low HP Beep: 'On'
-    Show Effectiveness: On
-    Skip Fanfares: On
-    Sound: Stereo
-    Surf Music: Off
-    Text Speed: Instant
-    Turbo A: On
+    Show Effectiveness: 'On'
+    Skip Fanfares: 'On'
+    Sound: 'Stereo'
+    Surf Music: 'Off'
+    Text Speed: 'Instant'
+    Turbo A: 'On'
   provide_hints: true
   # Roll world modifiers (triggers)
   Modify Route 2:
