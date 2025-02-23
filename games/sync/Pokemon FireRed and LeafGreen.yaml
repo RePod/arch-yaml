@@ -33,12 +33,6 @@ Pokemon FireRed and LeafGreen:
   itemfinder_required: off
   flash_required: logic
   fame_checker_required: false
-  #remove_badge_requirement
-  oaks_aide_route_2: 1
-  oaks_aide_route_10: 2
-  oaks_aide_route_11: 3
-  oaks_aide_route_16: 4
-  oaks_aide_route_15: 5
   viridian_city_roadblock:
     vanilla: 3
     early_parcel: 6
@@ -49,6 +43,12 @@ Pokemon FireRed and LeafGreen:
     any_gym: 1
     boulder_badge: 1
     any_badge: 1
+  #remove_badge_requirement
+  oaks_aide_route_2: 1
+  oaks_aide_route_10: 2
+  oaks_aide_route_11: 3
+  oaks_aide_route_16: 4
+  oaks_aide_route_15: 5
   viridian_gym_requirement:
     badges: 3
     gyms: 2
@@ -125,12 +125,7 @@ Pokemon FireRed and LeafGreen:
   tm_tutor_moves: true
   reusable_tm_tutors: true
   min_catch_rate: 255
-  guaranteed_catch: true
-  normalize_encounter_rates: true
-  all_pokemon_seen: true
-  exp_modifier: 225
   starting_money: 3939
-  blind_trainers: true
   better_shops: true
   free_fly_location:
     exclude_indigo: 4
@@ -143,6 +138,25 @@ Pokemon FireRed and LeafGreen:
   receive_item_messages: progression
   randomize_music: true
   randomize_fanfares: true
+  game_options:
+    Auto Run: On
+    Battle Scene: Off
+    Battle Style: Set
+    Bike Music: Off
+    Blind Trainers: On
+    Button Mode: Help
+    Encounter Rates: Normalized
+    Experience: Double
+    Frame: 1
+    Guaranteed Catch: On
+    Item Messages: Progression
+    Low HP Beep: 'On'
+    Show Effectiveness: On
+    Skip Fanfares: On
+    Sound: Stereo
+    Surf Music: Off
+    Text Speed: Instant
+    Turbo A: On
   provide_hints: true
   # Roll world modifiers (triggers)
   Modify Route 2:
