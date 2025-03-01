@@ -13,8 +13,7 @@ Jigsaw:
   percentage_of_extra_pieces: 10 # 0-100
   piece_order:
     random_order: 4
-    every_piece_fits: 2
-    least_merges_possible: 1
+    corners_edges_rest: 1
   number_of_checks_out_of_logic: 1 # 0-10, additional OoL checks
 
 triggers:
