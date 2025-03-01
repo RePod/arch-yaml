@@ -19,7 +19,7 @@ game:
   ChecksFinder: 1
   Clique: 1
   Hades: 1                                 # Unsupported https://github.com/NaixGames/Polycosmos/releases/latest
-  Hatsune Miku Project Diva Mega Mix+: 0   # Unsupported https://github.com/RePod/DivaAPworld-R/releases/latest
+  Hatsune Miku Project Diva Mega Mix+: 0   # Unsupported https://github.com/RePod/DivaAPworld-R/releases/download/1.1.4B-R_241129-f8358c1/megamix.apworld
   Jigsaw: 1                                # Unsupported https://github.com/spineraks-org/ArchipelagoJigsaw/releases/download/v0.1.0/jigsaw.apworld
   Manual_Hatsune_Miku: 0                   # Manual! I can provide it if needed.
   MegaMan Battle Network 3: 9
@@ -326,8 +326,7 @@ Jigsaw:
   percentage_of_extra_pieces: 10 # 0-100
   piece_order:
     random_order: 4
-    every_piece_fits: 2
-    least_merges_possible: 1
+    corners_edges_rest: 1
   number_of_checks_out_of_logic: 1 # 0-10, additional OoL checks
 Manual_Hatsune_Miku:
   # THE the Manual!
@@ -412,7 +411,7 @@ Ori and the Blind Forest:
     area_specific: 0
   extra_mapstones: 1 # 0-9
   deathlink_logic:
-    disabled: 4
+    disabled: 6
     partial: 1 # does not send instakills
     full: 0
 Ori and the Will of the Wisps:
