@@ -102,7 +102,7 @@ jobs:
           cp -a games/custom_worlds/. /tmp/Archipelago/custom_worlds
           UNSUPPORTED=$(
             yq '.description' games/sync/*.yaml |
-            grep -Po '(?<=.com\/)(.*?)(?=\/releases)' |
+            grep -Po '(?<=.com\/)(.*?)(?=\/releases)(?!.*\.apworld)' |
             awk '{printf("https://api.github.com/repos/%s/releases\n", $0);}')
           [[ -n "$UNSUPPORTED" ]] && echo "$UNSUPPORTED" | parallel --halt now,fail=1 "
             wget -q -O - {} |
