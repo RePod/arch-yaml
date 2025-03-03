@@ -411,7 +411,7 @@ Ori and the Blind Forest:
     area_specific: 0
   extra_mapstones: 1 # 0-9
   deathlink_logic:
-    disabled: 6
+    disabled: 19
     partial: 1 # does not send instakills
     full: 0
 Ori and the Will of the Wisps:
