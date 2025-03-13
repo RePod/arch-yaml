@@ -19,7 +19,7 @@ game:
   ChecksFinder: 1
   Clique: 1
   Hades: 1                                 # Unsupported https://github.com/NaixGames/Polycosmos/releases/latest
-  Hatsune Miku Project Diva Mega Mix+: 0   # Unsupported https://github.com/RePod/DivaAPworld-R/releases/download/1.1.9B-R_250306-a0c4577/megamix.apworld
+  Hatsune Miku Project Diva Mega Mix+: 0   # Unsupported https://github.com/RePod/DivaAPworld-R/releases/download/1.1.9B-R_250313-cf59e79/megamix.apworld
   Jigsaw: 1                                # Unsupported https://github.com/spineraks-org/ArchipelagoJigsaw/releases/download/v0.1.0/jigsaw.apworld
   Manual_Hatsune_Miku: 0                   # Manual! I can provide it if needed.
   MegaMan Battle Network 3: 9
@@ -313,7 +313,7 @@ Hatsune Miku Project Diva Mega Mix+:
   exclude_songs:
     - AI Shoujo to Shinsou Shinkai [8814] # 12 minutes
     - IF [4109] # HORRIBLE sync
-    - Minority Soldier [155] # Gimmicky entry angles, hard reads. (skill issue)
+    #- Minority Soldier [155] # Gimmicky entry angles, hard reads. (skill issue)
     - RAD DOGS [975] # Somehow breaks the UI
   non_local_items:
     - Leek
