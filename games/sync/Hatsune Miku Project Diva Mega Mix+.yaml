@@ -3,7 +3,7 @@ game: Hatsune Miku Project Diva Mega Mix+
 async: false
 per_game_name: true
 #description: "Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest"
-description: "Unsupported https://github.com/RePod/DivaAPworld-R/releases/download/1.1.9B-R_250306-a0c4577/megamix.apworld"
+description: "Unsupported https://github.com/RePod/DivaAPworld-R/releases/download/1.1.9B-R_250313-cf59e79/megamix.apworld"
 weight: 0
 
 Hatsune Miku Project Diva Mega Mix+:
@@ -28,7 +28,7 @@ Hatsune Miku Project Diva Mega Mix+:
   exclude_songs:
     - AI Shoujo to Shinsou Shinkai [8814] # 12 minutes
     - IF [4109] # HORRIBLE sync
-    - Minority Soldier [155] # Gimmicky entry angles, hard reads. (skill issue)
+    #- Minority Soldier [155] # Gimmicky entry angles, hard reads. (skill issue)
     - RAD DOGS [975] # Somehow breaks the UI
   non_local_items:
     - Leek
