@@ -24,7 +24,8 @@ Hatsune Miku Project Diva Mega Mix+:
   grade_needed: standard
   leek_count_percentage: 40
   leek_win_count_percentage: 65 # 50-100
-  include_songs: []
+  include_songs:
+    - FUEL [339]
   exclude_songs:
     - AI Shoujo to Shinsou Shinkai [8814] # 12 minutes
     - IF [4109] # HORRIBLE sync
