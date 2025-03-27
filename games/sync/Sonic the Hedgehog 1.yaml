@@ -14,7 +14,7 @@ Sonic the Hedgehog 1:
   allow_disable_r: true
   hard_mode: false # static ring count 0, only drop 6 rings
   ring_goal: 100 # 0-150, amount of MW rings found to clear
-  available_rings: 185 # 0-185, total rings in pool
+  available_rings: 150 # 0-185, total rings in pool
   boring_filler: false # Enable to take the fun out of the junk filler items
 
 triggers:
