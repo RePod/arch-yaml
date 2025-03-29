@@ -8,7 +8,7 @@ weight: 0
 
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
-  progression_balancing: random-low
+  progression_balancing: random-range-0-50
   accessibility: random
   allow_megamix_dlc_songs:
     true: 1
