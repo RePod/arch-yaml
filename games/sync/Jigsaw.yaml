@@ -6,15 +6,30 @@ description: "Unsupported https://github.com/spineraks-org/ArchipelagoJigsaw/rel
 weight: 1
 
 Jigsaw:
-  progression_balancing: random-middle
+  progression_balancing: random-range-low-0-50
   accessibility: random
-  number_of_pieces: 50 # 25-1000
-  orientation_of_image: square # square/landscape/protrait
+  number_of_pieces: random-range-low-130-250 # 25-1000
+  orientation_of_image: landscape # square/landscape/portrait, hopefully this moves to the client one day
+  allow_filler_items: false 
+  percentage_of_merges_that_are_checks: 100 # 10-100
+  maximum_number_of_checks: 100 # 25-1000, overrides percentage_of_merges_that_are_checks. deflates large piece count ratio, may bundle pieces into single items
   percentage_of_extra_pieces: 10 # 0-100
+  piece_order_type: # prioritized over piece_order
+    random_order: 3
+    corners_edges_normal: 1
+    normal_edges_corners: 1
+    edges_normal_corners: 1
+    corners_normal_edges: 1
+    normal_corners_edges: 1
+    edges_corners_normal: 1
+  strictness_piece_order_type: 100 # 1-100, how strict to follow above piece_order_type. barely~strictest
   piece_order:
-    random_order: 4
-    corners_edges_rest: 1
-  number_of_checks_out_of_logic: 1 # 0-10, additional OoL checks
+    random_order: 1          # receive in random order with no extra constraints whatsoever
+    every_piece_fits: 2      # every piece you receive, will be able to merge with another piece
+    least_merges_possible: 2 # receive in an order that gives the least number of possible merges
+  strictness_piece_order: 100 # 1-100, how strict to follow above piece_order. barely~strictest
+  number_of_checks_out_of_logic: 3 # 1-10
+  death_link: true
 
 triggers:
   - option_category: null
