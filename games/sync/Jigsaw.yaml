@@ -38,9 +38,10 @@ triggers:
     option_result: true
     options:
       Jigsaw:
-        progression_balancing: random-low
-        number_of_pieces: random-range-150-300
-        number_of_checks_out_of_logic: 5
+        #progression_balancing: random-low
+        number_of_pieces: random-range-250-450
+        maximum_number_of_checks: random-range-250-450
+        number_of_checks_out_of_logic: 10
   - option_name: game
     option_result: Jigsaw
     options:
