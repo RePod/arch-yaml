@@ -1400,9 +1400,10 @@ triggers:
         leek_count_percentage: 40 # 10-40 / 250*0.4 = 100, higher = less slots for dupes
         leek_win_count_percentage: 50 # 50-100
       Jigsaw:
-        progression_balancing: random-low
-        number_of_pieces: random-range-150-300
-        number_of_checks_out_of_logic: 5
+        #progression_balancing: random-low
+        number_of_pieces: random-range-250-450
+        maximum_number_of_checks: random-range-250-450
+        number_of_checks_out_of_logic: 10
       Manual_Hatsune_Miku:
         accessibility: minimal
         music_sheets: 60
