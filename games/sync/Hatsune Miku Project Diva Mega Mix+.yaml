@@ -24,41 +24,8 @@ Hatsune Miku Project Diva Mega Mix+:
   grade_needed: standard
   leek_count_percentage: 40
   leek_win_count_percentage: 85 # 50-100
-  include_songs: 
-    - As You Like It [951]
-    - BUTCHER VANITY [3784]
-    - Champion [1054]
-    - Confessions of a Rotten Girl [9131]
-    - Cosmos [1378]
-    - Delusional Sentimental Compensation Federation - HIMEHINA & AZKi cover [3187]
-    - DONUT HOLE 2024 [3780]
-    - DOUKEI [1330]
-    - Envy Cat Walk [724]
-    - FUEL [339]
-    - Ghost City Tokyo [477]
-    - I'm the Rain [3186]
-    - Intergalactic Bound [6906]
-    - Kill Carry On [5544]
-    - Lagtrain [3319]
-    - Liar Dancer [2905]
-    - Monitoring [4339]
-    - Never Gonna Give You Up [4528]
-    - Odo [1193]
-    - Othello [3194]
-    - Romeo and Cinderella [43]
-    - Senbonzakura -F edition- [637]
-    - Shrimp Miku [9696]
-    - Take On Me (Astrophysics Take) [4530]
-    - Tetoris [7451]
-    - The Lost One's Weeping [805]
-    - Traffic Jam [483]
-    - Unknown Mother Goose [977]
-    - Vocalo-Colosseum [1265]
-    - Volt Tackle [1035]
-    - Why do I [694]
-    - World's End Dance Hall -F edition- [606]
-    - YY [5549]
-    - Zaako [4939]
+  include_songs: []
+  include_premade: false
   exclude_songs:
     - AI Shoujo to Shinsou Shinkai [8814] # 12 minutes
     - IF [4109] # HORRIBLE sync
@@ -83,6 +50,46 @@ triggers:
         # Each song gets 1 copy in the pool (before dupes), so cut the checks in half
         leek_count_percentage: 40 # 10-40 / 250*0.4 = 100, higher = less slots for dupes
         leek_win_count_percentage: 50 # 50-100
+  - option_category: Hatsune Miku Project Diva Mega Mix+
+    option_name: include_premade
+    option_result: true
+    options:
+      Hatsune Miku Project Diva Mega Mix+:
+        +include_songs: 
+          - As You Like It [951]
+          - BUTCHER VANITY [3784]
+          - Champion [1054]
+          - Confessions of a Rotten Girl [9131]
+          - Cosmos [1378]
+          - Delusional Sentimental Compensation Federation - HIMEHINA & AZKi cover [3187]
+          - DONUT HOLE 2024 [3780]
+          - DOUKEI [1330]
+          - Envy Cat Walk [724]
+          - FUEL [339]
+          - Ghost City Tokyo [477]
+          - I'm the Rain [3186]
+          - Intergalactic Bound [6906]
+          - Kill Carry On [5544]
+          - Lagtrain [3319]
+          - Liar Dancer [2905]
+          - Monitoring [4339]
+          - Never Gonna Give You Up [4528]
+          - Odo [1193]
+          - Othello [3194]
+          - Romeo and Cinderella [43]
+          - Senbonzakura -F edition- [637]
+          - Shrimp Miku [9696]
+          - Take On Me (Astrophysics Take) [4530]
+          - Tetoris [7451]
+          - The Lost One's Weeping [805]
+          - Traffic Jam [483]
+          - Unknown Mother Goose [977]
+          - Vocalo-Colosseum [1265]
+          - Volt Tackle [1035]
+          - Why do I [694]
+          - World's End Dance Hall -F edition- [606]
+          - YY [5549]
+          - Zaako [4939]
   - option_name: game
     option_result: Hatsune Miku Project Diva Mega Mix+
     options:
