@@ -3,7 +3,7 @@ game: Hades
 async: false
 per_game_name: true
 description: "Unsupported https://github.com/NaixGames/Polycosmos/releases/latest"
-weight: 1
+weight: 0
 
 Hades:
   progression_balancing: random-middle
