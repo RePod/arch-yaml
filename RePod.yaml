@@ -500,25 +500,35 @@ Pokemon Crystal:
   progression_balancing: random-low
   accessibility: random
   goal:
-    elite_four: 50
+    elite_four: 1
     red: 0
   johto_only: off # include_silver_cave = Red
-  elite_four_badges: 8
-  red_badges: 16
+  elite_four_badges: 8 # 1-[8]-16
+  red_badges: 16 # 1-[16]
+  mt_silver_badges: 16 # 1-[16]
+  radio_tower_badges: 7 # 1-[7]-16
   randomize_badges: completely_random
   randomize_hidden_items: true
   require_itemfinder: false
+  route_32_condition: egg_from_aide # egg_from_aide/any_badge/none
   trainersanity: false
+  trainersanity_alerts: message_box # no_alerts/message_box/sound_only
   randomize_pokegear: true
   randomize_berry_trees: true
   randomize_starters: completely_random
+  starters_bst_average: normal_starters
   randomize_wilds: true
+  force_fully_evolved: 35
   normalize_encounter_rates: true
   randomize_static_pokemon: true
+  level_scaling: spheres # off/spheres/spheres_and_distance
+  randomize_trades: both
   randomize_trainer_parties: completely_random
+  boost_trainers: vanilla
+  trainer_level_boost: 1
   randomize_learnsets: start_with_four_moves
   randomize_tm_moves: true
-  tm_compatibility: 100
+  tm_compatibility: 50
   hm_compatibility: 100
   randomize_base_stats: random
   randomize_types: vanilla
@@ -538,10 +548,24 @@ Pokemon Crystal:
     vanilla: 1
     no_badges: 0
     add_kanto: 3
+  remove_ilex_cut_tree:
+    false: 4
+    true: 1
+  east_west_underground:
+    false: 3
+    true: 1
+  undergrounds_require_power:
+    both: 4
+    north_south: 1
+    east_west: 1
+    neither: 1
   reusable_tms: true
   guaranteed_catch: true
   minimum_catch_rate: 255
   blind_trainers: true
+  skip_elite_four:
+    false: 4
+    true: 1
   better_marts: true
   experience_modifier: 50
   phone_trap_weight: random
@@ -550,6 +574,7 @@ Pokemon Crystal:
   burn_trap_weight: 0
   freeze_trap_weight: 0
   paralysis_trap_weight: 0
+  remote_items: true
   item_receive_sound: true
   enable_mischief: true
 Pokemon Emerald:
@@ -1439,10 +1464,9 @@ triggers:
       Ori and the Will of the Wisps:
         progression_balancing: random-low
       Pokemon Crystal:
-        randomize_berry_trees: true
         trainersanity:
-          false: 2
-          true: 3
+          false: 1
+          true: 4
         goal: red
       Pokemon Emerald:
         # Ever hit a 0.8% by rolling 3 Dex+Trainersanity Emeralds?
