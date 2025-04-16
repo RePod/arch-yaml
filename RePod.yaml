@@ -18,7 +18,7 @@ game:
   Bumper Stickers: 1
   ChecksFinder: 1
   Clique: 1
-  Hades: 1                                 # Unsupported https://github.com/NaixGames/Polycosmos/releases/latest
+  Hades: 0                                 # Unsupported https://github.com/NaixGames/Polycosmos/releases/latest
   Hatsune Miku Project Diva Mega Mix+: 0   # Unsupported https://github.com/RePod/DivaAPworld-R/releases/download/1.1.9B-R_250313-cf59e79/megamix.apworld
   Jigsaw: 1                                # Unsupported https://github.com/spineraks-org/ArchipelagoJigsaw/releases/latest
   Manual_Hatsune_Miku: 0                   # Manual! I can provide it if needed.
