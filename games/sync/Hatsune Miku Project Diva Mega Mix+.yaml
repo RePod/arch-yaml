@@ -14,7 +14,7 @@ Hatsune Miku Project Diva Mega Mix+:
     true: 1
     false: 2
   auto_remove_songs: true
-  duplicate_song_percentage: 10
+  duplicate_song_percentage: 0
   starting_song_count: 3
   additional_song_count: 67
   song_difficulty_min: hard
