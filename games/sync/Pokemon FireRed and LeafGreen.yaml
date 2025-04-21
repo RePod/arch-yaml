@@ -8,16 +8,26 @@ Pokemon FireRed and LeafGreen:
   progression_balancing: random-low
   accessibility: random
   game_version: random
-  goal: elite_four # _rematch
+  goal: champion # _rematch
   kanto_only: false
   random_starting_town: true
+  dungeon_entrance_shuffle: simple # off/simple/restricted/full
+  randomize_fly_destinations: true
   shuffle_badges: true
   shuffle_hidden: all
   extra_key_items: true
+  shopsanity: true
+  # shop_prices
+  # minimum_shop_price
+  # maximum_shop_price
   famesanity: true
-  shuffle_fly_destination_unlocks: all
+  shuffle_fly_unlocks: all
   pokemon_request_locations: true
   shuffle_running_shoes: start_with
+  shuffle_berry_pouch: true
+  shuffle_tm_case:
+    true: 1
+    false: 3
   card_key:
     vanilla: 1
     split: 2
@@ -30,6 +40,9 @@ Pokemon FireRed and LeafGreen:
   split_teas:
     false: 1
     true: 9
+  gym_keys:
+    true: 2
+    false: 3
   itemfinder_required: off
   flash_required: logic
   fame_checker_required: false
@@ -109,17 +122,13 @@ Pokemon FireRed and LeafGreen:
     completely_random: 7
   types: vanilla
   abilities: follow_evolutions
-  ability_blacklist:
-    - Truant
-    - Wonder Guard
-    - Arena Trap
-    - Shadow Tag
-    - Magnet Pull
+  ability_blacklist: ['Arena Trap','Magnet Pull','Shadow Tag','Truant','Wonder Guard']
   moves:
     vanilla: 1
     randomized: 2
     start_with_four_moves: 2
   #move_blacklist
+  # physical_special_split
   hm_compatibility: full
   tm_tutor_compatibility: random
   tm_tutor_moves: true
@@ -128,12 +137,11 @@ Pokemon FireRed and LeafGreen:
   starting_money: 3939
   better_shops: true
   free_fly_location:
-    exclude_indigo: 4
-    any: 1
+    true: 3
+    false: 1
   town_map_fly_location:
-    off: 1
-    exclude_indigo: 4
-    any: 1
+    true: 1
+    false: 3
   randomize_music: true
   randomize_fanfares: true
   game_options:
@@ -142,13 +150,13 @@ Pokemon FireRed and LeafGreen:
     Battle Style: 'Set'
     Bike Music: 'Off'
     Blind Trainers: 'On'
-    Button Mode: 'Help'
+    Button Mode: 'L=A'
     Encounter Rates: 'Normalized'
     Experience: 'Double'
     Frame: 1
     Guaranteed Catch: 'On'
     Item Messages: 'Progression'
-    Low HP Beep: 'On'
+    Low HP Beep: 'Off'
     Show Effectiveness: 'On'
     Skip Fanfares: 'On'
     Sound: 'Stereo'
@@ -225,7 +233,8 @@ triggers:
     option_result: true
     options:
       Pokemon FireRed and LeafGreen:
-          goal: elite_four_rematch
+          goal: champion_rematch
+          skip_elite_four: false
           shuffle_hidden: all
           trainersanity: all # none-0-456-all
           dexsanity: all # none-1-386-all
