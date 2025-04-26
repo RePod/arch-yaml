@@ -17,7 +17,7 @@ Pokemon Crystal:
   radio_tower_badges: 7 # 1-[7]-16
   randomize_badges: completely_random
   randomize_hidden_items: true
-  require_itemfinder: false
+  require_itemfinder: logically_required
   route_32_condition: egg_from_aide # egg_from_aide/any_badge/none
   trainersanity: false
   trainersanity_alerts: message_box # no_alerts/message_box/sound_only
