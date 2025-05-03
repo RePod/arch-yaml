@@ -142,6 +142,7 @@ Pokemon FireRed and LeafGreen:
   town_map_fly_location:
     true: 1
     false: 3
+  remote_items: true
   randomize_music: true
   randomize_fanfares: true
   game_options:
@@ -164,6 +165,7 @@ Pokemon FireRed and LeafGreen:
     Text Speed: 'Instant'
     Turbo A: 'On'
   provide_hints: true
+  death_link: false
   # Roll world modifiers (triggers)
   Modify Route 2:
     Yes: 2
@@ -253,6 +255,7 @@ triggers:
           oaks_aide_route_11: 30
           oaks_aide_route_16: 40
           oaks_aide_route_15: 50
+          death_link: true
   # FRLG World state
   - option_name: Modify Route 2
     option_category: Pokemon FireRed and LeafGreen
