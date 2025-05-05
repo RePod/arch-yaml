@@ -14,7 +14,7 @@ requires:
 game:
   A Hat in Time: 0
   A Link to the Past: 9
-  ANIMAL WELL: 9                           # Unsupported https://github.com/ScipioWright/Archipelago-SW/releases/latest
+  ANIMAL WELL: 0                           # Unsupported, stuck in Discord-only RC hell https://github.com/ScipioWright/Archipelago-SW/releases/latest
   Bumper Stickers: 1
   ChecksFinder: 1
   Clique: 1
