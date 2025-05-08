@@ -3,7 +3,7 @@ game: Hatsune Miku Project Diva Mega Mix+
 async: false
 per_game_name: true
 #description: "Unsupported https://github.com/Cynichill/DivaAPworld/releases/latest"
-description: "Unsupported https://github.com/RePod/DivaAPworld-R/releases/download/1.1.9B-R_250315-e709e8d/megamix.apworld"
+description: "Unsupported https://github.com/RePod/DivaAPworld-R/releases/download/1.1.9B-R_250507-4019e41/megamix.apworld"
 weight: 0
 
 Hatsune Miku Project Diva Mega Mix+:
@@ -16,14 +16,14 @@ Hatsune Miku Project Diva Mega Mix+:
   auto_remove_songs: true
   duplicate_song_percentage: 0
   starting_song_count: 3
-  additional_song_count: 67
+  additional_song_count: 57
   song_difficulty_min: hard
   song_difficulty_max: exextreme
   song_difficulty_rating_min: six
   song_difficulty_rating_max: nine
   grade_needed: standard
   leek_count_percentage: 40
-  leek_win_count_percentage: 75 # 50-100
+  leek_win_count_percentage: 70 # 50-100
   include_songs: []
   include_premade: false
   exclude_songs:
