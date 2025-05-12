@@ -12,7 +12,9 @@ VVVVVV:
   area_rando: false # Painful.
   door_cost: random-high # 0-3
   area_cost: random
-  death_link: true
+  death_link:
+    false: 4
+    true: 1
   death_link_amnesty: 30
 
 triggers:
