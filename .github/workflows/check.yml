@@ -87,7 +87,7 @@ jobs:
         if: steps.arch-cache-restore.outputs.cache-hit != 'true'
         run: |
           wget -qnv -O - https://api.github.com/repos/ArchipelagoMW/Archipelago/releases |
-            jq '[.[].assets[] | select(.browser_download_url | endswith(".tar.gz"))][0].browser_download_url' |
+            jq '[.[] | select(.prerelease | not) | .assets[] | select(.browser_download_url | endswith(".tar.gz"))][0].browser_download_url' |
             xargs wget -nv -P /tmp
           mkdir /tmp/Archipelago
           tar xzf /tmp/Archipelago*.tar.gz -C /tmp/
