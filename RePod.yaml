@@ -1251,7 +1251,7 @@ VVVVVV:
   accessibility: random
   music_rando: true
   area_rando: false # Painful.
-  door_cost: random
+  door_cost: random-high # 0-3
   area_cost: random
   death_link: true
   death_link_amnesty: 30
@@ -1619,6 +1619,7 @@ triggers:
         percent_seals_required: random-range-80-95
         traps: true
       VVVVVV:
+        door_cost: random-range-high-1-3
         area_rando: true
       Void Stranger:
         progression_balancing: random-low
