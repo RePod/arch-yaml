@@ -27,8 +27,10 @@ Hatsune Miku Project Diva Mega Mix+:
   include_songs: []
   include_premade: false
   exclude_songs:
+    # Anything sync related = I don't want to deal with adjusting it
     - AI Shoujo to Shinsou Shinkai [8814] # 12 minutes
-    - IF [4109] # HORRIBLE sync
+    - IF [4109] # Sync
+    - Machine Gun Poem Doll [1171] # Sync
     - Multis Training [1232] # 3 minutes of...
     - Stamina Training [1231] # 3 minutes of... PSP-TSD flashbacks
     #- Minority Soldier [155] # Gimmicky entry angles, hard reads. (skill issue)
