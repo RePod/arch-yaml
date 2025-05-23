@@ -296,8 +296,8 @@ Hatsune Miku Project Diva Mega Mix+:
   progression_balancing: random-range-low-0-50
   accessibility: random
   allow_megamix_dlc_songs:
-    true: 1
-    false: 2
+    true: 2
+    false: 1
   auto_remove_songs: true
   duplicate_song_percentage: 0
   starting_song_count: 3
