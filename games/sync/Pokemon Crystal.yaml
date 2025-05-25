@@ -23,7 +23,7 @@ Pokemon Crystal:
   kanto_access_badges: 8 # 1-[8]-16
   red_gyarados_access:
     vanilla: 1
-    whirlpoo: 4
+    whirlpool: 4
   route_2_access: # the cave exit below Pewter
     vanilla: 1
     ledge: 1
