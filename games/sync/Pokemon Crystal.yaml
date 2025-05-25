@@ -19,6 +19,24 @@ Pokemon Crystal:
   randomize_hidden_items: true
   require_itemfinder: logically_required
   route_32_condition: egg_from_aide # egg_from_aide/any_badge/none
+  kanto_access_condition: wake_snorlax # wake_snorlax/badge_count/become_champion
+  kanto_access_badges: 8 # 1-[8]-16
+  red_gyarados_access:
+    vanilla: 1
+    whirlpoo: 4
+  route_2_access: # the cave exit below Pewter
+    vanilla: 1
+    ledge: 1
+    open: 1
+  route_3_access: # Pewter towards Mt Moon
+    vanilla: 1
+    boulder_badge: 2
+  blackthorn_dark_cave_access:
+    vanilla: 1
+    waterfall: 2 # Violet side: waterfall+flash+surf
+  national_park_access:
+    vanilla: 1
+    bicycle: 3
   trainersanity: false
   trainersanity_alerts: message_box # no_alerts/message_box/sound_only
   randomize_pokegear: true
@@ -29,7 +47,7 @@ Pokemon Crystal:
   force_fully_evolved: 35
   normalize_encounter_rates: true
   randomize_static_pokemon: true
-  level_scaling: spheres # off/spheres/spheres_and_distance
+  level_scaling: spheres_and_distance # off/spheres/spheres_and_distance
   randomize_trades: both
   randomize_trainer_parties: completely_random
   boost_trainers: vanilla
@@ -59,6 +77,7 @@ Pokemon Crystal:
   remove_ilex_cut_tree:
     false: 4
     true: 1
+  #saffron_gatehouse_tea TODO make triggers
   east_west_underground:
     false: 3
     true: 1
@@ -72,18 +91,38 @@ Pokemon Crystal:
   minimum_catch_rate: 255
   blind_trainers: true
   skip_elite_four:
-    false: 4
-    true: 1
+    false: 3
+    true: 2
   better_marts: true
   experience_modifier: 50
   phone_trap_weight: random
-  sleep_trap_weight: 0
-  poison_trap_weight: 0
-  burn_trap_weight: 0
-  freeze_trap_weight: 0
-  paralysis_trap_weight: 0
+  sleep_trap_weight: 1 # [0]-8
+  poison_trap_weight: 1 # [0]-8
+  burn_trap_weight: 1 # [0]-8
+  freeze_trap_weight: 1 # [0]-8
+  paralysis_trap_weight: 1 # [0]-8
   remote_items: true
   item_receive_sound: true
+  game_options:
+    text_speed: instant
+    battle_shfit: set
+    battle_animations: speedy
+    sound: stereo
+    menu_account: off
+    text_frame: random-range-1-8
+    bike_music: off
+    surf_music: off
+    skip_nicknames: true
+    auto_run: true
+    fast_egg_hatch: on
+    fast_egg_make: on
+    rods_always_work: on
+    exp_distribution: gen2
+    catch_exp: off
+    poison_flicker: off
+    turbo_button: a_or_b
+    time_of_day: nite
+    battle_move_stats: on
   enable_mischief: true
 
 triggers:
