@@ -8,8 +8,8 @@ Pokemon Crystal:
   progression_balancing: random-low
   accessibility: random
   goal:
-    elite_four: 1
-    red: 0
+    elite_four: 3
+    red: 1
   johto_only: off # include_silver_cave = Red
   elite_four_badges: 8 # 1-[8]-16
   red_badges: 16 # 1-[16]
@@ -68,12 +68,9 @@ Pokemon Crystal:
     free_fly: 2
     free_fly_and_map_card: 2
   hm_badge_requirements:
-    # vanilla: HMs require their vanilla badges
-    # no_badges: HMs do not require a badge to use
-    # add_kanto: HMs can be used with the Johto or Kanto badge
     vanilla: 1
     no_badges: 0
-    add_kanto: 3
+    add_kanto: 3 # either region badge
   remove_ilex_cut_tree:
     false: 4
     true: 1
@@ -131,10 +128,10 @@ triggers:
     option_result: true
     options:
       Pokemon Crystal:
+        goal: red
         trainersanity:
           false: 1
           true: 4
-        goal: red
   - option_name: game
     option_result: Pokemon Crystal
     options:
