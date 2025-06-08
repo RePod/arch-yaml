@@ -106,7 +106,7 @@ jobs:
             awk '{printf("https://api.github.com/repos/%s/releases\n", $0);}')
           [[ -n "$UNSUPPORTED" ]] && echo "$UNSUPPORTED" | parallel --halt now,fail=1 "
             wget -q -O - {} |
-            jq '[.[] | select(.prerelease | not) | .assets[] | select(.browser_download_url | endswith(".apworld"))][0].browser_download_url' |
+            jq '[.[] | select(.prerelease | not) | .assets[] | select(.browser_download_url | endswith(\".apworld\"))][0].browser_download_url' |
             xargs wget -nv -P /tmp/Archipelago/custom_worlds"
           UNSUPPORTED=$(yq '.description' games/sync/*.yaml | grep -Po '(https:\/\/.*\.apworld)$' || true)
           if [ -n "$UNSUPPORTED" ]; then
