@@ -61,6 +61,7 @@ triggers:
     options:
       Ori and the Blind Forest:
         enable_lure: false
+        enable_double_bash: false # Fine on its own but I'm done with horrible ones and no HP.
   - option_name: game
     option_result: Ori and the Blind Forest
     options:
