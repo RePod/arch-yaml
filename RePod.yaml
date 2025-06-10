@@ -1932,6 +1932,7 @@ triggers:
     options:
       Ori and the Blind Forest:
         enable_lure: false
+        enable_double_bash: false # Fine on its own but I'm done with horrible ones and no HP.
   # FRLG World state
   - option_name: Modify Route 2
     option_category: Pokemon FireRed and LeafGreen
