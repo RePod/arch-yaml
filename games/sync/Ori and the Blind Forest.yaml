@@ -15,9 +15,9 @@ Ori and the Blind Forest:
     world_tour: 1 # mcguffin hunt. N/11 areas contain a relic in a random loc
     none: 0 # reach and finish escape
   logic_difficulty:
-    casual: 0
-    standard: 1
-    expert: 2
+    casual: 1
+    standard: 2
+    expert: 5
     master: 0 # grenade jumping is not sync safe
     glitched: 0
   keystone_logic:
