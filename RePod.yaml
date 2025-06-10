@@ -1926,6 +1926,12 @@ triggers:
           - World's End Dance Hall -F edition- [606]
           - YY [5549]
           - Zaako [4939]
+  - option_category: Ori and the Blind Forest
+    option_name: logic_difficulty
+    option_result: expert
+    options:
+      Ori and the Blind Forest:
+        enable_lure: false
   # FRLG World state
   - option_name: Modify Route 2
     option_category: Pokemon FireRed and LeafGreen
