@@ -55,6 +55,12 @@ triggers:
         extra_mapstones: 1
         deathlink_logic: partial
         # All the enable_LOGIC are true by default but trend to higher diffs and have EXP logic gating
+  - option_category: Ori and the Blind Forest
+    option_name: logic_difficulty
+    option_result: expert
+    options:
+      Ori and the Blind Forest:
+        enable_lure: false
   - option_name: game
     option_result: Ori and the Blind Forest
     options:
