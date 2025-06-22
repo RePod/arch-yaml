@@ -86,7 +86,7 @@ Pokemon Crystal:
   remote_items: true
   # HMs
   hm_compatibility: 100
-  hm_compatibility:
+  hm_badge_requirements:
     vanilla: 3
     no_badges: 1
     add_kanto: 2
