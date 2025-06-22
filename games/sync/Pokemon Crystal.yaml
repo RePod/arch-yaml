@@ -90,7 +90,7 @@ Pokemon Crystal:
     vanilla: 3
     no_badges: 1
     add_kanto: 2
-    region: 2
+    regional: 2
   free_fly_location:
     off: 1
     free_fly: 2
