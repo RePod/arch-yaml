@@ -86,7 +86,7 @@ Pokemon Crystal:
   remote_items: true
   # HMs
   hm_compatibility: 100
-  hm_compatibility: # no_b
+  hm_compatibility:
     vanilla: 3
     no_badges: 1
     add_kanto: 2
@@ -106,7 +106,7 @@ Pokemon Crystal:
     vanilla: 2
     keep_bst: 1
     completely_random: 1
-  randomize_trades: true
+  randomize_trades: both
   encounter_grouping: all_split
   encounter_slot_distribution:
     remove_one_percents: 3
