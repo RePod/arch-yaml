@@ -10,117 +10,184 @@ Pokemon Crystal:
   goal:
     elite_four: 3
     red: 1
+  # Map
+  randomize_starting_town: true
   johto_only: off # include_silver_cave = Red
-  elite_four_badges: 8 # 1-[8]-16
-  red_badges: 16 # 1-[16]
-  mt_silver_badges: 16 # 1-[16]
-  radio_tower_badges: 7 # 1-[7]-16
-  randomize_badges: completely_random
-  randomize_hidden_items: true
-  require_itemfinder: logically_required
-  route_32_condition: egg_from_aide # egg_from_aide/any_badge/none
-  kanto_access_condition: wake_snorlax # wake_snorlax/badge_count/become_champion
-  kanto_access_badges: 8 # 1-[8]-16
+  # Roadblocks
+  elite_four_requirement:
+    badges: 3
+    gyms: 1
+  elite_four_count: random-range-middle
+  red_requirement:
+    badges: 3
+    gyms: 1
+  red_count: 16
+  mt_silver_requirement:
+    badges: 3
+    gyms: 1
+  mt_silver_count: 16
+  radio_tower_requirement:
+    badges: 3
+    gyms: 1
+  radio_tower_count: 7 # 0-7-16
+  route_44_access_requirement:
+    badges: 3
+    gyms: 1
+  route_44_access_count: 7 # 0-7-16
+  kanto_access_requirement: # VR gate to Kanto
+    wake_snorlax: 4
+    badges: 2
+    gyms: 2
+    become_champion: 1
+  kanto_access_count: 8 # 0-8-16
+  route_32_condition:
+    egg_from_aide: 4
+    any_badge: 2
+    any_gym: 2
+    zephyr_badge: 1
+    none: 1
+  route_2_access:
+    vanilla: 1
+    ledge: 3
+    open: 1
+  route_3_access:
+    vanilla: 2
+    boulder_badge: 1
   red_gyarados_access:
     vanilla: 1
-    whirlpool: 4
-  route_2_access: # the cave exit below Pewter
-    vanilla: 1
-    ledge: 1
-    open: 1
-  route_3_access: # Pewter towards Mt Moon
-    vanilla: 1
-    boulder_badge: 2
+    whirlpoo: 2
   blackthorn_dark_cave_access:
     vanilla: 1
     waterfall: 2 # Violet side: waterfall+flash+surf
   national_park_access:
     vanilla: 1
-    bicycle: 3
-  trainersanity: false
-  trainersanity_alerts: message_box # no_alerts/message_box/sound_only
-  randomize_pokegear: true
-  randomize_berry_trees: true
-  randomize_starters: completely_random
-  starters_bst_average: normal_starters
-  randomize_wilds: true
-  force_fully_evolved: 35
-  normalize_encounter_rates: true
-  randomize_static_pokemon: true
-  level_scaling: spheres_and_distance # off/spheres/spheres_and_distance
-  randomize_trades: both
-  randomize_trainer_parties: completely_random
-  boost_trainers: vanilla
-  trainer_level_boost: 1
-  randomize_learnsets: start_with_four_moves
-  randomize_tm_moves: true
-  tm_compatibility: 50
-  hm_compatibility: 100
-  randomize_base_stats: random
-  randomize_types: vanilla
-  randomize_palettes: random
-  randomize_music: true
-  early_fly:
+    bicycle: 2
+  saffron_gatehouse_tea: []
+  remove_ilex_cut_tree:
+    false: 2
+    true: 1
+  undergrounds_require_power:
+    both: 4
+    north_south: 2
+    east_west: 2
+    neither: 1
+  east_west_underground:
     false: 1
-    true: 4
+    true: 3
+  vanilla_clair:
+    false: 2
+    true: 1
+  # Items
+  randomize_badges: completely_random
+  randomize_pokegear: true
+  randomize_hidden_items: true
+  randomize_berry_trees: true
+  require_itemfinder: logically_required
+  remote_items: true
+  # HMs
+  hm_compatibility: 100
+  hm_compatibility: # no_b
+    vanilla: 3
+    no_badges: 1
+    add_kanto: 2
+    region: 2
   free_fly_location:
     off: 1
     free_fly: 2
     free_fly_and_map_card: 2
-  hm_badge_requirements:
-    vanilla: 1
-    no_badges: 0
-    add_kanto: 3 # either region badge
-  remove_ilex_cut_tree:
-    false: 4
-    true: 1
-  #saffron_gatehouse_tea TODO make triggers
-  east_west_underground:
-    false: 3
-    true: 1
-  undergrounds_require_power:
-    both: 4
-    north_south: 1
-    east_west: 1
-    neither: 1
+    map_card: 2
+  early_fly:
+    false: 1
+    true: 3
+  # Pokemon
+  randomize_wilds: catch_em_all
+  randomize_static_pokemon: true
+  randomize_base_stats:
+    vanilla: 2
+    keep_bst: 1
+    completely_random: 1
+  randomize_trades: true
+  encounter_grouping: all_split
+  encounter_slot_distribution:
+    remove_one_percents: 3
+    balanced: 1
+    equal: 1
+  # Starters
+  randomize_starters: completely_random
+  starters_bst_average: normal_starters
+  # Moves
+  randomize_learnsets: start_with_four_moves
+  learnset_type_bias: vanilla
+  metronome_only: false
+  randomize_tm_moves: true
+  tm_compatibility: 50
   reusable_tms: true
-  guaranteed_catch: true
-  minimum_catch_rate: 255
-  blind_trainers: true
-  skip_elite_four:
-    false: 3
-    true: 2
-  better_marts: true
-  experience_modifier: 50
+  # Trainers
+  randomize_trainer_parties: completely_random
+  force_fully_evolved: 30
+  # Traps
   phone_trap_weight: random
   sleep_trap_weight: 1 # [0]-8
   poison_trap_weight: 1 # [0]-8
   burn_trap_weight: 1 # [0]-8
   freeze_trap_weight: 1 # [0]-8
   paralysis_trap_weight: 1 # [0]-8
-  remote_items: true
-  item_receive_sound: true
+  # QoL
   game_options:
-    text_speed: instant
-    battle_shfit: set
+    ap_item_sound: on
+    auto_run: on
     battle_animations: speedy
-    sound: stereo
-    menu_account: off
-    text_frame: random-range-1-8
+    battle_move_stats: on
+    battle_shift: set
     bike_music: off
-    surf_music: off
-    skip_nicknames: true
-    auto_run: true
+    blind_trainers: on
+    catch_exp: off
+    dex_area_beep: on
+    exp_distribution: gen2
     fast_egg_hatch: on
     fast_egg_make: on
-    rods_always_work: on
-    exp_distribution: gen2
-    catch_exp: off
+    guaranteed_catch: on
+    low_hp_beep: off
+    menu_account: off
     poison_flicker: off
-    turbo_button: a_or_b
+    rods_always_work: on
+    short_fanfares: on
+    skip_dex_registration: on
+    skip_nicknames: on
+    sound: stereo
+    spinners: normal
+    surf_music: off
+    text_frame: random
+    text_speed: instant
     time_of_day: nite
-    battle_move_stats: on
+    turbo_button: a_or_b 
+  level_scaling: spheres # off/spheres/spheres_and_distance
+  starting_money: 3939
+  better_marts: true
+  experience_modifier: 50
+  skip_elite_four:
+    false: 3
+    true: 2
+  minimum_catch_rate: 255
+  randomize_palettes:
+    vanilla: 1
+    match_types: 3
+    completely_random: 6
+  randomize_music: true
   enable_mischief: true
+  # Saffron Tea triggers
+  North Gate:
+    Yes: 50
+    No: 50
+  South Gate:
+    Yes: 50
+    No: 50
+  East Gate:
+    Yes: 50
+    No: 50
+  West Gate:
+    Yes: 50
+    No: 50
 
 triggers:
   - option_category: null
@@ -129,9 +196,45 @@ triggers:
     options:
       Pokemon Crystal:
         goal: red
+        death_link: true
+        # Dexsanity
+        dexsanity: full
+        dexcountsanity: 251
+        dexcountsanity_step: 1
+        dexsanity_starters: available_early
+        # Trainersanity
         trainersanity:
           false: 1
           true: 4
+        trainersanity_alerts: sound_only
+  - option_name: North Gate
+    option_category: Pokemon Crystal
+    option_result: Yes
+    options:
+      Pokemon Crystal:
+        +saffron_gatehouse_tea:
+          - North
+  - option_name: South Gate
+    option_category: Pokemon Crystal
+    option_result: Yes
+    options:
+      Pokemon Crystal:
+        +saffron_gatehouse_tea:
+          - South
+  - option_name: East Gate
+    option_category: Pokemon Crystal
+    option_result: Yes
+    options:
+      Pokemon Crystal:
+        +saffron_gatehouse_tea:
+          - East
+  - option_name: West Gate
+    option_category: Pokemon Crystal
+    option_result: Yes
+    options:
+      Pokemon Crystal:
+        +saffron_gatehouse_tea:
+          - West
   - option_name: game
     option_result: Pokemon Crystal
     options:
