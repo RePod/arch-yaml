@@ -17,7 +17,7 @@ Pokemon Crystal:
   elite_four_requirement:
     badges: 3
     gyms: 1
-  elite_four_count: random-range-mid
+  elite_four_count: random-mid
   red_requirement:
     badges: 3
     gyms: 1
