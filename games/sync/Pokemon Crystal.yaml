@@ -35,10 +35,10 @@ Pokemon Crystal:
     gyms: 1
   route_44_access_count: 7 # 0-7-16
   kanto_access_requirement: # VR gate to Kanto
-    wake_snorlax: 4
-    badges: 2
-    gyms: 2
-    become_champion: 1
+    wake_snorlax: 1
+    badges: 3
+    gyms: 3
+    become_champion: 2
   kanto_access_count: 8 # 0-8-16
   route_32_condition:
     egg_from_aide: 4
