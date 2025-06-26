@@ -9,8 +9,11 @@ Jigsaw:
   # https://jigsaw-ap.netlify.app/
   progression_balancing: random-range-low-0-50
   accessibility: random
-  number_of_pieces: random-range-low-130-250 # 25-1000
+  number_of_pieces: random-range-low-130-250 # 4-50-2000
   orientation_of_image: landscape # square/landscape/portrait, hopefully this moves to the client one day
+  which_image:
+    37: 1
+    39: 1
   allow_filler_items: false 
   percentage_of_merges_that_are_checks: 100 # 10-100
   maximum_number_of_checks: 100 # 25-1000, overrides percentage_of_merges_that_are_checks. deflates large piece count ratio, may bundle pieces into single items
@@ -30,7 +33,7 @@ Jigsaw:
     least_merges_possible: 2 # receive in an order that gives the least number of possible merges
   strictness_piece_order: 100 # 1-100, how strict to follow above piece_order. barely~strictest
   number_of_checks_out_of_logic: random-low # 1-10
-  death_link: true
+  death_link: 10
 
 triggers:
   - option_category: null
