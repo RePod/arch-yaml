@@ -999,7 +999,7 @@ Pokemon FireRed and LeafGreen:
     Surf Music: 'Off'
     Text Speed: 'Instant'
     Turbo A: 'On'
-  provide_hints: true
+  provide_hints: all
   death_link: false
   # Roll world modifiers (triggers)
   Modify Route 2:
