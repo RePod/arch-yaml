@@ -2,7 +2,7 @@ name: RePod{NUMBER}
 game: Void Stranger
 async: false
 per_game_name: true
-description: "Unsupported https://github.com/CriminalPancake/void-stranger-ap/raw/refs/tags/v0.8.0/voidstranger.apworld"
+description: "Custom https://github.com/CriminalPancake/void-stranger-ap/raw/refs/tags/v0.8.0/voidstranger.apworld"
 weight: 0
 
 Void Stranger:

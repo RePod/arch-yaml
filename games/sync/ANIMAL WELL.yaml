@@ -2,7 +2,7 @@ name: RePod{NUMBER}
 game: ANIMAL WELL
 async: false
 per_game_name: true
-description: "Unsupported, https://github.com/ScipioWright/Archipelago-SW/releases/latest"
+description: "Custom https://github.com/ScipioWright/Archipelago-SW/releases/latest"
 weight: 0
 
 ANIMAL WELL:

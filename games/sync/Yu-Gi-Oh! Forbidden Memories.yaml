@@ -2,7 +2,7 @@ name: RePod{NUMBER}
 game: Yu-Gi-Oh! Forbidden Memories
 async: false
 per_game_name: true
-description: "Unsupported https://github.com/sg4e/Archipelago/releases/latest"
+description: "Custom https://github.com/sg4e/Archipelago/releases/latest"
 
 Yu-Gi-Oh! Forbidden Memories:
   # BizHawk client + lua connector

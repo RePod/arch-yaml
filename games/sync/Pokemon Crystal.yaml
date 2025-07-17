@@ -2,7 +2,7 @@ name: RePod{NUMBER}
 game: Pokemon Crystal
 async: false
 per_game_name: true
-description: "Unsupported https://github.com/gerbiljames/Archipelago/releases/latest"
+description: "Custom https://github.com/gerbiljames/Archipelago/releases/latest"
 
 Pokemon Crystal:
   progression_balancing: random-low
