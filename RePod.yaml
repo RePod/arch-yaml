@@ -14,34 +14,34 @@ requires:
 game:
   A Hat in Time: 0
   A Link to the Past: 9
-  ANIMAL WELL: 0                           # Unsupported, stuck in Discord-only RC hell https://github.com/ScipioWright/Archipelago-SW/releases/latest
+  ANIMAL WELL: 0                           # Custom https://github.com/ScipioWright/Archipelago-SW/releases/latest
   Bumper Stickers: 1
   ChecksFinder: 1
-  Clique: 1
-  Hades: 0                                 # Unsupported https://github.com/NaixGames/Polycosmos/releases/latest
-  Hatsune Miku Project Diva Mega Mix+: 0   # Unsupported https://github.com/RePod/DivaAPworld-R/releases/download/1.2.0B-R_250619-b5367f7/megamix.apworld
+  Clique: 1                                # Custom https://pharware.com/git/Phar/Clique/releases/download/1.5.4/clique.apworld
+  Hades: 0                                 # Custom https://github.com/NaixGames/Polycosmos/releases/latest
+  Hatsune Miku Project Diva Mega Mix+: 0   # Custom https://github.com/RePod/DivaAPworld-R/releases/download/1.2.0B-R_250714-b060fe9/megamix.apworld
   Jigsaw: 1                                # Unsupported https://github.com/spineraks-org/ArchipelagoJigsaw/releases/latest
   Manual_Hatsune_Miku: 0                   # Manual! I can provide it if needed.
   MegaMan Battle Network 3: 9
   Muse Dash: 0
-  Ori and the Blind Forest: 9              # Unsupported https://github.com/c-ostic/Archipelago/releases/latest
-  Ori and the Will of the Wisps: 0         # Unsupported https://github.com/Satisha10/APwotw_release/releases/latest
-  Pokemon Crystal: 9                       # Unsupported https://github.com/gerbiljames/Archipelago/releases/latest
+  Ori and the Blind Forest: 9              # Custom https://github.com/c-ostic/Archipelago/releases/latest
+  Ori and the Will of the Wisps: 0         # Custom https://github.com/Satisha10/APwotw_release/releases/latest
+  Pokemon Crystal: 9                       # Custom https://github.com/gerbiljames/Archipelago/releases/latest
   Pokemon Emerald: 9
-  Pokemon FireRed and LeafGreen: 9         # Unsupported https://github.com/vyneras/Archipelago/releases/latest
+  Pokemon FireRed and LeafGreen: 9         # Custom https://github.com/vyneras/Archipelago/releases/latest
   Pokemon Red and Blue: 9
   SMZ3: 4
-  Sonic the Hedgehog 1: 0                  # Unsupported https://github.com/kaithar/Archipelago/releases/latest
+  Sonic the Hedgehog 1: 0                  # Custom https://github.com/kaithar/Archipelago/releases/latest
   Super Mario 64: 9
   Super Mario World: 9
   Super Metroid: 9
   The Messenger: 9
   VVVVVV: 9
-  Void Stranger: 0                         # Unsupported https://github.com/CriminalPancake/void-stranger-ap/raw/refs/tags/v0.8.0/voidstranger.apworld
+  Void Stranger: 0                         # Custom https://github.com/CriminalPancake/void-stranger-ap/raw/refs/tags/v0.8.0/voidstranger.apworld
   Yacht Dice: 9
   Yoshi's Island: 9
   Yu-Gi-Oh! 2006: 9                        # Newer than 0.6.1 https://github.com/Rensen3/ArchipelagoYGO06/releases/latest
-  Yu-Gi-Oh! Forbidden Memories: 9          # Unsupported https://github.com/sg4e/Archipelago/releases/latest
+  Yu-Gi-Oh! Forbidden Memories: 9          # Custom https://github.com/sg4e/Archipelago/releases/latest
 
 A Hat in Time:
   # https://archipelago.gg/tutorial/A%20Hat%20in%20Time/setup/en
