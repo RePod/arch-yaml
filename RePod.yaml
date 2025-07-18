@@ -429,11 +429,11 @@ Ori and the Blind Forest:
     master: 0 # grenade jumping is not sync safe
     glitched: 0
   keystone_logic:
-    anywhere: 1
-    area_specific: 0
+    anywhere: 2
+    area_specific: 2
   mapstone_logic:
-    anywhere: 1
-    area_specific: 0
+    anywhere: 2
+    area_specific: 1
   extra_mapstones: 1 # 0-9
   deathlink_logic:
     disabled: 19
