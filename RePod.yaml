@@ -294,7 +294,7 @@ Hades:
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
   # Manual triggers
-  side_game: false # 
+  side_game: false # quicker goal settings
   include_premade: false # curated playlist of songs
   # regular options
   progression_balancing: random-range-low-0-50
@@ -1968,6 +1968,15 @@ triggers:
     options:
       null:
         name: RePodFM{NUMBER}
+  - option_category: Hatsune Miku Project Diva Mega Mix+
+    option_name: side_game
+    option_result: true
+    options:
+      Hatsune Miku Project Diva Mega Mix+:
+        starting_song_count: 3
+        additional_song_count: 15
+        leek_count_percentage: 40
+        leek_win_count_percentage: 85
   - option_category: Hatsune Miku Project Diva Mega Mix+
     option_name: include_premade
     option_result: true
