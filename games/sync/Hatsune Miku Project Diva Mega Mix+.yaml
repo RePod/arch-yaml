@@ -9,7 +9,7 @@ weight: 0
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
   # Manual triggers
-  side_game: false # 
+  side_game: false # quicker goal settings
   include_premade: false # curated playlist of songs
   # regular options
   progression_balancing: random-range-low-0-50
