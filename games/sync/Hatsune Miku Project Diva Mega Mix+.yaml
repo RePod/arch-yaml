@@ -8,6 +8,10 @@ weight: 0
 
 Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
+  # Manual triggers
+  side_game: false # 
+  include_premade: false # curated playlist of songs
+  # regular options
   progression_balancing: random-range-low-0-50
   accessibility: random
   allow_megamix_dlc_songs:
@@ -25,10 +29,11 @@ Hatsune Miku Project Diva Mega Mix+:
   leek_count_percentage: 40
   leek_win_count_percentage: 65 # 50-100
   include_songs: []
-  include_premade: false
+  
   exclude_songs:
     # Anything sync related = I don't want to deal with adjusting it
     - AI Shoujo to Shinsou Shinkai [8814] # 12 minutes
+    - HeavenDope [2914] # INCREASE THE BPM
     - IF [4109] # Sync
     - Machine Gun Poem Doll [1171] # Sync
     - Multis Training [1232] # 3 minutes of...
@@ -54,6 +59,15 @@ triggers:
         # Each song gets 1 copy in the pool (before dupes), so cut the checks in half
         leek_count_percentage: 40 # 10-40 / 250*0.4 = 100, higher = less slots for dupes
         leek_win_count_percentage: 50 # 50-100
+  - option_category: Hatsune Miku Project Diva Mega Mix+
+    option_name: side_game
+    option_result: true
+    options:
+      Hatsune Miku Project Diva Mega Mix+:
+        starting_song_count: 3
+        additional_song_count: 15
+        leek_count_percentage: 40
+        leek_win_count_percentage: 85
   - option_category: Hatsune Miku Project Diva Mega Mix+
     option_name: include_premade
     option_result: true
