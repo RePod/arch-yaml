@@ -851,7 +851,9 @@ Pokemon FireRed and LeafGreen:
   goal: champion # _rematch
   kanto_only: false
   random_starting_town: true
-  dungeon_entrance_shuffle: simple # off/simple/restricted/full
+  dungeon_entrance_shuffle: #simple # off/simple/restricted/full
+    #simple: 1 # broken on AP0.6.2
+    full: 1
   randomize_fly_destinations: true
   shuffle_badges: true
   shuffle_hidden: all
