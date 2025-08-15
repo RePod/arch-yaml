@@ -173,7 +173,7 @@ Pokemon Crystal:
     vanilla: 1
     match_types: 3
     completely_random: 6
-  randomize_music: true
+  randomize_music: completely_random
   enable_mischief: true
   # Saffron Tea triggers
   North Gate:
