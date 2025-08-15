@@ -75,6 +75,7 @@ triggers:
     options:
       Hatsune Miku Project Diva Mega Mix+:
         +include_songs:
+          # If an invalid item name got through and it's preventing gen, comment it out.
           - (Not) A Devil [7426]
           - 39 [232]
           - 4BLOOD [895]
