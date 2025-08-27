@@ -3,7 +3,7 @@ game: Hatsune Miku Project Diva Mega Mix+
 async: false
 per_game_name: true
 #description: "Custom https://github.com/Cynichill/DivaAPworld/releases/latest"
-description: "Custom https://github.com/RePod/DivaAPworld-R/releases/download/1.2.0B-R_250714-b060fe9/megamix.apworld"
+description: "Custom https://github.com/RePod/DivaAPworld-R/releases/latest"
 weight: 0
 
 Hatsune Miku Project Diva Mega Mix+:
