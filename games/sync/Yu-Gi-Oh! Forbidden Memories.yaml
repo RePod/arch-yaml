@@ -6,6 +6,7 @@ description: "Custom https://github.com/sg4e/Archipelago/releases/latest"
 
 Yu-Gi-Oh! Forbidden Memories:
   # BizHawk client + lua connector
+  # Music: https://github.com/sg4e/Free-Duel-music-randomizer
   progression_balancing: random-low
   accessibility: random
   duelist_progression:
