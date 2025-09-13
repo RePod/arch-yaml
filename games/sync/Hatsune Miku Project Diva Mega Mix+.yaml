@@ -29,18 +29,19 @@ Hatsune Miku Project Diva Mega Mix+:
   leek_count_percentage: 40
   leek_win_count_percentage: 65 # 50-100
   include_songs: []
-  
   exclude_songs:
     # Anything sync related = I don't want to deal with adjusting it
     - AI Shoujo to Shinsou Shinkai [8814] # 12 minutes
+    - Bury the Light Eurobeat Remix [4597] # Chart is fine... but 8 minutes. A nice stress out with Death Link and note-lacking parts.
     - HeavenDope [2914] # INCREASE THE BPM
+    - Himegoto*Crisisters [3022]
     - IF [4109] # Sync
+    - Jackpot Sad Girl [1217]
     - Machine Gun Poem Doll [1171] # Sync
+    - Minority Soldier [155] # Gimmicky entry angles, hard reads (skill issue)
     - Multis Training [1232] # 3 minutes of...
     - SnowMixnote [128] # "9 stars"
     - Stamina Training [1231] # 3 minutes of... PSP-TSD flashbacks
-    - Minority Soldier [155] # Gimmicky entry angles, hard reads (skill issue)
-    - Bury the Light Eurobeat Remix [4597] # Chart is fine... but 8 minutes. A nice stress out with Death Link and note-lacking parts.
   #non_local_items:
   #  - Leek
   death_link: true
