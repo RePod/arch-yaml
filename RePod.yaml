@@ -1989,9 +1989,9 @@ triggers:
     option_result: true
     options:
       Hatsune Miku Project Diva Mega Mix+:
-        +include_songs:
+        +include_songs: &premade
           # If an invalid item name got through and it's preventing gen, comment it out.
-          - (Not) A Devil [7426]
+          - (Not) A Devil [7426] # &premade used for exclude below this list
           - 39 [232]
           - 4BLOOD [895]
           - A Tale of Six Trillion Years and a Night [7700]
@@ -2002,6 +2002,7 @@ triggers:
           - Black Gold [222]
           - BUTCHER VANITY [3784]
           - Champion [1054]
+          - Cherry Pop [9278]
           - Confessions of a Rotten Girl [9131]
           - Cool Medley - Cyber Rock Jam [827]
           - Copyright B*tch [1352]
@@ -2086,6 +2087,7 @@ triggers:
           - Suna no Wakusei feat. Hatsune Miku [267]
           - Take On Me (Astrophysics Take) [4530]
           - Tayou [1333]
+          - Telepathy [9299]
           - Tengaku -Soukyou- [3916]
           - Teo [271]
           - Tetoris [7451]
@@ -2112,6 +2114,7 @@ triggers:
           - You're Telling Me A SHRIMP Fried This Rice?! [9168]
           - YY [5549]
           - Zaako [4939]
+        +exclude_songs: *premade
   - option_category: Ori and the Blind Forest
     option_name: logic_difficulty
     option_result: expert
