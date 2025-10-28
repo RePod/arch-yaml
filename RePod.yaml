@@ -318,6 +318,7 @@ Hatsune Miku Project Diva Mega Mix+:
   exclude_songs:
     # Anything sync related = I don't want to deal with adjusting it
     - AI Shoujo to Shinsou Shinkai [8814] # 12 minutes
+    - BAILE DA MIKU II - CADEIA PARALELA [4574]
     - Bury the Light Eurobeat Remix [4597] # Chart is fine... but 8 minutes. A nice stress out with Death Link and note-lacking parts.
     - HeavenDope [2914] # INCREASE THE BPM
     - Himegoto*Crisisters [3022]
