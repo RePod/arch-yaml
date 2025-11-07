@@ -12,7 +12,7 @@ Hatsune Miku Project Diva Mega Mix+:
   side_game: false # quicker goal settings
   include_premade: false # curated playlist of songs
   # regular options
-  progression_balancing: random-range-low-0-50
+  progression_balancing: 39
   accessibility: random
   allow_megamix_dlc_songs:
     true: 2
