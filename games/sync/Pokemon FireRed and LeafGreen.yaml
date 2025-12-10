@@ -33,7 +33,7 @@ Pokemon FireRed and LeafGreen:
   famesanity: true
   shuffle_fly_unlocks: all
   pokemon_request_locations: true
-  shuffle_pokedex: true
+  shuffle_pokedex: shuffle
   shuffle_running_shoes: start_with
   shuffle_berry_pouch: true
   shuffle_tm_case:
