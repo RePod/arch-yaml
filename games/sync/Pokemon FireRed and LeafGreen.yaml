@@ -9,27 +9,37 @@ Pokemon FireRed and LeafGreen:
   accessibility: random
   game_version: random
   goal: champion # _rematch
+  skip_elite_four: false
   kanto_only: false
   random_starting_town: true
-  dungeon_entrance_shuffle: #simple # off/simple/restricted/full
-    #simple: 1 # broken on AP0.6.2
-    full: 1
-  randomize_fly_destinations: true
+  shuffle_pokemon_centers: true
+  shuffle_gyms: true
+  shuffle_marts: true
+  shuffle_harbors: true
+  shuffle_buildings: full # simple/restricted/full
+  shuffle_dungeons: full # off/simple/restricted/full
+  shuffle_interiors: true
+  shuffle_warp_tiles: full # off/simple/full
+  shuffle_dropdowns: full # off/simple/full
+  decouple_entrances_warps: false
+  randomize_fly_destinations: completely_random
   shuffle_badges: true
   shuffle_hidden: all
   extra_key_items: true
   shopsanity: true
-  # shop_prices
-  # minimum_shop_price
-  # maximum_shop_price
+  vending_machines: true
+  prizesanity: false
+  # shop_slots, shop_prices, consistent_shop_prices
   famesanity: true
   shuffle_fly_unlocks: all
   pokemon_request_locations: true
+  shuffle_pokedex: true
   shuffle_running_shoes: start_with
   shuffle_berry_pouch: true
   shuffle_tm_case:
     true: 1
     false: 3
+  shuffle_jumping_shoes: true
   card_key:
     vanilla: 1
     split: 2
@@ -39,6 +49,9 @@ Pokemon FireRed and LeafGreen:
     progressive: 2
     split: 2
     progressive_split: 2
+  fishing_rods:
+    vanilla: 1
+    progressive: 2
   split_teas:
     false: 1
     true: 9
@@ -58,12 +71,13 @@ Pokemon FireRed and LeafGreen:
     any_gym: 1
     boulder_badge: 1
     any_badge: 1
-  #remove_badge_requirement
+  # remove_badge_requirement
   oaks_aide_route_2: 1
   oaks_aide_route_10: 2
   oaks_aide_route_11: 3
   oaks_aide_route_16: 4
   oaks_aide_route_15: 5
+  # fossil_count
   viridian_gym_requirement:
     badges: 3
     gyms: 2
@@ -162,10 +176,11 @@ Pokemon FireRed and LeafGreen:
     Low HP Beep: 'Off'
     Show Effectiveness: 'On'
     Skip Fanfares: 'On'
+    Skip Nicknames: 'On'
     Sound: 'Stereo'
     Surf Music: 'Off'
     Text Speed: 'Instant'
-    Turbo A: 'On'
+    Turbo Button: 'B'
   provide_hints: all
   death_link: false
   # Roll world modifiers (triggers)
