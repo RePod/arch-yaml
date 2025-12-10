@@ -169,7 +169,7 @@ Pokemon FireRed and LeafGreen:
     Blind Trainers: 'On'
     Button Mode: 'L=A'
     Encounter Rates: 'Normalized'
-    Experience: 'Double'
+    Experience Multiplier: 10
     Frame: 1
     Guaranteed Catch: 'On'
     Item Messages: 'Progression'
