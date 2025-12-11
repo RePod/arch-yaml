@@ -12,17 +12,6 @@ Pokemon FireRed and LeafGreen:
   skip_elite_four: false
   kanto_only: false
   random_starting_town: true
-  shuffle_pokemon_centers: true
-  shuffle_gyms: true
-  shuffle_marts: true
-  shuffle_harbors: true
-  shuffle_buildings: full # simple/restricted/full
-  shuffle_dungeons: full # off/simple/restricted/full
-  shuffle_interiors: true
-  shuffle_warp_tiles: full # off/simple/full
-  shuffle_dropdowns: full # off/simple/full
-  decouple_entrances_warps: false
-  randomize_fly_destinations: completely_random
   shuffle_badges: true
   shuffle_hidden: all
   extra_key_items: true
@@ -169,8 +158,8 @@ Pokemon FireRed and LeafGreen:
     Blind Trainers: 'On'
     Button Mode: 'L=A'
     Encounter Rates: 'Normalized'
-    Experience Multiplier: 10
-    Frame: 1
+    Experience Multiplier: 200
+    Frame: 8
     Guaranteed Catch: 'On'
     Item Messages: 'Progression'
     Low HP Beep: 'Off'
@@ -181,7 +170,7 @@ Pokemon FireRed and LeafGreen:
     Surf Music: 'Off'
     Text Speed: 'Instant'
     Turbo Button: 'B'
-  provide_hints: all
+  provide_hints: progression
   death_link: false
   # Roll world modifiers (triggers)
   Modify Route 2:
@@ -253,7 +242,7 @@ triggers:
     options:
       Pokemon FireRed and LeafGreen:
           goal: champion_rematch
-          skip_elite_four: false
+          skip_elite_four: true
           shuffle_hidden: all
           trainersanity: all # none-0-456-all
           dexsanity: all # none-1-386-all
@@ -273,6 +262,25 @@ triggers:
           oaks_aide_route_16: 40
           oaks_aide_route_15: 50
           death_link: true
+          shuffle_pokemon_centers: true
+          shuffle_gyms: true
+          shuffle_marts: true
+          shuffle_harbors: true
+          shuffle_buildings: full # simple/restricted/full
+          shuffle_dungeons: full # off/simple/restricted/full
+          shuffle_interiors: true
+          shuffle_warp_tiles: full # off/simple/full
+          shuffle_dropdowns: full # off/simple/full
+          mix_entrance_warp_pools:
+            - All
+            - Gyms
+            - Marts
+            - Harbors
+            - Buildings
+            - Dungeons
+            - Interiors
+          decouple_entrances_warps: true
+          randomize_fly_destinations: completely_random
   # FRLG World state
   - option_name: Modify Route 2
     option_category: Pokemon FireRed and LeafGreen
