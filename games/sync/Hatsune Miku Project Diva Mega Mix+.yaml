@@ -10,7 +10,7 @@ Hatsune Miku Project Diva Mega Mix+:
   # NOT the Manual!
   # Manual triggers
   side_game: false # quicker goal settings
-  include_premade: false # curated playlist of songs
+  include_premade: true # curated playlist of songs
   # regular options
   progression_balancing: 39
   accessibility: random
@@ -28,7 +28,7 @@ Hatsune Miku Project Diva Mega Mix+:
   grade_needed: standard
   leek_count_percentage: 30
   leek_win_count_percentage: 75 # 50-100
-  include_songs_percentage: 100
+  include_songs_percentage: 39
   include_songs: []
   exclude_songs:
     # Anything sync related = I don't want to deal with adjusting it
