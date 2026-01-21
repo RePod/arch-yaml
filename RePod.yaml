@@ -433,18 +433,20 @@ Ori and the Blind Forest:
     warmth_fragments: 1 # mcguffin hunt
     world_tour: 1 # mcguffin hunt. N/11 areas contain a relic in a random loc
     none: 0 # reach and finish escape
+  warmth_fragments_available: 50 # 1-30-50
+  warmth_fragments_required: 40 # 1-20-50
   logic_difficulty:
     casual: 1
     standard: 2
     expert: 5
-    master: 0 # grenade jumping is not sync safe
+    master: 1 # grenade jumping is not sync safe
     glitched: 0
   keystone_logic:
-    anywhere: 2
-    area_specific: 2
+    anywhere: 1
+    area_specific: 3
   mapstone_logic:
-    anywhere: 2
-    area_specific: 1
+    anywhere: 1
+    area_specific: 3
   extra_mapstones: 1 # 0-9
   deathlink_logic:
     disabled: 19
