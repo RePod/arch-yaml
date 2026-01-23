@@ -93,6 +93,8 @@ triggers:
     options:
       Ori and the Blind Forest:
         deathlink_logic: disabled
+        keystone_logic: area_specific
+        mapstone_logic: area_specific
   - option_name: game
     option_result: Ori and the Blind Forest
     options:
