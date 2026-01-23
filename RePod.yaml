@@ -2188,6 +2188,8 @@ triggers:
     options:
       Ori and the Blind Forest:
         deathlink_logic: disabled
+        keystone_logic: area_specific
+        mapstone_logic: area_specific
   - option_name: North Gate
     option_category: Pokemon Crystal
     option_result: Yes
