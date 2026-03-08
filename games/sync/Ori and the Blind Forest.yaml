@@ -2,7 +2,7 @@ name: RePod{NUMBER}
 game: Ori and the Blind Forest
 async: false
 per_game_name: true
-description: "Custom https://github.com/c-ostic/Archipelago/releases/latest"
+description: "Custom https://github.com/c-ostic/Archipelago/releases/download/v0.3.3-alpha/oribf.apworld"
 
 Ori and the Blind Forest:
   # Easy FillError on solo gens
