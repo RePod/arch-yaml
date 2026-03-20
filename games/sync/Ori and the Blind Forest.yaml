@@ -10,12 +10,8 @@ Ori and the Blind Forest:
   accessibility:
     full: 1
     minimal: 2
-  goal: # AllSkillTrees AllMaps WarmthFragments WorldTour 
-    all_skill_trees: 5 # old reliable
-    all_maps: 3 # place all mapstones
-    warmth_fragments: 1 # mcguffin hunt
-    world_tour: 1 # mcguffin hunt. N/11 areas contain a relic in a random loc
-    none: 0 # reach and finish escape
+  goal: # AllSkillTrees AllMaps WarmthFragments WorldTour / old weights: 5/3/1/1/0 (none)
+    - AllSkillTrees
   require_final_escape:
     false: 1
     true: 4
