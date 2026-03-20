@@ -2,7 +2,7 @@ name: RePod{NUMBER}
 game: Ori and the Blind Forest
 async: false
 per_game_name: true
-description: "Custom https://github.com/c-ostic/Archipelago/releases/download/v0.3.3-alpha/oribf.apworld"
+description: "Custom https://github.com/c-ostic/Archipelago/releases/latest"
 
 Ori and the Blind Forest:
   # Easy FillError on solo gens
@@ -10,12 +10,15 @@ Ori and the Blind Forest:
   accessibility:
     full: 1
     minimal: 2
-  goal:
+  goal: # AllSkillTrees AllMaps WarmthFragments WorldTour 
     all_skill_trees: 5 # old reliable
     all_maps: 3 # place all mapstones
     warmth_fragments: 1 # mcguffin hunt
     world_tour: 1 # mcguffin hunt. N/11 areas contain a relic in a random loc
     none: 0 # reach and finish escape
+  require_final_escape:
+    false: 1
+    true: 4
   warmth_fragments_available: 50 # 1-30-50
   warmth_fragments_required: 40 # 1-20-50
   logic_difficulty:
@@ -23,7 +26,6 @@ Ori and the Blind Forest:
     standard: 2
     expert: 5
     master: 1 # please no microledges
-    glitched: 0
   keystone_logic:
     anywhere: 1
     area_specific: 3
@@ -31,38 +33,29 @@ Ori and the Blind Forest:
     anywhere: 1
     area_specific: 3
     progressive: 1
+  include_teleporters:
+    false: 1
+    true: 3
   extra_mapstones: random-range-0-1 # 0-9
   deathlink_logic:
     disabled: 19
     partial: 1 # does not send instakills
     full: 0
-  enable_lure:
-    false: 1
-    true: 3
-  enable_damage_boost: # 12 ability cells. master+ req. ultra defense 
-    false: 1
-    true: 3
-  enable_double_bash: # master
-    false: 1
-    true: 4
-  enable_grenade_jump: # master
-    false: 1
-    true: 4
-  enable_air_dash: # standard+, 3 ability cells
-    false: 1
-    true: 4
-  enable_charge_dash: # expert+, 6 ability cells
-    false: 1
-    true: 4
-  enable_triple_jump: # master, 12 ability cells
-    false: 1
-    true: 4
-  enable_charge_flame_burn: # master, 3 ability cells
-    false: 1
-    true: 4
-  enable_rekindle: # standard+, ghost lever in blackroot
-    false: 1
-    true: 4
+  deathlink_count: 30 # 1-30
+  sein_logic: start
+  logic_modifiers: # TODO: triggers
+    - AirDash # Standard+, 3 ability cells
+    - ChargeDash # Expert+, 6 ability cells
+    - ChargeFlameBurn # Master, 3 ability cells
+    - DamageBoost # Master may require Ultra Defense, 12 ability cells
+    - DoubleBash # Expert+
+    - GrenadeJump # Master
+    - Lure # Standard+
+    - Rekindle
+    - TripleJump # Master, 12 ability cells
+  restrict_dungeon_keys:
+    false: 3
+    true: 1
   start_hints:
     - Dash
 
