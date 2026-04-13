@@ -33,6 +33,7 @@ Hatsune Miku Project Diva Mega Mix+:
   exclude_songs:
     # Anything sync related = I don't want to deal with adjusting it
     - AI Shoujo to Shinsou Shinkai [8814] # 12 minutes
+    - Ang Carinosa [7900] # 5m30
     - BAILE DA MIKU II - CADEIA PARALELA [4574]
     - Bury the Light Eurobeat Remix [4597] # Chart is fine... but 8 minutes. A nice stress out with Death Link and note-lacking parts.
     - HeavenDope [2914] # INCREASE THE BPM
@@ -199,6 +200,7 @@ triggers:
           - SAD GIRL SEX [9321]
           - Salamander [1000]
           - Samsa [7738]
+          - Save Your Tears For Miku [9174]
           - Secret Lie [1327]
           - Senbonzakura -F edition- [637]
           - Senbonzakura [216]
