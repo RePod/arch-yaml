@@ -9,7 +9,7 @@ Super Mario 64:
   accessibility: random
   area_rando: courses_only
   buddy_checks: false
-  exclamation_boxes: 1ups_only
+  exclamation_boxes: true
   progressive_keys: random
   enable_coin_stars: false
   enable_move_rando: false
