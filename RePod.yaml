@@ -318,6 +318,7 @@ Hatsune Miku Project Diva Mega Mix+:
   exclude_songs:
     # Anything sync related = I don't want to deal with adjusting it
     - AI Shoujo to Shinsou Shinkai [8814] # 12 minutes
+    - Ang Carinosa [7908] # 5m30
     - BAILE DA MIKU II - CADEIA PARALELA [4574]
     - Bury the Light Eurobeat Remix [4597] # Chart is fine... but 8 minutes. A nice stress out with Death Link and note-lacking parts.
     - HeavenDope [2914] # INCREASE THE BPM
@@ -331,6 +332,7 @@ Hatsune Miku Project Diva Mega Mix+:
     - Portrait of the Pirate F [1270]
     - SnowMixnote [128] # "9 stars"
     - Stamina Training [1231] # 3 minutes of... PSP-TSD flashbacks
+    - The Glorious Octagon of Destiny [4535] # 8m
     - THE POWER OF TERRY [4538] # 16 minutes and has a Hard 8* now! Oh no!
   death_link: true
   trap_percentage: 100
@@ -1239,7 +1241,7 @@ Super Mario 64:
   accessibility: random
   area_rando: courses_only
   buddy_checks: false
-  exclamation_boxes: 1ups_only
+  exclamation_boxes: true
   progressive_keys: random
   enable_coin_stars: false
   enable_move_rando: false
@@ -1734,7 +1736,7 @@ triggers:
       Super Mario 64:
         area_rando: courses_and_secrets
         buddy_checks: true
-        exclamation_boxes: 1ups_only
+        exclamation_boxes: true
         progressive_keys: true
         enable_coin_stars: false
         enable_move_rando: true
@@ -2156,6 +2158,7 @@ triggers:
           - SAD GIRL SEX [9321]
           - Salamander [1000]
           - Samsa [7738]
+          - Save Your Tears For Miku [9174]
           - Secret Lie [1327]
           - Senbonzakura -F edition- [637]
           - Senbonzakura [216]
