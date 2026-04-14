@@ -44,7 +44,7 @@ triggers:
       Super Mario 64:
         area_rando: courses_and_secrets
         buddy_checks: true
-        exclamation_boxes: 1ups_only
+        exclamation_boxes: true
         progressive_keys: true
         enable_coin_stars: false
         enable_move_rando: true
