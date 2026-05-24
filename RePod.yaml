@@ -20,12 +20,11 @@ game:
   Hades: 0                                 # Custom https://github.com/NaixGames/Polycosmos/releases/latest
   Hatsune Miku Project Diva Mega Mix+: 0   # Custom https://github.com/Cynichill/DivaAPworld/releases/latest
   Jigsaw: 1                                # Unsupported https://github.com/spineraks-org/ArchipelagoJigsaw/releases/latest
-  Manual_Hatsune_Miku: 0                   # Manual! I can provide it if needed.
   MegaMan Battle Network 3: 9
   Muse Dash: 0
   Ori and the Blind Forest: 9              # Custom https://github.com/c-ostic/Archipelago/releases/latest
   Ori and the Will of the Wisps: 0         # Custom https://github.com/Satisha10/APwotw_release/releases/latest
-  Pokemon Crystal: 9                       # Custom https://github.com/gerbiljames/Archipelago/releases/latest
+  Pokemon Crystal: 9                       # Custom https://github.com/gerbiljames/Archipelago-Crystal/releases/latest
   Pokemon Emerald: 9
   Pokemon FireRed and LeafGreen: 9         # Custom https://github.com/vyneras/Archipelago/releases/latest
   Pokemon Red and Blue: 9
@@ -362,23 +361,6 @@ Jigsaw:
   strictness_piece_order: 100 # 1-100, how strict to follow above piece_order. barely~strictest
   number_of_checks_out_of_logic: random-low # 1-10
   death_link: 10
-Manual_Hatsune_Miku:
-  # THE the Manual!
-  # https://discord.com/channels/731205301247803413/1150904175144751194/1218734532065493033
-  #     This does NOT link to the apworld, but steps to create it from scratch.
-  #     To make connecting easier I override the world name to Manual_Hatsune_Miku.
-  # House rules: EX8.5 85%, EX9+ 80% or EX9+ > Hard 95%+
-  progression_balancing: random-low
-  accessibility: random
-  extra_locations: 100
-  music_sheets: random-range-low-80-100
-  song_total: 39
-  duplicate_songs: 0 # Eliminate progression confusion.
-  start_total: random-low
-  force_song: []
-  remove_song: []
-  force_goal: []
-  filler_traps: 0
 MegaMan Battle Network 3:
   # https://archipelago.gg/tutorial/MegaMan%20Battle%20Network%203/setup/en
   progression_balancing: random-low
@@ -1588,10 +1570,6 @@ triggers:
         number_of_pieces: random-range-250-450
         maximum_number_of_checks: random-range-250-450
         number_of_checks_out_of_logic: 10
-      Manual_Hatsune_Miku:
-        accessibility: minimal
-        music_sheets: 60
-        song_total: 40
       MegaMan Battle Network 3:
         include_jobs: true
         extra_ranks: # 8 minimum
@@ -1907,11 +1885,6 @@ triggers:
     options:
       null:
         name: RePodSaw{NUMBER}
-  - option_name: game
-    option_result: Manual_Hatsune_Miku
-    options:
-      null:
-        name: RePodMiku{NUMBER}
   - option_name: game
     option_result: MegaMan Battle Network 3
     options:
