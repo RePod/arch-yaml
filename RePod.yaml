@@ -295,7 +295,6 @@ Hatsune Miku Project Diva Mega Mix+:
   allow_megamix_dlc_songs:
     true: 2
     false: 1
-  auto_remove_songs: true
   duplicate_song_percentage: 0
   starting_song_count: 3
   additional_song_count: 67
@@ -2077,6 +2076,7 @@ triggers:
           - Magnet [44]
           - Marshmallow [9252]
           - Melancholic [615]
+          - Melancholy for Prodigy [3905]
           - Mesmerizer [7421]
           - Miku is Head Over Heels [4594]
           - Miku wants to Enjoy The Silence [9183]
