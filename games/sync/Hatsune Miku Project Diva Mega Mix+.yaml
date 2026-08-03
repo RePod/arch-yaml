@@ -199,7 +199,6 @@ triggers:
           - POP/STARS [3440]
           - QUEEN [377]
           - RACER'S HIGH [1336]
-          - RACER'S HIGH [1336]
           - Racing Into the Night [476]
           - Rain to a flower, a song to you [2910]
           - Raspberry*Monster [820]
@@ -266,13 +265,14 @@ triggers:
           - Why do I [694]
           - WILDCARD [9326]
           - Wintry Winds [94]
-          - World's End Dance Hall -F edition- [606]
+          - "World's End Dance Hall -F edition- [606]"
           - Yoidore Shirazu [883]
           - You're Telling Me A SHRIMP Fried This Rice?! [9168]
           - Yuuki no Reason (Ado Ver.) [91001]
           - YY [5549]
           - Zaako [4939]
         +exclude_songs: *premade
+        +goal_song: *premade
   - option_name: game
     option_result: Hatsune Miku Project Diva Mega Mix+
     options:
