@@ -87,6 +87,7 @@ triggers:
           # If an invalid item name got through and it's preventing gen, disable 'include_premade' in the game options.
           # N++: Edit > Line Operations > Sort Lines Lex. Ascending Ignoring Case
           - (Not) A Devil [7426]
+          - -Archipelago Randomizer Enabled- [144]
           - 39 [232]
           - 4BLOOD [895]
           - A Tale of Six Trillion Years and a Night [7700]
@@ -107,6 +108,7 @@ triggers:
           - Cherry Pop [9278]
           - Chururira Chururira Daddadda! [966]
           - Confessions of a Rotten Girl [9131]
+          - Cool Me Down [9246]
           - Cool Medley - Cyber Rock Jam [827]
           - Copyright B*tch [1352]
           - Cosmos [1378]
@@ -144,14 +146,17 @@ triggers:
           - I Hate-Hate-Hate-Hate-Hate it! [4347]
           - I'm the Rain [3186]
           - Idola Circus [3918]
+          - Ievan Polkka (Tutorial) [700]
           - Ievan Polkka [27]
           - Intergalactic Bound [6906]
           - Into The Night [3090]
           - Iroha Uta [211]
+          - It's not buggy [3196]
           - Jugemu Sequencer [417]
           - Kagerou Daze [721]
           - Kasane territory ~ Zutto Teto no Taan [875]
           - Keitai Renwa [935]
+          - Kidoai Liar [7445]
           - Kill Carry On [5544]
           - Kimi Ni [439]
           - Kimi no Taion [261]
@@ -170,6 +175,7 @@ triggers:
           - Machine Love [9160]
           - magic number [4324]
           - Magnet [44]
+          - Manimani [4120]
           - Marshmallow [9252]
           - Mayday [3049]
           - Melancholic [615]
@@ -199,10 +205,10 @@ triggers:
           - Out of Eden [223]
           - Pinky Swear [725]
           - Playing Immortal [16008]
-          - Playing Immortal [16008]
           - Pneumonoultramicroscopicsilicovolcanoconiosis [2917]
           - Pomp and Circumstance - Ifuudoudou [959]
           - POP/STARS [3440]
+          - PPPP [9254]
           - QUEEN [377]
           - RACER'S HIGH [1336]
           - Racing Into the Night [476]
@@ -280,7 +286,7 @@ triggers:
           - Yuuki no Reason (Ado Ver.) [91001]
           - YY [5549]
           - Zaako [4939]
-        +exclude_songs: *premade
+        #+exclude_songs: *premade
         +goal_song: *premade
   - option_name: game
     option_result: Hatsune Miku Project Diva Mega Mix+
