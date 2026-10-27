@@ -104,7 +104,7 @@ Ori and the Will of the Wisps:
     #'arenas',
     #'demi bosses',
     #'bosses',
-  ]
+    ]
 
   no_trials: false # Trials are already completed.
   no_hearts: # Willow hearts are already destroyed.
