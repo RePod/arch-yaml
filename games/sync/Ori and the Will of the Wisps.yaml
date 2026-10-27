@@ -107,7 +107,9 @@ Ori and the Will of the Wisps:
   ]
 
   no_trials: false # Trials are already completed.
-  no_hearts: false # Willow hearts are already destroyed.
+  no_hearts: # Willow hearts are already destroyed.
+    false: 1
+    true: 5
   quests:
     # Change which quests are in the location pool.
     # 
