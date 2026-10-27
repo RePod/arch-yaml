@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # CWD -> $GITHUB_WORKSPACE
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Prepare env
         run: |
           echo "GEN_ROUNDS=2" >> "$GITHUB_ENV"
@@ -180,7 +180,7 @@ jobs:
           git push || exit 0
 
       - name: Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: concat-yaml
           path: ${{ env.GIGAYAML }}
