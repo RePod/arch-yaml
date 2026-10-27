@@ -6,22 +6,35 @@ description: "Custom https://github.com/Satisha10/APwotw_release/releases/latest
 weight: 0
 
 Ori and the Will of the Wisps:
-  progression_balancing: random-middle
+  progression_balancing: random-range-25-50
   accessibility: random
-  difficulty:
-    moki: 50  # easy
-    gorlek: 0 # medium, sword/hammer movement, damage boosts
-    kii: 0    # hard, precise paths, energy weapons as movement
-    unsafe: 0 # VERY hard/unverified paths
+
+  difficulty: # logic difficulty
+    moki: 50  # Recommended for beginners, who only played the game casually.
+    gorlek: 0 # Harder paths that can use sword and hammer as movement options, and damage boosts.
+    kii: 0    # Hard and precise paths that use energy weapons as movement.
+    unsafe: 0 # Very hard and unverified paths. Warning: some paths are **extremely hard**.
+
   glitches:
-    # - **Gorlek**: includes grounded sentry jumps, sentry as a fire source, breaking walls with Shuriken, and removing the kill plane in Feeding Grounds.
+    # Whether the logic includes paths with glitches. The required tricks depend on the logic difficulty.
+    # 
+    # - **Gorlek**: includes grounded sentry jumps, sentry as a fire source, breaking walls with Shuriken, and removing
+    #   the kill plane in Feeding Grounds.
     # - **Kii**: glitches are not included in Kii logic yet.
     # - **Unsafe**: everything else.
     'false': 50
     'true': 0
+
   spawn:
     # Choose the starting location.
-    marsh: 50
+    # 
+    # - **vanilla**: spawn in Inkwater Marsh.
+    # - Teleporter name: spawn in this teleporter.
+    #   Possible values: marsh, burrows, howlsden, hollow, glades, wellspring, westwoods, eastwoods,
+    #   reach, depths, eastpools, westpools, westwastes, eastwastes, outerruins, innerruins, willow, shriek.
+    # - **random_tp**: Spawn at a random teleporter (there are weights applied internally for this option).
+    # - **random_loc**: Spawn at a random location (usually placed on a checkpoint).
+    vanilla: 0
     burrows: 0
     howlsden: 0
     hollow: 0
@@ -39,35 +52,95 @@ Ori and the Will of the Wisps:
     innerruins: 0
     willow: 0
     shriek: 0
-  goal: # check goal progress with rando wheel (V)
-    trees: 50
-    wisps: 0
-    quests: 0
-  hard_mode:
-    'false': 50
-    'true': 0
-  qol: true
-  hints: true
-  # Item Pool
-  tp: true # teleporters
-  extratp: true # +2 teleporters
-  bonus: true # add rando specific items
-  extra_bonus: true # add rando specific powerful items
-  skill_upgrade: false # add rando specific skill upgrades
-  # World Changes
-  better_spawn: false # Opens some doors so random spawn works better.
+    random_tp: 50
+    random_loc: 0
+
+  goal:
+    - trees
+    #- wisps
+    #- quests
+    #- relics
+    #- one_random # choose among enabled, or all if solo
+
+  relic_count: 7 # 1-7-11, how many areas contain a relic (relic goal)
+
+  launch_fragments: false # Spilt Launch into multiple fragments.
+  fragments_required: 3 # 1-3-10 amount of launch fragments needed to get Launch.
+  fragments_count: 5 # 1-5-10 amount of launch fragments in the pool, Launch is in logic when all fragments are accessible
+
+  hard_mode: false # Play the game in hard difficulty.
+
+  door_rando:
+    disabled: 1
+    coupled: 0 # coupled/enabled/true, randomize doors 2 by 2 (going back will put you where you entered the door)
+    decoupled: 0 # the entrances are fully shuffled for both entering and exiting a door
+
+  free_regenerate: false # Ignore Regenerate in the region requirements.
+  free_teleporters: false # Remove the requirements on teleporters for their hard lock skill (e.g. Reach TP requires Flap).
+
+  qol: true # Activate QOL features and gameplay improvements.
+  hints: true # Display the reward for shrines and trials when activating them.
+  zone_hints: true # Lupo sells hints that indicate how many progression items are in the area.
+
+  unpopular: false # Tedious or extremely hard tricks. No effect without unsafe and glitches.
+  death_link: 5 # 0-99
+
+  tp: true # Add most teleporters to the item pool.
+  extratp: false # Add Ruins, West Pools and Shriek teleporters to the pool.
+  bonus: true # Add to the pool items specific to the randomizer.
+  extra_bonus: false # Add to the pool powerful items specific to the randomizer.
+  skill_upgrade: false # Add to the pool upgrades to skills specific to the randomizer.
+
+  #################
+  # World Changes #
+  #################
+  better_spawn: true # Open some doors so random spawn works better.
   better_wellspring: false # The top door of Wellspring Glades is opened by default.
   no_rain: false # Remove the rain in Marsh, and remove Howl.
-  no_combat: [] # Skip most of the combats. [Everything, Shrines, Arenas, Demi Bosses, Bosses]
-  no_trials: false # Trials only contain filler items.
-  no_hearts: false # The door to Shriek is open from the beginning.
-  no_quests: false # Talking to NPCs gives no item, and locations locked behind them are accessible.
-  no_ks: false  # Open keystone doors by default (and remove keystones from the pool).
+
+  no_combat: [ # Skip combat heavy parts
+    #'everything',
+    #'shrines',
+    #'arenas',
+    #'demi bosses',
+    #'bosses',
+  ]
+
+  no_trials: false # Trials are already completed.
+  no_hearts: false # Willow hearts are already destroyed.
+  quests:
+    # Change which quests are in the location pool.
+    # 
+    # - **all**: All quests are present.
+    # - **no_hand**: Remove the Hand-to-hand questline from the locations.
+    # - **none**: Remove all quests that involve talking to NPCs. Main quests (e.g. wisps) or rebuilding Glades are
+    #   still in the pool.
+    all: 50
+    no_hand: 0
+    none: 0
+
+  no_ks: false # Open keystone doors by default (and remove keystones from the pool).
   open_mode: false # Open most of the doors and obstacles.
   glades_done: false # Start with Glades rebuilt and regrown.
-  # Item Placements
-  sword: true # start with sword
-  vanilla_shop_upgrades: false  # Weapon upgrades and shards in shops are not randomized.
+
+  sword: true # Choose to have Sword at the beginning.
+  regenerate: false # Choose to have Regenerate at the beginning.
+  vanilla_shop_upgrades: false # Weapon upgrades and shards in shops are not randomized.
+  launch_on_seir: false # Place launch on Seir (i.e. the wisp in the ruins).
+  knowledge_hints: true # Display useful hints on randomizer knowledge while playing the seed.
+  shop_keywords: true # Attempt to match items to icons based on name.
+  skip_cutscenes: true # Skip most cutscenes, and makes then skippable in the pause menu.
+
+  ut_config:
+    # Configuration for Universal Tracker glitched logic. This doesn't affect generation.
+    # 
+    # - **one_level**: Add the next logic level.
+    # - **glitch**: Add glitches from the current logic level (and one above if `one_level` is also used).
+    # - **free_region**: Remove requirements on max health and Regenerate for entering an area.
+    # - **free_tp**: Remove skills requirements on some teleporters (same effect as `free_teleporters`).
+    # - **max_logic**: Set the logic to unsafe + unpopular + glitches and remove region/tp requirements.
+    ['one_level']
+
   
 triggers:
   - option_category: null
