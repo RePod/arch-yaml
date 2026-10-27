@@ -22,8 +22,7 @@ game:
   MegaMan Battle Network 3: 9
   Muse Dash: 0
   Ori and the Blind Forest: 9              # Custom https://github.com/c-ostic/Archipelago/releases/latest
-  Ori and the Will of the Wisps: 0         # Custom https://github.com/Satisha10/APwotw_release/releases/latest
-  Pokemon Crystal: 9                       # Custom https://github.com/gerbiljames/Archipelago-Crystal/releases/latest
+  Ori and the Will of the Wisps: 9         # Custom https://github.com/Satisha10/APwotw_release/releases/latest
   Pokemon Emerald: 9
   Pokemon FireRed and LeafGreen: 9         # Custom https://github.com/vyneras/Archipelago/releases/latest
   Pokemon Red and Blue: 9
@@ -387,22 +386,32 @@ Ori and the Blind Forest:
   start_hints:
     - Dash
 Ori and the Will of the Wisps:
-  progression_balancing: random-middle
+  progression_balancing: random-range-25-50
   accessibility: random
-  difficulty:
-    moki: 50 # easy
-    gorlek: 0 # medium, sword/hammer movement, damage boosts
-    kii: 0 # hard, precise paths, energy weapons as movement
-    unsafe: 0 # VERY hard/unverified paths
+  difficulty: # logic difficulty
+    moki: 50 # Recommended for beginners, who only played the game casually.
+    gorlek: 0 # Harder paths that can use sword and hammer as movement options, and damage boosts.
+    kii: 0 # Hard and precise paths that use energy weapons as movement.
+    unsafe: 0 # Very hard and unverified paths. Warning: some paths are **extremely hard**.
   glitches:
-    # - **Gorlek**: includes grounded sentry jumps, sentry as a fire source, breaking walls with Shuriken, and removing the kill plane in Feeding Grounds.
+    # Whether the logic includes paths with glitches. The required tricks depend on the logic difficulty.
+    # 
+    # - **Gorlek**: includes grounded sentry jumps, sentry as a fire source, breaking walls with Shuriken, and removing
+    #   the kill plane in Feeding Grounds.
     # - **Kii**: glitches are not included in Kii logic yet.
     # - **Unsafe**: everything else.
     'false': 50
     'true': 0
   spawn:
     # Choose the starting location.
-    marsh: 50
+    # 
+    # - **vanilla**: spawn in Inkwater Marsh.
+    # - Teleporter name: spawn in this teleporter.
+    #   Possible values: marsh, burrows, howlsden, hollow, glades, wellspring, westwoods, eastwoods,
+    #   reach, depths, eastpools, westpools, westwastes, eastwastes, outerruins, innerruins, willow, shriek.
+    # - **random_tp**: Spawn at a random teleporter (there are weights applied internally for this option).
+    # - **random_loc**: Spawn at a random location (usually placed on a checkpoint).
+    vanilla: 0
     burrows: 0
     howlsden: 0
     hollow: 0
@@ -420,219 +429,75 @@ Ori and the Will of the Wisps:
     innerruins: 0
     willow: 0
     shriek: 0
-  goal: # check goal progress with rando wheel (V)
-    trees: 50
-    wisps: 0
-    quests: 0
-  hard_mode:
-    'false': 50
-    'true': 0
-  qol: true
-  hints: true
-  # Item Pool
-  tp: true # teleporters
-  extratp: true # +2 teleporters
-  bonus: true # add rando specific items
-  extra_bonus: true # add rando specific powerful items
-  skill_upgrade: false # add rando specific skill upgrades
-  # World Changes
-  better_spawn: false # Opens some doors so random spawn works better.
+    random_tp: 50
+    random_loc: 0
+  goal:
+    - trees
+    #- wisps
+    #- quests
+    #- relics
+    #- one_random # choose among enabled, or all if solo
+  relic_count: 7 # 1-7-11, how many areas contain a relic (relic goal)
+  launch_fragments: false # Spilt Launch into multiple fragments.
+  fragments_required: 3 # 1-3-10 amount of launch fragments needed to get Launch.
+  fragments_count: 5 # 1-5-10 amount of launch fragments in the pool, Launch is in logic when all fragments are accessible
+  hard_mode: false # Play the game in hard difficulty.
+  door_rando:
+    disabled: 1
+    coupled: 0 # coupled/enabled/true, randomize doors 2 by 2 (going back will put you where you entered the door)
+    decoupled: 0 # the entrances are fully shuffled for both entering and exiting a door
+  free_regenerate: false # Ignore Regenerate in the region requirements.
+  free_teleporters: false # Remove the requirements on teleporters for their hard lock skill (e.g. Reach TP requires Flap).
+  qol: true # Activate QOL features and gameplay improvements.
+  hints: true # Display the reward for shrines and trials when activating them.
+  zone_hints: true # Lupo sells hints that indicate how many progression items are in the area.
+  unpopular: false # Tedious or extremely hard tricks. No effect without unsafe and glitches.
+  death_link: 5 # 0-99
+  tp: true # Add most teleporters to the item pool.
+  extratp: false # Add Ruins, West Pools and Shriek teleporters to the pool.
+  bonus: true # Add to the pool items specific to the randomizer.
+  extra_bonus: false # Add to the pool powerful items specific to the randomizer.
+  skill_upgrade: false # Add to the pool upgrades to skills specific to the randomizer.
+  #################
+  # World Changes #
+  #################
+  better_spawn: true # Open some doors so random spawn works better.
   better_wellspring: false # The top door of Wellspring Glades is opened by default.
   no_rain: false # Remove the rain in Marsh, and remove Howl.
-  no_combat: [] # Skip most of the combats. [Everything, Shrines, Arenas, Demi Bosses, Bosses]
-  no_trials: false # Trials only contain filler items.
-  no_hearts: false # The door to Shriek is open from the beginning.
-  no_quests: false # Talking to NPCs gives no item, and locations locked behind them are accessible.
+  no_combat: []
+  no_trials: false # Trials are already completed.
+  no_hearts: # Willow hearts are already destroyed.
+    false: 1
+    true: 5
+  quests:
+    # Change which quests are in the location pool.
+    # 
+    # - **all**: All quests are present.
+    # - **no_hand**: Remove the Hand-to-hand questline from the locations.
+    # - **none**: Remove all quests that involve talking to NPCs. Main quests (e.g. wisps) or rebuilding Glades are
+    #   still in the pool.
+    all: 50
+    no_hand: 0
+    none: 0
   no_ks: false # Open keystone doors by default (and remove keystones from the pool).
   open_mode: false # Open most of the doors and obstacles.
   glades_done: false # Start with Glades rebuilt and regrown.
-  # Item Placements
-  sword: true # start with sword
+  sword: true # Choose to have Sword at the beginning.
+  regenerate: false # Choose to have Regenerate at the beginning.
   vanilla_shop_upgrades: false # Weapon upgrades and shards in shops are not randomized.
-Pokemon Crystal:
-  progression_balancing: random-low
-  accessibility: random
-  goal:
-    elite_four: 3
-    red: 1
-  # Map
-  randomize_starting_town: true
-  johto_only: off # include_silver_cave = Red
-  # Roadblocks
-  elite_four_requirement:
-    badges: 3
-    gyms: 1
-  elite_four_count: random-middle
-  red_requirement:
-    badges: 3
-    gyms: 1
-  red_count: 16
-  mt_silver_requirement:
-    badges: 3
-    gyms: 1
-  mt_silver_count: 16
-  radio_tower_requirement:
-    badges: 3
-    gyms: 1
-  radio_tower_count: 7 # 0-7-16
-  route_44_access_requirement:
-    badges: 3
-    gyms: 1
-  route_44_access_count: 7 # 0-7-16
-  kanto_access_requirement: # VR gate to Kanto
-    wake_snorlax: 1
-    badges: 3
-    gyms: 3
-    become_champion: 2
-  kanto_access_count: 8 # 0-8-16
-  route_32_condition:
-    egg_from_aide: 4
-    any_badge: 2
-    any_gym: 2
-    zephyr_badge: 1
-    none: 1
-  route_2_access:
-    vanilla: 1
-    ledge: 3
-    open: 1
-  route_3_access:
-    vanilla: 2
-    boulder_badge: 1
-  red_gyarados_access:
-    vanilla: 1
-    whirlpool: 2
-  blackthorn_dark_cave_access:
-    vanilla: 1
-    waterfall: 2 # Violet side: waterfall+flash+surf
-  national_park_access:
-    vanilla: 1
-    bicycle: 2
-  saffron_gatehouse_tea: []
-  remove_ilex_cut_tree:
-    false: 2
-    true: 1
-  undergrounds_require_power:
-    both: 4
-    north_south: 2
-    east_west: 2
-    neither: 1
-  east_west_underground:
-    false: 1
-    true: 3
-  vanilla_clair:
-    false: 2
-    true: 1
-  # Items
-  randomize_badges: completely_random
-  randomize_pokegear: true
-  randomize_hidden_items: true
-  randomize_berry_trees: true
-  require_itemfinder: logically_required
-  remote_items: true
-  # HMs
-  hm_compatibility: 100
-  hm_badge_requirements:
-    vanilla: 3
-    no_badges: 1
-    add_kanto: 2
-    regional: 2
-  free_fly_location:
-    off: 1
-    free_fly: 2
-    free_fly_and_map_card: 2
-    map_card: 2
-  early_fly:
-    false: 1
-    true: 3
-  # Pokemon
-  randomize_wilds: catch_em_all
-  randomize_static_pokemon: true
-  randomize_base_stats:
-    vanilla: 2
-    keep_bst: 1
-    completely_random: 1
-  randomize_trades: both
-  encounter_grouping: all_split
-  encounter_slot_distribution:
-    remove_one_percents: 3
-    balanced: 1
-    equal: 1
-  # Starters
-  randomize_starters: completely_random
-  starters_bst_average: normal_starters
-  # Moves
-  randomize_learnsets: start_with_four_moves
-  learnset_type_bias: vanilla
-  metronome_only: false
-  randomize_tm_moves: true
-  tm_compatibility: 50
-  reusable_tms: true
-  # Trainers
-  randomize_trainer_parties: completely_random
-  force_fully_evolved: 30
-  # Traps
-  phone_trap_weight: random
-  sleep_trap_weight: 1 # [0]-8
-  poison_trap_weight: 1 # [0]-8
-  burn_trap_weight: 1 # [0]-8
-  freeze_trap_weight: 1 # [0]-8
-  paralysis_trap_weight: 1 # [0]-8
-  # QoL
-  game_options:
-    ap_item_sound: on
-    auto_run: on
-    battle_animations: speedy
-    battle_move_stats: on
-    battle_shift: set
-    bike_music: off
-    blind_trainers: on
-    catch_exp: off
-    dex_area_beep: on
-    exp_distribution: gen2
-    fast_egg_hatch: on
-    fast_egg_make: on
-    guaranteed_catch: on
-    low_hp_beep: off
-    menu_account: off
-    poison_flicker: off
-    rods_always_work: on
-    short_fanfares: on
-    skip_dex_registration: on
-    skip_nicknames: on
-    sound: stereo
-    spinners: normal
-    surf_music: off
-    text_frame: random
-    text_speed: instant
-    time_of_day: nite
-    turbo_button: a_or_b
-  level_scaling: spheres # off/spheres/spheres_and_distance
-  starting_money: 3939
-  better_marts: true
-  experience_modifier: 50
-  skip_elite_four:
-    false: 3
-    true: 2
-  minimum_catch_rate: 255
-  randomize_palettes:
-    vanilla: 1
-    match_types: 3
-    completely_random: 6
-  randomize_music: completely_random
-  enable_mischief: true
-  # Saffron Tea triggers
-  North Gate:
-    Yes: 50
-    No: 50
-  South Gate:
-    Yes: 50
-    No: 50
-  East Gate:
-    Yes: 50
-    No: 50
-  West Gate:
-    Yes: 50
-    No: 50
+  launch_on_seir: false # Place launch on Seir (i.e. the wisp in the ruins).
+  knowledge_hints: true # Display useful hints on randomizer knowledge while playing the seed.
+  shop_keywords: true # Attempt to match items to icons based on name.
+  skip_cutscenes: true # Skip most cutscenes, and makes then skippable in the pause menu.
+  ut_config: [
+    # Configuration for Universal Tracker glitched logic. This doesn't affect generation.
+    # 
+    # - **one_level**: Add the next logic level.
+    # - **glitch**: Add glitches from the current logic level (and one above if `one_level` is also used).
+    # - **free_region**: Remove requirements on max health and Regenerate for entering an area.
+    # - **free_tp**: Remove skills requirements on some teleporters (same effect as `free_teleporters`).
+    # - **max_logic**: Set the logic to unsafe + unpopular + glitches and remove region/tp requirements.
+    'one_level']
 Pokemon Emerald:
   # https://archipelago.gg/tutorial/Pokemon%20Emerald/setup/en
   progression_balancing: random-low
@@ -1525,19 +1390,6 @@ triggers:
         deathlink_logic: partial
       Ori and the Will of the Wisps:
         progression_balancing: random-low
-      Pokemon Crystal:
-        goal: red
-        death_link: true
-        # Dexsanity
-        dexsanity: full
-        dexcountsanity: 251
-        dexcountsanity_step: 1
-        dexsanity_starters: available_early
-        # Trainersanity
-        trainersanity:
-          false: 1
-          true: 4
-        trainersanity_alerts: sound_only
       Pokemon Emerald:
         # Ever hit a 0.8% by rolling 3 Dex+Trainersanity Emeralds?
         # Grinding and breeding are OoL
@@ -1829,11 +1681,6 @@ triggers:
     options:
       null:
         name: RePodWisp{NUMBER} # OrePod...
-  - option_name: game
-    option_result: Pokemon Crystal
-    options:
-      null:
-        name: RePodCRY{NUMBER}
   - option_name: game
     option_result: Pokemon Emerald
     options:
@@ -2136,34 +1983,6 @@ triggers:
         deathlink_logic: disabled
         keystone_logic: area_specific
         mapstone_logic: area_specific
-  - option_name: North Gate
-    option_category: Pokemon Crystal
-    option_result: Yes
-    options:
-      Pokemon Crystal:
-        +saffron_gatehouse_tea:
-          - North
-  - option_name: South Gate
-    option_category: Pokemon Crystal
-    option_result: Yes
-    options:
-      Pokemon Crystal:
-        +saffron_gatehouse_tea:
-          - South
-  - option_name: East Gate
-    option_category: Pokemon Crystal
-    option_result: Yes
-    options:
-      Pokemon Crystal:
-        +saffron_gatehouse_tea:
-          - East
-  - option_name: West Gate
-    option_category: Pokemon Crystal
-    option_result: Yes
-    options:
-      Pokemon Crystal:
-        +saffron_gatehouse_tea:
-          - West
   # FRLG World state
   - option_name: Modify Route 2
     option_category: Pokemon FireRed and LeafGreen
