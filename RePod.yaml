@@ -464,7 +464,12 @@ Ori and the Will of the Wisps:
   better_spawn: true # Open some doors so random spawn works better.
   better_wellspring: false # The top door of Wellspring Glades is opened by default.
   no_rain: false # Remove the rain in Marsh, and remove Howl.
-  no_combat: []
+  no_combat: ['everything',
+    #'shrines',
+    #'arenas',
+    #'demi bosses',
+    #'bosses',
+  ]
   no_trials: false # Trials are already completed.
   no_hearts: # Willow hearts are already destroyed.
     false: 1
