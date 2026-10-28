@@ -99,7 +99,7 @@ Ori and the Will of the Wisps:
   no_rain: false # Remove the rain in Marsh, and remove Howl.
 
   no_combat: [ # Skip combat heavy parts
-    #'everything',
+    'everything',
     #'shrines',
     #'arenas',
     #'demi bosses',
