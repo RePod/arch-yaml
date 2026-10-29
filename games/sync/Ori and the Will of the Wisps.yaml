@@ -106,7 +106,7 @@ Ori and the Will of the Wisps:
     #'bosses',
     ]
 
-  no_trials: false # Trials are already completed.
+  no_trials: true # Trials are already completed.
   no_hearts: # Willow hearts are already destroyed.
     false: 1
     true: 5
